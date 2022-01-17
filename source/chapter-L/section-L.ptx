@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section">
+    <title></title>
+    <introduction>
+        Symbolic logic uses formal mathematics with symbols to represent statements in language. Everyday language includes factual statements, opinions, commands, and questions. Symbolic logic only deals with statements and opinions, but not commands or questions. Aristotle was one of the early pioneers of logic.
+    </introduction>
+
+    <subsection>
+        <title>Statements</title>
+        <definition>
+            A <term>statement</term> (or <term>proposition</term>) is a declarative sentence, a sentence that is either definitely true or definitely false, but not both or indeterminate.
+        </definition>
+
+        <p>
+            General statements are typically are represented by the letters <m>P, Q, R</m>, and <m>S</m>. In applications, letters that represent the sentence are typically used. For example, for the statement <q>John is coming to the party</q> might be represented by <m>J</m> (for <m>John</m>).
+        </p>
+
+        <p>
+            Examples of sentences which are not statements include:
+        </p>
+        <ul>
+            <li><term>Commands</term>. For example, <q>Tie your shoes.</q></li>
+            <li><term>Questions</term>. For example, <q>Are you having fun?</q></li>
+            <li><term>Paradoxes or contradictions</term>. This most often occurs with sentences that refer to themselves (are self-referential). For example, <q>This sentence is false.</q> (called the <em>liar paradox</em>). This is a paradox because if the sentence is true, then the sentence itself tells us it is false, and the sentence cannot both be true and false. Similarly, if the sentence is false, then the sentence tells us it is not false (i.e. true), leading to another contradiction. Thus, no truth value can be assigned to the statement.</li>
+        </ul>
+        <p>
+            Roughly, logic and mathematics can only apply to statements.
+        </p>
+
+        <!-- \begin{definition}
+        An \textbf{open sentence} is a sentence that become a statement when we assign values its variables. The values of the variables come from an implied domain.
+        \end{definition} -->
+
+    </subsection>
+
+    <subsection>
+        <title>Negation (Not)</title>
+        <definition>
+            <p>
+                Let <m>P</m> be a statement. The <term>negation</term> of <m>P</m>, denoted by <m>\neg P</m>, is a statement which is true if <m>P</m> is false, and is false when <m>P</m> is true.
+            </p>
+        </definition>
+
+        <p>
+            At a very basic level, to determine the negation of a statement, one can add <q>it is not true that</q> to the beginning of the statement. Note that the negation of a statement is itself a statement, which can be true or false. The negation often occurs in English as the connective <q>not</q>.
+        </p>
+        <example>
+            <p>
+                The negation of <q>It is raining today.</q> is <q>It is not true that is raining today</q> or more simply, <q>It is not raining today</q>.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                The statement <q>I did not take your hat</q> is the negation of the statement <q>I did take your hat</q> or more simply, <q>I took your hat</q>.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                The negation of a statement that is itself a negation is the original statement. For example, the negation of <q>The grass is not green</q>, is <q>The grass is green</q>.
+            </p>
+        </example>
+
+        <p>
+            The fact that the negation of a statement is false when the statement is true, and true when the statement is false, can be summarized in a so-called <em>truth table</em>.
+        </p>
+        <definition>
+            <p>
+                A <term>truth table</term> is a table that includes all possible combinations of truth values for each simple statement, and the truth value of any compound statements in each case.
+            </p>
+        </definition>
+        <p>
+            For the single statement <m>P</m>, there are two possible values of <m>P</m>: true and false. The truth table for negation is given by,
+        </p>
+        <me>
+            \begin{array}{c|c}
+                P \amp \neg P \\ \hline
+                T \amp F \\ \hline
+                F \amp T \\
+            \end{array}
+        </me>
+        <p>
+            Each row of a truth table can be thought of as one possible state of affairs in the world. Here, there are only two possibilities.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Simple and Compound Sentences</title>
+        <p>
+            Roughly, a <term>simple sentence</term> is a sentence that does not <q>contain</q> another complete sentence as a component. Intuitively, a simple sentence only says <q>one thing</q>.
+        </p>
+        <p>
+            Simple sentences can be combined together in various ways to form a <term>compound sentence</term>, which is simply a sentence that contains multiple simple statements. These simple sentences are combined with words such as,
+        </p>
+        <ul>
+            <li><q>and</q>, called a <em>conjunction</em>.</li>
+            <li><q>or</q>, called a <em>disjunction</em></li>
+            <li><q>if..., then...</q>, called an <em>implication</em>, or <em>conditional</em>.</li>
+            <li><q>if and only if</q>, called a <em>biconditional</em>.</li>
+        </ul>
+        <p>
+            These are called <term>logical connectives</term>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Disjunction (Or)</title>
+        <p>
+            In English, the connective ``or" can have an ambiguous meaning. For example, the sentence,
+        </p>
+        <me>
+            \text{<q>You can have cake or fruit.</q>}
+        </me>
+        <p>
+            probably means you have to choose between cake and fruit, and you cannot have both of them. In logic, this is called the <em>exclusive or</em>. However, the sentence,
+        </p>
+        <me>
+            \text{<q>You can enter if you have a driver's license or passport</q>}
+        </me>
+        <p>
+            probably means that people can enter if they have a driver's license, a passport, or they have both. This is called the <em>inclusive or</em>. This is the main or default <q>or</q> that is used in logic.
+        </p>
+
+        <definition>
+            <p>
+                Let <m>P, Q</m> be statements. The <term>disjunction</term> (or, <term>or</term>), denoted by <m>P \lor Q</m>, is a statement that is true if at least one of <m>P</m> or <m>Q</m> is true, and is false if both <m>P</m> and <m>Q</m> are false.
+            </p>
+        </definition>
+
+        <p>
+            For two statements, there are 4 possible combinations: <m>TT</m>, <m>TF</m>, <m>FT</m>, and <m>FF</m>. The truth table for disjunction is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \lor Q \\ \hline
+                T \amp T \amp T \\ \hline
+                T \amp F \amp T \\ \hline
+                F \amp T \amp T \\ \hline
+                F \amp F \amp F
+            \end{array}
+        </me>
+        <p>
+            The order of the combinations (<m>TT</m>, then <m>TF</m>, <m>FT</m>, and finally <m>FF</m>) is just a convention, however it is preferred because it makes things more organized.
+        </p>
+        <p>
+            Note that just because a statement uses a logical connector such as <q>or</q>, does not necessarily mean it is an <q>or</q> statement. For example, <q>They decided to play Truth or Dare.</q> contains an <q>or</q>, however, it is used in part of a name, and is not used to connect simple sentences.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Conjunction (And)</title>
+        <definition>
+            <p>
+                Let <m>P, Q</m> be statements. The <term>conjunction</term> of <m>P</m> and <m>Q</m>, denoted by <m>P \land Q</m>, is a statement that is true if both <m>P</m> and <m>Q</m> are true, and is false if at least one of <m>P</m> and <m>Q</m> are false.
+            </p>
+        </definition>
+
+        <p>
+            The truth table for conjunction is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \land Q \\ \hline
+                T \amp T \amp T \\ \hline
+                T \amp F \amp F \\ \hline
+                F \amp T \amp F \\ \hline
+                F \amp F \amp F
+            \end{array}
+        </me>
+    </subsection>
+    
+    <subsection>
+        <title>Conditional (Implication)</title>
+
+        <definition>
+            <p>
+                The <term>conditional</term> (or <term>implication</term>), denoted by <m>P \rightarrow Q</m>, is a statement that is true if <m>P</m> if false or if <m>P</m> and <m>Q</m> are true, and is false if <m>P</m> is true and <m>Q</m> is false.
+            </p>
+        </definition>
+        <p>
+            In mathematics, <m>P</m> is often called the <term>hypothesis</term> and <m>Q</m> is called the <term>conclusion</term>. In logic, <m>P</m> and <m>Q</m> are more typically called the <term>antecedent</term> and <term>consequent</term>, respectively.
+        </p>
+
+        <example>
+            <q>If what you've told me is true, [then] you will have gained my trust.</q> (Mace Windu).
+        </example>
+
+        <p>
+            The truth table for a conditional is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \rightarrow Q \\ \hline
+                T \amp T \amp T \\ \hline
+                T \amp F \amp F \\ \hline
+                F \amp T \amp T \\ \hline
+                F \amp F \amp T
+            \end{array}
+        </me>
+        <p>
+            If a conditional is true, then the hypothesis <m>P</m> gives a condition (not necessarily the only condition) under which the conclusion <m>Q</m> will also be guaranteed to be true.
+        </p>
+        <p>
+            Alternative forms of the conditional include, <q>If <m>P</m>, then <m>Q</m></q>, <q><m>P</m> implies <m>Q</m></q>, <q><m>P</m> is a sufficient condition for <m>Q</m></q>, <q><m>P</m> only if <m>Q</m></q>, <q><m>Q</m> if <m>P</m></q>, and, <q><m>Q</m> is a necessary condition for <m>P</m></q>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Logical Connectives as Operators</title>
+        <p>
+            These logical connectives can be thought of as operators that combine multiple statments and ouput another single statement. This is analogous to how <m>+</m> or <m>\times</m> combines two numbers and outputs a single number.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Exclusive Or</title>
+    </subsection>
+
+    <subsection>
+        <title>Converse</title>
+        <definition>
+            <p>
+                The <term>converse</term>, <m>Q \rightarrow P</m>, switches the hypothesis and conclusion.
+            </p>
+        </definition>
+        <me>
+            \begin{array}{c|c|c|c}
+                P \amp Q \amp P \rightarrow Q \amp Q \rightarrow P \\ \hline
+                T \amp T \amp T \amp T \\ \hline
+                T \amp F \amp F \amp T \\ \hline
+                F \amp T \amp T \amp F \\ \hline
+                F \amp F \amp T \amp T
+            \end{array}
+        </me>
+
+        <definition>
+            <title>Inverse</title>
+            <definition>
+                <p>
+                    The <term>inverse</term>, <m>\neg P \rightarrow \neg Q</m>, negates the hypothesis and conclusion.
+                </p>
+            </definition>
+            <p>
+                The truth table is given by,
+            </p>
+            <me>
+                \begin{array}{c|c|c|c|c|c}
+                    P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg P \rightarrow \neg Q \\ \hline
+                    T \amp T \amp F \amp F \amp T \amp T \\ \hline
+                    T \amp F \amp F \amp T \amp F \amp T \\ \hline
+                    F \amp T \amp T \amp F \amp T \amp F \\ \hline
+                    F \amp F \amp T \amp T \amp T \amp T
+                \end{array}
+            </me>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Contrapositive</title>
+        <definition>
+            <p>
+                The <term>contrapositive</term>, <m>\neq Q \rightarrow \neq P</m>, negates both statements, and reverses the order of the conditional.
+            </p>
+        </definition>
+        <p>
+            In short, the contrapositive is the converse of the inverse. It has truth table given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c|c|c|c}
+                P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg Q \rightarrow \neg P \\ \hline
+                T \amp T \amp F \amp F \amp T \amp T \\ \hline
+                T \amp F \amp F \amp T \amp F \amp F \\ \hline
+                F \amp T \amp T \amp F \amp T \amp T \\ \hline
+                F \amp F \amp T \amp T \amp T \amp T
+            \end{array}
+        </me>
+        <p>
+            Notice that the truth values for the contrapositive <m>\neq Q \rightarrow \neg P</m> are the same as the original condition <m>P \rightarrow Q</m>.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Biconditional</title>
+        <definition>
+            <p>
+                The <term>biconditional</term>, <m>P \iff Q</m> is true if <m>P</m> and <m>Q</m> are either both true and both false, and is false if one of them is true and one is false.
+            </p>
+        </definition>
+
+        <p>
+            In other words, <m>P \iff Q</m> is true if both statements share the same truth value.
+        </p>
+        <p>
+            The truth table for a biconditional is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \iff Q  \\ \hline
+                T \amp T \amp T \\ \hline
+                T \amp F \amp F \\ \hline
+                F \amp T \amp F \\ \hline
+                F \amp F \amp T
+            \end{array}
+        </me>
+        <p>
+            With a biconditional, either both statements are true, or both are false. If one is true, then so is the other, and if one is false, then so is the other. Sometimes we say that <q><m>P</m> occurs <em>precisely when</em> <m>Q</m> occurs.</q>
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Logical Equivalence</title>
+        <p>
+            If two statements have the same truth values in every case, then we say that <m>P</m> and <m>Q</m> are <term>logically equivalent</term>, and this is denoted by <m>P \equiv Q</m>. Roughly, this means that the two statements are <q>equal</q>, in the sense of logic.
+        </p>
+        <p>
+            This notation allows us to describe some of the previous logical connectives in terms of more basic logical connectives. For example,
+        </p>
+        <ul>
+            <li>For a biconditional, <m>P \iff Q \equiv (P \rightarrow Q) \land (Q \rightarrow P)</m>. The truth table is given by,
+                <me>
+                    \begin{array}{c|c|c|c|c|c}
+                        P \amp Q \amp P \iff Q \amp P \rightarrow Q \amp Q \rightarrow P \amp (P \rightarrow Q) \land (Q \rightarrow P) \\ \hline
+                        T \amp T \amp T \amp T \amp T \amp T \\ \hline
+                        T \amp F \amp F \amp F \amp T \amp F \\ \hline
+                        F \amp T \amp F \amp T \amp F \amp F \\ \hline
+                        F \amp F \amp T \amp T \amp T \amp T
+                    \end{array}
+                </me>
+            Notice that the column for <m>P \iff Q</m> and for <m>(P \rightarrow Q) \land (Q \rightarrow P)</m> have the same truth value in every case.
+            </li>
+            <li>Previously, we saw that a conditional is logically equivalent to its contrapositive.</li>
+            <li>The definition of conditional says that <m>P \rightarrow Q</m> is false if (and only if) <m>P</m> is true and <m>Q</m> is false. This means that,
+            <me>
+                \neg (P \rightarrow Q) \equiv P \land \neg Q
+            </me></li>
+        </ul>
+    </subsection>
+
+    <subsection>
+        <title>Properties of Logic</title>
+
+        <theorem>
+            <title>DeMorgan's laws</title>
+            <p>
+                <ul>
+                    <li><term>Negation of a conjunction</term>, <m>\neg (P \land Q) \equiv (\neg P) \lor (\neg Q)</m></li>
+                    <li><term>Negation of a disjunction</term>, <m>\neg (P \lor Q) \equiv (\neg P) \land (\neg Q)</m></li>
+                </ul>
+            </p>
+        </theorem>
+
+        <theorem>
+            <title>Associative property</title>
+            <p>
+                <md>
+                    <mrow>P \land (Q \land R) \equiv (P \land Q) \land R</mrow>
+                    <mrow>P \lor (Q \lor R) \equiv (P \lor Q) \lor R</mrow>
+                </md>
+            </p>
+        </theorem>
+        <p>
+            This means that parentheses are unnecessary for a sequence of only conjunctions or only disjunctions.
+        </p>
+
+        <theorem>
+            <title>Commutative property</title>
+            <p>
+                <ul>
+                    <li><m>P \land Q \equiv Q \land P</m></li>
+                    <li><m>P \lor Q \equiv Q \lor P</m></li>
+                </ul>
+            </p>
+        </theorem>
+
+        <p>
+            This intuitively means that order doesn't matter for disjunctions and conjunctions.
+        </p>
+
+        <theorem>
+            <title>Distribution properties</title>
+            <p>
+                <ul>
+                    <li>Distribution of conjunction over disjunction, <m>P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)</m></li>
+                    <li>Distribution of disjunction over conjunction, <m>P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)</m></li>
+                </ul>
+            </p>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Truth Tables for Compound Propositions</title>
+        <p>
+            In general, there are <m>2^n</m> rows in a truth table for <m>n</m> simple statements.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Quantifiers</title>
+        <definition>
+            <p>
+                The <term>existential quantifier</term>, denoted by <m>\exists</m>, represents <q>there exists</q>, <q>there is a</q>, or <q>there is at least one</q>.
+            </p>
+        </definition>
+
+        <definition>
+            <p>
+                The <term>universal quantifier</term>, <m>\forall</m>, represents <q>for all</q>, <q>for every</q>, or <q>for each</q>.
+            </p>
+        </definition>
+
+        <p>
+            The statement, <m>\forall x \in S, P(x)</m> means that for all elements <m>x</m> in the set
+            <m>S</m>, the statement <m>P(x)</m> is true. This is equivalent to saying that the conditional, <q>If <m>x \in S</m>, then <m>P(x)</m> is true</q>. In symbols, this can be summarized as,
+        </p>
+        <me>
+            (\forall x \in S, P(x)) \equiv (x \in S) \rightarrow P(x)
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Logical Inference</title>
+        <ul>
+            <li>Modus Ponens, <m>((P \rightarrow Q) \land P) \rightarrow Q</m></li>
+            <li>Modus Tollens, <m>((P \rightarrow Q) \land (\neg Q)) \rightarrow (\neg P)</m></li>
+            <li>Elimination, <m>((P \lor Q) \land (\neg P)) \rightarrow Q</m></li>
+        </ul>
+
+        <theorem>
+            <title>Chain of implications</title>
+            <p>
+                <ul>
+                    <li><m>((P \rightarrow Q) \land (Q \rightarrow R)) \rightarrow (P \rightarrow R)</m></li>
+                    <li><m>((P \rightarrow P_1) \land (P_1 \rightarrow P_2) \land \dots \land (P_n \rightarrow Q)) \rightarrow (P \rightarrow Q)</m></li>
+                </ul>
+            </p>
+        </theorem>
+    </subsection>
+
+</section>

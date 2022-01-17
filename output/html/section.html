@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-03T11:26:47-08:00       *-->
+<!--*       on 2022-01-17T13:08:14-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -50,32 +50,322 @@
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book.html"><span class="title">Book:</span> <span class="subtitle">Subtitle</span></a></h1>
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="book.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="book.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-1.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-L.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="book.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="book.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-1.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-L.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul></ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1</span> <span class="title"></span>
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title"></span>
 </h2>
-<section class="introduction" id="introduction-2"></section><nav class="summary-links"><ul><li><a href="subsection-1.html"><span class="codenumber">1.1</span> <span class="title"></span></a></li></ul></nav></section></div></main>
+<section class="introduction" id="introduction-3">Symbolic logic uses formal mathematics with symbols to represent statements in language. Everyday language includes factual statements, opinions, commands, and questions. Symbolic logic only deals with statements and opinions, but not commands or questions. Aristotle was one of the early pioneers of logic.</section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Statements</span>
+</h3>
+<article class="definition definition-like" id="definition-1"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>A <dfn class="terminology">statement</dfn> (or <dfn class="terminology">proposition</dfn>) is a declarative sentence, a sentence that is either definitely true or definitely false, but not both or indeterminate.</article><p id="p-1">General statements are typically are represented by the letters \(P, Q, R\text{,}\) and \(S\text{.}\) In applications, letters that represent the sentence are typically used. For example, for the statement “John is coming to the party” might be represented by \(J\) (for \(John\)).</p>
+<p id="p-2">Examples of sentences which are not statements include:</p>
+<ul class="disc">
+<li id="li-1"><p id="p-derived-li-1"><dfn class="terminology">Commands</dfn>. For example, “Tie your shoes.”</p></li>
+<li id="li-2"><p id="p-derived-li-2"><dfn class="terminology">Questions</dfn>. For example, “Are you having fun?”</p></li>
+<li id="li-3"><p id="p-derived-li-3"><dfn class="terminology">Paradoxes or contradictions</dfn>. This most often occurs with sentences that refer to themselves (are self-referential). For example, “This sentence is false.” (called the <em class="emphasis">liar paradox</em>). This is a paradox because if the sentence is true, then the sentence itself tells us it is false, and the sentence cannot both be true and false. Similarly, if the sentence is false, then the sentence tells us it is not false (i.e. true), leading to another contradiction. Thus, no truth value can be assigned to the statement.</p></li>
+</ul>
+<p id="p-3">Roughly, logic and mathematics can only apply to statements.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Negation (Not)</span>
+</h3>
+<article class="definition definition-like" id="definition-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-4">Let \(P\) be a statement. The <dfn class="terminology">negation</dfn> of \(P\text{,}\) denoted by \(\neg P\text{,}\) is a statement which is true if \(P\) is false, and is false when \(P\) is true.</p></article><p id="p-5">At a very basic level, to determine the negation of a statement, one can add “it is not true that” to the beginning of the statement. Note that the negation of a statement is itself a statement, which can be true or false. The negation often occurs in English as the connective “not”.</p>
+<article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-6">The negation of “It is raining today.” is “It is not true that is raining today” or more simply, “It is not raining today”.</p></article></div>
+<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-7">The statement “I did not take your hat” is the negation of the statement “I did take your hat” or more simply, “I took your hat”.</p></article></div>
+<article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-8">The negation of a statement that is itself a negation is the original statement. For example, the negation of “The grass is not green”, is “The grass is green”.</p></article></div>
+<p id="p-9">The fact that the negation of a statement is false when the statement is true, and true when the statement is false, can be summarized in a so-called <em class="emphasis">truth table</em>.</p>
+<article class="definition definition-like" id="definition-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-10">A <dfn class="terminology">truth table</dfn> is a table that includes all possible combinations of truth values for each simple statement, and the truth value of any compound statements in each case.</p></article><p id="p-11">For the single statement \(P\text{,}\) there are two possible values of \(P\text{:}\) true and false. The truth table for negation is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c}
+P \amp \neg P \\ \hline
+T \amp F \\ \hline
+F \amp T \\
+\end{array}
+\end{equation*}
+</div>
+<p id="p-12">Each row of a truth table can be thought of as one possible state of affairs in the world. Here, there are only two possibilities.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Simple and Compound Sentences</span>
+</h3>
+<p id="p-13">Roughly, a <dfn class="terminology">simple sentence</dfn> is a sentence that does not “contain” another complete sentence as a component. Intuitively, a simple sentence only says “one thing”.</p>
+<p id="p-14">Simple sentences can be combined together in various ways to form a <dfn class="terminology">compound sentence</dfn>, which is simply a sentence that contains multiple simple statements. These simple sentences are combined with words such as,</p>
+<ul class="disc">
+<li id="li-4"><p id="p-derived-li-4">“and”, called a <em class="emphasis">conjunction</em>.</p></li>
+<li id="li-5"><p id="p-derived-li-5">“or”, called a <em class="emphasis">disjunction</em></p></li>
+<li id="li-6"><p id="p-derived-li-6">“if..., then...”, called an <em class="emphasis">implication</em>, or <em class="emphasis">conditional</em>.</p></li>
+<li id="li-7"><p id="p-derived-li-7">“if and only if”, called a <em class="emphasis">biconditional</em>.</p></li>
+</ul>
+<p id="p-15">These are called <dfn class="terminology">logical connectives</dfn>.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">Disjunction (Or)</span>
+</h3>
+<p id="p-16">In English, the connective ``or" can have an ambiguous meaning. For example, the sentence,</p>
+<div class="displaymath">
+\begin{equation*}
+\text{}
+\end{equation*}
+</div>
+<p id="p-17">probably means you have to choose between cake and fruit, and you cannot have both of them. In logic, this is called the <em class="emphasis">exclusive or</em>. However, the sentence,</p>
+<div class="displaymath">
+\begin{equation*}
+\text{}
+\end{equation*}
+</div>
+<p id="p-18">probably means that people can enter if they have a driver's license, a passport, or they have both. This is called the <em class="emphasis">inclusive or</em>. This is the main or default “or” that is used in logic.</p>
+<article class="definition definition-like" id="definition-4"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-19">Let \(P, Q\) be statements. The <dfn class="terminology">disjunction</dfn> (or, <dfn class="terminology">or</dfn>), denoted by \(P \lor Q\text{,}\) is a statement that is true if at least one of \(P\) or \(Q\) is true, and is false if both \(P\) and \(Q\) are false.</p></article><p id="p-20">For two statements, there are 4 possible combinations: \(TT\text{,}\) \(TF\text{,}\) \(FT\text{,}\) and \(FF\text{.}\) The truth table for disjunction is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c}
+P \amp Q \amp P \lor Q \\ \hline
+T \amp T \amp T \\ \hline
+T \amp F \amp T \\ \hline
+F \amp T \amp T \\ \hline
+F \amp F \amp F
+\end{array}
+\end{equation*}
+</div>
+<p id="p-21">The order of the combinations (\(TT\text{,}\) then \(TF\text{,}\) \(FT\text{,}\) and finally \(FF\)) is just a convention, however it is preferred because it makes things more organized.</p>
+<p id="p-22">Note that just because a statement uses a logical connector such as “or”, does not necessarily mean it is an “or” statement. For example, “They decided to play Truth or Dare.” contains an “or”, however, it is used in part of a name, and is not used to connect simple sentences.</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.5</span> <span class="title">Conjunction (And)</span>
+</h3>
+<article class="definition definition-like" id="definition-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-23">Let \(P, Q\) be statements. The <dfn class="terminology">conjunction</dfn> of \(P\) and \(Q\text{,}\) denoted by \(P \land Q\text{,}\) is a statement that is true if both \(P\) and \(Q\) are true, and is false if at least one of \(P\) and \(Q\) are false.</p></article><p id="p-24">The truth table for conjunction is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c}
+P \amp Q \amp P \land Q \\ \hline
+T \amp T \amp T \\ \hline
+T \amp F \amp F \\ \hline
+F \amp T \amp F \\ \hline
+F \amp F \amp F
+\end{array}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.6</span> <span class="title">Conditional (Implication)</span>
+</h3>
+<article class="definition definition-like" id="definition-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-25">The <dfn class="terminology">conditional</dfn> (or <dfn class="terminology">implication</dfn>), denoted by \(P \rightarrow Q\text{,}\) is a statement that is true if \(P\) if false or if \(P\) and \(Q\) are true, and is false if \(P\) is true and \(Q\) is false.</p></article><p id="p-26">In mathematics, \(P\) is often called the <dfn class="terminology">hypothesis</dfn> and \(Q\) is called the <dfn class="terminology">conclusion</dfn>. In logic, \(P\) and \(Q\) are more typically called the <dfn class="terminology">antecedent</dfn> and <dfn class="terminology">consequent</dfn>, respectively.</p>
+<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like">“If what you've told me is true, [then] you will have gained my trust.” (Mace Windu).</article></div>
+<p id="p-27">The truth table for a conditional is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c}
+P \amp Q \amp P \rightarrow Q \\ \hline
+T \amp T \amp T \\ \hline
+T \amp F \amp F \\ \hline
+F \amp T \amp T \\ \hline
+F \amp F \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-28">If a conditional is true, then the hypothesis \(P\) gives a condition (not necessarily the only condition) under which the conclusion \(Q\) will also be guaranteed to be true.</p>
+<p id="p-29">Alternative forms of the conditional include, “If \(P\text{,}\) then \(Q\)”, “\(P\) implies \(Q\)”, “\(P\) is a sufficient condition for \(Q\)”, “\(P\) only if \(Q\)”, “\(Q\) if \(P\)”, and, “\(Q\) is a necessary condition for \(P\)”.</p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.7</span> <span class="title">Logical Connectives as Operators</span>
+</h3>
+<p id="p-30">These logical connectives can be thought of as operators that combine multiple statments and ouput another single statement. This is analogous to how \(+\) or \(\times\) combines two numbers and outputs a single number.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.8</span> <span class="title">Exclusive Or</span>
+</h3></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.9</span> <span class="title">Converse</span>
+</h3>
+<article class="definition definition-like" id="definition-7"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-31">The <dfn class="terminology">converse</dfn>, \(Q \rightarrow P\text{,}\) switches the hypothesis and conclusion.</p></article><div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c}
+P \amp Q \amp P \rightarrow Q \amp Q \rightarrow P \\ \hline
+T \amp T \amp T \amp T \\ \hline
+T \amp F \amp F \amp T \\ \hline
+F \amp T \amp T \amp F \\ \hline
+F \amp F \amp T \amp T
+\end{array}
+\end{equation*}
+</div>
+<article class="definition definition-like" id="definition-8"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse.</span>
+</h4>
+<article class="definition definition-like" id="definition-9"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h5>
+<p id="p-32">The <dfn class="terminology">inverse</dfn>, \(\neg P \rightarrow \neg Q\text{,}\) negates the hypothesis and conclusion.</p></article><p id="p-33">The truth table is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg P \rightarrow \neg Q \\ \hline
+T \amp T \amp F \amp F \amp T \amp T \\ \hline
+T \amp F \amp F \amp T \amp F \amp T \\ \hline
+F \amp T \amp T \amp F \amp T \amp F \\ \hline
+F \amp F \amp T \amp T \amp T \amp T
+\end{array}
+\end{equation*}
+</div></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.10</span> <span class="title">Contrapositive</span>
+</h3>
+<article class="definition definition-like" id="definition-10"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-34">The <dfn class="terminology">contrapositive</dfn>, \(\neq Q \rightarrow \neq P\text{,}\) negates both statements, and reverses the order of the conditional.</p></article><p id="p-35">In short, the contrapositive is the converse of the inverse. It has truth table given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg Q \rightarrow \neg P \\ \hline
+T \amp T \amp F \amp F \amp T \amp T \\ \hline
+T \amp F \amp F \amp T \amp F \amp F \\ \hline
+F \amp T \amp T \amp F \amp T \amp T \\ \hline
+F \amp F \amp T \amp T \amp T \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-36">Notice that the truth values for the contrapositive \(\neq Q \rightarrow \neg P\) are the same as the original condition \(P \rightarrow Q\text{.}\)</p></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.11</span> <span class="title">Biconditional</span>
+</h3>
+<article class="definition definition-like" id="definition-11"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-37">The <dfn class="terminology">biconditional</dfn>, \(P \iff Q\) is true if \(P\) and \(Q\) are either both true and both false, and is false if one of them is true and one is false.</p></article><p id="p-38">In other words, \(P \iff Q\) is true if both statements share the same truth value.</p>
+<p id="p-39">The truth table for a biconditional is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c}
+P \amp Q \amp P \iff Q  \\ \hline
+T \amp T \amp T \\ \hline
+T \amp F \amp F \\ \hline
+F \amp T \amp F \\ \hline
+F \amp F \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-40">With a biconditional, either both statements are true, or both are false. If one is true, then so is the other, and if one is false, then so is the other. Sometimes we say that “\(P\) occurs <em class="emphasis">precisely when</em> \(Q\) occurs.”</p></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.12</span> <span class="title">Logical Equivalence</span>
+</h3>
+<p id="p-41">If two statements have the same truth values in every case, then we say that \(P\) and \(Q\) are <dfn class="terminology">logically equivalent</dfn>, and this is denoted by \(P \equiv Q\text{.}\) Roughly, this means that the two statements are “equal”, in the sense of logic.</p>
+<p id="p-42">This notation allows us to describe some of the previous logical connectives in terms of more basic logical connectives. For example,</p>
+<ul class="disc">
+<li id="li-8"><p id="p-derived-li-8">For a biconditional, \(P \iff Q \equiv (P \rightarrow Q) \land (Q \rightarrow P)\text{.}\) The truth table is given by,<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+P \amp Q \amp P \iff Q \amp P \rightarrow Q \amp Q \rightarrow P \amp (P \rightarrow Q) \land (Q \rightarrow P) \\ \hline
+T \amp T \amp T \amp T \amp T \amp T \\ \hline
+T \amp F \amp F \amp F \amp T \amp F \\ \hline
+F \amp T \amp F \amp T \amp F \amp F \\ \hline
+F \amp F \amp T \amp T \amp T \amp T
+\end{array}
+\end{equation*}
+</div>Notice that the column for \(P \iff Q\) and for \((P \rightarrow Q) \land (Q \rightarrow P)\) have the same truth value in every case.</p></li>
+<li id="li-9"><p id="p-derived-li-9">Previously, we saw that a conditional is logically equivalent to its contrapositive.</p></li>
+<li id="li-10"><p id="p-derived-li-10">The definition of conditional says that \(P \rightarrow Q\) is false if (and only if) \(P\) is true and \(Q\) is false. This means that,<div class="displaymath">
+\begin{equation*}
+\neg (P \rightarrow Q) \equiv P \land \neg Q
+\end{equation*}
+</div></p></li>
+</ul></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.13</span> <span class="title">Properties of Logic</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-1"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span><span class="space"> </span><span class="title">DeMorgan's laws.</span>
+</h4>
+<ul id="p-43" class="disc">
+<li id="li-11"><p id="p-derived-li-11"><dfn class="terminology">Negation of a conjunction</dfn>, \(\neg (P \land Q) \equiv (\neg P) \lor (\neg Q)\)</p></li>
+<li id="li-12"><p id="p-derived-li-12"><dfn class="terminology">Negation of a disjunction</dfn>, \(\neg (P \lor Q) \equiv (\neg P) \land (\neg Q)\)</p></li>
+</ul></article><article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span><span class="space"> </span><span class="title">Associative property.</span>
+</h4>
+<div class="displaymath" id="p-44">
+\begin{gather*}
+P \land (Q \land R) \equiv (P \land Q) \land R\\
+P \lor (Q \lor R) \equiv (P \lor Q) \lor R
+\end{gather*}
+</div></article><p id="p-45">This means that parentheses are unnecessary for a sequence of only conjunctions or only disjunctions.</p>
+<article class="theorem theorem-like" id="theorem-3"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span><span class="space"> </span><span class="title">Commutative property.</span>
+</h4>
+<ul id="p-46" class="disc">
+<li id="li-13"><p id="p-derived-li-13">\(\displaystyle P \land Q \equiv Q \land P\)</p></li>
+<li id="li-14"><p id="p-derived-li-14">\(\displaystyle P \lor Q \equiv Q \lor P\)</p></li>
+</ul></article><p id="p-47">This intuitively means that order doesn't matter for disjunctions and conjunctions.</p>
+<article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span><span class="space"> </span><span class="title">Distribution properties.</span>
+</h4>
+<ul id="p-48" class="disc">
+<li id="li-15"><p id="p-derived-li-15">Distribution of conjunction over disjunction, \(P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)\)</p></li>
+<li id="li-16"><p id="p-derived-li-16">Distribution of disjunction over conjunction, \(P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)\)</p></li>
+</ul></article></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.14</span> <span class="title">Truth Tables for Compound Propositions</span>
+</h3>
+<p id="p-49">In general, there are \(2^n\) rows in a truth table for \(n\) simple statements.</p></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.15</span> <span class="title">Quantifiers</span>
+</h3>
+<article class="definition definition-like" id="definition-12"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-50">The <dfn class="terminology">existential quantifier</dfn>, denoted by \(\exists\text{,}\) represents “there exists”, “there is a”, or “there is at least one”.</p></article><article class="definition definition-like" id="definition-13"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span>
+</h4>
+<p id="p-51">The <dfn class="terminology">universal quantifier</dfn>, \(\forall\text{,}\) represents “for all”, “for every”, or “for each”.</p></article><p id="p-52">The statement, \(\forall x \in S, P(x)\) means that for all elements \(x\) in the set \(S\text{,}\) the statement \(P(x)\) is true. This is equivalent to saying that the conditional, “If \(x \in S\text{,}\) then \(P(x)\) is true”. In symbols, this can be summarized as,</p>
+<div class="displaymath">
+\begin{equation*}
+(\forall x \in S, P(x)) \equiv (x \in S) \rightarrow P(x)
+\end{equation*}
+</div></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.16</span> <span class="title">Logical Inference</span>
+</h3>
+<ul class="disc">
+<li id="li-17"><p id="p-derived-li-17">Modus Ponens, \(((P \rightarrow Q) \land P) \rightarrow Q\)</p></li>
+<li id="li-18"><p id="p-derived-li-18">Modus Tollens, \(((P \rightarrow Q) \land (\neg Q)) \rightarrow (\neg P)\)</p></li>
+<li id="li-19"><p id="p-derived-li-19">Elimination, \(((P \lor Q) \land (\neg P)) \rightarrow Q\)</p></li>
+</ul>
+<article class="theorem theorem-like" id="theorem-5"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.NaN</span><span class="period">.</span><span class="space"> </span><span class="title">Chain of implications.</span>
+</h4>
+<ul id="p-53" class="disc">
+<li id="li-20"><p id="p-derived-li-20">\(\displaystyle ((P \rightarrow Q) \land (Q \rightarrow R)) \rightarrow (P \rightarrow R)\)</p></li>
+<li id="li-21"><p id="p-derived-li-21">\(\displaystyle ((P \rightarrow P_1) \land (P_1 \rightarrow P_2) \land \dots \land (P_n \rightarrow Q)) \rightarrow (P \rightarrow Q)\)</p></li>
+</ul></article></section></section></div></main>
 </div>
 </body>
 </html>
