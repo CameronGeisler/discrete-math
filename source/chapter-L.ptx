@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="chapter-L" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="chapter-L" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Logic</title>
     <introduction>
-        An introduction to logic.
+        <p>
+            An introduction to logic.
+        </p>
     </introduction>
 
-    <xi:include href="./chapter-L/section-L.ptx"/>
-</section>
+    <xi:include href="./chapter-L/section-ITL.ptx"/>
+    <xi:include href="./chapter-L/section-CCICAB.ptx"/>
+    <xi:include href="./chapter-L/section-POL.ptx"/>
+
+</chapter>

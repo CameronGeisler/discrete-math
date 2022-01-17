@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-CCICAB">
+    <title>Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</title>
+    
+    <subsection>
+        <title>Conditional (Implication)</title>
+
+        <definition>
+            <p>
+                The <term>conditional</term> (or <term>implication</term>), denoted by <m>P \rightarrow Q</m>, is a statement that is true if <m>P</m> if false or if <m>P</m> and <m>Q</m> are true, and is false if <m>P</m> is true and <m>Q</m> is false.
+            </p>
+        </definition>
+        <p>
+            In mathematics, <m>P</m> is often called the <term>hypothesis</term> and <m>Q</m> is called the <term>conclusion</term>. In logic, <m>P</m> and <m>Q</m> are more typically called the <term>antecedent</term> and <term>consequent</term>, respectively.
+        </p>
+
+        <example>
+            <q>If what you've told me is true, [then] you will have gained my trust.</q> (Mace Windu).
+        </example>
+
+        <p>
+            The truth table for a conditional is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \rightarrow Q \\ \hline
+                T \amp T \amp T \\ \hline
+                T \amp F \amp F \\ \hline
+                F \amp T \amp T \\ \hline
+                F \amp F \amp T
+            \end{array}
+        </me>
+        <p>
+            If a conditional is true, then the hypothesis <m>P</m> gives a condition (not necessarily the only condition) under which the conclusion <m>Q</m> will also be guaranteed to be true.
+        </p>
+        <p>
+            Alternative forms of the conditional include, <q>If <m>P</m>, then <m>Q</m></q>, <q><m>P</m> implies <m>Q</m></q>, <q><m>P</m> is a sufficient condition for <m>Q</m></q>, <q><m>P</m> only if <m>Q</m></q>, <q><m>Q</m> if <m>P</m></q>, and, <q><m>Q</m> is a necessary condition for <m>P</m></q>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Logical Connectives as Operators</title>
+        <p>
+            These logical connectives can be thought of as operators that combine multiple statments and ouput another single statement. This is analogous to how <m>+</m> or <m>\times</m> combines two numbers and outputs a single number.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Exclusive Or</title>
+    </subsection>
+
+    <subsection>
+        <title>Converse</title>
+        <definition>
+            <p>
+                The <term>converse</term>, <m>Q \rightarrow P</m>, switches the hypothesis and conclusion.
+            </p>
+        </definition>
+        <me>
+            \begin{array}{c|c|c|c}
+                P \amp Q \amp P \rightarrow Q \amp Q \rightarrow P \\ \hline
+                T \amp T \amp T \amp T \\ \hline
+                T \amp F \amp F \amp T \\ \hline
+                F \amp T \amp T \amp F \\ \hline
+                F \amp F \amp T \amp T
+            \end{array}
+        </me>
+
+        <definition>
+            <title>Inverse</title>
+            <definition>
+                <p>
+                    The <term>inverse</term>, <m>\neg P \rightarrow \neg Q</m>, negates the hypothesis and conclusion.
+                </p>
+            </definition>
+            <p>
+                The truth table is given by,
+            </p>
+            <me>
+                \begin{array}{c|c|c|c|c|c}
+                    P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg P \rightarrow \neg Q \\ \hline
+                    T \amp T \amp F \amp F \amp T \amp T \\ \hline
+                    T \amp F \amp F \amp T \amp F \amp T \\ \hline
+                    F \amp T \amp T \amp F \amp T \amp F \\ \hline
+                    F \amp F \amp T \amp T \amp T \amp T
+                \end{array}
+            </me>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Contrapositive</title>
+        <definition>
+            <p>
+                The <term>contrapositive</term>, <m>\neq Q \rightarrow \neq P</m>, negates both statements, and reverses the order of the conditional.
+            </p>
+        </definition>
+        <p>
+            In short, the contrapositive is the converse of the inverse. It has truth table given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c|c|c|c}
+                P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg Q \rightarrow \neg P \\ \hline
+                T \amp T \amp F \amp F \amp T \amp T \\ \hline
+                T \amp F \amp F \amp T \amp F \amp F \\ \hline
+                F \amp T \amp T \amp F \amp T \amp T \\ \hline
+                F \amp F \amp T \amp T \amp T \amp T
+            \end{array}
+        </me>
+        <p>
+            Notice that the truth values for the contrapositive <m>\neq Q \rightarrow \neg P</m> are the same as the original condition <m>P \rightarrow Q</m>.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Biconditional</title>
+        <definition>
+            <p>
+                The <term>biconditional</term>, <m>P \leftrightarrow Q</m> is true if <m>P</m> and <m>Q</m> are either both true and both false, and is false if one of them is true and one is false.
+            </p>
+        </definition>
+
+        <p>
+            In other words, <m>P \leftrightarrow Q</m> is true if both statements share the same truth value.
+        </p>
+        <p>
+            The truth table for a biconditional is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \leftrightarrow Q  \\ \hline
+                T \amp T \amp T \\ \hline
+                T \amp F \amp F \\ \hline
+                F \amp T \amp F \\ \hline
+                F \amp F \amp T
+            \end{array}
+        </me>
+        <p>
+            With a biconditional, either both statements are true, or both are false. If one is true, then so is the other, and if one is false, then so is the other. Sometimes we say that <q><m>P</m> occurs <em>precisely when</em> <m>Q</m> occurs.</q>
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Logical Equivalence</title>
+        <p>
+            If two statements have the same truth values in every case, then we say that <m>P</m> and <m>Q</m> are <term>logically equivalent</term>, and this is denoted by <m>P \equiv Q</m>. Roughly, this means that the two statements are <q>equal</q>, in the sense of logic.
+        </p>
+        <p>
+            This notation allows us to describe some of the previous logical connectives in terms of more basic logical connectives. For example,
+        </p>
+        <ul>
+            <li>For a biconditional, <m>P \leftrightarrow Q \equiv (P \rightarrow Q) \land (Q \rightarrow P)</m>. The truth table is given by,
+                <me>
+                    \begin{array}{c|c|c|c|c|c}
+                        P \amp Q \amp P \leftrightarrow Q \amp P \rightarrow Q \amp Q \rightarrow P \amp (P \rightarrow Q) \land (Q \rightarrow P) \\ \hline
+                        T \amp T \amp T \amp T \amp T \amp T \\ \hline
+                        T \amp F \amp F \amp F \amp T \amp F \\ \hline
+                        F \amp T \amp F \amp T \amp F \amp F \\ \hline
+                        F \amp F \amp T \amp T \amp T \amp T
+                    \end{array}
+                </me>
+            Notice that the column for <m>P \leftrightarrow Q</m> and for <m>(P \rightarrow Q) \land (Q \rightarrow P)</m> have the same truth value in every case.
+            </li>
+            <li>Previously, we saw that a conditional is logically equivalent to its contrapositive.</li>
+            <li>The definition of conditional says that <m>P \rightarrow Q</m> is false if (and only if) <m>P</m> is true and <m>Q</m> is false. This means that,
+            <me>
+                \neg (P \rightarrow Q) \equiv P \land \neg Q
+            </me></li>
+        </ul>
+    </subsection>
+
+</section>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-17T15:45:44-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-ITL.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-POL.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-ITL.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-POL.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">1</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCICAB.html" data-scroll="section-CCICAB" class="active">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">2</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-CCICAB"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</span>
+</h2>
+<section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Conditional (Implication)</span>
+</h3>
+<article class="definition definition-like" id="definition-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h4>
+<p id="p-26">The <dfn class="terminology">conditional</dfn> (or <dfn class="terminology">implication</dfn>), denoted by \(P \rightarrow Q\text{,}\) is a statement that is true if \(P\) if false or if \(P\) and \(Q\) are true, and is false if \(P\) is true and \(Q\) is false.</p></article><p id="p-27">In mathematics, \(P\) is often called the <dfn class="terminology">hypothesis</dfn> and \(Q\) is called the <dfn class="terminology">conclusion</dfn>. In logic, \(P\) and \(Q\) are more typically called the <dfn class="terminology">antecedent</dfn> and <dfn class="terminology">consequent</dfn>, respectively.</p>
+<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like">“If what you've told me is true, [then] you will have gained my trust.” (Mace Windu).</article></div>
+<p id="p-28">The truth table for a conditional is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c}
+P \amp Q \amp P \rightarrow Q \\ \hline
+T \amp T \amp T \\ \hline
+T \amp F \amp F \\ \hline
+F \amp T \amp T \\ \hline
+F \amp F \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-29">If a conditional is true, then the hypothesis \(P\) gives a condition (not necessarily the only condition) under which the conclusion \(Q\) will also be guaranteed to be true.</p>
+<p id="p-30">Alternative forms of the conditional include, “If \(P\text{,}\) then \(Q\)”, “\(P\) implies \(Q\)”, “\(P\) is a sufficient condition for \(Q\)”, “\(P\) only if \(Q\)”, “\(Q\) if \(P\)”, and, “\(Q\) is a necessary condition for \(P\)”.</p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Logical Connectives as Operators</span>
+</h3>
+<p id="p-31">These logical connectives can be thought of as operators that combine multiple statments and ouput another single statement. This is analogous to how \(+\) or \(\times\) combines two numbers and outputs a single number.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Exclusive Or</span>
+</h3></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Converse</span>
+</h3>
+<article class="definition definition-like" id="definition-7"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4>
+<p id="p-32">The <dfn class="terminology">converse</dfn>, \(Q \rightarrow P\text{,}\) switches the hypothesis and conclusion.</p></article><div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c}
+P \amp Q \amp P \rightarrow Q \amp Q \rightarrow P \\ \hline
+T \amp T \amp T \amp T \\ \hline
+T \amp F \amp F \amp T \\ \hline
+F \amp T \amp T \amp F \\ \hline
+F \amp F \amp T \amp T
+\end{array}
+\end{equation*}
+</div>
+<article class="definition definition-like" id="definition-8"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse.</span>
+</h4>
+<article class="definition definition-like" id="definition-9"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h5>
+<p id="p-33">The <dfn class="terminology">inverse</dfn>, \(\neg P \rightarrow \neg Q\text{,}\) negates the hypothesis and conclusion.</p></article><p id="p-34">The truth table is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg P \rightarrow \neg Q \\ \hline
+T \amp T \amp F \amp F \amp T \amp T \\ \hline
+T \amp F \amp F \amp T \amp F \amp T \\ \hline
+F \amp T \amp T \amp F \amp T \amp F \\ \hline
+F \amp F \amp T \amp T \amp T \amp T
+\end{array}
+\end{equation*}
+</div></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Contrapositive</span>
+</h3>
+<article class="definition definition-like" id="definition-10"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h4>
+<p id="p-35">The <dfn class="terminology">contrapositive</dfn>, \(\neq Q \rightarrow \neq P\text{,}\) negates both statements, and reverses the order of the conditional.</p></article><p id="p-36">In short, the contrapositive is the converse of the inverse. It has truth table given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg Q \rightarrow \neg P \\ \hline
+T \amp T \amp F \amp F \amp T \amp T \\ \hline
+T \amp F \amp F \amp T \amp F \amp F \\ \hline
+F \amp T \amp T \amp F \amp T \amp T \\ \hline
+F \amp F \amp T \amp T \amp T \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-37">Notice that the truth values for the contrapositive \(\neq Q \rightarrow \neg P\) are the same as the original condition \(P \rightarrow Q\text{.}\)</p></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.6</span> <span class="title">Biconditional</span>
+</h3>
+<article class="definition definition-like" id="definition-11"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4>
+<p id="p-38">The <dfn class="terminology">biconditional</dfn>, \(P \leftrightarrow Q\) is true if \(P\) and \(Q\) are either both true and both false, and is false if one of them is true and one is false.</p></article><p id="p-39">In other words, \(P \leftrightarrow Q\) is true if both statements share the same truth value.</p>
+<p id="p-40">The truth table for a biconditional is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c}
+P \amp Q \amp P \leftrightarrow Q  \\ \hline
+T \amp T \amp T \\ \hline
+T \amp F \amp F \\ \hline
+F \amp T \amp F \\ \hline
+F \amp F \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-41">With a biconditional, either both statements are true, or both are false. If one is true, then so is the other, and if one is false, then so is the other. Sometimes we say that “\(P\) occurs <em class="emphasis">precisely when</em> \(Q\) occurs.”</p></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.7</span> <span class="title">Logical Equivalence</span>
+</h3>
+<p id="p-42">If two statements have the same truth values in every case, then we say that \(P\) and \(Q\) are <dfn class="terminology">logically equivalent</dfn>, and this is denoted by \(P \equiv Q\text{.}\) Roughly, this means that the two statements are “equal”, in the sense of logic.</p>
+<p id="p-43">This notation allows us to describe some of the previous logical connectives in terms of more basic logical connectives. For example,</p>
+<ul class="disc">
+<li id="li-8"><p id="p-derived-li-8">For a biconditional, \(P \leftrightarrow Q \equiv (P \rightarrow Q) \land (Q \rightarrow P)\text{.}\) The truth table is given by,<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+P \amp Q \amp P \leftrightarrow Q \amp P \rightarrow Q \amp Q \rightarrow P \amp (P \rightarrow Q) \land (Q \rightarrow P) \\ \hline
+T \amp T \amp T \amp T \amp T \amp T \\ \hline
+T \amp F \amp F \amp F \amp T \amp F \\ \hline
+F \amp T \amp F \amp T \amp F \amp F \\ \hline
+F \amp F \amp T \amp T \amp T \amp T
+\end{array}
+\end{equation*}
+</div>Notice that the column for \(P \leftrightarrow Q\) and for \((P \rightarrow Q) \land (Q \rightarrow P)\) have the same truth value in every case.</p></li>
+<li id="li-9"><p id="p-derived-li-9">Previously, we saw that a conditional is logically equivalent to its contrapositive.</p></li>
+<li id="li-10"><p id="p-derived-li-10">The definition of conditional says that \(P \rightarrow Q\) is false if (and only if) \(P\) is true and \(Q\) is false. This means that,<div class="displaymath">
+\begin{equation*}
+\neg (P \rightarrow Q) \equiv P \land \neg Q
+\end{equation*}
+</div></p></li>
+</ul></section></section></div></main>
+</div>
+</body>
+</html>

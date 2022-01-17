@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-DPPBC">
+    <title>Direct Proof, Proof by Contrapositive</title>
+
+    <subsection>
+        <title>Direct Proof, Proof by Contrapositive</title>
+
+        <definition>
+            <p>
+                A <term>direct proof</term> is a proof technique that involves using the assumptions of the statement, axioms, established facts and theorems, and combining them to logically deduce the desired conclusion.
+            </p>
+        </definition>
+
+        <p>
+            Typically, direct proof is used for conditional statements <m>A \implies B</m>. We assume <m>A</m>, and make a sequence of conclusions from that, until we logically conclude <m>B</m>. Often, using direct proof involves playing around with definitions and previous theorems, in an attempt to combine them in some way.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Ending a Proof (Q.E.D)</title>
+
+        <p>
+            Often, proofs are ended by the symbol <m>\square</m> in the bottom right corner, like
+        </p>
+        <proof>
+
+        </proof>
+        <p>
+            Alternatively, proofs can be ended with the acronym <q>Q.E.D</q> which stands for the latin phrase <q>quod erat demonstrandum</q> which means <q>that which was to be demonstrated</q>, which basically means <q>we have proved what we said we would prove</q>.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Average of Two Numbers is Between Them</title>
+        <fact>
+            <p>
+                Let <m>a, b \in \mathbb{R}, a \lt b</m>. Then,
+                <me>
+                    a \lt \frac{a + b}{2} \lt b
+                </me>
+                In other words, the average of two numbers <m>a</m> and <m>b</m> is greater than the smaller number and less than the larger number.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                First,
+                <md>
+                    <mrow>a + b \amp \lt b + b \amp\amp \text{as $a \lt b$}</mrow>
+                    <mrow>a + b \amp \lt 2b</mrow>
+                    <mrow>\frac{a + b}{2} \amp \lt b \amp\amp \text{dividing both sides by 2}</mrow>
+                </md>
+                Similarly,
+                <md>
+                    <mrow>a + b \amp > a + a \amp\amp \text{as <m>b > a</m>}</mrow>
+                    <mrow>a + b \amp > 2a</mrow>
+                    <mrow>\frac{a + b}{2} \amp > a</mrow>
+                </md>
+            </p>
+            as desired.
+        </proof>
+        <proof>
+            <title>Alternate proof</title>
+            <p>
+                Alternatively, start with <m>a \lt b</m> and add <m>a</m> to both sides,
+            </p>
+            <md>
+                <mrow>a \amp \lt b</mrow>
+                <mrow>2a \amp \lt a + b</mrow>
+            </md>
+            and divide by 2. Similarly, adding <m>b</m> to both sides,
+            <md>
+                <mrow>a \amp \lt b</mrow>
+                <mrow>a + b \amp \lt 2b</mrow>
+            </md>
+            and dividing by 2 again.
+        </proof>
+
+    </subsection>
+
+    <subsection>
+        <title>Sum of Rational Numbers is Rational</title>
+        <fact>
+            <p>
+                If <m>x, y</m> are rational numbers, then their sum <m>x + y</m> is a rational number.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                Let <m>x, y</m> be rational, so <m>x = \frac{a}{b}, y = \frac{c}{d}</m> for some <m>a, b, c, d \in \mathbb{Z}, b, d \neq 0</m>. Then,
+                <me>
+                    x + y = \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}
+                </me>
+                Then, <m>ad + bc, bd \in \mathbb{Z}</m>, and <m>bd \neq 0</m> (because <m>b, d \neq 0</m>). Thus, <m>x + y</m> is rational.
+            </p>
+        </proof>
+
+        <p>
+            Note that the previous two results imply that for any two rational numbers, there exists a rational number between them.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Square of a Rational Number is Rational</title>
+        <fact>
+            <p>
+                If <m>x</m> is a rational number, then <m>x^2</m> is rational.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                Let <m>x</m> be rational, so <m>x = \frac{a}{b}</m> for some <m>a, b \in \mathbb{Z}, b \neq 0</m>. Then,
+                <me>
+                    x^2 = \brac{\frac{a}{b}}^2 = \frac{a^2}{b^2}
+                </me>
+                Then, since <m>a^2, b^2 \in \mathbb{Z}</m> (because the squares of integers are integers) and <m>b^2 \neq 0</m> (since <m>b \neq 0</m>), this implies that <m>x^2</m> is rational.
+            </p>
+        </proof>
+
+        <corollary>
+            <p>
+                If <m>x^2</m> is irrational, then <m>x</m> is irrational.
+            </p>
+        </corollary>
+        <proof>
+            <p>This is the contrapositive of the previous statement.</p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Product of Rational Numbers is Rational</title>
+        <fact>
+            If <m>x, y</m> are rational numbers, then their product <m>xy</m> is rational.
+        </fact>
+        <p>
+            This is only a slight generalization from the fact that the square of a rational number is rational. Here, we consider two different numbers, but the structure of the proof is similar.
+        </p>
+        <proof>
+            <p>
+                Let <m>x, y</m> be rational, so <m>x = \frac{a}{b}, y = \frac{c}{d}</m> for some <m>a, b, c, d \in \mathbb{Z}, b, d \neq 0</m>. Then,
+                <me>
+                    xy = \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}
+                </me>
+                Then, <m>ac, bd \in \mathbb{Z}</m>, and <m>bd \neq 0</m> (since <m>b, d \neq 0</m>). Thus, <m>xy</m> is rational.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Absolute Value of Product is Product of Absolute Values</title>
+        <fact>
+            <p>
+                For all <m>x, y \in \mathbb{R}</m>,
+                <me>
+                    \abs{xy} = \abs{x} \cdot \abs{y}
+                </me>
+            </p>
+        </fact>
+    </subsection>
+
+    <subsection>
+        <title>More Examples</title>
+
+        <fact>
+            If <m>a \lt b</m>, then <m>4ab \lt (a + b)^2</m>.
+        </fact>
+        <p>
+            First, expanding the right-hand side,
+        </p>
+        <md>
+            <mrow>4ab \amp \lt a^2 + 2ab + b^2</mrow>
+            <mrow>0 \amp \lt a^2 - 2ab + b^2</mrow>
+            <mrow>0 \amp \lt (a - b)^2</mrow>
+        </md>
+        <p>
+            Then, since this is a true statement (since <m>a \neq b</m>), we can reverse the steps to form a proof.
+        </p>
+        <proof>
+            <p>
+                If <m>a \lt b</m>, then <m>a - b \neq 0</m>, and so <m>(a - b)^2 > 0</m>. Then,
+                <md>
+                    <mrow>(a - b)^2 \amp > 0</mrow>
+                    <mrow>a^2 - 2ab + b^2 \amp > 0 \amp\amp \text{expanding the left hand side}</mrow>
+                    <mrow>a^2 + 2ab + b^2 \amp > 4ab \amp\amp \text{adding $4ab$ to both sides}</mrow>
+                    <mrow>(a + b)^2 \amp > 4ab \amp\amp \text{factoring the left hand side}</mrow>
+                </md>
+            </p>
+        </proof>
+
+        <fact>
+            <p>
+                Let <m>x \in \mathbb{R}</m>. If <m>x^3 - x > 0</m>, then <m>x > -1</m>.
+            </p>
+        </fact>
+        <p>
+            This fact is an implication, where the hypothesis <m>x^3 - x > 0</m> is complicated, but the conclusion <m>x > -1</m> is simpler. Then, a good idea is to try proving the contrapositive.
+        </p>
+        <proof>
+            We will prove the contrapositive, that if <m>x \leq -1</m>, then <m>x^3 - x \leq 0</m>. Let <m>x \leq -1</m>. Then <m>x \leq -1 \lt 0</m>. Also,
+            <md>
+                <mrow>x \amp \leq -1</mrow>
+                <mrow>x^2 \amp \geq 1 \amp\amp \text{squaring both sides, both $x$ and $-1$ are negative so flip inequality}</mrow>
+                <mrow>x^2 - 1 \amp \geq 0</mrow>
+                <mrow>x^3 - x \amp \leq 0 \amp\amp \text{multiplying by $x \lt 0$}</mrow>
+            </md>
+            as desired.
+        </proof>
+
+        <fact>
+            <p>If <m>p</m> is prime and <m>p \geq 5</m>, then <m>p^2 - 1</m> is divisible by 24.</p>
+        </fact>
+        <proof>
+            First, <m>p^2 - 1 = (p - 1)(p + 1)</m>. Since <m>p \geq 5</m> is prime, <m>p</m> is odd, so <m>p-1</m> and <m>p+1</m> are both even. This implies that <m>4 \mid (p^2 - 1)</m>. Also, <m>p-1</m> and <m>p+1</m> are two consecutive even integers, so exactly one of them is divisible by 4. Thus, <m>8 \mid (p^2 - 1)</m>. Also, in general, exactly one of <m>p-1, p, p+1</m> is divisible by 3. Since <m>p</m> is prime, <m>3 \nmid p</m>. Thus, either <m>p-1</m> or <m>p+1</m> is divisible by 3. Together, <m>24 \mid (p^2 - 1)</m>.
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Proving <q>Or</q> Statements</title>
+        <p>
+            Consider an <q>or</q> statement, that <m>P \implies (A \lor B)</m>, i.e. that given the hypotheses, either one of <m>A</m> or <m>B</m> is true (or both).
+        </p>
+        <p>
+            To prove a statement of this form, we can split up the proof into two cases: (1) if <m>A</m> is true, or (2) <m>A</m> is false. These two cases cover all possible scenarios, so if the statement is true in both of these cases, it will be true in all cases. 
+        </p>
+        <ul>
+            <li>In the first case, the proof is done, because <m>A</m> being true implies that <m>A \lor B</m> is true. Here, there is nothing to prove.</li>
+            <li>In the second case, the goal is to prove that because <m>A</m> is false, this implies that <m>B</m> will be true.</li>
+        </ul>
+        <p>
+            Of course, we could have instead considered (1) <m>B</m> is true and (2) <m>B</m> is false, because <m>A</m> and <m>B</m> are symmetric.
+        </p>
+        <p>
+            Here, the first case is trivially true, so the argument is phrased in a different but equivalent way. To prove <m>A \lor B</m> we assume that <m>A</m> is false, and prove that <m>B</m> is true (or, assume <m>B</m> is false, and prove <m>A</m> is true). That is, we prove the statement <m>\not A \rightarrow B</m>. So, in summary, <m>A \lor B</m> is logically equivalent to <m>\neg A \rightarrow B</m>, or,
+        </p>
+        <me>
+            \boxed{A \lor B \equiv \neg A \rightarrow B}
+        </me>
+        <p>
+            Also, <q>or</q> statements can also be proven by contradiction, by assuming that <m>\neg A \land \neg B</m> (because <m>\neg (A \lor B) = \neg A \land \neg B</m> by DeMorgan's laws).
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Disproving a Statement</title>
+        <p>
+            To disprove a statement is to prove its negation. To disprove <m>\forall x \in D</m>, if <m>P(x)</m>, then <m>Q(x)</m>, we have to prove the negation, that is, there exists <m>x \in D</m> such that <m>P(x)</m> and <m>Q(x)</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Proof by Contrapositive</title>
+        <p>
+            To prove <m>P \rightarrow Q</m>, it is sufficient to prove <m>\neg Q \rightarrow \neg P</m>. This is because the contrapositive of a conditional is logically equivalent to the original conditional.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>False Algebra Proof</title>
+        <fact>
+            <m>2 = 1</m>.
+        </fact>
+        <proof>
+            <p>
+                Let <m>x = y</m>. Then, multiplying both sides by <m>y</m>, <m>x^2 = xy</m>. Then, subtracting <m>y^2</m> from both sides, <m>x^2 - y^2 = xy - y^2</m>. Then, factoring the left-hand side as a difference of squares, and factoring the common factor of <m>y</m> from the right-hand side,
+                <me>
+                    (x - y)(x + y) = y(x - y)
+                </me>
+                Then, cancelling the common factor of <m>x - y</m> on both sides, we get <m>x + y = y</m>. Then, recall that <m>x = y</m>, so this implies that <m>y + y = y</m>, or <m>2y = y</m>. Finally, cancelling <m>y</m> from both sides, we get <m>2 = 1</m>.
+            </p>
+        </proof>
+        <p>
+            The issue with this proof is that you can only cancel a factor on both sides (i.e. divide by that factor) if it is non-zero. For example, <m>2 \cdot 0 = 3 \cdot 0</m> is true (both sides are 0), but it does not imply that <m>2 = 3</m> (cancelling the factors of 0). Here, we cancelled <m>x - y</m> on both sides. However, we assumed that <m>x = y</m>, and so <m>x - y = 0</m>.
+        </p>
+    </subsection>   
+    
+</section>

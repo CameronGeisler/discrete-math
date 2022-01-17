@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-PBPW">
+    <title>Proof Basics, Proof Writing</title>
+
+    <introduction>
+        <p>
+            One of the great goals of mathematics is to prove statements.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Introduction to Proof</title>
+
+        <definition>
+            <p>
+                A <term>proof</term> is a logical argument that establishes the truth of a statement.
+            </p>
+        </definition>
+
+        <p>
+            The goal of a proof is to logically convince the reader that the statement is true.
+        </p>
+        <p>
+            In fact, the history of proofs goes back to the ancient Greeks. The ancient Greeks were one of the first to believe that it was desirable to prove statements and theorems from more simpler facts.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Proof Terminology</title>
+        <definition>
+            <p>
+                Roughly, an <term>axiom</term> is a statement accepted as true without proof.
+            </p>
+        </definition>
+        <p>
+            For example, some axioms could be:
+        </p>
+        <ul>
+            <li>The sum, difference, and product of integers, is an integer. In other words, if <m>n, m \in \mathbb{Z}</m>, then <m>n + m, n - m, -n, -m, nm \in \mathbb{Z}</m>.</li>
+            <li>If <m>x \in \mathbb{R}</m>, then <m>x^2 \geq 0</m>.</li>
+            <li>If <m>a, b \in \mathbb{R}</m>, and <m>a \neq 0</m> and <m>b \neq 0</m>, then <m>ab \neq 0</m>.</li>
+        </ul>
+        <definition>
+            <p>A <term>theorem</term> is a statement in mathematics which is true (it has been proved) and is particularly useful and interesting.</p>
+        </definition>
+
+        <definition>
+            <p>
+                A <term>corollary</term> is a true statement that follows directly from a theorem.
+            </p>
+        </definition>
+
+        <definition>
+            <p>
+                A <term>lemma</term> is a true statements whose main purpose is to help prove other statements.
+            </p>
+        </definition>
+
+        <blockquote>
+            <q>A proof, in mathematics, is an impeccable argument, using only the methods of pure logical reasoning, which enables one to infer the validity of a given mathematical assertion from the pre-established validity of other mathematical assertions, or from some particular primitive assertions--the axioms--whose validity is taken to be self-evident. Once such a mathematical assertion has been established in this way, it is referred to as a theorem.</q>
+            <attribution>Roger Penrose (1931-)</attribution>
+        </blockquote>
+    </subsection>
+
+    <subsection>
+        <title>General Proof-Writing Techniques</title>
+        <p>
+            Proofs are constructed using definitions, axioms, and previously established theorems and facts. In this way, ability to write proofs is closely connected with knowledge of definitions and theorems. A good proof is (a) correct, (b) clear, and (c) concise.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Constructing a Proof</title>
+        <ul>
+            <li><term>Understand the problem</term>. First, this requires understanding what the meaning of all of the words in the problem. It can also be helpful to rewrite the hypotheses given in the statement, and the conclusion is to be proved, ideally in a more convenient form. Sometimes, this requires translating words to symbols. The hypotheses are what you have to work with, and the conclusion is the goal to be proved.</li>
+            <li><term>Consider special cases</term>. When proving general statements, it can be helpful to first consider special cases of the statement. This makes the statement more concrete and less abstract. This can spark intuition about how the general case will behave like.</li>
+            <li><term>Sketch a diagram</term>. It is often helpful to sketch a diagram of the situation involved.</li>
+        </ul>
+    </subsection>
+
+    <subsection>
+        <title>Structure of a Proof</title>
+        <p>
+            First, write a brief <term>introduction</term>.
+        </p>
+        <ul>
+            <li>
+                Define terms. Any variables used in the proof should be defined <em>before</em> they are used. Typically, we use words like <q>Let...</q> or <q>Consider...</q>. For example, <q>Let <m>n</m> be a natural number</q>, or <q>Consider an arbitrary point <m>(x,y)</m></q>.
+            </li>
+            <li>Sometimes, it is helpful to review relevant definitions or facts.</li>
+            <li>
+                If the solution is particularly complicated, it is helpful to state the overall direction of the general steps of the proof.
+            </li>
+        </ul>
+        <p>
+            In the <term>main body</term>, derive the solution with a clear logical layout.
+        </p>
+        <ul>
+            <li>
+                Use complete English sentences. This is still true even if the solution is mostly made up of equations and mathematical expressions.
+            </li>
+            <li>
+                Use connective words such as <q>Then, ...</q>, <q>Therefore, ...</q>, <q>Now we see that...</q>, <q>Observe that...</q>, <q>Thus, ...</q>.
+            </li>
+            <li>
+                Sometimes, a diagram can be helpful, but typically <q>picture</q> proofs are not sufficient. If you do include a diagram, utilize a straightedge when drawing straight lines.
+            </li>
+            <li>
+                If a solution is particularly complicated, structure your solution appropriately. For example, at the beginning, say <q>First, we will show that...</q>. Then, <q>Next, we will show that...</q>. And, <q>Finally, ...</q>.
+            </li>
+        </ul>
+        <p>
+            After completing the proof, state a concise summary of what you proved, addressing the original statement. Clearly indicate what the answer is, if there is one.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Other Tips</title>
+        <ul>
+            <li>Write neatly, are write large enough, to make it easy for the reader.</li>
+            <li>If necessary, typeset your work (use LaTeX) and print it.</li>
+            <li>If you cannot fully solve a question, be honest about it, and state what you have done.</li>
+        </ul>
+    </subsection>
+
+    <subsection>
+        <title>Proof by Cases</title>
+        <p>
+            Many proofs require two or more cases, each with slightly different assumptions. This is somewhat a <q>brute force</q> method, especially if there are many cases.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Proof Intuition</title>
+        <p>
+            In a proof, we must start from assumptions and definitions, and successively deduce statements, towards the final conclusion. However, when actually discovering or developing a proof, it is often helpful to proceed both forwards <em>and</em> backwards, trying to find links between the premises and conclusion.
+        </p>
+        <p>
+            Also, in general in mathematics, intuition comes first, and rigor comes later. Intuition, imagination, and creativity plays a larger role than many believe. This is partly because math textbooks are finished mathematics that has been refined for often hundreds of years.
+        </p>
+    </subsection>   
+
+</section>

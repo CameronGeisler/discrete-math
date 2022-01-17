@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-POL">
+    <title>Properties of Logic</title>
+    
+    <subsection>
+        <title>Properties of Logic</title>
+
+        <theorem>
+            <title>DeMorgan's laws</title>
+            <p>
+                <ul>
+                    <li><term>Negation of a conjunction</term>, <m>\neg (P \land Q) \equiv (\neg P) \lor (\neg Q)</m></li>
+                    <li><term>Negation of a disjunction</term>, <m>\neg (P \lor Q) \equiv (\neg P) \land (\neg Q)</m></li>
+                </ul>
+            </p>
+        </theorem>
+
+        <theorem>
+            <title>Associative property</title>
+            <p>
+                <md>
+                    <mrow>P \land (Q \land R) \equiv (P \land Q) \land R</mrow>
+                    <mrow>P \lor (Q \lor R) \equiv (P \lor Q) \lor R</mrow>
+                </md>
+            </p>
+        </theorem>
+        <p>
+            This means that parentheses are unnecessary for a sequence of only conjunctions or only disjunctions.
+        </p>
+
+        <theorem>
+            <title>Commutative property</title>
+            <p>
+                <ul>
+                    <li><m>P \land Q \equiv Q \land P</m></li>
+                    <li><m>P \lor Q \equiv Q \lor P</m></li>
+                </ul>
+            </p>
+        </theorem>
+
+        <p>
+            This intuitively means that order doesn't matter for disjunctions and conjunctions.
+        </p>
+
+        <theorem>
+            <title>Distribution properties</title>
+            <p>
+                <ul>
+                    <li>Distribution of conjunction over disjunction, <m>P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)</m></li>
+                    <li>Distribution of disjunction over conjunction, <m>P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)</m></li>
+                </ul>
+            </p>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Truth Tables for Compound Propositions</title>
+        <p>
+            In general, there are <m>2^n</m> rows in a truth table for <m>n</m> simple statements.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Quantifiers</title>
+        <definition>
+            <p>
+                The <term>existential quantifier</term>, denoted by <m>\exists</m>, represents <q>there exists</q>, <q>there is a</q>, or <q>there is at least one</q>.
+            </p>
+        </definition>
+
+        <definition>
+            <p>
+                The <term>universal quantifier</term>, <m>\forall</m>, represents <q>for all</q>, <q>for every</q>, or <q>for each</q>.
+            </p>
+        </definition>
+
+        <p>
+            The statement, <m>\forall x \in S, P(x)</m> means that for all elements <m>x</m> in the set
+            <m>S</m>, the statement <m>P(x)</m> is true. This is equivalent to saying that the conditional, <q>If <m>x \in S</m>, then <m>P(x)</m> is true</q>. In symbols, this can be summarized as,
+        </p>
+        <me>
+            (\forall x \in S, P(x)) \equiv (x \in S) \rightarrow P(x)
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Logical Inference</title>
+        <ul>
+            <li>Modus Ponens, <m>((P \rightarrow Q) \land P) \rightarrow Q</m></li>
+            <li>Modus Tollens, <m>((P \rightarrow Q) \land (\neg Q)) \rightarrow (\neg P)</m></li>
+            <li>Elimination, <m>((P \lor Q) \land (\neg P)) \rightarrow Q</m></li>
+        </ul>
+
+        <theorem>
+            <title>Chain of implications</title>
+            <p>
+                <ul>
+                    <li><m>((P \rightarrow Q) \land (Q \rightarrow R)) \rightarrow (P \rightarrow R)</m></li>
+                    <li><m>((P \rightarrow P_1) \land (P_1 \rightarrow P_2) \land \dots \land (P_n \rightarrow Q)) \rightarrow (P \rightarrow Q)</m></li>
+                </ul>
+            </p>
+        </theorem>
+    </subsection>
+
+</section>
