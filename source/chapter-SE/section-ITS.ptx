@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-ITS">
+    <title>Introduction to Sequences</title>
+
+    <introduction>
+        <p>
+            A sequence is an ordered list of objects.
+        </p>
+    </introduction>
+
+    <definition>
+        <title>Sequences</title>
+        <definition>
+            <p>
+                Broadly, a <term>sequence</term> is an ordered list of objects.
+            </p>
+        </definition>
+
+        <p>
+            Typically, a sequence is represented by a set of elements listed in a row,
+        </p>
+        <me>
+            a_1, a_2, a_3, a_4, \dots, a_n
+        </me>
+        <p>
+            Each element of a sequence is called a <term>term</term>. Then, the terms of the sequence are denoted by <m>a_k</m>, read as <q>a sub k</q>. The integer <m>k</m> is called a <term>subscript</term>, or <term>index</term>, because it indicates the position of each term in the list. The first term is <m>a_1</m>, the second term is <m>a_2</m>, the third term is <m>a_3</m>, and so on. The tenotation <m>a_n</m> represents the <m>n</m>th term, or the <term>general term</term>.
+        </p>
+
+        <p>
+            A sequence can be thought of more formally as a function <m>f</m>, whose domain is all the integers between two given integers, or all the integers greater than or equal to a given integer. Then,
+        </p>
+        <md>
+            <mrow>f(1) \amp = a_1</mrow>
+            <mrow>f(2) \amp = a_2</mrow>
+            <mrow>f(3) \amp = a_3</mrow>
+            <mrow>\amp \vdots</mrow>
+            <mrow>f(n) \amp = a_n</mrow>
+        </md>
+        <p>
+            We can also consider sequences which continue indefinitely, called <term>infinite sequences</term> (in contrast, sequences with finitely many terms are called <term>finite sequences</term>). Infinite sequences are commonly studied in calculus.
+        </p>
+        <p>
+            Also, a sequence can be started at an index other than 1, sometimes 0 or 2. More generally,
+        </p>
+        <me>
+            a_m, a_{m+1}, a_{m+2}, \dots, a_n
+        </me>
+        <p>
+            where <m>n \geq m</m>.
+        </p>
+    </definition>
+
+    <subsection>
+        <title>Defining a Sequence</title>
+        <p>
+            There are multiple ways to define a sequence.
+        </p>
+        <ul>
+            <li><term>List the first few terms</term>, followed by an ellipsis <m>\dots</m> (where <m>\dots</m> means <q>and so on</q>).</li>
+        </ul>
+        <example>
+            <p>
+                The sequence,
+                <me>
+                    \set{a_n} = \set{1, 2, 3, 4, 5, \dots}
+                </me>
+                is the sequence of natural numbers. It continues, 6, 7, 8, and so on.
+            </p>
+        </example>
+        <p>
+            This only works if the pattern is obvious from the first few terms.
+        </p>
+
+        <ul>
+            <li><term>Provide a formula for the general term</term>. Give an <term>explicit formula</term> for the general term <m>a_n</m> as a function of <m>n</m>. In other words, write <m>a_n = f(n)</m>, where <m>f(n)</m> is some expression involving <m>n</m>.</li>
+        </ul>
+
+        <example>
+            <p>
+                The sequence of natural numbers can be written as <m>a_n = n</m> for all <m>n \in \mathbb{N}</m>.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                The sequence,
+                <me>
+                    \set{a_n} = \set{2, 4, 6, 8, \dots}
+                </me>
+                is the sequence of even natural numbers, given by <m>a_n = 2n</m> for all <m>n \in \mathbb{N}</m>.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                For example, <m>a_n = \sqrt{n}</m>.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                For example, the sequence <m>a_n = (-1)^{n+1}</m>, or,
+                <me>
+                    \set{a_n} = \set{1, -1, 1, -1, \dots}
+                </me>
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Infinite Sequences</title>
+        <definition>
+            <p>
+                An <term>infinite sequence</term> (or simply <term>sequence</term>) is an ordered collection of numbers with infinitely many elements.
+            </p>
+        </definition>
+        <p>
+            An arbitrary infinite sequence can be represented by the notation,
+        </p>
+        <ul>
+            <li>
+                <m>\set{a_n}_{n=1}^{\infty}</m> i.e. the set of all <m>a_n</m> where <m>n = 1, 2, 3, \dots</m> <q>up to infinity</q>.
+            </li>
+            <li>
+                <m>\set{a_n}_{n \in \mathbb{N}}</m>, i.e. <m>n \in \mathbb{N}</m> is any natural number.
+            </li>
+            <li>
+                Or, simply by <m>\set{a_n}</m>, especially if the starting index is arbitrary.
+            </li>
+        </ul>
+        <p>
+            An infinite sequence can be thought of as a function whose domain is all natural numbers, or the set of all positive integers greater than or equal to some integer.
+        </p>
+    </subsection>
+    
+    <!-- \begin{example}
+    For example, the sequence given by $a_n = \frac{1}{n-1}$ might be started at $n = 2$, as the expression $\frac{1}{n-1}$ is undefined for $n = 1$.
+    \end{example}
+   
+    \section*{Writing Terms of a Sequence Given a Formula for the General Term}
+    
+    \section*{Terms of a Sequence Using a Graphing Calculator}
+    Graphing calculators can compute terms of a sequence. Enter $\boxed{LIST} \rightarrow \boxed{OPS} \rightarrow 5: \text{seq(}$
+    \begin{equation*}
+        \operatorname{seq}\brac{f(x), x, a_i, a_j}
+    \end{equation*}
+    to output the terms of the sequence $a_n = f(n)$ from the $i$th term to the $j$th term.
+    
+    \section*{Recursive Sequences (Recursion Formulas)}
+    Previously, sequences have been defined \textbf{explicitly}, where the general term $a_n$ is given as an explicit function of $n$. In other words, given $n$, we can determine $a_n$ by substituting it into the formula.
+    \\ \\ Alternatively, a sequence can be defined \textbf{recursively} (or \textbf{inductively}), where each term $a_n$ is defined as a function of some previous terms $a_{n-1}, a_{n-2}$, etc.
+    
+    \begin{example}
+    $a_1 = 1$ and $a_n = \sqrt{6 + a_{n-1}}$ for all $n \geq 2$.
+    \end{example}
+    
+    \section*{Increasing and Decreasing Sequences}
+    \begin{definition}
+    A sequence $\set{a_n}$ is
+    \begin{itemize}
+        \item \textbf{increasing} if $a_{n+1} \geq a_n$ for all $n$.
+        \item \textbf{decreasing} if $a_{n+1} \leq a_n$ for all $n$.
+    \end{itemize}
+    \end{definition}
+    
+    \section*{Convergent Sequences}
+    \begin{definition}
+    Broadly, a sequence is \textbf{convergent} if its terms approach a specific value. Otherwise, it is \textbf{divergent}.
+    \end{definition}
+    
+    \section*{Sequences Defined Randomly}
+    A sequence can also be defined as the result of a random experiment. For example, when flipping a coin,
+    \begin{equation*}
+        a_n = \begin{cases} 1 & \text{if heads} \\ 0 & \text{if tails} \end{cases}
+    \end{equation*} -->
+    
+</section>

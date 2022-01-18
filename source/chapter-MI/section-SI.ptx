@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-SI">
+    <title>Strong Induction</title>
+
+    <subsection>
+        <title>Strong Induction</title>
+        <p>
+            Let <m>P(n)</m> be a statement depending on <m>n \in \mathbb{N}</m>. Then, <m>P(n)</m> is true for all natural numbers <m>n</m> if,
+            <ul>
+                <li><m>P(1)</m> is true.</li>
+                <li>For all <m>k \in \mathbb{Z}</m>, if <m>P(1), P(2), \dots, P(k)</m> is true, then <m>P(k + 1)</m> is true.</li>
+            </ul>
+        </p>
+
+        <p>
+            To contrast with strong induction, <q>regular</q> induction is sometimes called <term>weak induction</term>. Induction allows us to use <em>all</em> of the previous information, and it is also logically valid. In some sense, strong induction logically contains regular induction. In this way, when proving something by induction, you should always keep in mind that you can use strong induction if you need to. That is, you can assume all of the previous statements <m>n = 1, 2, 3, \dots, k</m> are true, not just the immediately previous case <m>n = k</m>.
+        </p>
+
+        <example>
+            <title>Postage stamps</title>
+            <p>
+                Any amount of postage more than one cent can be formed using only two-cent and three-cent stamps.
+            </p>
+            <proof>
+                <p>
+                    By induction, for the base case, postage of two and three cents can be formed by one two-cent stamp and one three-cent stamp, respectively. Then, by strong induction, assume the result is true for all postage of <m>k</m> cents for <m>3 \leq k \leq n</m>. Then, a postage of <m>(n+1)</m> cents can be formed by taking stamps of <m>(n-1)</m> cents and adding a two-cent stamp.
+                </p>
+            </proof>
+        </example>
+    </subsection>
+</section>

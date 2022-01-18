@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-FOTPOMI">
+    <title>Foundations of the Principle of Math Induction</title>
+
+    <subsection>
+        <title>Proof of Math Induction</title>
+        <p>
+            Mathematical induction can be taken as an axiom, a fundamental fact which is assumed to be true. However, it is a result of a more fundamental property of the natural numbers, which is the well-ordering principle. The well-ordering principle makes math induction concrete.
+        </p>
+        <p>
+            First, we have to consider math induction in a more precise way. Let <m>S</m> be the set of all natural numbers such that <m>P(n)</m> is true. Then, the principle of math induction can be stated as follows.
+        </p>
+        <theorem>
+            <title>Principle of math induction</title>
+            <p>
+                Let <m>S \subseteq \mathbb{N}</m> be a subset of the natural numbers. If <m>S</m> contains 1, and if <m>S</m> has the property that if <m>S</m> contains some integer <m>k</m>, then <m>S</m> also contains <m>k+1</m>, then <m>S = \mathbb{N}</m> contains all natural numbers.
+            </p>
+        </theorem>
+
+        <proof>
+            <p>
+                Let <m>S</m> be a set of natural numbers, such that <m>S</m> contains 1, and <m>S</m> has the property that if <m>k \in S</m>, then <m>(k+1) \in S</m>. By contradiction, assume that <m>S</m> is not the set of natural numbers. Then, there exists a natural number not in <m>S</m>. Let <m>A = \mathbb{N} \setminus S</m>, the set of natural numbers not in <m>S</m>. This set <m>A</m> is non-empty, so by the well-ordering property, it contains a smallest element <m>S</m>, i.e. a smallest natural number that is not in <m>S</m>.
+            </p>
+            <p>
+                Since <m>1 \in S</m>, <m>k \neq 1</m>, and so <m>k > 1</m>. Then, since <m>k - 1 \lt k</m>, and <m>S</m> is the smallest natural number not in <m>S</m>, then <m>(k - 1) \in S</m>. However, this implies that <m>(k - 1) + 1 = k \in S</m>, contradicting the fact that <m>k \notin S</m>.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>General Principle of Math Induction</title>
+        <theorem>
+            <title>Principle of math induction</title>
+            <p>
+                Let <m>S \subseteq \mathbb{N}</m> be a subset of the natural numbers. If <m>S</m> contains <m>a</m>, and if <m>S</m> has the property that if <m>S</m> contains some integer <m>k \geq a</m>, then <m>S</m> also contains <m>k+1</m>, then <m>S = \mathbb{N}</m> contains all natural numbers.
+            </p>
+        </theorem>
+    </subsection>
+</section>

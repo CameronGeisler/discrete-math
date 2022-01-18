@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-18T15:53:54-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Proof by Mathematical Induction</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-MI.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-MI.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-SI.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-MI.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-MI.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-SI.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul>
+<li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li>
+<li><a href="section-ISON.html" data-scroll="section-ISON">Important Sets of Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-SE.html" data-scroll="chapter-SE"><span class="codenumber">5</span> <span class="title">Sequences</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sequences</a></li></ul>
+</li>
+<li class="link">
+<a href="chapter-MI.html" data-scroll="chapter-MI"><span class="codenumber">6</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="section-PBMI.html" data-scroll="section-PBMI" class="active">Proof by Mathematical Induction</a></li>
+<li><a href="section-SI.html" data-scroll="section-SI">Strong Induction</a></li>
+<li><a href="section-FOTPOMI.html" data-scroll="section-FOTPOMI">Foundations of the Principle of Math Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">7</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
+<li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
+<li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-PBMI"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Proof by Mathematical Induction</span>
+</h2>
+<section class="introduction" id="introduction-18"><p id="p-280">Mathematical induction is a method for proving statements about the set of natural numbers. Since there are infinitely many natural numbers, a general statement about the natural numbers cannot be proven by showing it for certain cases. Math induction allows us to prove a statement for all natural numbers, in a relatively concise way.</p></section><section class="subsection" id="subsection-72"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.1</span> <span class="title">Principle of Mathematical Induction</span>
+</h3>
+<p id="p-281">Let \(P(n)\) be a statement depending on \(n\text{,}\) where \(n \in \mathbb{N}\text{.}\) Then, for each \(n\text{,}\) \(P(n)\) is either true or false. Then,</p>
+<article class="theorem theorem-like" id="theorem-16"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of mathematical induction.</span>
+</h4>
+<p id="p-282">A statement \(P(n)\) is true for all natural numbers \(n\) if,</p>
+<ul class="disc">
+<li id="li-74"><p id="p-derived-li-74">\(P(1)\) is true (called the <dfn class="terminology">base case</dfn>).</p></li>
+<li id="li-75"><p id="p-derived-li-75">For all \(k \in \mathbb{N}\text{,}\) if \(P(k)\) is true, then \(P(k+1)\) is true (called the <dfn class="terminology">induction step</dfn>). The assumption that \(P(k)\) is true is called the <dfn class="terminology">inductive hypothesis</dfn>.</p></li>
+</ul></article></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.2</span> <span class="title">Intuition for Math Induction</span>
+</h3>
+<p id="p-283">Math induction makes intuitive sense. Suppose that \(P(1)\) is true, and for all \(k\text{,}\) if \(P(k)\) is true implies \(P(k+1)\) is true. Then, applying this for \(k = 1\) means that \(P(2)\) is true. Then, since \(P(2)\) is true, this implies that \(P(3)\) is true. Since \(P(3)\) is true, \(P(4)\) is true, and so on. Then, for any \(n \in \mathbb{N}\text{,}\) we can apply the implication enough times to show that \(P(n)\) is true.</p>
+<p id="p-284">Math induction is like an infinite sequence of dominoes. To ensure that “all” of the dominoes will be knocked, we must be certain that,</p>
+<ul class="disc">
+<li id="li-76"><p id="p-derived-li-76">The first domino will be knocked over (the base case).</p></li>
+<li id="li-77"><p id="p-derived-li-77">The dominoes are set up such that if one domino falls, then the next domino will fall (the induction step).</p></li>
+</ul>
+<p id="p-285">In a similar way, the principle of math induction can be thought of as climbing a ladder. If you can climb onto the first rung, and also always climb one rung higher, then you can climb the “entire” ladder.</p></section><section class="subsection" id="subsection-74"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.3</span> <span class="title">Basic Examples</span>
+</h3>
+<article class="fact theorem-like" id="fact-21"><h4 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Product of consecutive integers is even.</span>
+</h4>
+<p id="p-286">For all \(n \in \mathbb{N}\text{,}\) \(n(n + 1)\) is even.</p></article><p id="p-287">This is true for all \(n \in \mathbb{Z}\) however we will only prove it for positive integers. This can be proved without induction, since at least one of \(n\) and \((n + 1)\) is even (if \(n\) is even, then \((n + 1)\) is odd, and if \(n\) is odd, then \((n + 1)\) is even). Thus, \(n(n + 1)\) is the product of an even and odd integer, which is even.</p>
+<article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-288">By induction, for \(n = 1\text{,}\) we have \(1 \cdot (1 + 1) = 2\) which is even. Then, assume the result is true for some \(n \in \mathbb{Z}, n \geq 1\text{,}\) that \(n(n + 1)\) is even. Then, we want to show that \((n + 1)((n + 1) + 1) = (n + 1)(n + 2)\) is even. Then,</p>
+<div class="displaymath">
+\begin{align*}
+(n + 1)(n + 2) \amp = n^2 + 3n + 2\\
+\amp = (n^2 + n) + (2n + 2) \amp\amp \text{splitting up the terms to use the induction hypothesis}\\
+\amp = n(n + 1) + 2(n + 1)
+\end{align*}
+</div>
+<p class="continuation">By the induction hypothesis, \(n(n + 1)\) is even, and also \(2(n + 1)\) is even, so their sum \((n + 1)(n + 2)\) is even.</p></article></div>
+<article class="fact theorem-like" id="fact-22"><h4 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial approximation.</span>
+</h4>
+<p id="p-289">For all \(n \in \mathbb{N}, x \in \mathbb{R}\text{,}\) if \(x &gt; -1\text{,}\) then \((1 + x)^n \geq 1 + nx\text{.}\)</p></article><article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><p id="p-290">By induction, for \(n = 1\text{,}\) we have,</p>
+<div class="displaymath">
+\begin{equation*}
+(1 + x)^1 = 1 + x \geq 1 + 1 \cdot x
+\end{equation*}
+</div>
+<p class="continuation">Then, assume that our result is true for \(n = k \in \mathbb{N}\text{,}\) and we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+(1 + x)^{k+1} \geq 1 + (k + 1)x
+\end{equation*}
+</div>
+<p class="continuation">Then,</p>
+<div class="displaymath">
+\begin{align*}
+(1 + x)^{k+1} \amp = (1 + x)^k(1 + x)\\
+\amp \geq (1 + kx)(1 + x) \amp\amp \text{as $(1 + x)^k \geq 1 + kx$ and $1 + x &gt; 0$}\\
+\amp = 1 + x + kx + x^2\\
+\amp = 1 + (k + 1)x + kx^2\\
+\amp \geq 1 + (k + 1)x \amp\amp \text{as $kx^2 \geq 0$}
+\end{align*}
+</div>
+<p class="continuation">By induction, the result is true for all \(n \in \mathbb{N}\text{.}\)</p></article></div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.4</span> <span class="title">Using Proof by Induction</span>
+</h3>
+<ol class="decimal">
+<li id="li-78"><p id="p-derived-li-78">State that you are using a proof by induction, by saying “By induction, ...” or similar. If there are multiple variables that are natural numbers, then specify explicitly which is being used as the index by saying for example, “By induction on \(n\text{,}\) ...”.</p></li>
+<li id="li-79"><p id="p-derived-li-79">Prove the base case is true.</p></li>
+<li id="li-80"><p id="p-derived-li-80">Assume that \(P(k)\) is true for some \(k \in \mathbb{N}\text{,}\) and use that assumption with some mathematical reasoning to prove that \(P(k+1)\) is true.</p></li>
+<li id="li-81"><p id="p-derived-li-81">Finally, recall again the conclusion of the proof.</p></li>
+</ol>
+<p id="p-291">The most difficult and important part of induction is the inductive step. Often, the inductive step involves showing that the \((k+1)\)th case can be written <em class="emphasis">in terms of</em> the \(k\)th case, in some way. This will allow you to use the inductive assumption.</p></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.5</span> <span class="title">General Principle of Math Induction</span>
+</h3>
+<p id="p-292">Sometimes, we only want to prove a statement for all natural numbers, starting at some integer that is not 1. Perhaps that for smaller natural numbers, the statement is false or is undefined. The principle of math induction still holds.</p>
+<p id="p-293">For \(b \in \mathbb{Z}\text{,}\) a statement \(P(n)\) is true for all \(n \in \mathbb{Z}\text{,}\) \(n \geq b\) if,</p>
+<ul class="disc">
+<li id="li-82"><p id="p-derived-li-82">\(P(b)\) is true, and,</p></li>
+<li id="li-83"><p id="p-derived-li-83">For all \(k \in \mathbb{Z}\text{,}\) \(k \geq b\text{,}\) if \(P(k)\) is true, then \(P(k + 1)\) is true.</p></li>
+</ul>
+<article class="fact theorem-like" id="fact-23"><h4 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Factorials are even.</span>
+</h4>
+<p id="p-294">For all \(n \in \mathbb{N}, n \geq 2\text{,}\) \(n!\) is even.</p></article><p id="p-295">Of course, this is trivial since \(n!\) contains a factor of 2 for all \(n \geq 2\text{,}\) and so is even. However, we can also prove this by induction.</p>
+<article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-296">By induction, for \(n = 2\text{,}\) \(2! = 2\) is even. Then, assume the result is true for some \(n \geq 2\text{,}\) that \(n!\) is even. Then,</p>
+<div class="displaymath">
+\begin{equation*}
+(n + 1)! = (n + 1) \cdot n!
+\end{equation*}
+</div>
+<p class="continuation">Since \(n!\) is even, \((n + 1) \cdot n!\) is even, as any multiple of an even integer is even.</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

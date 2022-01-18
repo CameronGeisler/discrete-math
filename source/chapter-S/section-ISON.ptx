@@ -33,6 +33,15 @@
                 </me>
                 The integers are denoted by Z because the German word for number is <em>Zahlen</em>.
             </li>
+        </ul>
+        <p>
+            To avoid ambiguity, some people write <m>\mathbb{Z}^{+}</m> to represent the <term>postive integers</term>, rather than using the term natural numbers.
+        </p>
+        <p>
+            Also, sometimes, the set of whole numbers is referred to as the <term>non-negative integers</term>.
+        </p>
+
+        <ul>
             <li>
                 <term>Rational numbers</term> (or <term>fractions</term>, or simply <term>rationals</term>). The set of all numbers that can be represented as a quotient of two integers (of course, such that the denominator isn't 0). Represented as decimals, rational numbers are terminating or repeating decimals.
                 <me>
@@ -47,9 +56,9 @@
                 <term>Real numbers</term> <m>\mathbb{R}</m>. The set including all rational and irrational numbers. Broadly, it is the set of all decimal numbers.
             </li>
             <li>
-                <term>Complex numbers</term> <m>\mathbb{C}</m>. The set of all numbers of the form <m>a + bi</m>, where <m>i^2 = -1</m>. In other words,
+                <term>Complex numbers</term> <m>\mathbb{C}</m>. The set of all numbers of the form <m>a + bi</m>, where <m>a, b \in \mathbb{R}</m>, and <m>i</m> is the imaginary unit which satisfies <m>i^2 = -1</m>. In other words,
                 <me>
-                    \mathbb{C} = \set{a + bi: i^2 = -1}
+                    \mathbb{C} = \set{a + bi: a, b \in \mathbb{R}}
                 </me>
             </li>
         </ul>

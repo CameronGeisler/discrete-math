@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-MI" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Mathematical Induction</title>
+    <introduction>
+        <p>
+
+        </p>
+    </introduction>
+
+    <xi:include href="./chapter-MI/section-PBMI.ptx"/>
+    <xi:include href="./chapter-MI/section-SI.ptx"/>
+    <xi:include href="./chapter-MI/section-FOTPOMI.ptx"/>
+
+</chapter>
