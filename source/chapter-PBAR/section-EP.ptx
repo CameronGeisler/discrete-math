@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-EP">
+    <title>Existence Proofs</title>
+
+    <introduction>
+        <p>
+            Sometimes, in mathematics, we want to prove that a certain object exists. For example, given an equation, a solution to this equation exists.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Existence Proofs</title>
+        <definition>
+            <p>
+                An <term>existence theorem</term> is a theorem which asserts that something exists, without providing information about how to find it.
+            </p>
+        </definition>
+
+        <p>
+            There are two classes of proofs of existence theorems: <term>constructive proofs</term> and <term>non-constructive proofs</term>. Literally, constructive proofs involve explicitly constructing the object that satisfies the properties of the theorem, and proving that it does satisfy these properties. On the other hand, non-constructive proof show the existence of the object without constructing it.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Famous Non-Constructive Proof</title>
+        <theorem>
+            <title>There exists a power of irrationals which is rational</title>
+            <p>
+                There exists two irrational numbers <m>a</m> and <m>b</m> such that <m>a^b</m> is rational.
+            </p>
+        </theorem>
+
+        <p>
+            This theorem is not intuitive, and it has an elegant non-constructive proof. It uses the fact that <m>\sqrt{2}</m> is irrational.
+        </p>
+        <proof>
+            <p>
+                Consider the number <m>\sqrt{2}^{\sqrt{2}</m>.
+                <ul>
+                    <li>If <m>\sqrt{2}^{\sqrt{2}}</m> is rational, then we can let <m>a = b = \sqrt{2}</m> (which are both irrational) and we are done.</li>
+                    <li>
+                        If <m>\sqrt{2}^{\sqrt{2}}</m> is irrational, then consider raising this number to the exponent <m>\sqrt{2}</m>,
+                        <md>
+                            <mrow>\brac{\sqrt{2}^{\sqrt{2}}^{\sqrt{2}} \amp = \sqrt{2}^{\sqrt{2} \cdot \sqrt{2}} \amp\amp \text{by properties of exponents}</mrow>
+                            <mrow>\amp = \sqrt{2}^2</mrow>
+                            <mrow>\amp = 2</mrow>
+                        </md>
+                        Thus, we can let <m>a = \sqrt{2}^{\sqrt{2}}</m> (which is irrational, by assumption), and <m>b = \sqrt{2}</m>. Then, <m>a^b = 2</m> is rational, and we are done.
+                    </li>
+                </ul>
+            </p>
+        </proof>
+        <p>
+            This proof is very subtle. Notice that this proof doesn't actual show that <m>\sqrt{2}^{\sqrt{2}}</m> is rational or not (in fact, it is not). Rather, it shows that either way, we can construct the desired result.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Remark on Existence Theorems</title>
+        <p>
+            Sometimes, existence theorems seem unhelpful. It seems intuitive that if there is a method to determine how to find something, then that method can just be used to determine the solution, without considering whether it exists. However, this can sometimes lead to pitfalls.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title></title>
+        <fact>
+            <title>False proof 1 is the largest positive Integer (Perron's paradox)</title>
+            <p>1 is the largest positive integer.</p>
+        </fact>
+        <p>
+            This result is clearly false, as there is no largest positive integer. However, if we assume that a largest positive integer does exist, then we can <q>prove</q> the result.
+        </p>
+        <proof>
+            <p>
+                Let <m>n</m> be the largest positive integer. Then, <m>n</m> is a positive integer, so <m>n \geq 1</m>. Then, multiplying both sides by <m>n</m> (which is positive), we have <m>n^2 \geq n</m>. Also, <m>n</m> is a positive integer so <m>n^2</m> is also a positive integer, so it must be at most <m>n</m>, or <m>n^2 \leq n</m>. Thus, <m>n^2 = n</m>, so <m>n^2 - n = 0</m>, so <m>n(n - 1) = 0</m>. The solutions to this equation are <m>n = 0, 1</m>. Since 0 is not a positive integer, this implies that <m>n = 1</m>.
+            </p>
+        </proof>
+
+        <p>
+            The only mistake in this proof is the initial assumption, that a largest positive integer $n$ exists. In fact, this theorem proves the implication, <q>if the largest positive integer exists, then it is 1</q>. This implication is true, however, the hypothesis is false.
+        </p>
+        <p>
+            The more general principle is that if you assume a false statment, then you can prove anything, because the condition <m>\text{false} \implies Q</m> is true always. This false proof is called <term>Perron's paradox</term>, named after German mathematician <term>Oskar Perron</term>.
+        </p>
+    </subsection>
+
+    
+    \section*{Uniqueness Proofs}
+    
+    To prove that an object $A$ is unique, the typical method is to assume there exists two objects $A$ and $B$ which both satisfy the desired properties. Then, show that these two objects are equal, $A = B$.
+    \\ \\ In some sense, this is a proof by contradiction. That is,
+    \begin{itemize}
+        \item By contradiction, assume that there exists $A, B$ which satisfy the properties, and that $A \neq B$.
+        \item Show that $A = B$, contradicting the initial assumption.
+    \end{itemize}
+    
+    \section*{Examples of Uniqueness Proofs}
+    \begin{itemize}
+        \item Division algorithm.
+        \item Uniqueness of an inverse of a square matrix.
+        \item Uniqueness of the limit of a function (or sequence).
+    \end{itemize}
+</section>

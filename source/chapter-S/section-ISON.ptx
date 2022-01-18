@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-ISON">
+    <title>Important Sets of Numbers</title>
+
+    <introduction>
+        <p>
+            In mathematics, naturally, the most important sets are sets containing numbers.
+        </p>
+    </introduction>
+    
+    <subsection>
+        <title>Important Number Sets</title>
+        <ul>
+            <li>
+                <term>Natural numbers</term>. These are the numbers used for counting,
+                <me>
+                    \mathbb{N} = \set{1, 2, 3, \dots}
+                </me>
+                Note that some mathematicians, and especially computer scientists, include 0 as a natural number.
+            </li>
+            <li>
+                <term>Whole numbers</term>. If one considers the natural numbers to not include zero, then the whole numbers are the natural numbers, including zero.
+                <me>
+                    \set{0, 1, 2, 3, \dots}
+                </me>
+                Sometimes, the whole numbers are represented by <m>\mathbb{W}</m>.
+            </li>
+            <li>
+                <term>Integers</term>. The set including all whole numbers and the negatives of the natural numbers,
+                <me>
+                    \mathbb{Z} = \set{\dots, -3, -2, -1, 0, 1, 2, 3, \dots}
+                </me>
+                The integers are denoted by Z because the German word for number is <em>Zahlen</em>.
+            </li>
+            <li>
+                <term>Rational numbers</term> (or <term>fractions</term>, or simply <term>rationals</term>). The set of all numbers that can be represented as a quotient of two integers (of course, such that the denominator isn't 0). Represented as decimals, rational numbers are terminating or repeating decimals.
+                <me>
+                    \mathbb{Q} = \set{\frac{a}{b}: a, b \in \mathbb{Z}, b \neq 0}
+                </me>
+                The rationals are denoted by Q for <q>quotient</q>.
+            </li>
+            <li>
+                <term>Irrational numbers</term>. The set of all numbers which cannot be represented as quotients of integers, and whose decimal representations are neither terminating nor repeating. Sometimes, it is denoted by <m>\mathbb{I}</m>.
+            </li>
+            <li>
+                <term>Real numbers</term> <m>\mathbb{R}</m>. The set including all rational and irrational numbers. Broadly, it is the set of all decimal numbers.
+            </li>
+            <li>
+                <term>Complex numbers</term> <m>\mathbb{C}</m>. The set of all numbers of the form <m>a + bi</m>, where <m>i^2 = -1</m>. In other words,
+                <me>
+                    \mathbb{C} = \set{a + bi: i^2 = -1}
+                </me>
+            </li>
+        </ul>
+        <p>
+            These sets have the following inclusion relationship,
+        </p>
+        <me>
+            \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Intervals of Real Numbers</title>
+        <p>
+            Intervals are a particular kind of subset of real numbers. Let <m>a \leq b</m>. Then,
+        </p>
+        <ul>
+            <li>
+                A <term>closed interval</term> <m>[a,b]</m> is the set,
+                <me>
+                    [a, b] = \set{x \in \mathbb{R}: a \leq x \leq b}
+                </me>
+            </li>
+            <li>
+                An <term>open interval</term> <m>(a,b)</m> is the set,
+                <me>
+                    (a, b) = \set{x \in \mathbb{R}: a \lt x \lt b}
+                </me>
+            </li>
+            <li>
+                A <term>half-open interval</term> is the set,
+                <me>
+                    (a, b] = \set{x \in \mathbb{R}: a \lt x \leq b}
+                </me>
+                or,
+                <me>
+                    [a, b) = \set{x \in \mathbb{R}: a \leq x \lt b}
+                </me>
+            </li>
+            <li>
+                <term>Infinite intervals</term>. Can be of the form,
+                <md>
+                    <mrow>(a, \infty) \amp = \set{x \in \mathbb{R}: x > a}</mrow>
+                    <mrow>[a, \infty) = \set{x \in \mathbb{R}: x \geq a}</mrow>
+                    <mrow>(-\infty, b) = \set{x \in \mathbb{R}: x \lt b}</mrow>
+                    <mrow>(-\infty, b] = \set{x \in \mathbb{R}: x \leq b}</mrow>
+                    <mrow>(-\infty, \infty) = \mathbb{R}</mrow>
+                </md>
+            </li>
+        </ul>
+    </subsection>
+</section>

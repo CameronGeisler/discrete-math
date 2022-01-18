@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-UP">
+    <title>Uniqueness Proofs</title>
+
+    <subsection>
+        <title>Uniqueness Proofs</title>
+        <p>
+            To prove that an object <m>A</m> is unique, the typical method is to assume there exists two objects <m>A</m> and <m>B</m> which both satisfy the desired properties. Then, show that these two objects are equal, <m>A = B</m>.
+        </p>
+        <p>
+            In some sense, this is a proof by contradiction. That is,
+        </p>
+        <ol>
+            <li>By contradiction, assume that there exists <m>A, B</m> which satisfy the properties, and that <m>A \neq B</m>.</li>
+            <li>Show that <m>A = B</m>, contradicting the initial assumption.</li>
+        </ol>
+    </subsection>
+
+    <subsection>
+        <title>Examples of Uniquness Proofs</title>
+        <ul>
+            <li>The division algorithm</li>
+            <li>Uniqueness of an inverse of a square matrix.</li>
+            <li>Uniqueness of the limit of a function (or sequence).</li>
+        </ul>
+    </subsection>
+</section>

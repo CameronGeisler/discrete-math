@@ -4,7 +4,7 @@
     <title>Direct Proof, Proof by Contrapositive</title>
 
     <subsection>
-        <title>Direct Proof, Proof by Contrapositive</title>
+        <title>Direct Proof</title>
 
         <definition>
             <p>
@@ -158,6 +158,12 @@
                 </me>
             </p>
         </fact>
+
+        <proof>
+            <p>
+                Exercise.
+            </p>
+        </proof>
     </subsection>
 
     <subsection>
@@ -253,7 +259,10 @@
     <subsection>
         <title>Proof by Contrapositive</title>
         <p>
-            To prove <m>P \rightarrow Q</m>, it is sufficient to prove <m>\neg Q \rightarrow \neg P</m>. This is because the contrapositive of a conditional is logically equivalent to the original conditional.
+            <term>Proof by contrapositive</term> involves proving a conditional <m>P \rightarrow Q</m> by instead proving its contrapositive <m>\neg Q \rightarrow \neg P</m>. This is valid because the contrapositive of a conditional is logically equivalent to the original conditional.
+        </p>
+        <p>
+            This is often helpful if the hypothesis <m>P</m> is a more complicated statement than the conclusion <m>Q</m>.
         </p>
     </subsection>
 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-18T14:02:13-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Permutations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-TFCP.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-PWIE.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-TFCP.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-PWIE.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P" class="active">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-P"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Permutations</span>
+</h2>
+<section class="introduction" id="introduction-4"><p id="p-32">Consider a collection of objects. To <dfn class="terminology">permute</dfn> these objects means to rearrange their order. A <dfn class="terminology">permutation</dfn> is one of these such rearrangements, or orderings. Intuitively, it is a way to “sequence” or “line up” the objects. The fundamental counting principle allows us to determine the number of ways to arrange objects, or the number of permutations of objects.</p>
+<article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-33">How many different ways are there to arrange 5 people in a line? By the fundamental counting principle, there are 5 selections in total. For the first spot, we can choose any of the 5 people. For the second spot, we can choose anyone except the 1st person, so there are 4 options. For the 3rd spot, there are 3 options as we can't choose the 1st nor 2nd person. For the 4th spot, there are only 2 options. Finally, for the last spot, there is only 1 person left, so there is only 1 option. Thus, in total, the number of ways to arrange 5 people is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 5! = 120
+\end{equation*}
+</div></article></div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Permutations of Objects</span>
+</h3>
+<p id="p-34">More generally, consider the permutations of \(n\) objects. This can be viewed as a series of choices, filling in \(n\) positions using the \(n\) objects. For the first spot, we can choose any of the \(n\) objects, and so there are \(n\) choices. For the second spot, one of the objects has been taken, so there are $n-1$ choices for the object in the 2nd position. Similarly, there $n-2$ for the 3rd position, and so on. For the second-last object, there will be 2 positions left and so there are 2 choices, and the last object will only have one available slot left, and so there will be only 1 choice. In summary,</p>
+<article class="theorem theorem-like" id="theorem-3"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Permutations of \(n\) objects.</span>
+</h4>
+<p id="p-35">The number of permutations of \(n\) objects is \(n!\text{.}\)</p></article><article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-36">Consider \(n\) boys and \(n\) girls. Consider the number of ways that they can form couples (assume only couples of mixed gender). The first boy can “choose” from all \(n\) of the girls (you could view this as the girls choosing boys, it would be equivalent). Then, the second boy has \(n-1\) choices, the third has \(n-2\) choices, and so on. Thus, there are \(n(n - 1)(n - 2) \cdots 2 \cdot 1 = n!\) ways to form these couples.</p></article></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Permutations of \(r\) Elements from \(n\) Elements</span>
+</h3>
+<article class="definition definition-like" id="definition-1"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h4>
+<p id="p-37">A <dfn class="terminology">permutation of \(r\) elements from a set of \(n\)</dfn> unique elements is any of the specific orderings or arrangement, without repetition, of \(r\) elements.</p></article><p id="p-38">Each rearrangement of these \(r\) elements is a different permutation. Of course, here \(r\) is an integer and \(1 \leq r \leq n\text{.}\)</p>
+<p id="p-39">Consider these \(n\) elements taken \(r\) at a time. Using the FCP, there are \(n\) ways to choose the first of the \(r\) elements, \(n-1\) ways to choose the second element, and so on. For each element, there are \(n - (\text{object number} - 1)\) ways to choose it. Thus, there are \(n - (r - 1) = n - r + 1\) ways to choose the \(r\)th (the final) element. Thus,</p>
+<div class="displaymath">
+\begin{align*}
+\nPr{n}{r} \amp = n(n - 1)(n - 2) \cdots (n - r + 1)\\
+\amp = n(n - 1)(n - 2) \cdots (n - r + 1) \cdot \frac{(n - r)!}{(n - r)!} \amp\amp \text{multiplying and dividing by $(n - r)!$}\\
+\amp = \frac{n(n - 1)(n - 2) \cdots (n - r + 1)(n - r)!}{(n - r)!}\\
+\amp = \frac{n!}{(n - r)!}
+\end{align*}
+</div>
+<p id="p-40">In summary,</p>
+<article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h4>
+<p id="p-41">The number of permutations of \(n\) unique objects taken \(r\) at a time is denoted by \(\nPr{n}{r}\text{,}\) and is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\nPr{n}{r} = \frac{n!}{(n - r)!}}
+\end{equation*}
+</div></article><p id="p-42">This formula is a generalization of the FCP. If there are \(n\) elements taken \(n\) at a time, then using the permutation formula,</p>
+<div class="displaymath">
+\begin{equation*}
+\nPr{n}{n} = \frac{n!}{(n - n)!} = \frac{n!}{0!} = \frac{n!}{1} = n!
+\end{equation*}
+</div>
+<p id="p-43">which is consistent with the FCP. Also, notice that these two methods mean that the equality,</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\frac{n!}{0!}}_{\text{from permutation formula}} = \underbrace{n!}_{\text{from FCP}}
+\end{equation*}
+</div>
+<p id="p-44">must hold. Thus, \(0!\) must be equal to 1. This is one reason why zero factorial is defined as it is.</p>
+<p id="p-45">Recall that a permutation of \(r\) elements from an \(n\) element set consists of choosing \(r\) elements from the set in a particular order. We can view this as choosing an “ordered subset” of \(r\) elements from an \(n\) element set.</p>
+<article class="example example-like" id="example-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-11"><article class="example example-like"><p id="p-46">Consider \(\nPr{n}{1}\text{,}\) the number of permutations of \(n\) objects taking 1 at a time. Intuitively, we know that there are \(n\) permutations (one for choosing each of the \(n\) objects). Using the permutation formula,</p>
+<div class="displaymath">
+\begin{equation*}
+\nPr{n}{1} = \frac{n!}{(n - 1)!} = \frac{n(n - 1)!}{(n - 1)!} = n
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="example-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-12"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-12"><article class="example example-like"><p id="p-47">How many different signals can be made by using at least 4 different flags from a selection of 6 different flags?</p>
+<p id="p-48">Signals are different depending on the order of the flags presented. At least 4 different flags means a signal could use 4, 5, or 6 flags. Thus, the number of different signals is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\nPr{6}{4} + \nPr{6}{5} + \nPr{6}{6} = 720 + 720 + 360 = 1800
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="example-13"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-13"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-13"><article class="example example-like"><p id="p-49">A race has 7 competitors. Determine the number of ways the 1st, 2nd, and 3rd place medals be awarded.</p>
+<p id="p-50">When choosing these 3 medals, order matters. So, there are \(\nPr{7}{3} = 210\) ways.</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

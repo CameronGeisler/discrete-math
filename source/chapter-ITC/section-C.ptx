@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-C">
+    <title>Combinations</title>
+
+    <introduction>
+        <definition>
+            <p>
+                Broadly, a <term>combination</term> is a selection of objects where order doesn't matter.
+            </p>
+        </definition>
+
+        <example>
+            <p>
+                Consider a group of 5 distinct balls. How many ways can one choose a collection of 3 balls from these 5 balls? This can be framed as a permutation. List the balls from 1-5, and write I if the ball is included in the collection and E if it is excluded. For example, the particular collection of balls 2, 4, and 5 would be represented by <m>EIEII</m>. For another example, choosing balls 1, 2, and 3 is represented by <m>IIIEE</m>. In general, there is a one-to-one correspondence between the combinations of 5 balls taken 3 at a time, and permutations of this 5-character sequences of E's and I's. From permutations, we know that there are <m>\frac{5!}{2! 3!} = 10</m> permutations of <m>EIEII</m>, and so there are also 10 combinations.
+            </p>
+        </example>
+    </introduction>
+
+    <subsection>
+        <title>Combinations</title>
+        <p>
+            More generally, if there are <m>n</m> distinct objects, being chosen <m>n</m> at a time, then the number of combinations is equal to the number of permutations of an <m>n</m>-character sequence, where there are <m>n</m> identical objects of one kind (in the example, the I's), and <m>n-r</m> identical objects of another kind (the E's). Then,
+        </p>
+        <theorem>
+            <title>Combinations</title>
+            <p>
+                The number of combinations of <m>n</m> distinct objects taken <m>n</m> at a time, <m>\nCr{n}{k}</m> (read as <q><m>n</m> choose <m>n</m></q>), is given by,
+                <me>
+                    \nCr{n}{k} = \frac{n!}{(n - k)!k!}
+                </me>
+            </p>
+        </theorem>
+        <p>
+            Sometimes, the alternate notation <m>\binom{n}{k}</m> is used to represent <m>\nCr{n}{k}</m>, especially in more advanced mathematics.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Number of Subsets of a Given Size</title>
+        <p>
+            Let <m>A</m> be a set of <m>n</m> elements, <m>A = \set{a_1, \dots, a_n}</m>. Then, the number of <m>k</m> element subsets of <m>A</m> is,
+        </p>
+        <me>
+            \nCr{n}{k} = \frac{n!}{k!(n - k)!}
+        </me>
+        <p>
+            Note that the numbers of 1 element subsets is <m>n</m> (as there are <m>n</m> possible sets). For 2 element subsets, there are <m>n</m> ways to choose the first element, and <m>n-1</m> ways to choose the second element, for <m>n(n - 1)</m> ways to choose both. However, this assumes that order is relevant, that <m>\set{s_3, s_4}</m> is different than <m>\set{s_4, s_3}</m>. There are 2 ways to order each selection of 2 elements, so the total number of 2 element subsets is <m>\frac{n(n - 1)}{2}</m>.
+        </p>
+        <p>
+            For 3 element subsets, in a similar way, there are <m>n(n - 1)(n - 2)</m> ways to select 3 elements from <m>n</m> elements where order matters, and <m>3 \cdot 2 \cdot 1 = 3! = 6</m> ways to order a selection of 3 elements. Thus, the number of 3 element subsets is <m>\frac{n(n - 1)(n - 2)}{6}</m>.
+        </p>
+        <p>
+            In general, the number of <m>k</m> element subsets of an <m>n</m> element set is given by,
+        </p>
+        <me>
+            \frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!}
+        </me>
+        <p>
+            This can be rewritten as,
+        </p>
+        <md>
+            <mrow>\frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!} \amp = \frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!} \cdot \frac{(n - k)!}{(n - k)!}</mrow>
+            <mrow>\amp = \frac{n!}{k!(n - k)!}</mrow>
+        </md>
+    </subsection>
+    
+    <!-- \section*{Combinations Identity}
+    \begin{theorem}
+    The number of combinations of <m>n</m> distinct objects taken <m>n</m> at a time, is equal to the number of combinations of <m>n</m> distinct objects taken $n - r$ at a time. In other words,
+    \begin{align*}
+        \nCr{n}{r} \amp = \nCr{n}{n-r} \qquad \text{or} \qquad \binom{n}{r} = \binom{n}{n - r}
+    \end{align*}
+    \end{theorem}
+    \begin{proof}
+    \textbf{Combinatorial proof}. First, $\nCr{n}{r}$ represents the number of ways to choose <m>n</m> elements from <m>n</m> distinct elements. Also, $\nCr{n}{n-r}$ represents the number of ways to choose $n - r$ elements from <m>n</m> distinct elements. Choosing $n - r$ elements to include in your set is equivalent to choosing <m>n</m> elements to not include, or $\nCr{n}{r}$.
+    \end{proof}
+    
+    \begin{proof}
+    \textbf{Direct proof}.
+    \begin{align*}
+        \nCr{n}{n-r} \amp = \frac{n!}{(n - (n - r))!(n - r)!} \amp\amp \text{using the combination formula} \\
+        \amp = \frac{n!}{(n - n + r)!(n - r)!} \\
+        \amp = \frac{n!}{r!(n - r)!} \amp\amp \text{simplifying} \\
+        \amp = \nCr{n}{r}
+    \end{align*}
+    \end{proof}
+    
+    \section*{Examples}
+    \begin{example}
+    An ice cream store sells 27 flavors of ice cream. Determine the number of 6 dip sundaes. How many 6 dip sundaes are possible if order is not considered and no flavor is repeated?
+    \\ \\ There are ${}_{27}C_6 = 296010$ total possible sundaes.
+    \end{example}
+    
+    \begin{example}
+    How many ways can a person selection 8 DVDs from a display of 13 DVDs?
+    \\ \\ There are $_{13}C_8 = 1287$ ways.
+    \end{example}
+    
+    \begin{example}
+    The president of the college asked a sorority to submit a list of 8 students to serve as security at a school function. They have 19 students who are available to help. In how many ways can the students be chosen?
+    \\ \\ There are $_{19}C_8 = 75582$ ways.
+    \end{example}
+    
+    \begin{example}
+    Sarah is packing for a trip. She has 17 pairs of shoes. If she has room to pack 5 pairs, how many ways can she choose which shoes to take?
+    \\ \\ There are $_{17}C_5 = 6188$ ways.
+    \end{example}
+    
+    \begin{example}
+    From the 9 male and 8 female sales representatives for an insurance company, a team of 4 men and 3 women will be selected to attend a national conference on insurance fraud.
+    \\ \\ There are $(_{9}C_{4})(_{8}C_{3}) = 126 \cdot 56 = 7056$
+    \end{example}
+    
+    \begin{example}
+    There are 19 seniors and 16 juniors in a particular social organization. How many ways can 3 seniors and 3 juniors be chosen to participate in a charity event?
+    \\ \\ There are $(_{19}C_3)(_{16}C_3) = 969 \cdot 560 = 542640$ ways.
+    \end{example}
+    
+    
+    \begin{example}
+    How many ways can a dinner patron select 4 appetizers and 2 vegetables if there are 7 appetizers and 7 vegetables on the menu?
+    \\ \\ There are $(_{7}C_4)(_{7}C_2) = 35 \cdot 21 = 735$ ways.
+    \end{example}
+    
+    \begin{example}
+    Determine the number of ways to place $m$ rooks on an $n \times n$ chessboard so that no two rooks attack each other (where $m \leq n$).
+    \\ \\ First, there are $\binom{n}{m}$ ways to choose the columns which the rooks will occupy, and similarly $\binom{n}{m}$ ways to choose the rows they will occupy. Then, ignoring the other rows we can form an $m \times m$ chessboard. There are now $m!$ ways to arrange the rooks on this $m \times m$ chessboard. Thus, in total there are,
+    \begin{align*}
+        \binom{n}{m} \binom{n}{m} m! \amp = \binom{n}{m} \frac{n!}{m!(n - m)!} m! \\
+        \amp = \binom{n}{m} n(n - 1) \cdots (n - m + 1)
+    \end{align*}
+    ways.
+    \end{example}
+    
+    \begin{example}
+    Consider 10 (distinct) balls. First, the balls are split up into two piles. Then, any pile with at least two elements is split further into two piles, repeating the process until each pile only has 1 element. Each split of a pile counts as one step.
+    \begin{enumerate}[(a)]
+        \item Determine the number of steps this process takes.
+        \item Determine the number of ways that this process can be done.
+    \end{enumerate}
+    \begin{enumerate}[(a)]
+        \item For 2 balls, it will take 1 step. For 3 balls, it will take 2 steps. In general, for <m>n</m> balls, we know that no matter how we split the balls, the number of steps will be the same (this is implicit in the question). Then, we can split the <m>n</m> balls by taking 1 ball to make a pile of $(n-1)$ balls and a pile of 1 ball. Then, split the $(n-1)$ balls into $(n-2)$ balls and 1 ball. it will take $(n - 1)$ steps. Repeat this process until there are no more balls to split.
+        \\ \\ Thus, for <m>n</m> balls it will take $(n-1)$ steps, and so for 10 balls it will take 9 steps.
+        \item This process can be viewed in reverse. Consider 10 piles of 1 ball each. There are $\binom{10}{2}$ ways to choose 2 piles to combine. Then, there are 9 piles, and so there are $\binom{9}{2}$ ways to choose two piles to combine. And so on. Thus, there are
+        \begin{equation*}
+            \binom{10}{2} \binom{9}{2} \binom{8}{2} \cdots \binom{3}{2} \binom{2}{2} = 2571912000
+        \end{equation*}
+        ways.
+    \end{enumerate}
+    \end{example}
+    
+    \begin{example}
+    You want to send postcards to 12 friends. In the shop there are only 3 kinds of postcards. How many ways can you send the postcards, if there is a large number of each kind of postcard, and you want to send one or more cards to each friend (but no one should get two identical cards)?
+    \\ \\ Each friend must get at least 1 postcard, so they can receive 1, 2, or 3 postcards. There are
+    \begin{equation*}
+        {}_{3}C_1 + {}_{3}C_2 + {}_{3}C_3 = 3 + 3 + 1 = 7
+    \end{equation*}
+    ways to send 1, 2, or 3 postcards (i.e. 3 ways to choose 1 postcard to send, 3 ways to choose 2 postcards to send, and 1 way to choose all three postcards to send). Thus, there are $7^{12} = 13841287201$ ways to send postcards to all 12 friends.
+    \end{example}
+    
+    \section*{Selecting Lineups for a Team}
+    \begin{example}
+    A vollyball team has 9 boys and 6 girls. The league rules require at least 2 girls on the court at all time. Determine the number of possible lineups of 6 players.
+    \\ \\ There are $({}_{9}C_4)({}_{6}C_2) = 126 \cdot 15 = 1890$ possible lineups.
+    \end{example}
+    
+    \begin{example}
+    A vollyball team has 10 boys and 12 girls. Determine the number of 8-player vollyball teams can be made, if there must be at least 3 of each gender.
+    \\ \\ There can be 3 males and 5 females, 4 males and 4 females, or 5 males and 3 females. Thus, the total number of possible teams is
+    \begin{equation*}
+        ({}_{10}C_3)({}_{12}C_5) + ({}_{10}C_4)({}_{12}C_4) + ({}_{10}C_5)({}_{12}C_3) = 95040 + 103950 + 55440 = 254430
+    \end{equation*}
+    \end{example}
+    
+    \section*{Lotteries}
+    Many lotteries require selecting a few numbers from a larger range of numbers.
+    
+    \begin{example}
+    A lottery ticket is a selection of a few numbers (say, 5) from a larger set of numbers (say, 50), and a winning ticket contains the exact 5 selected numbers, in any order.
+    \\ \\ Then, the number of possible lottery tickets is $\nCr{50}{5} = 2118760$, so the probability of winning with any one ticket is
+    \begin{equation*}
+        \frac{1}{2118760} \approx 4.7 \times 10^{-7} = 0.00000047
+    \end{equation*}
+    \end{example} -->
+
+</section>

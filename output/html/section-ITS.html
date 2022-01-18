@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-18T14:02:14-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction to Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-S.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-S.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-S.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-S.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS" class="active">Introduction to Sets</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-ITS"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Introduction to Sets</span>
+</h2>
+<section class="subsection" id="subsection-62"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.1</span> <span class="title">Sets</span>
+</h3>
+<article class="definition definition-like" id="definition-23"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
+</h4>
+<p id="p-238">Roughly, a <dfn class="terminology">set</dfn> is a collection of distinct objects, called <dfn class="terminology">elements</dfn> (or <dfn class="terminology">members</dfn>).</p>
+<ul class="disc">
+<li id="li-55"><p id="p-derived-li-55">Sets are typically represented by capital letters, like \(A, B, S\text{,}\) etc.</p></li>
+<li id="li-56"><p id="p-derived-li-56">The objects in sets can be pretty much anything, i.e. they need not be numbers.</p></li>
+</ul></article><p id="p-239">Sets can be defined by listing the elements within <dfn class="terminology">set braces</dfn>, \(\{ \text{ and } \}\text{,}\) separated by commas. For example, the set containing the integers 1, 2, and 4 would be written as,</p>
+<div class="displaymath">
+\begin{equation*}
+\set{1, 2, 4}
+\end{equation*}
+</div>
+<p id="p-240">This is called the \textbf{roster method}, because it involes simply listing the elements of the set.</p>
+<p id="p-241">If an object \(x\) is an element of the set \(A\text{,}\) we write \(x \in A\text{.}\) Otherwise, we write \(x \notin A\) For each object \(x\) and set \(A\text{,}\) either \(x \in A\) or \(x \notin A\text{,}\) but not both.</p>
+<article class="example example-like" id="example-23"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-23"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-23"><article class="example example-like">Note that \(1 \in \set{1,3}\) (the object 1 is in the set containing 1 and 3), but \(\set{1} \not\in \set{1,3}\) (the set containing 1 is not an element of the set containing 1 and 3). However, \(\set{1} \in \set{\set{1},3}\) (the set containing 1 is an element of the set containing 3 and the set containing 1). In general, an object is not the same as a set containing that object. Also, note that sets are indeed themselves objects, so they can be included among the elements of a set.</article></div>
+<article class="definition definition-like" id="definition-24"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h4>
+<p id="p-242">Two sets are <dfn class="terminology">equal</dfn>, \(A = B\text{,}\) if and only if they contain exactly the same elements (up to ordering). Otherwise, they are not equal, \(A \neq B\text{.}\) In other words, two sets are not equal if at least one element is in one of the sets and is not in the other set.</p></article><p id="p-243">For example, \(\set{1,2,3} = \set{2,3,1} = \set{3,2,1}\text{,}\) but \(\set{1,2} \neq \set{1,3}\text{.}\)</p>
+<aside class="aside aside-like" id="aside-1"><h4 class="heading"><span class="title">Aside on definitions.</span></h4>
+<p id="p-244">Definitions are very important in mathematics to facilitate clear communication of ideas. However, it is an unfortunate fact that it is impossible to define every concept. Recall that a set is defined as a “collection of distinct objects”. This naturally leads to the question of how a collection is defined. After all, “set” and “collection” seem to be almost synonyms, so defining one in terms of the other seems unhelpful. Theoretically, we could define “collection”, say as an group or aggregate of things. This isn't much more helpful, since now we would have to define a group or aggregate. This could continue indefinitely, until we run out of suitable words. In this way, a concept like a set is simply defined intuitively.</p></aside></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Well-Defined Sets</span>
+</h3>
+<p id="p-245">Sets must be <dfn class="terminology">well-defined</dfn>, in that it must be clear and unambiguous which elements are in the set and which are not. In other words, given any object, it must be clear whether that object is in the set or not.</p>
+<article class="example example-like" id="example-24"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-24"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-24"><article class="example example-like"><p id="p-246">The set of all young adults is not well-defined, because it depends on the definition of “young adult”. The set of all people aged 20 or older is well-defined.</p></article></div>
+<article class="example example-like" id="example-25"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-25"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-25"><article class="example example-like"><p id="p-247">The set of the top 5 airports in the country is not well-defined, because the quality of an airport is subjective and up to interpretation.</p></article></div></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.3</span> <span class="title">Duplicate Elements</span>
+</h3>
+<p id="p-248">Note that a set is a collection of <em class="emphasis">distinct</em> objects, so sets with duplicate objects are considered equal to the set without the duplicates. For example,</p>
+<div class="displaymath">
+\begin{equation*}
+\set{1, 2} = \set{1, 2, 1} = \set{1, 2, 1, 1, 1, 1, 1}
+\end{equation*}
+</div>
+<p id="p-249">All of these sets are equal, but of course by convention, sets are written without duplicate elements.</p></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.4</span> <span class="title">Set-Builder Notation</span>
+</h3>
+<p id="p-250">A set can also be defined based on all its elements sharing a common property. This can be done using <dfn class="terminology">set-builder notation</dfn>, which defines a set as,</p>
+<div class="displaymath">
+\begin{equation*}
+A = \set{x: x \text{ has property } P}
+\end{equation*}
+</div>
+<p id="p-251">which means, “\(A\) is the set of all objects \(x\) such that \(x\) has property \(P\)”, or more concisely, “\(A\) is the set of all objects \(x\) with property \(P\)”. Here, the colon \(:\) means “such that”. Sometimes, we use a vertical bar \(|\) instead. Alternatively, it can be written as,</p>
+<div class="displaymath">
+\begin{equation*}
+A = \set{x \in X: x \text{ has property } P}
+\end{equation*}
+</div>
+<p id="p-252">which means, “\(A\) is the set of all objects in \(X\) that satisfy property \(P\)”. Here, the variable \(x\) is a \textit{dummy variable}, in that replacing \(x\) with any other variable or symbol does not change the set. For example,</p>
+<div class="displaymath">
+\begin{equation*}
+\set{x \in X: x \text{ has property } P} = \set{y \in X: y \text{ has property } P}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-66"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.5</span> <span class="title">The Empty Set</span>
+</h3>
+<article class="definition definition-like" id="definition-25"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
+</h4>
+<p id="p-253">The <dfn class="terminology">empty set</dfn> (or <dfn class="terminology">null set</dfn>), denoted by \(\emptyset\) or \(\set{}\text{,}\) is the unique set with no elements.</p></article></section><section class="subsection" id="subsection-67"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.6</span> <span class="title">Cardinality</span>
+</h3>
+<article class="definition definition-like" id="definition-26"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span>
+</h4>
+<p id="p-254">Let \(A\) be a set. The <dfn class="terminology">cardinality</dfn> (or <dfn class="terminology">size</dfn> or <dfn class="terminology">cardinal number</dfn>) of a set \(A\text{,}\) denoted by \(n(A)\) or \(\abs{A}\text{,}\) is the number of elements in \(A\text{.}\)</p>
+<ul class="disc"><li id="li-57"><p id="p-derived-li-57">The empty set has cardinality zero, \(\abs{\emptyset} = 0\text{,}\) and it is the unique set with this property.</p></li></ul></article></section></section></div></main>
+</div>
+</body>
+</html>

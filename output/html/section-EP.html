@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-18T14:02:14-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Existence Proofs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-PBC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-PBAR.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-UP.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-PBC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-PBAR.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-UP.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP" class="active">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-EP"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Existence Proofs</span>
+</h2>
+<section class="introduction" id="introduction-12"><p id="p-222">Sometimes, in mathematics, we want to prove that a certain object exists. For example, given an equation, a solution to this equation exists.</p></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">Existence Proofs</span>
+</h3>
+<article class="definition definition-like" id="definition-22"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+</h4>
+<p id="p-223">An <dfn class="terminology">existence theorem</dfn> is a theorem which asserts that something exists, without providing information about how to find it.</p></article><p id="p-224">There are two classes of proofs of existence theorems: <dfn class="terminology">constructive proofs</dfn> and <dfn class="terminology">non-constructive proofs</dfn>. Literally, constructive proofs involve explicitly constructing the object that satisfies the properties of the theorem, and proving that it does satisfy these properties. On the other hand, non-constructive proof show the existence of the object without constructing it.</p></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">Famous Non-Constructive Proof</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-15"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">There exists a power of irrationals which is rational.</span>
+</h4>
+<p id="p-225">There exists two irrational numbers \(a\) and \(b\) such that \(a^b\) is rational.</p></article><p id="p-226">This theorem is not intuitive, and it has an elegant non-constructive proof. It uses the fact that \(\sqrt{2}\) is irrational.</p>
+<article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><p id="p-227">Consider the number \(\sqrt{2}^{\sqrt{2}\text{.}\)</p>
+<ul class="disc">
+<li id="li-48"><p id="p-derived-li-48">If \(\sqrt{2}^{\sqrt{2}}\) is rational, then we can let \(a = b = \sqrt{2}\) (which are both irrational) and we are done.</p></li>
+<li id="li-49"><p id="p-derived-li-49">If \(\sqrt{2}^{\sqrt{2}}\) is irrational, then consider raising this number to the exponent \(\sqrt{2}\text{,}\)<div class="displaymath">
+\begin{align*}
+\brac{\sqrt{2}^{\sqrt{2}}^{\sqrt{2}} \amp = \sqrt{2}^{\sqrt{2} \cdot \sqrt{2}} \amp\amp \text{by properties of exponents}\\
+\amp = \sqrt{2}^2\\
+\amp = 2
+\end{align*}
+</div>Thus, we can let \(a = \sqrt{2}^{\sqrt{2}}\) (which is irrational, by assumption), and \(b = \sqrt{2}\text{.}\) Then, \(a^b = 2\) is rational, and we are done.</p></li>
+</ul></article></div>
+<p id="p-228">This proof is very subtle. Notice that this proof doesn't actual show that \(\sqrt{2}^{\sqrt{2}}\) is rational or not (in fact, it is not). Rather, it shows that either way, we can construct the desired result.</p></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">Remark on Existence Theorems</span>
+</h3>
+<p id="p-229">Sometimes, existence theorems seem unhelpful. It seems intuitive that if there is a method to determine how to find something, then that method can just be used to determine the solution, without considering whether it exists. However, this can sometimes lead to pitfalls.</p></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.4</span> <span class="title"></span>
+</h3>
+<article class="fact theorem-like" id="fact-20"><h4 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">False proof 1 is the largest positive Integer (Perron's paradox).</span>
+</h4>
+<p id="p-230">1 is the largest positive integer.</p></article><p id="p-231">This result is clearly false, as there is no largest positive integer. However, if we assume that a largest positive integer does exist, then we can “prove” the result.</p>
+<article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><p id="p-232">Let \(n\) be the largest positive integer. Then, \(n\) is a positive integer, so \(n \geq 1\text{.}\) Then, multiplying both sides by \(n\) (which is positive), we have \(n^2 \geq n\text{.}\) Also, \(n\) is a positive integer so \(n^2\) is also a positive integer, so it must be at most \(n\text{,}\) or \(n^2 \leq n\text{.}\) Thus, \(n^2 = n\text{,}\) so \(n^2 - n = 0\text{,}\) so \(n(n - 1) = 0\text{.}\) The solutions to this equation are \(n = 0, 1\text{.}\) Since 0 is not a positive integer, this implies that \(n = 1\text{.}\)</p></article></div>
+<p id="p-233">The only mistake in this proof is the initial assumption, that a largest positive integer $n$ exists. In fact, this theorem proves the implication, “if the largest positive integer exists, then it is 1”. This implication is true, however, the hypothesis is false.</p>
+<p id="p-234">The more general principle is that if you assume a false statment, then you can prove anything, because the condition \(\text{false} \implies Q\) is true always. This false proof is called <dfn class="terminology">Perron's paradox</dfn>, named after German mathematician <dfn class="terminology">Oskar Perron</dfn>.</p></section> \section*{Uniqueness Proofs} To prove that an object $A$ is unique, the typical method is to assume there exists two objects $A$ and $B$ which both satisfy the desired properties. Then, show that these two objects are equal, $A = B$. \\ \\ In some sense, this is a proof by contradiction. That is, \​begin{itemize} \item By contradiction, assume that there exists $A, B$ which satisfy the properties, and that $A \neq B$. \item Show that $A = B$, contradicting the initial assumption. \end{itemize} \section*{Examples of Uniqueness Proofs} \​begin{itemize} \item Division algorithm. \item Uniqueness of an inverse of a square matrix. \item Uniqueness of the limit of a function (or sequence). \end{itemize}</section></div></main>
+</div>
+</body>
+</html>

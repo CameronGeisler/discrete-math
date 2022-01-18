@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-17T15:45:44-08:00       *-->
+<!--*       on 2022-01-18T14:02:14-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -55,6 +55,11 @@
 \renewcommand{\neg}{\sim}
 \newcommand{\brac}[1]{\left( #1 \right)}
 \newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -76,56 +81,71 @@
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link">
-<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">1</span> <span class="title">Logic</span></a><ul>
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
 <li><a href="section-ITL.html" data-scroll="section-ITL" class="active">Introduction to Logic</a></li>
 <li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
 <li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">2</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
 <li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
 <li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
 </ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-ITL"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Introduction to Logic</span>
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Introduction to Logic</span>
 </h2>
-<section class="introduction" id="introduction-3">Symbolic logic uses formal mathematics with symbols to represent statements in language. Everyday language includes factual statements, opinions, commands, and questions. Symbolic logic only deals with statements and opinions, but not commands or questions. Aristotle was one of the early pioneers of logic. Propositional logic.</section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Statements</span>
+<section class="introduction" id="introduction-9">Symbolic logic uses formal mathematics with symbols to represent statements in language. Everyday language includes factual statements, opinions, commands, and questions. Symbolic logic only deals with statements and opinions, but not commands or questions. Aristotle was one of the early pioneers of logic. Propositional logic.</section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Statements</span>
 </h3>
-<article class="definition definition-like" id="definition-1"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
-</h4>A <dfn class="terminology">statement</dfn> (or <dfn class="terminology">proposition</dfn>) is a declarative sentence, a sentence that is either definitely true or definitely false, but not both or indeterminate.</article><p id="p-2">General statements are typically are represented by the letters \(P, Q, R\text{,}\) and \(S\text{.}\) In applications, letters that represent the sentence are typically used. For example, for the statement “John is coming to the party” might be represented by \(J\) (for \(John\)).</p>
-<p id="p-3">Examples of sentences which are not statements include:</p>
-<ul class="disc">
-<li id="li-1"><p id="p-derived-li-1"><dfn class="terminology">Commands</dfn>. For example, “Tie your shoes.”</p></li>
-<li id="li-2"><p id="p-derived-li-2"><dfn class="terminology">Questions</dfn>. For example, “Are you having fun?”</p></li>
-<li id="li-3"><p id="p-derived-li-3"><dfn class="terminology">Paradoxes or contradictions</dfn>. This most often occurs with sentences that refer to themselves (are self-referential). For example, “This sentence is false.” (called the <em class="emphasis">liar paradox</em>). This is a paradox because if the sentence is true, then the sentence itself tells us it is false, and the sentence cannot both be true and false. Similarly, if the sentence is false, then the sentence tells us it is not false (i.e. true), leading to another contradiction. Thus, no truth value can be assigned to the statement.</p></li>
-</ul>
-<p id="p-4">Roughly, logic and mathematics can only apply to statements.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Negation (Not)</span>
-</h3>
-<article class="definition definition-like" id="definition-2"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
-</h4>
-<p id="p-5">Let \(P\) be a statement. The <dfn class="terminology">negation</dfn> of \(P\text{,}\) denoted by \(\neg P\text{,}\) is a statement which is true if \(P\) is false, and is false when \(P\) is true.</p></article><p id="p-6">At a very basic level, to determine the negation of a statement, one can add “it is not true that” to the beginning of the statement. Note that the negation of a statement is itself a statement, which can be true or false. The negation often occurs in English as the connective “not”.</p>
-<article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-7">The negation of “It is raining today.” is “It is not true that is raining today” or more simply, “It is not raining today”.</p></article></div>
-<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-8">The statement “I did not take your hat” is the negation of the statement “I did take your hat” or more simply, “I took your hat”.</p></article></div>
-<article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-9">The negation of a statement that is itself a negation is the original statement. For example, the negation of “The grass is not green”, is “The grass is green”.</p></article></div>
-<p id="p-10">The fact that the negation of a statement is false when the statement is true, and true when the statement is false, can be summarized in a so-called <em class="emphasis">truth table</em>.</p>
 <article class="definition definition-like" id="definition-3"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h4>A <dfn class="terminology">statement</dfn> (or <dfn class="terminology">proposition</dfn>) is a declarative sentence, a sentence that is either definitely true or definitely false, but not both or indeterminate.</article><p id="p-78">General statements are typically are represented by the letters \(P, Q, R\text{,}\) and \(S\text{.}\) In applications, letters that represent the sentence are typically used. For example, for the statement “John is coming to the party” might be represented by \(J\) (for \(John\)).</p>
+<p id="p-79">Examples of sentences which are not statements include:</p>
+<ul class="disc">
+<li id="li-5"><p id="p-derived-li-5"><dfn class="terminology">Commands</dfn>. For example, “Tie your shoes.”</p></li>
+<li id="li-6"><p id="p-derived-li-6"><dfn class="terminology">Questions</dfn>. For example, “Are you having fun?”</p></li>
+<li id="li-7"><p id="p-derived-li-7"><dfn class="terminology">Paradoxes or contradictions</dfn>. This most often occurs with sentences that refer to themselves (are self-referential). For example, “This sentence is false.” (called the <em class="emphasis">liar paradox</em>). This is a paradox because if the sentence is true, then the sentence itself tells us it is false, and the sentence cannot both be true and false. Similarly, if the sentence is false, then the sentence tells us it is not false (i.e. true), leading to another contradiction. Thus, no truth value can be assigned to the statement.</p></li>
+</ul>
+<p id="p-80">Roughly, logic and mathematics can only apply to statements.</p></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Negation (Not)</span>
+</h3>
+<article class="definition definition-like" id="definition-4"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
 </h4>
-<p id="p-11">A <dfn class="terminology">truth table</dfn> is a table that includes all possible combinations of truth values for each simple statement, and the truth value of any compound statements in each case.</p></article><p id="p-12">For the single statement \(P\text{,}\) there are two possible values of \(P\text{:}\) true and false. The truth table for negation is given by,</p>
+<p id="p-81">Let \(P\) be a statement. The <dfn class="terminology">negation</dfn> of \(P\text{,}\) denoted by \(\neg P\text{,}\) is a statement which is true if \(P\) is false, and is false when \(P\) is true.</p></article><p id="p-82">At a very basic level, to determine the negation of a statement, one can add “it is not true that” to the beginning of the statement. Note that the negation of a statement is itself a statement, which can be true or false. The negation often occurs in English as the connective “not”.</p>
+<article class="example example-like" id="example-19"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-19"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-19"><article class="example example-like"><p id="p-83">The negation of “It is raining today.” is “It is not true that is raining today” or more simply, “It is not raining today”.</p></article></div>
+<article class="example example-like" id="example-20"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-20"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-20"><article class="example example-like"><p id="p-84">The statement “I did not take your hat” is the negation of the statement “I did take your hat” or more simply, “I took your hat”.</p></article></div>
+<article class="example example-like" id="example-21"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-21"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-21"><article class="example example-like"><p id="p-85">The negation of a statement that is itself a negation is the original statement. For example, the negation of “The grass is not green”, is “The grass is green”.</p></article></div>
+<p id="p-86">The fact that the negation of a statement is false when the statement is true, and true when the statement is false, can be summarized in a so-called <em class="emphasis">truth table</em>.</p>
+<article class="definition definition-like" id="definition-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
+</h4>
+<p id="p-87">A <dfn class="terminology">truth table</dfn> is a table that includes all possible combinations of truth values for each simple statement, and the truth value of any compound statements in each case.</p></article><p id="p-88">For the single statement \(P\text{,}\) there are two possible values of \(P\text{:}\) true and false. The truth table for negation is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c}
@@ -135,37 +155,37 @@ F \amp T \\
 \end{array}
 \end{equation*}
 </div>
-<p id="p-13">Each row of a truth table can be thought of as one possible state of affairs in the world. Here, there are only two possibilities.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Simple and Compound Sentences</span>
+<p id="p-89">Each row of a truth table can be thought of as one possible state of affairs in the world. Here, there are only two possibilities.</p></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">Simple and Compound Sentences</span>
 </h3>
-<p id="p-14">Roughly, a <dfn class="terminology">simple sentence</dfn> is a sentence that does not “contain” another complete sentence as a component. Intuitively, a simple sentence only says “one thing”.</p>
-<p id="p-15">Simple sentences can be combined together in various ways to form a <dfn class="terminology">compound sentence</dfn>, which is simply a sentence that contains multiple simple statements. These simple sentences are combined with words such as,</p>
+<p id="p-90">Roughly, a <dfn class="terminology">simple sentence</dfn> is a sentence that does not “contain” another complete sentence as a component. Intuitively, a simple sentence only says “one thing”.</p>
+<p id="p-91">Simple sentences can be combined together in various ways to form a <dfn class="terminology">compound sentence</dfn>, which is simply a sentence that contains multiple simple statements. These simple sentences are combined with words such as,</p>
 <ul class="disc">
-<li id="li-4"><p id="p-derived-li-4">“and”, called a <em class="emphasis">conjunction</em>.</p></li>
-<li id="li-5"><p id="p-derived-li-5">“or”, called a <em class="emphasis">disjunction</em></p></li>
-<li id="li-6"><p id="p-derived-li-6">“if..., then...”, called an <em class="emphasis">implication</em>, or <em class="emphasis">conditional</em>.</p></li>
-<li id="li-7"><p id="p-derived-li-7">“if and only if”, called a <em class="emphasis">biconditional</em>.</p></li>
+<li id="li-8"><p id="p-derived-li-8">“and”, called a <em class="emphasis">conjunction</em>.</p></li>
+<li id="li-9"><p id="p-derived-li-9">“or”, called a <em class="emphasis">disjunction</em></p></li>
+<li id="li-10"><p id="p-derived-li-10">“if..., then...”, called an <em class="emphasis">implication</em>, or <em class="emphasis">conditional</em>.</p></li>
+<li id="li-11"><p id="p-derived-li-11">“if and only if”, called a <em class="emphasis">biconditional</em>.</p></li>
 </ul>
-<p id="p-16">These are called <dfn class="terminology">logical connectives</dfn>.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">Disjunction (Or)</span>
+<p id="p-92">These are called <dfn class="terminology">logical connectives</dfn>.</p></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.4</span> <span class="title">Disjunction (Or)</span>
 </h3>
-<p id="p-17">In English, the connective ``or" can have an ambiguous meaning. For example, the sentence,</p>
+<p id="p-93">In English, the connective ``or" can have an ambiguous meaning. For example, the sentence,</p>
 <div class="displaymath">
 \begin{equation*}
 \text{}
 \end{equation*}
 </div>
-<p id="p-18">probably means you have to choose between cake and fruit, and you cannot have both of them. In logic, this is called the <em class="emphasis">exclusive or</em>. However, the sentence,</p>
+<p id="p-94">probably means you have to choose between cake and fruit, and you cannot have both of them. In logic, this is called the <em class="emphasis">exclusive or</em>. However, the sentence,</p>
 <div class="displaymath">
 \begin{equation*}
 \text{}
 \end{equation*}
 </div>
-<p id="p-19">probably means that people can enter if they have a driver's license, a passport, or they have both. This is called the <em class="emphasis">inclusive or</em>. This is the main or default “or” that is used in logic.</p>
-<article class="definition definition-like" id="definition-4"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+<p id="p-95">probably means that people can enter if they have a driver's license, a passport, or they have both. This is called the <em class="emphasis">inclusive or</em>. This is the main or default “or” that is used in logic.</p>
+<article class="definition definition-like" id="definition-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
 </h4>
-<p id="p-20">Let \(P, Q\) be statements. The <dfn class="terminology">disjunction</dfn> (or, <dfn class="terminology">or</dfn>), denoted by \(P \lor Q\text{,}\) is a statement that is true if at least one of \(P\) or \(Q\) is true, and is false if both \(P\) and \(Q\) are false.</p></article><p id="p-21">For two statements, there are 4 possible combinations: \(TT\text{,}\) \(TF\text{,}\) \(FT\text{,}\) and \(FF\text{.}\) The truth table for disjunction is given by,</p>
+<p id="p-96">Let \(P, Q\) be statements. The <dfn class="terminology">disjunction</dfn> (or, <dfn class="terminology">or</dfn>), denoted by \(P \lor Q\text{,}\) is a statement that is true if at least one of \(P\) or \(Q\) is true, and is false if both \(P\) and \(Q\) are false.</p></article><p id="p-97">For two statements, there are 4 possible combinations: \(TT\text{,}\) \(TF\text{,}\) \(FT\text{,}\) and \(FF\text{.}\) The truth table for disjunction is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c}
@@ -177,14 +197,14 @@ F \amp F \amp F
 \end{array}
 \end{equation*}
 </div>
-<p id="p-22">The order of the combinations (\(TT\text{,}\) then \(TF\text{,}\) \(FT\text{,}\) and finally \(FF\)) is just a convention, however it is preferred because it makes things more organized.</p>
-<p id="p-23">Note that just because a statement uses a logical connector such as “or”, does not necessarily mean it is an “or” statement. For example, “They decided to play Truth or Dare.” contains an “or”, however, it is used in part of a name, and is not used to connect simple sentences.</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.5</span> <span class="title">Conjunction (And)</span>
+<p id="p-98">The order of the combinations (\(TT\text{,}\) then \(TF\text{,}\) \(FT\text{,}\) and finally \(FF\)) is just a convention, however it is preferred because it makes things more organized.</p>
+<p id="p-99">Note that just because a statement uses a logical connector such as “or”, does not necessarily mean it is an “or” statement. For example, “They decided to play Truth or Dare.” contains an “or”, however, it is used in part of a name, and is not used to connect simple sentences.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.5</span> <span class="title">Conjunction (And)</span>
 </h3>
-<article class="definition definition-like" id="definition-5"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-7"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span>
 </h4>
-<p id="p-24">Let \(P, Q\) be statements. The <dfn class="terminology">conjunction</dfn> of \(P\) and \(Q\text{,}\) denoted by \(P \land Q\text{,}\) is a statement that is true if both \(P\) and \(Q\) are true, and is false if at least one of \(P\) and \(Q\) are false.</p></article><p id="p-25">The truth table for conjunction is given by,</p>
+<p id="p-100">Let \(P, Q\) be statements. The <dfn class="terminology">conjunction</dfn> of \(P\) and \(Q\text{,}\) denoted by \(P \land Q\text{,}\) is a statement that is true if both \(P\) and \(Q\) are true, and is false if at least one of \(P\) and \(Q\) are false.</p></article><p id="p-101">The truth table for conjunction is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c}

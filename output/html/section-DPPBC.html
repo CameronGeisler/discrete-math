@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-17T15:45:44-08:00       *-->
+<!--*       on 2022-01-18T14:02:14-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -55,6 +55,11 @@
 \renewcommand{\neg}{\sim}
 \newcommand{\brac}[1]{\left( #1 \right)}
 \newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -67,56 +72,71 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-PBPW.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-PBAR.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-PBPW.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-PBAR.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-PBC.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-PBPW.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-PBAR.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-PBPW.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-PBAR.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-PBC.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link">
-<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">1</span> <span class="title">Logic</span></a><ul>
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
 <li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
 <li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
 <li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">2</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
 <li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
 <li><a href="section-DPPBC.html" data-scroll="section-DPPBC" class="active">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
 </ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DPPBC"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Direct Proof, Proof by Contrapositive</span>
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Direct Proof, Proof by Contrapositive</span>
 </h2>
-<section class="subsection" id="subsection-25"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Direct Proof, Proof by Contrapositive</span>
+<section class="subsection" id="subsection-36"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Direct Proof</span>
 </h3>
-<article class="definition definition-like" id="definition-19"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-21"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
 </h4>
-<p id="p-71">A <dfn class="terminology">direct proof</dfn> is a proof technique that involves using the assumptions of the statement, axioms, established facts and theorems, and combining them to logically deduce the desired conclusion.</p></article><p id="p-72">Typically, direct proof is used for conditional statements \(A \implies B\text{.}\) We assume \(A\text{,}\) and make a sequence of conclusions from that, until we logically conclude \(B\text{.}\) Often, using direct proof involves playing around with definitions and previous theorems, in an attempt to combine them in some way.</p></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Ending a Proof (Q.E.D)</span>
+<p id="p-147">A <dfn class="terminology">direct proof</dfn> is a proof technique that involves using the assumptions of the statement, axioms, established facts and theorems, and combining them to logically deduce the desired conclusion.</p></article><p id="p-148">Typically, direct proof is used for conditional statements \(A \implies B\text{.}\) We assume \(A\text{,}\) and make a sequence of conclusions from that, until we logically conclude \(B\text{.}\) Often, using direct proof involves playing around with definitions and previous theorems, in an attempt to combine them in some way.</p></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Ending a Proof (Q.E.D)</span>
 </h3>
-<p id="p-73">Often, proofs are ended by the symbol \(\square\) in the bottom right corner, like</p>
+<p id="p-149">Often, proofs are ended by the symbol \(\square\) in the bottom right corner, like</p>
 <article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"></article></div>
-<p id="p-74">Alternatively, proofs can be ended with the acronym “Q.E.D” which stands for the latin phrase “quod erat demonstrandum” which means “that which was to be demonstrated”, which basically means “we have proved what we said we would prove”.</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">Average of Two Numbers is Between Them</span>
+<p id="p-150">Alternatively, proofs can be ended with the acronym “Q.E.D” which stands for the latin phrase “quod erat demonstrandum” which means “that which was to be demonstrated”, which basically means “we have proved what we said we would prove”.</p></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Average of Two Numbers is Between Them</span>
 </h3>
 <article class="fact theorem-like" id="fact-1"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h4>
-<p id="p-75">Let \(a, b \in \mathbb{R}, a \lt b\text{.}\) Then,</p>
+<p id="p-151">Let \(a, b \in \mathbb{R}, a \lt b\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{equation*}
 a \lt \frac{a + b}{2} \lt b
 \end{equation*}
 </div>
-<p class="continuation">In other words, the average of two numbers \(a\) and \(b\) is greater than the smaller number and less than the larger number.</p></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-76">First,</p>
+<p class="continuation">In other words, the average of two numbers \(a\) and \(b\) is greater than the smaller number and less than the larger number.</p></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-152">First,</p>
 <div class="displaymath">
 \begin{align*}
 a + b \amp \lt b + b \amp\amp \text{as $a \lt b$}\\
@@ -132,7 +152,7 @@ a + b \amp &gt; 2a\\
 \frac{a + b}{2} \amp &gt; a
 \end{align*}
 </div> as desired.</article></div>
-<article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="title">Alternate proof.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-77">Alternatively, start with \(a \lt b\) and add \(a\) to both sides,</p>
+<article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="title">Alternate proof.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-153">Alternatively, start with \(a \lt b\) and add \(a\) to both sides,</p>
 <div class="displaymath">
 \begin{align*}
 a \amp \lt b\\
@@ -143,64 +163,64 @@ a \amp \lt b\\
 a \amp \lt b\\
 a + b \amp \lt 2b
 \end{align*}
-</div>and dividing by 2 again.</article></div></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.4</span> <span class="title">Sum of Rational Numbers is Rational</span>
+</div>and dividing by 2 again.</article></div></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.4</span> <span class="title">Sum of Rational Numbers is Rational</span>
 </h3>
 <article class="fact theorem-like" id="fact-2"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
 </h4>
-<p id="p-78">If \(x, y\) are rational numbers, then their sum \(x + y\) is a rational number.</p></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-79">Let \(x, y\) be rational, so \(x = \frac{a}{b}, y = \frac{c}{d}\) for some \(a, b, c, d \in \mathbb{Z}, b, d \neq 0\text{.}\) Then,</p>
+<p id="p-154">If \(x, y\) are rational numbers, then their sum \(x + y\) is a rational number.</p></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-155">Let \(x, y\) be rational, so \(x = \frac{a}{b}, y = \frac{c}{d}\) for some \(a, b, c, d \in \mathbb{Z}, b, d \neq 0\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{equation*}
 x + y = \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}
 \end{equation*}
 </div>
 <p class="continuation">Then, \(ad + bc, bd \in \mathbb{Z}\text{,}\) and \(bd \neq 0\) (because \(b, d \neq 0\)). Thus, \(x + y\) is rational.</p></article></div>
-<p id="p-80">Note that the previous two results imply that for any two rational numbers, there exists a rational number between them.</p></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.5</span> <span class="title">Square of a Rational Number is Rational</span>
+<p id="p-156">Note that the previous two results imply that for any two rational numbers, there exists a rational number between them.</p></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.5</span> <span class="title">Square of a Rational Number is Rational</span>
 </h3>
 <article class="fact theorem-like" id="fact-3"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
 </h4>
-<p id="p-81">If \(x\) is a rational number, then \(x^2\) is rational.</p></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><p id="p-82">Let \(x\) be rational, so \(x = \frac{a}{b}\) for some \(a, b \in \mathbb{Z}, b \neq 0\text{.}\) Then,</p>
+<p id="p-157">If \(x\) is a rational number, then \(x^2\) is rational.</p></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><p id="p-158">Let \(x\) be rational, so \(x = \frac{a}{b}\) for some \(a, b \in \mathbb{Z}, b \neq 0\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 = \brac{\frac{a}{b}}^2 = \frac{a^2}{b^2}
 \end{equation*}
 </div>
 <p class="continuation">Then, since \(a^2, b^2 \in \mathbb{Z}\) (because the squares of integers are integers) and \(b^2 \neq 0\) (since \(b \neq 0\)), this implies that \(x^2\) is rational.</p></article></div>
-<article class="corollary theorem-like" id="corollary-1"><h4 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+<article class="corollary theorem-like" id="corollary-2"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
 </h4>
-<p id="p-83">If \(x^2\) is irrational, then \(x\) is irrational.</p></article><article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-84">This is the contrapositive of the previous statement.</p></article></div></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.6</span> <span class="title">Product of Rational Numbers is Rational</span>
+<p id="p-159">If \(x^2\) is irrational, then \(x\) is irrational.</p></article><article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-160">This is the contrapositive of the previous statement.</p></article></div></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.6</span> <span class="title">Product of Rational Numbers is Rational</span>
 </h3>
 <article class="fact theorem-like" id="fact-4"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
-</h4>\(x, y\)\(xy\)</article><p id="p-85">This is only a slight generalization from the fact that the square of a rational number is rational. Here, we consider two different numbers, but the structure of the proof is similar.</p>
-<article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-86">Let \(x, y\) be rational, so \(x = \frac{a}{b}, y = \frac{c}{d}\) for some \(a, b, c, d \in \mathbb{Z}, b, d \neq 0\text{.}\) Then,</p>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
+</h4>\(x, y\)\(xy\)</article><p id="p-161">This is only a slight generalization from the fact that the square of a rational number is rational. Here, we consider two different numbers, but the structure of the proof is similar.</p>
+<article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-162">Let \(x, y\) be rational, so \(x = \frac{a}{b}, y = \frac{c}{d}\) for some \(a, b, c, d \in \mathbb{Z}, b, d \neq 0\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{equation*}
 xy = \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}
 \end{equation*}
 </div>
-<p class="continuation">Then, \(ac, bd \in \mathbb{Z}\text{,}\) and \(bd \neq 0\) (since \(b, d \neq 0\)). Thus, \(xy\) is rational.</p></article></div></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.7</span> <span class="title">Absolute Value of Product is Product of Absolute Values</span>
+<p class="continuation">Then, \(ac, bd \in \mathbb{Z}\text{,}\) and \(bd \neq 0\) (since \(b, d \neq 0\)). Thus, \(xy\) is rational.</p></article></div></section><section class="subsection" id="subsection-42"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.7</span> <span class="title">Absolute Value of Product is Product of Absolute Values</span>
 </h3>
 <article class="fact theorem-like" id="fact-5"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
 </h4>
-<p id="p-87">For all \(x, y \in \mathbb{R}\text{,}\)</p>
+<p id="p-163">For all \(x, y \in \mathbb{R}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \abs{xy} = \abs{x} \cdot \abs{y}
 \end{equation*}
-</div></article></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.8</span> <span class="title">More Examples</span>
+</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-164">Exercise.</p></article></div></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.8</span> <span class="title">More Examples</span>
 </h3>
 <article class="fact theorem-like" id="fact-6"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
-</h4>\(a \lt b\text{,}\)\(4ab \lt (a + b)^2\text{.}\)</article><p id="p-88">First, expanding the right-hand side,</p>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span>
+</h4>\(a \lt b\text{,}\)\(4ab \lt (a + b)^2\text{.}\)</article><p id="p-165">First, expanding the right-hand side,</p>
 <div class="displaymath">
 \begin{align*}
 4ab \amp \lt a^2 + 2ab + b^2\\
@@ -208,8 +228,8 @@ xy = \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}
 0 \amp \lt (a - b)^2
 \end{align*}
 </div>
-<p id="p-89">Then, since this is a true statement (since \(a \neq b\)), we can reverse the steps to form a proof.</p>
-<article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-90">If \(a \lt b\text{,}\) then \(a - b \neq 0\text{,}\) and so \((a - b)^2 &gt; 0\text{.}\) Then,</p>
+<p id="p-166">Then, since this is a true statement (since \(a \neq b\)), we can reverse the steps to form a proof.</p>
+<article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-167">If \(a \lt b\text{,}\) then \(a - b \neq 0\text{,}\) and so \((a - b)^2 &gt; 0\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{align*}
 (a - b)^2 \amp &gt; 0\\
@@ -219,10 +239,10 @@ a^2 + 2ab + b^2 \amp &gt; 4ab \amp\amp \text{adding $4ab$ to both sides}\\
 \end{align*}
 </div></article></div>
 <article class="fact theorem-like" id="fact-7"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
 </h4>
-<p id="p-91">Let \(x \in \mathbb{R}\text{.}\) If \(x^3 - x &gt; 0\text{,}\) then \(x &gt; -1\text{.}\)</p></article><p id="p-92">This fact is an implication, where the hypothesis \(x^3 - x &gt; 0\) is complicated, but the conclusion \(x &gt; -1\) is simpler. Then, a good idea is to try proving the contrapositive.</p>
-<article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof">We will prove the contrapositive, that if \(x \leq -1\text{,}\) then \(x^3 - x \leq 0\text{.}\) Let \(x \leq -1\text{.}\) Then \(x \leq -1 \lt 0\text{.}\) Also,<div class="displaymath">
+<p id="p-168">Let \(x \in \mathbb{R}\text{.}\) If \(x^3 - x &gt; 0\text{,}\) then \(x &gt; -1\text{.}\)</p></article><p id="p-169">This fact is an implication, where the hypothesis \(x^3 - x &gt; 0\) is complicated, but the conclusion \(x &gt; -1\) is simpler. Then, a good idea is to try proving the contrapositive.</p>
+<article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof">We will prove the contrapositive, that if \(x \leq -1\text{,}\) then \(x^3 - x \leq 0\text{.}\) Let \(x \leq -1\text{.}\) Then \(x \leq -1 \lt 0\text{.}\) Also,<div class="displaymath">
 \begin{align*}
 x \amp \leq -1\\
 x^2 \amp \geq 1 \amp\amp \text{squaring both sides, both $x$ and $-1$ are negative so flip inequality}\\
@@ -231,43 +251,44 @@ x^3 - x \amp \leq 0 \amp\amp \text{multiplying by $x \lt 0$}
 \end{align*}
 </div>as desired.</article></div>
 <article class="fact theorem-like" id="fact-8"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span>
 </h4>
-<p id="p-93">If \(p\) is prime and \(p \geq 5\text{,}\) then \(p^2 - 1\) is divisible by 24.</p></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof">First, \(p^2 - 1 = (p - 1)(p + 1)\text{.}\) Since \(p \geq 5\) is prime, \(p\) is odd, so \(p-1\) and \(p+1\) are both even. This implies that \(4 \mid (p^2 - 1)\text{.}\) Also, \(p-1\) and \(p+1\) are two consecutive even integers, so exactly one of them is divisible by 4. Thus, \(8 \mid (p^2 - 1)\text{.}\) Also, in general, exactly one of \(p-1, p, p+1\) is divisible by 3. Since \(p\) is prime, \(3 \nmid p\text{.}\) Thus, either \(p-1\) or \(p+1\) is divisible by 3. Together, \(24 \mid (p^2 - 1)\text{.}\)</article></div></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.9</span> <span class="title">Proving “Or” Statements</span>
+<p id="p-170">If \(p\) is prime and \(p \geq 5\text{,}\) then \(p^2 - 1\) is divisible by 24.</p></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof">First, \(p^2 - 1 = (p - 1)(p + 1)\text{.}\) Since \(p \geq 5\) is prime, \(p\) is odd, so \(p-1\) and \(p+1\) are both even. This implies that \(4 \mid (p^2 - 1)\text{.}\) Also, \(p-1\) and \(p+1\) are two consecutive even integers, so exactly one of them is divisible by 4. Thus, \(8 \mid (p^2 - 1)\text{.}\) Also, in general, exactly one of \(p-1, p, p+1\) is divisible by 3. Since \(p\) is prime, \(3 \nmid p\text{.}\) Thus, either \(p-1\) or \(p+1\) is divisible by 3. Together, \(24 \mid (p^2 - 1)\text{.}\)</article></div></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.9</span> <span class="title">Proving “Or” Statements</span>
 </h3>
-<p id="p-94">Consider an “or” statement, that \(P \implies (A \lor B)\text{,}\) i.e. that given the hypotheses, either one of \(A\) or \(B\) is true (or both).</p>
-<p id="p-95">To prove a statement of this form, we can split up the proof into two cases: (1) if \(A\) is true, or (2) \(A\) is false. These two cases cover all possible scenarios, so if the statement is true in both of these cases, it will be true in all cases.</p>
+<p id="p-171">Consider an “or” statement, that \(P \implies (A \lor B)\text{,}\) i.e. that given the hypotheses, either one of \(A\) or \(B\) is true (or both).</p>
+<p id="p-172">To prove a statement of this form, we can split up the proof into two cases: (1) if \(A\) is true, or (2) \(A\) is false. These two cases cover all possible scenarios, so if the statement is true in both of these cases, it will be true in all cases.</p>
 <ul class="disc">
-<li id="li-38"><p id="p-derived-li-38">In the first case, the proof is done, because \(A\) being true implies that \(A \lor B\) is true. Here, there is nothing to prove.</p></li>
-<li id="li-39"><p id="p-derived-li-39">In the second case, the goal is to prove that because \(A\) is false, this implies that \(B\) will be true.</p></li>
+<li id="li-42"><p id="p-derived-li-42">In the first case, the proof is done, because \(A\) being true implies that \(A \lor B\) is true. Here, there is nothing to prove.</p></li>
+<li id="li-43"><p id="p-derived-li-43">In the second case, the goal is to prove that because \(A\) is false, this implies that \(B\) will be true.</p></li>
 </ul>
-<p id="p-96">Of course, we could have instead considered (1) \(B\) is true and (2) \(B\) is false, because \(A\) and \(B\) are symmetric.</p>
-<p id="p-97">Here, the first case is trivially true, so the argument is phrased in a different but equivalent way. To prove \(A \lor B\) we assume that \(A\) is false, and prove that \(B\) is true (or, assume \(B\) is false, and prove \(A\) is true). That is, we prove the statement \(\not A \rightarrow B\text{.}\) So, in summary, \(A \lor B\) is logically equivalent to \(\neg A \rightarrow B\text{,}\) or,</p>
+<p id="p-173">Of course, we could have instead considered (1) \(B\) is true and (2) \(B\) is false, because \(A\) and \(B\) are symmetric.</p>
+<p id="p-174">Here, the first case is trivially true, so the argument is phrased in a different but equivalent way. To prove \(A \lor B\) we assume that \(A\) is false, and prove that \(B\) is true (or, assume \(B\) is false, and prove \(A\) is true). That is, we prove the statement \(\not A \rightarrow B\text{.}\) So, in summary, \(A \lor B\) is logically equivalent to \(\neg A \rightarrow B\text{,}\) or,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{A \lor B \equiv \neg A \rightarrow B}
 \end{equation*}
 </div>
-<p id="p-98">Also, “or” statements can also be proven by contradiction, by assuming that \(\neg A \land \neg B\) (because \(\neg (A \lor B) = \neg A \land \neg B\) by DeMorgan's laws).</p></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.10</span> <span class="title">Disproving a Statement</span>
+<p id="p-175">Also, “or” statements can also be proven by contradiction, by assuming that \(\neg A \land \neg B\) (because \(\neg (A \lor B) = \neg A \land \neg B\) by DeMorgan's laws).</p></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.10</span> <span class="title">Disproving a Statement</span>
 </h3>
-<p id="p-99">To disprove a statement is to prove its negation. To disprove \(\forall x \in D\text{,}\) if \(P(x)\text{,}\) then \(Q(x)\text{,}\) we have to prove the negation, that is, there exists \(x \in D\) such that \(P(x)\) and \(Q(x)\text{.}\)</p></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.11</span> <span class="title">Proof by Contrapositive</span>
+<p id="p-176">To disprove a statement is to prove its negation. To disprove \(\forall x \in D\text{,}\) if \(P(x)\text{,}\) then \(Q(x)\text{,}\) we have to prove the negation, that is, there exists \(x \in D\) such that \(P(x)\) and \(Q(x)\text{.}\)</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.11</span> <span class="title">Proof by Contrapositive</span>
 </h3>
-<p id="p-100">To prove \(P \rightarrow Q\text{,}\) it is sufficient to prove \(\neg Q \rightarrow \neg P\text{.}\) This is because the contrapositive of a conditional is logically equivalent to the original conditional.</p></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.12</span> <span class="title">False Algebra Proof</span>
+<p id="p-177"><dfn class="terminology">Proof by contrapositive</dfn> involves proving a conditional \(P \rightarrow Q\) by instead proving its contrapositive \(\neg Q \rightarrow \neg P\text{.}\) This is valid because the contrapositive of a conditional is logically equivalent to the original conditional.</p>
+<p id="p-178">This is often helpful if the hypothesis \(P\) is a more complicated statement than the conclusion \(Q\text{.}\)</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.12</span> <span class="title">False Algebra Proof</span>
 </h3>
 <article class="fact theorem-like" id="fact-9"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
-</h4>\(2 = 1\text{.}\)</article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><p id="p-101">Let \(x = y\text{.}\) Then, multiplying both sides by \(y\text{,}\) \(x^2 = xy\text{.}\) Then, subtracting \(y^2\) from both sides, \(x^2 - y^2 = xy - y^2\text{.}\) Then, factoring the left-hand side as a difference of squares, and factoring the common factor of \(y\) from the right-hand side,</p>
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
+</h4>\(2 = 1\text{.}\)</article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-179">Let \(x = y\text{.}\) Then, multiplying both sides by \(y\text{,}\) \(x^2 = xy\text{.}\) Then, subtracting \(y^2\) from both sides, \(x^2 - y^2 = xy - y^2\text{.}\) Then, factoring the left-hand side as a difference of squares, and factoring the common factor of \(y\) from the right-hand side,</p>
 <div class="displaymath">
 \begin{equation*}
 (x - y)(x + y) = y(x - y)
 \end{equation*}
 </div>
 <p class="continuation">Then, cancelling the common factor of \(x - y\) on both sides, we get \(x + y = y\text{.}\) Then, recall that \(x = y\text{,}\) so this implies that \(y + y = y\text{,}\) or \(2y = y\text{.}\) Finally, cancelling \(y\) from both sides, we get \(2 = 1\text{.}\)</p></article></div>
-<p id="p-102">The issue with this proof is that you can only cancel a factor on both sides (i.e. divide by that factor) if it is non-zero. For example, \(2 \cdot 0 = 3 \cdot 0\) is true (both sides are 0), but it does not imply that \(2 = 3\) (cancelling the factors of 0). Here, we cancelled \(x - y\) on both sides. However, we assumed that \(x = y\text{,}\) and so \(x - y = 0\text{.}\)</p></section></section></div></main>
+<p id="p-180">The issue with this proof is that you can only cancel a factor on both sides (i.e. divide by that factor) if it is non-zero. For example, \(2 \cdot 0 = 3 \cdot 0\) is true (both sides are 0), but it does not imply that \(2 = 3\) (cancelling the factors of 0). Here, we cancelled \(x - y\) on both sides. However, we assumed that \(x = y\text{,}\) and so \(x - y = 0\text{.}\)</p></section></section></div></main>
 </div>
 </body>
 </html>

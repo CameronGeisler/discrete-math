@@ -8,5 +8,8 @@
 
     <xi:include href="./chapter-PBAR/section-PBPW.ptx"/>
     <xi:include href="./chapter-PBAR/section-DPPBC.ptx"/>
+    <xi:include href="./chapter-PBAR/section-PBC.ptx"/>
+    <xi:include href="./chapter-PBAR/section-EP.ptx"/>
+    <xi:include href="./chapter-PBAR/section-UP.ptx"/>
 
 </chapter>

@@ -21,6 +21,11 @@
   \renewcommand{\neg}{\sim}
   \newcommand{\brac}[1]{\left( #1 \right)}
   \newcommand{\eval}[1]{\left. #1 \right|}
+  \newcommand{\floor}[1]{\lfloor #1 \rfloor}
+  \newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+  \newcommand{\nCr}[2]{_{#1}C_{#2}}
+  \newcommand{\nPr}[2]{_{#1}P_{#2}}
 </macros>
 
 <latex-preamble>

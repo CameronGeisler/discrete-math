@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-DM">
+    <title>Distributing Money</title>
+
+    <introduction>
+        This is an application of combinations.
+    </introduction>
+
+    <subsection>
+        <title>Distributing Money</title>
+
+        <p>
+            Consider <m>n</m> identical dollars to be distributed to <m>k</m> people, such that each person gets at least 1 dollar.
+        </p>
+        <p>
+            Line up all the dollars (the order doesn't matter). Let the first person choose dollars from left to right, until we stop them. Then, let the second person continue collecting dollars from left to right, until they are stopped, and so on. In this way, the number of ways to distribute the dollars is equivalent to the number of ways to split up the <m>n</m> dollars with <q>cuts</q> to specify where one person stops and the next starts.
+        </p>
+        <p>
+            Note that there are <m>n-1</m> possible positions to place a cut, since you can only a cut before any of the <m>n</m> dollars, except the first one. Also, there are $k-1$ cuts to make, since we need to put a marker to specify where each person starts collecting, except the first person which will always start at the beginning. Thus, there are <m>\binom{n-1}{k-1}</m> ways to do this.
+        </p>
+        <theorem>
+            <p>
+                The number of ways to distribute <m>n</m> identical objects to <m>k</m> people, such that each person gets at least one of the objects, is,
+                <me>
+                    \boxed{\binom{n-1}{k-1}}
+                </me>
+            </p>
+        </theorem>
+
+        <p>
+            This result can be used to consider a more general case, where <m>n</m> identical dollars are distributed to <m>k</m> people (with no requirement that everyone gets at least one).
+        </p>
+        <p>
+            Instead, borrow 1 dollar from each person, and distribute the resulting <m>n+k</m> dollars such that every person gets at least 1 dollar. In this way, every person will at least have their 1 dollar returned, and they may or may not get more than that. From the previous problem, the number of ways to distribute <m>n+k</m> dollars among <m>k</m> people, such that every person gets at least 1, is,
+        </p>
+        <me>
+            \binom{n+k-1}{k-1}
+        </me>
+
+        <theorem>
+            <p>
+                The number of ways to distribute <m>n</m> identical objects to <m>k</m> people is,
+                <me>
+                    \boxed{\binom{n+k-1}{k-1}}
+                </me>
+            </p>
+        </theorem>
+        <p>
+            Note that this number is clearly larger than the previous case.
+        </p>
+
+        <example>
+            <p>
+                Determine the number of ways to distribute <m>n</m> identical dollars to <m>k</m> people, such that each person gets at least 2 dollars.
+            </p>
+            <p>
+                First, give 1 dollar to each person, so that there are <m>n-k</m> dollars left. Then, distribute those <m>-k</m> dollars such that every person gets at least 1 dollar. In this way, each person will get at least 2 dollars. From the previous problem, there are,
+            </p>
+            <me>
+                \binom{n-k-1}{k-1}
+            </me>
+            <p>
+                ways to distribute $n-k$ dollars to <m>k</m> people, such that each person gets at least 1 dollar.
+            </p>
+        </example>
+        
+        <example>
+            <p>
+                Determine the number of ways that <m>k</m> people can be seated in <m>n</m> consecutive seats, such that no two people sit next to one another.
+            </p>
+            <p>
+                First, <q>Remove</q> <m>k-1</m> seats to leave <m>n - (k-1) = n - k + 1</m> seats remaining. The number of ways that <m>k</m> people can be arranged in <m>n - k + 1</m> seats (where they can sit next to each other) is,
+            </p>
+            <me>
+                \binom{n-k+1}{k}
+            </me>
+            <p>
+                Then, insert the remaining <m>k-1</m> seats to the right of every person, except the last person. In this way, person <m>i</m> will not sit next to person <m>i+1</m>, as there will be at least one seat between them.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Determine the number of ways that <m>n</m> identical dollars can be distributed to <m>k</m> boys and <m>l</m> girls, such that every girl gets at least one dollar (but the same restriction does not hold for boys).
+            </p>
+            <p>
+                First, borrow 1 dollar from each boy, and distribute the resulting $n+k$ dollars such that everyone gets at least 1 dollar. Then, the girls will all get at least 1 dollar, and the boys will have at least 0 dollars. Then, the number of ways to do this is,
+            </p>
+            <me>
+                \binom{n+k-1}{k+l-1}
+            </me>
+        </example>
+
+        <example>
+            <p>
+                A group of <m>k</m> earls are playing cards. Originally, they each have <m>p</m> pennies. At the end of the game, they count how much money they have. They do not borrow from each other, so that each cannot lose more than his <m>p</m> pennies. How many possible results are there?
+            </p>
+            <p>
+                This is equivalent to determining the number of ways to distribute the <m>kp</m> total pennies (<m>p</m> pennies per earl and <m>k</m> earls) among <m>k</m> earls. Thus, there are,
+            </p>
+            <me>
+                \binom{kp + k - 1}{k-1}
+            </me>
+            <p>
+                ways.
+            </p>
+        </example>
+    </subsection>
+</section>

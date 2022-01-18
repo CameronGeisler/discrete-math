@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-SOPAC">
+    <title>Combinations</title>
+
+    <introduction>
+        <p>
+            In summary, it can be difficult to distinguish whether to use permutations or combinations to solve a counting problem.
+        </p>
+        <p>
+            The number of ways to choose <m>n</m> objects from <m>n</m> available objects,
+        </p>
+        <ul>
+            <li>Ordered, with replacement is <m>n^k</m>.</li>
+            <li>Ordered, without replacement, is <m>\nPr{n}{k}</m>.</li>
+            <li>Unordered, without replacement, is <m>\nCr{n}{k}</m>.</li>
+            <li>Unordered, with replacement, is more complicated.</li>
+        </ul>
+    </introduction>
+
+</section>

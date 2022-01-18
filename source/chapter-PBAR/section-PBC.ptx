@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-PBC">
+    <title>Proof by Contradiction</title>
+
+    <subsection>
+        <title>Proof by Contradiction</title>
+        <p>
+            Proof by contradiction is an indirect proof technique. It involves assuming the negation of the desired result, then doing some mathematical reasoning, and the concluding a contradiction. To prove a statement <m>P</m> by contradiction, the process is as follows:
+        </p>
+        <ol>
+            <li>By contradiction, suppose <m>P</m> is false (that is, <m>\neg P</m> is true).</li>
+            <li>Use a chain of implication, to imply a contradiction <m>C</m>, a statement that is always false</li>
+            <li>Then, by the chain of implications, the implication <m>\neg P \rightarrow C</m> is true.</li>
+            <li>Then, since <m>C</m> is false (it is a contradiction), this implies that <m>\neg (\neg P) = P</m> is true.</li>
+        </ol>
+        <p>
+            In latin, this method is called <q>reductio ad absurdum</q> meaning <q>reduction to absurdity</q>. Typically, we start a proof by contraction by <q>by contradiction</q>, <q>by way of contradiction</q> or simply <q>BWOC</q>. Then, by supposing or assuming a statement.
+        </p>
+        <p>
+            In the case where <m>P</m> is a conditional <m>A \longrightarrow B</m>, the negation of this is <m>\neq (A \longrightarrow B) = A \land \neq B</m>. Then, to start the proof, assume that <m>A \land \neg B</m> is true. That is, the hypothesis is true, but the conclusion is false.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Basic Proofs by Contradiction</title>
+        <fact>
+            <title>There is no largest positive integer/real number</title>
+            <p>
+                There is no largest positive integer/real number.
+            </p>
+        </fact>
+        <proof>
+            By contradiction, suppose <m>n</m> is the largest integer/real number. Then, <m>x + 1</m> is also an integer/real number and <m>n + 1 > n</m>, which contradicts our assumption that <m>n</m> is the largest integer/real number.
+        </proof>
+
+        <fact>
+            <title>There is no smallest positive rational/real number</title>
+            <p>
+                There is no smallest positive rational/real number.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                By contradiction, suppose <m>p</m> is the smallest positive rational number. Then, there exists <m>a, b \in \mathbb{Z}, b \neq 0</m>, such that <m>p = \frac{a}{b}</m>. Then, since <m>0 \lt \frac{1}{2} \lt 1</m>, by multiplying all three sides by <m>p</m>, we have,
+                <md>
+                    <mrow>0 \amp \lt \frac{p}{2} \lt p</mrow>
+                    <mrow>0 \amp \lt \frac{a}{2b} \lt p</mrow>
+                </md>
+                Since <m>a, 2b \in \mathbb{Z}</m>, and <m>b \neq 0</m> so <m>2b \neq 0</m>, <m>\frac{p}{2}</m> is rational and is smaller than <m>p</m>, which contradicts our assumption that <m>p</m> is the smallest rational number.
+            </p>
+        </proof>
+        <proof>
+            <p>
+                By contradiction, suppose <m>p</m> is the smallest real number. Then,
+                <me>
+                    0 \lt \frac{p}{2} \lt p
+                </me>
+                Since <m>\frac{p}{2} > 0</m> and <m>\frac{p}{2} \lt p</m>, so <m>\frac{p}{2}</m> is positive and smaller than <m>p</m>, which contradicts our assumption that <m>p</m> is the smallest real number.
+            </p>
+        </proof>
+
+        <fact>
+            <title>Sum of rational and irrational is irrational</title>
+            <p>
+                The sum of a rational number and irrational number is irrational. In other words, if <m>r \in \mathbb{Q}</m> and <m>x \in \mathbb{R} \setminus \mathbb{Q}</m>, then <m>r + x \in \mathbb{R} \setminus \mathbb{Q}</m>.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                By contradiction, suppose <m>r + x</m> is rational, <m>r + x \in \mathbb{Q}</m>. Then, there exists <m>a, b, c, d \in \mathbb{Z}, b, d \neq 0</m> such tha t<m>r = \frac{c}{d}</m> and <m>r + x = \frac{a}{b}</m>. Then,
+                <md>
+                    <mrow>x \amp = (r + x) - r</mrow>
+                    <mrow>\amp = \frac{a}{b} - \frac{c}{d}</mrow>
+                    <mrow>x \amp = \frac{ad - bc}{bd}</mrow>
+                </md>
+                Since <m>ad - bc, bd \in \mathbb{Z}, bd \neq 0</m>, this implies that <m>x \in \mathbb{Q}</m>, which contradicts the assumption that <m>x</m> is irrational.
+            </p>
+            <p>
+                Alternatively, using the property that the sum/difference of two rational numbers is rational, we have that <m>x = (r + x) - r</m> is rational, contradicting our assumption that <m>x</m> is irrational.
+            </p>
+        </proof>
+
+        <fact>
+            <title>Product of rational and irrational is irrational</title>
+            <p>
+                The product of a rational number and irrational number is irrational. In other words, if <m>r \in \mathbb{Q}</m> and <m>x \in \mathbb{R} \setminus \mathbb{Q}</m>, then <m>rx \in \mathbb{R} \setminus \mathbb{Q}</m>.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                By contradiction, suppose <m>rx</m> is rational, <m>rx \in \mathbb{Q}</m>. Then, there exists <m>a, b, c, d \in \mathbb{Z}, b, d \neq 0</m>, such that <m>r = \frac{a}{b}, rx = \frac{c}{d}</m>. Then,
+                <me>
+                    x = \frac{rx}{r} = \frac{\frac{c}{d}}{\frac{a}{b}} = \frac{bc}{ad}
+                </me>
+                Since <m>bc, ad \in \mathbb{Z}</m> and <m>ad \neq 0</m>, this implies that <m>x \in \mathbb{Q}</m>, which contradicts the assumption that <m>x</m> was irrational.
+            </p>
+        </proof>
+
+        <fact>
+            <title>Reciprocal of irrational is irrational</title>
+            <p>
+                If <m>x</m> is an irrational number, then <m>\frac{1}{x}</m> is irrational.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                By contradiction, suppose that <m>x \in \mathbb{Q}</m> but <m>\frac{1}{x} \in \mathbb{R} \setminus \mathbb{Q}</m>. Then, there exists <m>a, b \in \mathbb{Z}, b \neq 0</m>, such that <m>x = \frac{a}{b}</m>. Then,
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Tips for Proof by Contradiction</title>
+        <p>
+            Clearly state the fact, theorem, or property that is being contradicted at the end, rather than just ending with <q>, a contradiction.</q>
+            <me>
+                \frac{1}{x} = \frac{1}{\frac{a}{b}} = \frac{b}{a} \in \mathbb{Q}
+            </me>
+            which contradicts our assumption that <m>\frac{1}{x} \in \mathbb{R} \setminus \mathbb{Q}</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Bad Proofs by Contradiction</title>
+        <p>
+            Proof my contradiction can be overused. In general, if a direct proof is available, it is considered poor mathematics to use a proof by contradiction.
+        </p>
+        <p>
+            Suppose we want to prove a statement <m>P</m> is true. By contradiction, we suppose <m>P</m> is false. Then, we show that <m>P</m> is true. This leads to a contradiction, as <m>P</m> cannot be both true and false. Thus, <m>P</m> is true.
+        </p>
+        <p>
+            This is a poor proof because the the assumption that <m>P</m> is false adds nothing to the proof. Instead, we could have just shown that <m>P</m> is true, using a direct proof.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Square Root of 2 (<m>\sqrt{2}</m>) is Irrational (Hippasus Death)</title>
+        <p>
+            Here, we will prove that the real number <m>\sqrt{2}</m> is irrational, possibly one of the most well known proofs by contradiction. In ancient Greece (in 5th century BC), the Pythagoreans believed that all numbers were rational. To them, the term <q>number</q> meant rational number. However, Hippasus, a member of the Pythagoreans, was the first to publicly reveal that the square root of 2, was irrational. Here, the square root of 2 represented the length of the hypotenuse of a right triangle with side lengths 1. The Pythagoreans did not accept <m>\sqrt{2}</m> as a number, and supposedly, he was thrown off a boat and drowned. However, whether this actually happened is controversial.
+        </p>
+        <theorem>
+            <p>
+                The number <m>\sqrt{2}</m> is irrational. Equivalently, the equation <m>x^2 = 2</m> has no positive rational solutions.
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By contradiction, suppose <m>\sqrt{2}</m> is rational, so there exists <m>a, b \in \mathbb{Z}, b \neq 0</m>, such that <m>\sqrt{2} = \frac{a}{b}</m>. Further, <m>a, b</m> can be chosen to have no common factors, so that <m>\frac{a}{b}</m> is in lowest terms. Then, we will square both sides to convert the equation to an equation between integers,
+                <md>
+                    <mrow>2 \amp = \frac{a^2}{b^2}</mrow>
+                    <mrow>2b^2 \amp = a^2</mrow>
+                </md>
+                Then, since <m>b^2 \in \mathbb{Z}</m>, <m>a^2</m> is even, and this implies that <m>a</m> is even. Thus, there exists <m>k \in \mathbb{Z}</m> such tha <m>a = 2k</m>. Then,
+                <md>
+                    <mrow>2b^2 \amp = (2k)^2</mrow>
+                    <mrow>2b^2 \amp = 4k^2</mrow>
+                    <mrow>b^2 \amp = 2k^2</mrow>
+                </md>
+                Then, since <m>k^2 \in \mathbb{Z}</m>, <m>b^2</m> is even, and so <m>b</m> is even. However, <m>a</m> and <m>b</m> cannot both be even, as otherwise then they share a common factor of 2, contradicting the assumption that <m>a</m> and <m>b</m> share no common factors.
+            </p>
+        </proof>
+        <remark>
+            <p>
+                Note why the assumption that <m>a</m> and <m>b</m> have no common factors works here. Say we write <m>a = 2c</m>, <m>b = 2d</m>, for some <m>c, d \in \mathbb{Z}, d \neq 0</m>. Then, we have,
+                <me>
+                    \sqrt{2} = \frac{a}{b} = \frac{2c}{2d} = \frac{c}{d}
+                </me>
+                Then, we can continue a similar process and find that both <m>c</m> and <m>d</m> must be even. This will repeat infinitely many times, leading to the conclusion that there not exist a representation of <m>\sqrt{2} = \frac{a}{b}</m>, where <m>a</m> and <m>b</m> are in lowest terms. However, all rational numbers have a (unique) representation <m>\frac{a}{b}</m> in lowest terms.
+            </p>
+        </remark>
+    </subsection>
+
+    <subsection>
+        <title>Square Roots of Other Numbers are Irrational</title>
+        <p>
+            The reasoning for proving that <m>\sqrt{2}</m> is irrational can be used to prove that other radicals are irrational.
+        </p>
+        <theorem>
+            <p>
+                The number <m>\sqrt{3}</m> is irrational.
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By contradiction, suppose <m>\sqrt{3}</m> is rational, so there exists <m>a, b \in \mathbb{Z}, b \neq 0</m>, such that <m>\sqrt{3} = \frac{a}{b}</m>, where <m>a</m> and <m>b</m> have no common factors. Then,
+                <md>
+                    <mrow>3 \amp = \frac{a^2}{b^2}</mrow>
+                    <mrow>3b^2 \amp = a^2</mrow>
+                </md>
+                Then, <m>3 \mid a^2</m>. Then, this implies that <m>3 \mid a</m> (this is by Euclid's lemma). Then, <m>a = 3k</m> for some <m>k \in \mathbb{Z}</m>. Then,
+                <md>
+                    <mrow>3b^2 \amp = (3k)^2</mrow>
+                    <mrow>3b^2 \amp = 9k^2</mrow>
+                    <mrow>b^2 \amp = 3k^2</mrow>
+                </md>
+                Then, <m>3 \mid b^2</m>, so again, this implies that <m>3 \mid b</m>. Then, <m>a</m> and <m>b</m> share a common factor of 3, contradicting the assumption that they share no common factors.
+            </p>
+        </proof>
+
+        <p>
+            Notice the similar themes between the proofs for <m>\sqrt{2}</m> and <m>\sqrt{3}</m>. Use proof by contradiction, square both sides, and so on.
+        </p>
+
+        <p>
+            The key element of this proof is Euclid's lemma, which says that if a prime number <m>p</m> divides a product <m>ab</m>, then <m>p</m> divides <m>a</m> or <m>p</m> divides <m>b</m>. Then, for <m>a = b</m>, this says that if <m>p</m> divides <m>a^2</m>, then <m>p</m> divides <m>a</m>.
+        </p>
+        <p>
+            Notice that this property does not hold if <m>p = 4</m> as it is not prime. In this case, if <m>\sqrt{4} = \frac{a}{b}</m>, then we have,
+        </p>
+        <md>
+            <mrow>4 \amp = \frac{a^2}{b^2}</mrow>
+            <mrow>4b^2 \amp = a^2</mrow>
+        </md>
+        <p>
+            This implies that <m>4 \mid a^2</m>, however, this does not imply that <m>4 \mid a</m>. For example, <m>4 \mid 36</m>, but <m>4 \nmid 6</m>.
+        </p>
+
+        <fact>
+            <title>Square root of any prime number <m>p</m> is irrational</title>
+            <p>
+                Let <m>p</m> be prime. Then, <m>\sqrt{p}</m> is irrational. Equivalently, <m>x^2 = p</m> has no positive rational solutions.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                By contradiction, suppose <m>\sqrt{p}</m> is rational, so there exists <m>a, b \in \mathbb{Z}, b \neq 0</m> such that <m>\sqrt{p} = \frac{a}{b}</m>, where <m>a</m> and <m>b</m> share no common factors. Then, <m>p b^2 = a^2</m>, so by Euclid's lemma, <m>p \mid a</m>, so <m>a = kp</m> for some <m>k \in \mathbb{Z}</m>. Then,
+                <md>
+                    <mrow>pb^2 \amp = (kp)^2</mrow>
+                    <mrow>pb^2 \amp = k^2 p^2</mrow>
+                    <mrow>b^2 \amp = k^2 p</mrow>
+                </md>
+                Then, <m>p \mid b^2</m>, so by Euclid's lemma, <m>p \mid b</m>. Thus, <m>a</m> and <m>b</m> share a common factor of <m>p</m>, contradicting the assumption that they share no common factors.
+            </p>
+        </proof>
+
+        <fact>
+            <title>Square root of 12 is irrational</title>
+            <p>
+                The number <m>\sqrt{12}</m> is irrational. Equivalently, <m>x^2 = 12</m> has no positive rational solutions.
+            </p>
+        </fact>
+        <proof>
+            <title>Proof using previous results</title>
+            <p>
+                First, <m>\sqrt{12} = 2 \sqrt{3}</m>. Then, <m>2</m> is rational and <m>\sqrt{3}</m> is irrational, and the product of a rational and irrational is irrational, so <m>\sqrt{12}</m> is irrational.
+            </p>
+        </proof>
+        <proof>
+            <title>Proof by contradiction</title>
+            <p>
+                By contradiction, suppose <m>\sqrt{12}</m> is rational, so that there exists <m>a, b \in \mathbb{Z}, b \neq 0</m>, such that <m>\sqrt{12} = \frac{a}{b}</m>, and <m>a</m> and <m>b</m> share no common factors. Then, <m>a^2 = 12b^2 = 2(6b^2)</m>, and so <m>a^2</m> is even, and so <m>a</m> is even. Then, there exists <m>k \in \mathbb{Z}</m> such that <m>a = 2k</m> and so,
+                <md>
+                    <mrow>12b^2 \amp = (2k)^2</mrow>
+                    <mrow>12b^2 \amp = 4k^2</mrow>
+                    <mrow>3b^2 \amp = k^2</mrow>
+                </md>
+                Since <m>a</m> and <m>b</m> share no common factors, <m>b</m> must be odd (otherwise, <m>a</m> and <m>b</m> would share the common factor of 2). Then, <m>3b^2</m> is the product of 3 odd numbers, and so is odd. This implies that <m>k^2</m> is also odd, and so <m>k</m> is odd. Then, there exists <m>m, n \in \mathbb{Z}</m> such that <m>b = 2m + 1</m> and <m>k = 2n + 1</m>. Then,
+                <md>
+                    <mrow>3(2m + 1)^2 \amp = (2n + 1)^2</mrow>
+                    <mrow>12m^2 + 12m + 3 \amp = 4n^2 + 4n + 1</mrow>
+                    <mrow>4(n^2 + n - 3m^2 - 3m) \amp = 2</mrow>
+                </md>
+                Then, this is a contradiction, because <m>4(n^2 + n - 3m^2 - 3m)</m> is a multiple of 4, which cannot be equal to 2.
+            </p>
+        </proof>
+
+        <fact>
+            <title>Square root of any non-perfect square is irrational</title>
+            <p>
+                If <m>n \in \mathbb{N}</m> is not a perfect square, then <m>\sqrt{n} \notin \mathbb{Q}</m> is irrational.
+            </p>
+        </fact>
+        <proof>
+            <p>
+                Exercise.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Some Logarithms are Irrational</title>
+        <fact>
+            <p>
+                The number <m>\log_{2}{3}</m> is irrational.
+            </p>
+        </fact>
+        <p>
+            Recall that <m>\log_b{x}</m> is defined to be the number <m>y</m> such that <m>b^y = x</m>.
+        </p>
+        <proof>
+            <p>
+                By contradiction, suppose <m>\log_{2}{3}</m> is rational, so <m>\log_{2}{3} = \frac{a}{b}</m> for some <m>a, b \in \mathbb{Z}, b \neq 0</m>. Then,
+                <md>
+                    <mrow>\log_{2}{3} \amp = \frac{a}{b}</mrow>
+                    <mrow>3 \amp = 2^{a/b} \amp\amp \text{definition of logarithm}</mrow>
+                    <mrow>3^b \amp = 2^a</mrow>
+                </md>
+                Then, <m>3^b</m> is an integer power of 3, a product of odd numbers, and so is odd. Similarly, <m>2^a</m> is an integer power of 2, a product of even integers, and so is even. This contradicts the fact that an even integer cannot be equal to an odd integer.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>An Integer Cannot Divide Two Consecutive Numbers</title>
+        <fact>
+            <p>
+                Let <m>a, b \in \mathbb{Z}</m> with <m>a \geq 2</m>. Then, <m>a \nmid b</m> or <m>a \nmid (b + 1)</m>
+            </p>
+        </fact>
+        <proof>
+            <p>
+                By contradiction, suppose that <m>a \mid b</m> and <m>a \mid (b + 1)</m>. Then, there exists <m>m, n \in \mathbb{Z}</m> such that <m>b = ma</m> and <m>b + 1 = na</m>. Then, consider the difference of these two equations,
+                <md>
+                    <mrow>na - ma \amp = (b + 1) - b</mrow>
+                    <mrow>a(n - m) \amp = 1</mrow>
+                </md>
+                Then, since <m>a, n-m \in \mathbb{Z}</m>, the product <m>a(n - m)</m> is the product of two integers. If the product of two integers is equal to 1, then each integer must be either 1 or <m>-1</m>. Thus, <m>a = \pm 1</m>, contradicting the assumption that <m>a \geq 2</m>.
+            </p>
+        </proof>
+    </subsection>
+</section>

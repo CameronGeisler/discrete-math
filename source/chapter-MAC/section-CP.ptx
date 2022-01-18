@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-CP">
+    <title>Circular Permutations</title>
+
+    <introduction>
+        <p>
+            Consider a necklace with <m>n</m> distinct beads. How many ways can the beads be arranged? Here, we consider two necklaces to be the same if one can be transformed to the other by a rotation. There are <m>n!</m> ways to order <m>n</m> distinct objects. However, for each of these permutations, there are <m>n</m> possible equivalent rotations. Thus, the number of necklace arrangements is,
+        </p>
+        <me>
+            \frac{n!}{n} = (n-1)!
+        </me>
+        <p>
+            Suppose further that two necklaces are considered the same if they can be reflected to another (which they can, in real life). For each of these <m>(n-1)!</m> arrangements, there are 2 equivalent reflections. Thus,
+        </p>
+        <theorem>
+            <p>
+                The number of distinct necklaces arrangements that can be formed with <m>n</m> distinct beads is,
+                <me>
+                    \frac{(n-1)!}{2}
+                </me>
+            </p>
+        </theorem>
+    </introduction>
+
+    <!-- \begin{example}
+    Determine the number of ways 13 couples can be seated at a round table if no couple can sit opposite to one another at the table.
+    \\ \\ Suppose that the number of ways to seat 12 couples (24 people), such that no couple sits across from one another, is $a_{12}$. Then, there are 24 ways to ``insert" the partner A of the 13th couple (there are 24 possible spots between each pair of people), and another 24 ways to insert partner B (there are 25 possible spots but cannot be seated across from partner A). Thus,
+    \begin{equation*}
+        a_{13} = 24^2 a_{12}
+    \end{equation*}
+    A similar argument can be made to show that $a_{12} = 22^2 a_{11}$, $a_{11} = 20^2 a_{10}$, and in general $a_n = (2n - 2)^2 a_{n - 1}$. Then, by recursion,
+    \begin{align*}
+        a_{13} \amp = 24^2 a_{12} \\
+        \amp = 24^2 \cdot 22^2 a_{11} \\
+        \amp = 24^2 \cdot 22^2 \cdot 20^2 a_{10} \\
+        \amp = \dots \\
+        \amp = 24^2 \cdot 22^2 \cdot 20^2 \cdots 4^2 \cdot 2^2 a_1 \\
+        \amp = 24^2 \cdot 22^2 \cdot 20^2 \cdots 4^2 \cdot 2^2
+    \end{align*}
+    and $a_1 = 1$, the number of ways to arrange 1 couple. The final answer can be simplified as $2^{24} (12!)^2$.
+    \end{example} -->
+    
+</section>

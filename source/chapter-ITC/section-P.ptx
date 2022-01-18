@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-P">
+    <title>Permutations</title>
+
+    <introduction>
+        <p>
+            Consider a collection of objects. To <term>permute</term> these objects means to rearrange their order. A <term>permutation</term> is one of these such rearrangements, or orderings. Intuitively, it is a way to <q>sequence</q> or <q>line up</q> the objects. The fundamental counting principle allows us to determine the number of ways to arrange objects, or the number of permutations of objects.
+        </p>
+        <example>
+            <p>
+                How many different ways are there to arrange 5 people in a line? By the fundamental counting principle, there are 5 selections in total. For the first spot, we can choose any of the 5 people. For the second spot, we can choose anyone except the 1st person, so there are 4 options. For the 3rd spot, there are 3 options as we can't choose the 1st nor 2nd person. For the 4th spot, there are only 2 options. Finally, for the last spot, there is only 1 person left, so there is only 1 option. Thus, in total, the number of ways to arrange 5 people is given by,
+                <me>
+                    5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 5! = 120
+                </me>
+            </p>
+        </example>
+    </introduction>
+
+    <subsection>
+        <title>Permutations of Objects</title>
+        <p>
+            More generally, consider the permutations of <m>n</m> objects. This can be viewed as a series of choices, filling in <m>n</m> positions using the <m>n</m> objects. For the first spot, we can choose any of the <m>n</m> objects, and so there are <m>n</m> choices. For the second spot, one of the objects has been taken, so there are $n-1$ choices for the object in the 2nd position. Similarly, there $n-2$ for the 3rd position, and so on. For the second-last object, there will be 2 positions left and so there are 2 choices, and the last object will only have one available slot left, and so there will be only 1 choice. In summary,
+        </p>
+        <theorem>
+            <title>Permutations of <m>n</m> objects</title>
+            <p>
+                The number of permutations of <m>n</m> objects is <m>n!</m>.
+            </p>
+        </theorem>
+
+        <example>
+            <p>
+                Consider <m>n</m> boys and <m>n</m> girls. Consider the number of ways that they can form couples (assume only couples of mixed gender). The first boy can <q>choose</q> from all <m>n</m> of the girls (you could view this as the girls choosing boys, it would be equivalent). Then, the second boy has <m>n-1</m> choices, the third has <m>n-2</m> choices, and so on. Thus, there are <m>n(n - 1)(n - 2) \cdots 2 \cdot 1 = n!</m> ways to form these couples.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Permutations of <m>r</m> Elements from <m>n</m> Elements</title>
+        <definition>
+            <p>
+                A <term>permutation of <m>r</m> elements from a set of <m>n</m></term> unique elements is any of the specific orderings or arrangement, without repetition, of <m>r</m> elements.
+            </p>
+        </definition>
+        <p>
+            Each rearrangement of these <m>r</m> elements is a different permutation. Of course, here <m>r</m> is an integer and <m>1 \leq r \leq n</m>.
+        </p>
+        <p>
+            Consider these <m>n</m> elements taken <m>r</m> at a time. Using the FCP, there are <m>n</m> ways to choose the first of the <m>r</m> elements, <m>n-1</m> ways to choose the second element, and so on. For each element, there are <m>n - (\text{object number} - 1)</m> ways to choose it. Thus, there are <m>n - (r - 1) = n - r + 1</m> ways to choose the <m>r</m>th (the final) element. Thus,
+        </p>
+        <md>
+            <mrow>\nPr{n}{r} \amp = n(n - 1)(n - 2) \cdots (n - r + 1)</mrow>
+            <mrow>\amp = n(n - 1)(n - 2) \cdots (n - r + 1) \cdot \frac{(n - r)!}{(n - r)!} \amp\amp \text{multiplying and dividing by $(n - r)!$}</mrow>
+            <mrow>\amp = \frac{n(n - 1)(n - 2) \cdots (n - r + 1)(n - r)!}{(n - r)!}</mrow>
+            <mrow>\amp = \frac{n!}{(n - r)!}</mrow>
+        </md>
+        <p>
+            In summary,
+        </p>
+        <theorem>
+            <p>
+                The number of permutations of <m>n</m> unique objects taken <m>r</m> at a time is denoted by <m>\nPr{n}{r}</m>, and is given by,
+                <me>
+                    \boxed{\nPr{n}{r} = \frac{n!}{(n - r)!}}
+                </me>
+            </p>
+        </theorem>
+
+        <p>
+            This formula is a generalization of the FCP. If there are <m>n</m> elements taken <m>n</m> at a time, then using the permutation formula,
+        </p>
+        <me>
+            \nPr{n}{n} = \frac{n!}{(n - n)!} = \frac{n!}{0!} = \frac{n!}{1} = n!
+        </me>
+        <p>
+            which is consistent with the FCP. Also, notice that these two methods mean that the equality,
+        </p>
+        <me>
+            \underbrace{\frac{n!}{0!}}_{\text{from permutation formula}} = \underbrace{n!}_{\text{from FCP}}
+        </me>
+        <p>
+            must hold. Thus, <m>0!</m> must be equal to 1. This is one reason why zero factorial is defined as it is.
+        </p>
+        <p>
+            Recall that a permutation of <m>r</m> elements from an <m>n</m> element set consists of choosing <m>r</m> elements from the set in a particular order. We can view this as choosing an <q>ordered subset</q> of <m>r</m> elements from an <m>n</m> element set.
+        </p>
+
+        <example>
+            <p>
+                Consider <m>\nPr{n}{1}</m>, the number of permutations of <m>n</m> objects taking 1 at a time. Intuitively, we know that there are <m>n</m> permutations (one for choosing each of the <m>n</m> objects). Using the permutation formula,
+                <me>
+                    \nPr{n}{1} = \frac{n!}{(n - 1)!} = \frac{n(n - 1)!}{(n - 1)!} = n
+                </me>
+            </p>
+        </example>
+
+        <example>
+            <p>
+                How many different signals can be made by using at least 4 different flags from a selection of 6 different flags?
+            </p>
+            <p>
+                Signals are different depending on the order of the flags presented. At least 4 different flags means a signal could use 4, 5, or 6 flags. Thus, the number of different signals is given by,
+                <me>
+                    \nPr{6}{4} + \nPr{6}{5} + \nPr{6}{6} = 720 + 720 + 360 = 1800
+                </me>
+            </p>
+        </example>
+
+        <example>
+            <p>
+                A race has 7 competitors. Determine the number of ways the 1st, 2nd, and 3rd place medals be awarded.
+            </p>
+            <p>
+                When choosing these 3 medals, order matters. So, there are <m>\nPr{7}{3} = 210</m> ways.
+            </p>
+        </example>
+    </subsection>
+    
+    <!-- \section*{Solving Equations with Permutations}
+    \begin{example}
+    Solve $\nPr{n}{3} = 60$
+    \\ \\ Using the permutation formula,
+    \begin{align*}
+        60 \amp = \frac{n!}{(n - 3)!} \\
+        60 \amp = \frac{n(n - 1)(n - 2)(n - 3)!}{(n - 3)!} \\
+        60 \amp = n(n - 1)(n - 2)
+    \end{align*}
+    Using logical reasoning, we want to find 3 consecutive integers whose product is 60. Note that $4 \cdot 4 \cdot 4 = 64$, and by inspection, $3 \cdot 4 \cdot 5 = 60$, and so $n = 5$.
+    \end{example}
+    
+    \begin{example}
+    Solve ${}_nP_2 = 56$
+    \\ \\ Using the permutation formula,
+    \begin{align*}
+        56 \amp = \frac{n!}{(n - 2)!} \\
+        56 \amp = \frac{n(n - 1)(n - 2)!}{(n - 2)!} \\
+        56 \amp = n(n - 1)
+    \end{align*}
+    Using logical reasoning, we want to find 2 consecutive integers whose product is 56. By inspection, $7 \cdot 8 = 56$, and so $n = 8$. Alternatively, we can solve the quadratic equation for $n$,
+    \begin{align*}
+        56 \amp = n(n - 1) \\
+        0 \amp = n^2 - n - 56 \\
+        0 \amp = (n - 8)(n + 7) \\
+        n \amp = 8, -7
+    \end{align*}
+    Since $n \geq 0$, $n = 8$.
+    \end{example}
+    
+    \begin{example}
+    Solve ${}_5P_r = 20$
+    \\ \\ Using the permutation formula,
+    \begin{align*}
+        20 \amp = \frac{5!}{(5 - r)!} \\
+        20 \amp = \frac{120}{(5 - r)!} \\
+        (5 - r)! \amp = 6 \\
+        (5 - r)! \amp = 3! \amp\amp \text{as $6 = 3!$} \\
+        5 - r \amp = 3 \\
+        r \amp = 2
+    \end{align*}
+    \end{example}
+    
+    \begin{example}
+    Solve ${}_6P_r = 30$
+    \\ \\ Using the permutation formula,
+    \begin{align*}
+        30 \amp = \frac{6!}{(6 - r)!} \\
+        30 \amp = \frac{720}{(6 - r)!} \\
+        (6 - r)! \amp = 24 \\
+        (6 - r)! \amp = 4! \amp\amp \text{as $24 = 4!$} \\
+        6 - r \amp = 4 \\
+        r \amp = 2
+    \end{align*}
+    \end{example} -->
+
+</section>

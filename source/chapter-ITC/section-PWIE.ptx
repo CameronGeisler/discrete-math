@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-PWIE">
+    <title>Permutations with Identical Elements</title>
+
+    <introduction>
+        <p>
+            Recall that the number of permutations of <m>n</m> unique objects <m>n</m> at a time is <m>n!</m>. However, if some of those <m>n</m> objects are identical, this number is reduced, because some permutations are indistinguishable.
+        </p>
+        
+        <example>
+            <p>
+                For example, consider the number of permutation of letters in the word <m>WOOD</m>. If all the letters were distinct, the number of arrangements would be <m>4! = 24</m>. However, <m>WOOD</m> contains two <m>O</m>s (say, <m>O_1</m> and <m>O_2</m>) and so the permutation <m>WO_1 O_2 D</m> is indistinguishable to <m>WO_2 O_1 D</m> (they are both <m>WOOD</m>). When counting only unique permutations, these two (<m>2! = 2</m> are counted as one. Each permutation of <m>WO_1 O_2 D</m> (with subscripts) can be arranged in groups of <m>2 = 2!</m>, where every group corresponds to a single permutation of <m>WOOD</m> (without subscripts). Then, the number of permutations of <m>WOOD</m> is,
+            </p>
+            <me>
+                \frac{4!}{2!} = 4 \cdot 3 = 12
+            </me>
+            <me>
+                \begin{array}{c|c|c}
+                    \amp \text{unique} \amp \text{non-unique} \\
+                    \amp \text{permutations} \amp \text{permutations} \\ \hline
+                    1 \amp WOOD \amp  \\ \hline
+                    2 \amp WDOO \amp \\ \hline
+                    3 \amp WODO \amp \\ \hline
+                    4 \amp OWOD \amp \\ \hline
+                    5 \amp OWDO \amp \\ \hline
+                    6 \amp OOWD \amp \\ \hline
+                    7 \amp OODW \amp \\ \hline
+                    8 \amp ODWO \amp \\ \hline
+                    9 \amp ODOW \amp \\ \hline
+                    10 \amp DWOO \amp \\ \hline
+                    11 \amp DOWO \amp \\ \hline
+                    12 \amp DOOW \amp
+                \end{array}
+            </me>    
+        </example>
+
+        <example>
+            <p>
+                Similarly, consider the word <m>BUBBLE</m>. There are three <m>B</m>s (say <m>B_1, B_2, B_3</m>) and so the 6 permutations,
+                <me>
+                    B_1 U B_2 B_3 LE \quad B_1 U B_3 B_2 LE \quad B_2 U B_1 B_3 LE \quad B_2 U B_3 B_1 LE \quad B_3 U B_1 B_2 LE \quad B_3 U B_2 B_1 LE
+                </me>
+                are all indistinguishable. In general, any rearrangement of these B's will not create a new permutation. There are <m>6 = 3!</m> ways to arrange these 3 B's, so the number of permutations is,
+                <me>
+                    \frac{6!}{3!} = 6 \cdot 5 \cdot 4 = 120
+                </me>
+            </p>
+        </example>
+        <p>
+            More generally,
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Permutations with Identical Objects</title>
+
+        <theorem>
+            <title>Permutation with identical objects</title>
+            <p>
+                The number of permutations of <m>n</m> objects with <m>n</m> identical objects is,
+            </p>
+            <me>
+                \boxed{\frac{n!}{r!}}
+            </me>
+        </theorem>
+
+        <p>
+            This can be extended to permutations with multiple groups of identical objects.
+        </p>
+        <example>
+            <p>
+                Consider 5 soup cans, made up of 3 noodle soup cans and 2 tomato soup cans. The 3 noodle soup cans are identical, so they can be arranged in <m>3! = 6</m> indistinguishable ways. Similarly, the 2 tomato soup cans can be arranged in <m>2! = 2</m> indistinguishable ways. Then, the number of permutations is,
+            </p>
+            <me>
+                \frac{5!}{3! 2!} = \frac{5 \cdot 4}{2} = 10
+            </me>
+        </example>
+
+        <theorem>
+            <title>Permutations with multiple groups of identical objects</title>
+            <p>
+                The number of permutations of <m>n</m> objects with <m>n_1</m> identical objects of one kind, <m>n_2</m> identical objects of another kind, and so on for <m>k</m> kinds of objects, is,
+            </p>
+            <me>
+                \boxed{\frac{n!}{n_1! n_2! \cdots n_k!}}
+            </me>
+            <p>
+                Here, <m>n_1 + n_2 + \dots + n_k = n</m>.
+            </p>
+        </theorem>
+
+        <p>
+            Note that if all of the objects are unique, then <m>n_i = 1</m> for every <m>i</m>, and the expression simplifies to <m>n!</m>, as from before.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Anagrams</title>
+        <p>
+            An <term>anagram</term> is a word or phrase formed by rearranging (i.e. permuting) the letters of a different word or phrase.
+        </p>
+        <p>
+            So, anagrams are a type of permutation, and so given a certain word (simplify this by not counting multiple words with spaces), how many anagrams of that word exist? Again, simplify things by saying that any arrangement of letters is a <q>word</q> whether or not that word is a real word or even pronounceable.
+        </p>
+        <example>
+            <p>
+                Determine the number of anagrams that can be formed from the word COMBINATORICS.
+            </p>
+            <p>
+                There are 13 letters, with O and I both repeated twice. Thus, the number of anagrams is,
+            </p>
+            <me>
+                \frac{13!}{2!2!} = 1556755200
+            </me>
+        </example>
+    </subsection>
+</section>
