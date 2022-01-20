@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-19T15:51:38-08:00       *-->
+<!--*       on 2022-01-20T12:57:27-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -81,13 +81,7 @@
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link">
-<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
-<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
-<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
-<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
-<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
-<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Summary of Permutations and Combinations</a></li>
-</ul>
+<a href="chapter-B.html" data-scroll="chapter-B"><span class="codenumber">1</span> <span class="title">Basics</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
 </li>
 <li class="link">
 <a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
@@ -97,24 +91,27 @@
 </ul>
 </li>
 <li class="link">
-<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<a href="chapter-BC.html" data-scroll="chapter-BC"><span class="codenumber">3</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Summary of Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sequences</span></a><ul>
+<li><a href="section-ITSE.html" data-scroll="section-ITSE">Introduction to Sequences</a></li>
+<li><a href="section-SSN.html" data-scroll="section-SSN">Sums, Summation Notation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">5</span> <span class="title">Proof Basics and Reference</span></a><ul>
 <li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
 <li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
 <li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
 <li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
 <li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul>
-<li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li>
-<li><a href="section-ISON.html" data-scroll="section-ISON">Important Sets of Numbers</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="chapter-SE.html" data-scroll="chapter-SE"><span class="codenumber">5</span> <span class="title">Sequences</span></a><ul>
-<li><a href="section-ITSE.html" data-scroll="section-ITSE">Introduction to Sequences</a></li>
-<li><a href="section-SSN.html" data-scroll="section-SSN">Sums, Summation Notation</a></li>
 </ul>
 </li>
 <li class="link">
@@ -137,20 +134,20 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-SI"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Strong Induction</span>
 </h2>
-<section class="subsection" id="subsection-96"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-94"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.1</span> <span class="title">Strong Induction</span>
 </h3>
-<p id="p-433">Let \(P(n)\) be a statement depending on \(n \in \mathbb{N}\text{.}\) Then, \(P(n)\) is true for all natural numbers \(n\) if,</p>
+<p id="p-436">Let \(P(n)\) be a statement depending on \(n \in \mathbb{N}\text{.}\) Then, \(P(n)\) is true for all natural numbers \(n\) if,</p>
 <ul class="disc">
 <li id="li-97"><p id="p-derived-li-97">\(P(1)\) is true.</p></li>
 <li id="li-98"><p id="p-derived-li-98">For all \(k \in \mathbb{Z}\text{,}\) if \(P(1), P(2), \dots, P(k)\) is true, then \(P(k + 1)\) is true.</p></li>
 </ul>
-<p id="p-434">To contrast with strong induction, “regular” induction is sometimes called <dfn class="terminology">weak induction</dfn>. Induction allows us to use <em class="emphasis">all</em> of the previous information, and it is also logically valid. It is called strong induction, because of the stronger hypotheses that are assumed.</p>
-<p id="p-435">In some sense, strong induction logically contains regular induction. In this way, when proving something by induction, you should always keep in mind that you can use strong induction if you need to. That is, you can assume all of the previous statements \(n = 1, 2, 3, \dots, k\) are true, not just the immediately previous case \(n = k\text{.}\)</p>
-<article class="example example-like" id="example-34"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-34"><h4 class="heading">
+<p id="p-437">To contrast with strong induction, “regular” induction is sometimes called <dfn class="terminology">weak induction</dfn>. Induction allows us to use <em class="emphasis">all</em> of the previous information, and it is also logically valid. It is called strong induction, because of the stronger hypotheses that are assumed.</p>
+<p id="p-438">In some sense, strong induction logically contains regular induction. In this way, when proving something by induction, you should always keep in mind that you can use strong induction if you need to. That is, you can assume all of the previous statements \(n = 1, 2, 3, \dots, k\) are true, not just the immediately previous case \(n = k\text{.}\)</p>
+<article class="example example-like" id="example-31"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-31"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Postage stamps.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-436">Any amount of postage more than one cent can be formed using only two-cent and three-cent stamps.</p>
-<article class="hiddenproof" id="proof-51"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-51"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof"><p id="p-437">By induction, for the base case, postage of two and three cents can be formed by one two-cent stamp and one three-cent stamp, respectively. Then, by strong induction, assume the result is true for all postage of \(k\) cents for \(3 \leq k \leq n\text{.}\) Then, a postage of \((n+1)\) cents can be formed by taking stamps of \((n-1)\) cents and adding a two-cent stamp.</p></article></div></article></div></section></section></div></main>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-31"><article class="example example-like"><p id="p-439">Any amount of postage more than one cent can be formed using only two-cent and three-cent stamps.</p>
+<article class="hiddenproof" id="proof-51"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-51"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof"><p id="p-440">By induction, for the base case, postage of two and three cents can be formed by one two-cent stamp and one three-cent stamp, respectively. Then, by strong induction, assume the result is true for all postage of \(k\) cents for \(3 \leq k \leq n\text{.}\) Then, a postage of \((n+1)\) cents can be formed by taking stamps of \((n-1)\) cents and adding a two-cent stamp.</p></article></div></article></div></section></section></div></main>
 </div>
 </body>
 </html>

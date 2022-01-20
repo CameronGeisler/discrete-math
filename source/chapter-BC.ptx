@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="chapter-ITC" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Introduction to Combinatorics</title>
+<chapter xml:id="chapter-BC" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Basic Combinatorics</title>
     <introduction>
         <p>
             An introduction to combinatorics. Combinatorics, broadly, is the study of counting. At a basic level, it typically involves counting the number of possible ways to do something.

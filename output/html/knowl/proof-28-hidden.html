@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-19T15:51:40-08:00       *-->
+<!--*       on 2022-01-20T12:57:29-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Let \(n\) be the largest positive integer. Then, \(n\) is a positive integer, so \(n \geq 1\text{.}\) Then, multiplying both sides by \(n\) (which is positive), we have \(n^2 \geq n\text{.}\) Also, \(n\) is a positive integer so \(n^2\) is also a positive integer, so it must be at most \(n\text{,}\) or \(n^2 \leq n\text{.}\) Thus, \(n^2 = n\text{,}\) so \(n^2 - n = 0\text{,}\) so \(n(n - 1) = 0\text{.}\) The solutions to this equation are \(n = 0, 1\text{.}\) Since 0 is not a positive integer, this implies that \(n = 1\text{.}\)</p></article></body>
+<body><article class="hiddenproof"><p>By contradiction, suppose \(\sqrt{3}\) is rational, so there exists \(a, b \in \mathbb{Z}, b \neq 0\text{,}\) such that \(\sqrt{3} = \frac{a}{b}\text{,}\) where \(a\) and \(b\) have no common factors. Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+3 \amp = \frac{a^2}{b^2}\\
+3b^2 \amp = a^2
+\end{align*}
+</div>
+<p class="continuation">Then, \(3 \mid a^2\text{.}\) Then, this implies that \(3 \mid a\) (this is by Euclid's lemma). Then, \(a = 3k\) for some \(k \in \mathbb{Z}\text{.}\) Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+3b^2 \amp = (3k)^2\\
+3b^2 \amp = 9k^2\\
+b^2 \amp = 3k^2
+\end{align*}
+</div>
+<p class="continuation">Then, \(3 \mid b^2\text{,}\) so again, this implies that \(3 \mid b\text{.}\) Then, \(a\) and \(b\) share a common factor of 3, contradicting the assumption that they share no common factors.</p></article></body>
 </html>

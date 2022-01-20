@@ -63,29 +63,6 @@
     </subsection>
 
     <subsection>
-        <title>Quantifiers</title>
-        <definition>
-            <p>
-                The <term>existential quantifier</term>, denoted by <m>\exists</m>, represents <q>there exists</q>, <q>there is a</q>, or <q>there is at least one</q>.
-            </p>
-        </definition>
-
-        <definition>
-            <p>
-                The <term>universal quantifier</term>, <m>\forall</m>, represents <q>for all</q>, <q>for every</q>, or <q>for each</q>.
-            </p>
-        </definition>
-
-        <p>
-            The statement, <m>\forall x \in S, P(x)</m> means that for all elements <m>x</m> in the set
-            <m>S</m>, the statement <m>P(x)</m> is true. This is equivalent to saying that the conditional, <q>If <m>x \in S</m>, then <m>P(x)</m> is true</q>. In symbols, this can be summarized as,
-        </p>
-        <me>
-            (\forall x \in S, P(x)) \equiv (x \in S) \rightarrow P(x)
-        </me>
-    </subsection>
-
-    <subsection>
         <title>Logical Inference</title>
         <ul>
             <li>Modus Ponens, <m>((P \rightarrow Q) \land P) \rightarrow Q</m></li>

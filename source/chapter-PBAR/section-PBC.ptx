@@ -31,7 +31,7 @@
             </p>
         </fact>
         <proof>
-            By contradiction, suppose <m>n</m> is the largest integer/real number. Then, <m>x + 1</m> is also an integer/real number and <m>n + 1 > n</m>, which contradicts our assumption that <m>n</m> is the largest integer/real number.
+            By contradiction, suppose <m>n</m> is the largest integer/real number. Then, <m>n + 1</m> is also an integer/real number and <m>n + 1 > n</m>, which contradicts our assumption that <m>n</m> is the largest integer/real number.
         </proof>
 
         <fact>

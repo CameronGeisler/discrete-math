@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-19T15:51:41-08:00       *-->
+<!--*       on 2022-01-20T12:57:29-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body>
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The most difficult and important part of induction is the inductive step. Often, the inductive step involves showing that the \((k+1)\)th case can be written <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">in terms of</em> the \(k\)th case, in some way. This will allow you to use the inductive assumption.</p>
+<p>By induction, for \(n = 1\text{,}\) we have \(1 \cdot (1 + 1) = 2\) which is even. Then, assume the result is true for some \(n \in \mathbb{Z}, n \geq 1\text{,}\) that \(n(n + 1)\) is even. Then, we want to show that \((n + 1)((n + 1) + 1) = (n + 1)(n + 2)\) is even. Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(n + 1)(n + 2) \amp = n^2 + 3n + 2\\
+\amp = (n^2 + n) + (2n + 2) \amp\amp \text{splitting up the terms to use the induction hypothesis}\\
+\amp = n(n + 1) + 2(n + 1)
+\end{align*}
+</div>
+<p class="continuation">By the induction hypothesis, \(n(n + 1)\) is even, and also \(2(n + 1)\) is even, so their sum \((n + 1)(n + 2)\) is even.</p>
 <span class="incontext"><a href="section-PBMI.html#p-379">in-context</a></span>
 </body>
 </html>

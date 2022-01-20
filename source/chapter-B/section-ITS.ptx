@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-ITS">
+    <title>Introduction to Sets</title>
+
+    <subsection>
+        <title>Sets</title>
+        <definition>
+            <p>
+                Intuitively, a <term>set</term> is a collection of distinct objects, called <term>elements</term> (or <term>members</term>).
+                <ul>
+                    <li>Sets are typically represented by capital letters, like <m>A, B, S</m>, etc.</li>
+                    <li>The objects in sets can be pretty much anything, i.e. they need not be numbers.</li>
+                </ul>
+            </p>
+        </definition>
+
+        <p>
+            Sets can be defined by listing the elements within <term>set braces</term>, <m>\{ \text{ and } \}</m>, separated by commas. For example, the set containing the integers 1, 2, and 4 would be written as,
+        </p>
+        <me>
+            \set{1, 2, 4}
+        </me>
+        <p>
+            This is called the <term>roster method</term>, because it involves simply listing the elements of the set. If the set is large, then we can write,
+        </p>
+        <me>
+            \set{1, 2, 3, \dots, 100}
+        </me>
+        <p>
+            which represents the set of all integers from 1 to 100.
+        </p>
+        <p>
+            If an object <m>x</m> is an element of the set <m>A</m>, we write <m>x \in A</m>. Otherwise, we write <m>x \notin A</m>. For each object <m>x</m> and set <m>A</m>, either <m>x \in A</m> or <m>x \notin A</m>, but not both.
+        </p>
+
+        <definition>
+            <p>
+                Two sets are <term>equal</term>, <m>A = B</m>, if and only if they contain exactly the same elements (up to ordering). Otherwise, they are not equal, <m>A \neq B</m>. In other words, two sets are not equal if at least one element is in one of the sets and is not in the other set.
+            </p>
+        </definition>
+
+        <p>
+            This means that a set is completely determined by its elements, and in particular not by the ordering of the elements, or how many times the elements are listed.
+        </p>
+
+        <p>
+            For example, <m>\set{1,2,3} = \set{2,3,1} = \set{3,2,1}</m>, but <m>\set{1,2} \neq \set{1,3}</m>.
+        </p>
+        <p>
+            Also, sets with duplicate objects are considered equal to the set without the duplicates. For example,
+        </p>
+        <me>
+            \set{1, 2} = \set{1, 2, 1} = \set{1, 2, 1, 1, 1, 1, 1}
+        </me>
+        <p>
+            All of these sets are equal, but of course by convention, for simplicity, sets are written without duplicate elements.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Set-Builder Notation</title>
+        <p>
+            A set can also be defined based on all its elements sharing a common property. This can be done using <term>set-builder notation</term>, which defines a set as,
+        </p>
+        <definition>
+            <p>
+                Let <m>S</m> be a set, <m>P(x)</m> be a property that elements of <m>S</m> may or may not satisfy. Then, we write,
+                <me>
+                    \set{x \in S: P(x)}
+                </me>
+                which represents <term>the set of all elements <m>x</m>in <m>S</m> such that <m>P(x)</m> is true.</term>
+            </p>
+        </definition>
+
+        <remark>
+            <p>
+                Here, the colon <m>:</m> means <q>such that</q>. Sometimes, we use a vertical bar <m>\mid</m> instead, i.e. <m>\set{x \in S \mid P(x)}</m>.
+            </p>
+        </remark>
+
+        <p>
+            With this notation, the variable <m>x</m> is a <em>dummy variable</em>, in that replacing <m>x</m> with any other variable or symbol does not change the set. For example, the following two sets are equal,
+        </p>
+        <me>
+            \set{x \in S: P(x)} = \set{y \in X: P(y)}
+        </me>
+        <p>
+            Sometimes, for convenience, we simply write,
+        </p>
+        <me>
+            \set{x : P(x)}
+        </me>
+        <p>
+            without specifying the set that <m>x</m> belongs to, especially if the set <m>S</m> is implicitly clear.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Finite and Infinite Sets</title>
+        <p>
+            Some sets have infinitely many elements. In roster notation, which can be indicated by an ellipsis <q><m>\dots</m></q>.
+        </p>
+        <definition>
+            <p>
+                Intuitively, a <term>finite</term> set has a finite number of elements, i.e. the number of elements in the set is a whole number. An <term>infinite</term> set has infinitely many elements, i.e. the number of elements in the set is not a whole number.
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Cardinality</title>
+        <definition>
+            <p>
+                Let <m>A</m> be a finite set. The <term>cardinality</term> (or <term>size</term> or <term>cardinal number</term>) of a set <m>A</m>, denoted by <m>n(A)</m> or <m>\abs{A}</m>, is the number of elements in <m>A</m>.
+                <ul>
+                    <li>The empty set has cardinality zero, <m>\abs{\emptyset} = 0</m>, and it is the unique set with this property.</li>
+                </ul>
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Important Sets of Numbers</title>
+        <p>
+            In mathematics, naturally, the most important sets are sets containing numbers. Many of these sets are used frequently enough to be worthy of a term, symbols and notation to denote them.
+        </p>
+        <ul>
+            <li>
+                <term>Natural numbers</term>. These are the numbers used for counting,
+                <me>
+                    \mathbb{N} = \set{1, 2, 3, \dots}
+                </me>
+                Note that some mathematicians, and especially computer scientists, include 0 as a natural number.
+            </li>
+            <li>
+                <term>Whole numbers</term>. If one considers the natural numbers to not include zero, then the whole numbers are the natural numbers, including zero.
+                <me>
+                    \set{0, 1, 2, 3, \dots}
+                </me>
+                Sometimes, the whole numbers are represented by <m>\mathbb{W}</m>.
+            </li>
+            <li>
+                <term>Integers</term>. The set including all whole numbers and the negatives of the natural numbers,
+                <me>
+                    \mathbb{Z} = \set{\dots, -3, -2, -1, 0, 1, 2, 3, \dots}
+                </me>
+                The integers are denoted by Z because the German word for number is <em>Zahlen</em>.
+            </li>
+        </ul>
+        <p>
+            Note that infinite sets can be listed using an ellipsis <q><m>\dots</m></q>. 
+        </p>
+        <p>
+            To avoid ambiguity, sometimes the notation <m>\mathbb{Z}^{+}</m> is used to represent the <term>postive integers</term>, rather than using the term natural numbers.
+        </p>
+        <p>
+            Also, sometimes, the set of whole numbers is referred to as the <term>non-negative integers</term>.
+        </p>
+        <ul>
+            <li>
+                <term>Rational numbers</term> (or <term>fractions</term>, or simply <term>rationals</term>). The set of all numbers that can be represented as a quotient of two integers (of course, such that the denominator isn't 0). Represented as decimals, rational numbers are terminating or repeating decimals.
+                <me>
+                    \mathbb{Q} = \set{\frac{a}{b}: a, b \in \mathbb{Z}, b \neq 0}
+                </me>
+                The rationals are denoted by Q for <q>quotient</q>.
+            </li>
+            <li>
+                <term>Irrational numbers</term>. The set of all numbers which cannot be represented as quotients of integers. Sometimes, it is denoted by <m>\mathbb{I}</m>. Represented as decimals, irrational numbers are neither terminating nor repeating.
+            </li>
+            <li>
+                <term>Real numbers</term> <m>\mathbb{R}</m>. The set including all rational and irrational numbers. Roughly, it is the set of all decimal numbers. Or, it can be thought of as the set of all numbers on a number line.
+            </li>
+        </ul>
+        <p>
+            The real numbers <m>\mathbb{R}</m> is said to be <term>continuous</term>, because it is thought of to have no <q>holes</q>. In contrast, the integers <m>\mathbb{Z}</m> are said to be <term>discrete</term>, because they are all separated from each other. This is why it is called discrete mathematics.
+        </p>
+        <ul>
+            <li>
+                <term>Complex numbers</term> <m>\mathbb{C}</m>. The set of all numbers of the form <m>a + bi</m>, where <m>a, b \in \mathbb{R}</m>, and <m>i</m> is the imaginary unit which satisfies <m>i^2 = -1</m>. In other words,
+                <me>
+                    \mathbb{C} = \set{a + bi: a, b \in \mathbb{R}}
+                </me>
+            </li>
+        </ul>
+    </subsection>
+    
+    <subsection>
+        <title>The Empty Set</title>
+        <definition>
+            <p>
+                The <term>empty set</term> (or <term>null set</term>), denoted by <m>\emptyset</m> or <m>\set{}</m>, is the unique set with no elements.
+            </p>
+        </definition>
+    </subsection>    
+
+    <subsection>
+        <title>Intervals of Real Numbers</title>
+        <p>
+            Intervals are a particular kind of subset of real numbers. Roughly, they represent a range of numbers which lie between two given numbers. Let <m>a \leq b</m>. Then,
+        </p>
+        <ul>
+            <li>
+                A <term>closed interval</term> <m>[a,b]</m> is the set,
+                <me>
+                    [a, b] = \set{x \in \mathbb{R}: a \leq x \leq b}
+                </me>
+            </li>
+            <li>
+                An <term>open interval</term> <m>(a,b)</m> is the set,
+                <me>
+                    (a, b) = \set{x \in \mathbb{R}: a \lt x \lt b}
+                </me>
+            </li>
+            <li>
+                A <term>half-open interval</term> is the set,
+                <me>
+                    (a, b] = \set{x \in \mathbb{R}: a \lt x \leq b}
+                </me>
+                or,
+                <me>
+                    [a, b) = \set{x \in \mathbb{R}: a \leq x \lt b}
+                </me>
+            </li>
+            <li>
+                <term>Infinite intervals</term>. Can be of the form,
+                <md>
+                    <mrow>(a, \infty) \amp = \set{x \in \mathbb{R}: x > a}</mrow>
+                    <mrow>[a, \infty) = \set{x \in \mathbb{R}: x \geq a}</mrow>
+                    <mrow>(-\infty, b) = \set{x \in \mathbb{R}: x \lt b}</mrow>
+                    <mrow>(-\infty, b] = \set{x \in \mathbb{R}: x \leq b}</mrow>
+                    <mrow>(-\infty, \infty) = \mathbb{R}</mrow>
+                </md>
+            </li>
+        </ul>
+    </subsection>
+</section>

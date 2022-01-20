@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="chapter-S" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Sets</title>
+    <title>Sequences</title>
     <introduction>
         <p>
-            An introduction to sets.
+
         </p>
     </introduction>
 
-    <xi:include href="./chapter-S/section-ITS.ptx"/>
-    <xi:include href="./chapter-S/section-ISON.ptx"/>
+    <xi:include href="./chapter-S/section-ITSE.ptx"/>
+    <xi:include href="./chapter-S/section-SSN.ptx"/>
 
 </chapter>

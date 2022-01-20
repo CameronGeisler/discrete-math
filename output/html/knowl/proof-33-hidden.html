@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-19T15:51:40-08:00       *-->
+<!--*       on 2022-01-20T12:57:29-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,44 +13,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>First, consider the algebraic identity,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(k + 1)^2 - k^2 = 2k + 1
-\end{equation*}
-</div>
-<p>which is a rearrangement of the familiar expansion \((k + 1)^2 = k^2 + 2k + 1\text{,}\) and is true for all integers \(k\text{.}\) Then, consider the summation,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\sum_{k=1}^n \brac{(k + 1)^2 - k^2} = \sum_{k=1}^n (2k + 1)
-\end{equation*}
-</div>
-<p>The right-hand side, by linearity of summation, is equal to,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\sum_{k=1}^n (2k + 1) = 2\sum_{k=1}^n k + \underbrace{\sum_{k=1}^n 1}_{n} = 2 \sum_{k=1}^n k + n
-\end{equation*}
-</div>
-<p>The left hand side is a telescoping sum,</p>
+<body><article class="hiddenproof"><p>By contradiction, suppose \(\log_{2}{3}\) is rational, so \(\log_{2}{3} = \frac{a}{b}\) for some \(a, b \in \mathbb{Z}, b \neq 0\text{.}\) Then,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\sum_{k=1}^n \brac{(k + 1)^2 - k^2} \amp = \brac{2^2 - 1^2} + \brac{3^2 - 2^2} + \dots + \brac{n^2 - (n-1)^2} + \brac{(n+1)^2 - n^2}\\
-\amp = (n + 1)^2 - 1
+\log_{2}{3} \amp = \frac{a}{b}\\
+3 \amp = 2^{a/b} \amp\amp \text{definition of logarithm}\\
+3^b \amp = 2^a
 \end{align*}
 </div>
-<p>Thus, after simplification, the identity becomes,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(n + 1)^2 - 1 = 2 \sum_{k=1}^n k + n
-\end{equation*}
-</div>
-<p>Then, the summation \(\sum_{k=1}^n k\) can be solved for algebraically in terms of \(n\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\sum_{k=1}^n k \amp = \frac{(n + 1)^2 - 1 - n}{2}\\
-\amp = \frac{\brac{n^2 + 2n + 1} - 1 - n}{2}\\
-\amp = \frac{n^2 + n}{2}\\
-\amp = \frac{n(n + 1)}{2}
-\end{align*}
-</div></article></body>
+<p class="continuation">Then, \(3^b\) is an integer power of 3, a product of odd numbers, and so is odd. Similarly, \(2^a\) is an integer power of 2, a product of even integers, and so is even. This contradicts the fact that an even integer cannot be equal to an odd integer.</p></article></body>
 </html>
