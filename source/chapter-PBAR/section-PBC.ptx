@@ -107,6 +107,10 @@
             <p>
                 By contradiction, suppose that <m>x \in \mathbb{Q}</m> but <m>\frac{1}{x} \in \mathbb{R} \setminus \mathbb{Q}</m>. Then, there exists <m>a, b \in \mathbb{Z}, b \neq 0</m>, such that <m>x = \frac{a}{b}</m>. Then,
             </p>
+            <me>
+                \frac{1}{x} = \frac{1}{\frac{a}{b}} = \frac{b}{a} \in \mathbb{Q}
+            </me>
+            which contradicts our assumption that <m>\frac{1}{x} \in \mathbb{R} \setminus \mathbb{Q}</m>.
         </proof>
     </subsection>
 
@@ -114,10 +118,6 @@
         <title>Tips for Proof by Contradiction</title>
         <p>
             Clearly state the fact, theorem, or property that is being contradicted at the end, rather than just ending with <q>, a contradiction.</q>
-            <me>
-                \frac{1}{x} = \frac{1}{\frac{a}{b}} = \frac{b}{a} \in \mathbb{Q}
-            </me>
-            which contradicts our assumption that <m>\frac{1}{x} \in \mathbb{R} \setminus \mathbb{Q}</m>.
         </p>
     </subsection>
 
@@ -160,15 +160,18 @@
                 Then, since <m>k^2 \in \mathbb{Z}</m>, <m>b^2</m> is even, and so <m>b</m> is even. However, <m>a</m> and <m>b</m> cannot both be even, as otherwise then they share a common factor of 2, contradicting the assumption that <m>a</m> and <m>b</m> share no common factors.
             </p>
         </proof>
-        <remark>
             <p>
                 Note why the assumption that <m>a</m> and <m>b</m> have no common factors works here. Say we write <m>a = 2c</m>, <m>b = 2d</m>, for some <m>c, d \in \mathbb{Z}, d \neq 0</m>. Then, we have,
-                <me>
-                    \sqrt{2} = \frac{a}{b} = \frac{2c}{2d} = \frac{c}{d}
-                </me>
-                Then, we can continue a similar process and find that both <m>c</m> and <m>d</m> must be even. This will repeat infinitely many times, leading to the conclusion that there not exist a representation of <m>\sqrt{2} = \frac{a}{b}</m>, where <m>a</m> and <m>b</m> are in lowest terms. However, all rational numbers have a (unique) representation <m>\frac{a}{b}</m> in lowest terms.
             </p>
-        </remark>
+            <me>
+                \sqrt{2} = \frac{a}{b} = \frac{2c}{2d} = \frac{c}{d}
+            </me>
+            <p>
+                Then, we can continue a similar process and find that both <m>c</m> and <m>d</m> must be even. This process can be repeated indefinitely. Thus, if <m>\sqrt{2}</m> is rational, then its it could always be written as a rational number with smaller and smaller integers. However, this is impossible, since integers cannot be divided indefinitely, and so this is a contradiction. This method of reasoning is called <em>proof by infinite descent</em>.
+            </p>
+            <p>
+                Alternatively, the above reasoning proves that if <m>\sqrt{2}</m> is rational, then it does not have a representation in lowest terms. However, is it a fact that all rational numbers have a (unique) representation <m>\frac{a}{b}</m> in lowest terms.
+            </p>
     </subsection>
 
     <subsection>

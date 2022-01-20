@@ -50,7 +50,7 @@
         <title>First Example</title>
         <p>
             The method of mathematical induction was first used by <term>Francesco Maurolico
-            </term> (1494-1575), Italian mathematician and astronomer, in his work <em>Arithmeticorum libri duo</em>, published in 1575. He used it to prove the closed form formula for the sum of the first <m>n</m> odd positive integers.
+            </term> (1494-1575), Italian mathematician and astronomer, in his work <em>Arithmeticorum libri duo</em>, published in 1575. He used it to prove the closed form formula for the sum of the first <m>n</m> odd positive integers. In 1654, Blaise Pascal more precisely specified the method, and in 1883, Augustus De Morgan gave it the modern name <q>mathematical induction</q>.
         </p>
         <theorem>
             <p>
