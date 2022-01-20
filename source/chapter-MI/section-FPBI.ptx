@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-FPBI">
+    <title>False Proofs by Induction</title>
+
+    <subsection>
+        <title>All Cows are the Same Color</title>
+        <fact>
+            All cows are the same colour. More precisely, for any set of cows, all cows in that set will have the same colour.
+        </fact>
+        <proof>
+            <title>False proof</title>
+            <p>
+                Let <m>S = \set{c_1, c_2, \dots, c_n}</m> represent a set of <m>n</m> cows, each labelled <m>c_k</m>. For <m>n = 1</m>, this is a set of 1 cow, of which all cows have the same colour, vacuously.
+            </p>
+            <p>
+                Then, assume the result is true for a set of <m>k</m> cows for some <m>k \in \mathbb{N}</m>. Then, we want to show that a set of <m>k+1</m> cows all have the same colour.
+            </p>
+            <p>
+                Consider a group of <m>k+1</m> cows. Remove any one cow, and then a group of <m>k</m> remains, which by the induction hypothesis all have the same colour. Then, return the cow and remove any one different cow, again leaving a group of <m>k</m> cows, which all have the same colour. Then, the first removed cow has the same colour as the rest of the group, and the second removed cow has the same colour as the rest of the group. Thus, the first and second removed cow have the same colour, and so all <m>k+1</m> cows have the same colour. Thus, by induction, all cows are the same colour.
+            </p>
+        </proof>
+        
+        <p>
+            The flaw in this proof is that the induction breaks down when <m>n = 2</m>. In a group of two cows, removing one and then the other cow, the other cow has the same colour as itself, but there is no overlap between these two (there is no <q>rest of the group</q>). Thus, this reasoning does not imply the 2 cows are the same colour.
+        </p>
+        <p>
+            More generally, a similar idea can be used to create a false proof can be used to show that all numbers are equal to each other.
+        </p>
+        <corollary>
+            <p>
+                All numbers are equal to each other.
+            </p>
+        </corollary>
+    </subsection>
+</section>

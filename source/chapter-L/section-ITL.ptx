@@ -7,6 +7,19 @@
         <p>
             Symbolic logic uses formal mathematics with symbols to represent statements in language. Everyday language includes factual statements, opinions, commands, and questions. Symbolic logic only deals with statements and opinions, but not commands or questions. Aristotle was one of the early pioneers of propositional logic.
         </p>
+        <p>
+            In mathematics, there are three important kind of mathematical statements.
+        </p>
+        <definition>
+            <ul>
+                <li><term>Universal statements</term>, of the form <q>All <m>X</m> have property <m>Y</m></q>.</li>
+                <li><term>Condiitional statements</term>, of the form <q>If <m>X</m> is true, then <m>Y</m> is true.</q></li>
+                <li><term>Existential statements</term>, of the form <q>There is at least one <m>X</m> for which property <m>Y</m> is true</q>.</li>
+            </ul>
+        </definition>
+        <p>
+            These kinds of statements can be combined to form more complex statements.
+        </p>
     </introduction>
 
     <subsection>
@@ -69,6 +82,10 @@
         </definition>
 
         <p>
+            In other words, the negation of <m>P</m> has opposite truth values as <m>P</m>.
+        </p>
+
+        <p>
             At a very basic level, to determine the negation of a statement, one can add <q>it is not true that</q> to the beginning of the statement. The negation often occurs in English as the connective <q>not</q>.
         </p>
         <example>
@@ -83,11 +100,9 @@
             </p>
         </example>
 
-        <example>
-            <p>
-                The negation of a statement that is itself a negation is the original statement. For example, the negation of <q>The grass is not green</q>, is <q>The grass is green</q>.
-            </p>
-        </example>
+        <p>
+            The negation of a statement that is itself a negation is the original statement. For example, the negation of <q>The grass is not green</q>, is <q>It is not true that the grass is not green</q>, or, <q>The grass is green</q> (a <em>double negative</em>).
+        </p>
 
         <p>
             The fact that the negation of a statement is false when the statement is true, and true when the statement is false, can be summarized in a so-called <em>truth table</em>.
@@ -179,6 +194,10 @@
                 F \amp F \amp F
             \end{array}
         </me>
+    </subsection>
+
+    <subsection>
+        <title>Exclusive Or</title>
     </subsection>
 
 </section>

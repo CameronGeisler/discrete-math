@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-20T14:09:52-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quantifiers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-POL.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chapter-BC.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-POL.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chapter-BC.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-B.html" data-scroll="chapter-B"><span class="codenumber">1</span> <span class="title">Basics</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCIAC.html" data-scroll="section-CCIAC">Conditionals, Converse, Inverse, and Contrapositive</a></li>
+<li><a href="section-BLE.html" data-scroll="section-BLE">Biconditionals, Logical Equivalence</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+<li><a href="section-Q.html" data-scroll="section-Q" class="active">Quantifiers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-BC.html" data-scroll="chapter-BC"><span class="codenumber">3</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Summary of Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sequences</span></a><ul>
+<li><a href="section-ITSE.html" data-scroll="section-ITSE">Introduction to Sequences</a></li>
+<li><a href="section-SSN.html" data-scroll="section-SSN">Sums, Summation Notation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">5</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MI.html" data-scroll="chapter-MI"><span class="codenumber">6</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="section-PBMI.html" data-scroll="section-PBMI">Proof by Mathematical Induction</a></li>
+<li><a href="section-IE.html" data-scroll="section-IE">Induction Examples</a></li>
+<li><a href="section-SI.html" data-scroll="section-SI">Strong Induction</a></li>
+<li><a href="section-FOTPOMI.html" data-scroll="section-FOTPOMI">Foundations of the Principle of Math Induction</a></li>
+<li><a href="section-FPBI.html" data-scroll="section-FPBI">False Proofs by Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">7</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
+<li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
+<li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-Q"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Quantifiers</span>
+</h2>
+<section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.1</span> <span class="title">Quantifiers</span>
+</h3>
+<article class="definition definition-like" id="definition-19"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
+</h4>
+<p id="p-99">The <dfn class="terminology">existential quantifier</dfn>, denoted by \(\exists\text{,}\) represents “there exists”, “there is a”, or “there is at least one”.</p></article><article class="definition definition-like" id="definition-20"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+</h4>
+<p id="p-100">The <dfn class="terminology">universal quantifier</dfn>, \(\forall\text{,}\) represents “for all”, “for every”, or “for each”.</p></article><p id="p-101">The statement, \(\forall x \in S, P(x)\) means that for all elements \(x\) in the set \(S\text{,}\) the statement \(P(x)\) is true. This is equivalent to saying that the conditional, “If \(x \in S\text{,}\) then \(P(x)\) is true”. In symbols, this can be summarized as,</p>
+<div class="displaymath">
+\begin{equation*}
+(\forall x \in S, P(x)) \equiv (x \in S) \rightarrow P(x)
+\end{equation*}
+</div></section></section></div></main>
+</div>
+</body>
+</html>

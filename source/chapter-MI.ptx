@@ -12,5 +12,6 @@
     <xi:include href="./chapter-MI/section-IE.ptx"/>
     <xi:include href="./chapter-MI/section-SI.ptx"/>
     <xi:include href="./chapter-MI/section-FOTPOMI.ptx"/>
+    <xi:include href="./chapter-MI/section-FPBI.ptx"/>
 
 </chapter>

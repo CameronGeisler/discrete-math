@@ -3,18 +3,63 @@
 <section xml:id="section-POL">
     <title>Properties of Logic</title>
     
+
     <subsection>
-        <title>Properties of Logic</title>
+        <title>De Morgan's Laws</title>
+        <p>
+            In general, the negation of a conjunction of two statements, <m>P \land Q</m>, is logically equivalent to the disjunction of their negations, or <m>\neg P \lor \neg Q</m>. This can be verified using truth tables,
+        </p>
+        <me>
+            \begin{array}{cc|ccc|cc}
+                P \amp Q \amp \neg P \amp \neg Q \amp P \land Q \amp \neg (P \land Q) \amp \neg P \lor \neg Q \\ \hline
+                T \amp T \amp F \amp F \amp T \amp F \amp F \\ \hline
+                T \amp F \amp F \amp T \amp F \amp T \amp T \\ \hline
+                F \amp T \amp T \amp F \amp F \amp T \amp T \\ \hline
+                F \amp F \amp T \amp T \amp F \amp T \amp T
+            \end{array}
+        </me>
+        <p>
+            Notice that the two right-most columns have the same truth values. Similarly, in general, the negation of a disjunction of two statements, <m>P \lor Q</m>, is logically equivalent to the conjunction of their negations, or <m>\neg P \land \neg Q</m>. Again, using a truth table,
+        </p>
+        <me>
+            \begin{array}{cc|ccc|cc}
+                P \amp Q \amp \neg P \amp \neg Q \amp P \lor Q \amp \neg (P \lor Q) \amp \neg P \land \neg Q \\ \hline
+                T \amp T \amp F \amp F \amp T \amp F \amp F \\ \hline
+                T \amp F \amp F \amp T \amp T \amp F \amp F \\ \hline
+                F \amp T \amp T \amp F \amp T \amp F \amp F \\ \hline
+                F \amp F \amp T \amp T \amp F \amp T \amp T
+            \end{array}
+        </me>
+        <p>
+            In summary,
+        </p>
 
         <theorem>
             <title>DeMorgan's laws</title>
             <p>
                 <ul>
-                    <li><term>Negation of a conjunction</term>, <m>\neg (P \land Q) \equiv (\neg P) \lor (\neg Q)</m></li>
-                    <li><term>Negation of a disjunction</term>, <m>\neg (P \lor Q) \equiv (\neg P) \land (\neg Q)</m></li>
+                    <li>
+                        <term>Negation of a conjunction</term>. THe negation of an <q>and</q> statement is logically equivalent to the <q>or</q> statement where each component is negated,
+                        <me>
+                            \neg (P \land Q) \equiv (\neg P) \lor (\neg Q)
+                        </me>
+                    </li>
+                    <li>
+                        <term>Negation of a disjunction</term>. The negation of an <q>or</q> statement is logically equivalent to the <q>and</q> statement where each component is negated,
+                        <me>
+                            \neg (P \lor Q) \equiv (\neg P) \land (\neg Q)
+                        </me>
+                    </li>
                 </ul>
             </p>
         </theorem>
+        <p>
+            These logical equivalences are named after Augustus De Morgan (1806-1871), who was the first to state them in formal mathematical terms.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Properties of Compound Statements</title>
 
         <theorem>
             <title>Associative property</title>
@@ -52,6 +97,22 @@
                 </ul>
             </p>
         </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Tautologies and Contradictions</title>
+        <definition>
+            <p>
+                A <term>tautology</term> is a statement form that is always <em>true</em> regarless of the truth values of the individual statements substituted for its statement variables. A statement whose form is a tautology is a <term>tautological statement</term>.
+            </p>
+            <p>
+                A <term>contradiction</term> is a statement form that is always <em>false</em> regarless of the truth values of the individual statements substituted for its statement variables. A statement whose form is a contradiction is a <term>contradictiory statement</term>.
+            </p>
+        </definition>
+
+        <p>
+            For example, <m>P \lor \neg P</m> is a tautology, and <m>P \land \neg P</m> is a contradiction. If <m>T</m> is a tautology, then <m>P \land T \equiv P</m> and <m>P \lor T \equiv T</m>. If <m>C</m> is a contradiction, then <m>P \land C = C</m> and <m>P \lor C = P</m>.
+        </p>
     </subsection>
 
     <subsection>

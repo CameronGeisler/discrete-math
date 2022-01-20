@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T12:57:25-08:00       *-->
+<!--*       on 2022-01-20T14:09:52-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -72,10 +72,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-CCICAB.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chapter-BC.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-BLE.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-Q.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-CCICAB.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chapter-BC.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-BLE.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-L.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-Q.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -86,8 +86,10 @@
 <li class="link">
 <a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
 <li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
-<li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
+<li><a href="section-CCIAC.html" data-scroll="section-CCIAC">Conditionals, Converse, Inverse, and Contrapositive</a></li>
+<li><a href="section-BLE.html" data-scroll="section-BLE">Biconditionals, Logical Equivalence</a></li>
 <li><a href="section-POL.html" data-scroll="section-POL" class="active">Properties of Logic</a></li>
+<li><a href="section-Q.html" data-scroll="section-Q">Quantifiers</a></li>
 </ul>
 </li>
 <li class="link">
@@ -120,6 +122,7 @@
 <li><a href="section-IE.html" data-scroll="section-IE">Induction Examples</a></li>
 <li><a href="section-SI.html" data-scroll="section-SI">Strong Induction</a></li>
 <li><a href="section-FOTPOMI.html" data-scroll="section-FOTPOMI">Foundations of the Principle of Math Induction</a></li>
+<li><a href="section-FPBI.html" data-scroll="section-FPBI">False Proofs by Induction</a></li>
 </ul>
 </li>
 <li class="link">
@@ -132,56 +135,99 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-POL"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Properties of Logic</span>
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Properties of Logic</span>
 </h2>
 <section class="subsection" id="subsection-21"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Properties of Logic</span>
+<span class="type">Subsection</span> <span class="codenumber">2.4.1</span> <span class="title">De Morgan's Laws</span>
 </h3>
+<p id="p-84">In general, the negation of a conjunction of two statements, \(P \land Q\text{,}\) is logically equivalent to the disjunction of their negations, or \(\neg P \lor \neg Q\text{.}\) This can be verified using truth tables,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{cc|ccc|cc}
+P \amp Q \amp \neg P \amp \neg Q \amp P \land Q \amp \neg (P \land Q) \amp \neg P \lor \neg Q \\ \hline
+T \amp T \amp F \amp F \amp T \amp F \amp F \\ \hline
+T \amp F \amp F \amp T \amp F \amp T \amp T \\ \hline
+F \amp T \amp T \amp F \amp F \amp T \amp T \\ \hline
+F \amp F \amp T \amp T \amp F \amp T \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-85">Notice that the two right-most columns have the same truth values. Similarly, in general, the negation of a disjunction of two statements, \(P \lor Q\text{,}\) is logically equivalent to the conjunction of their negations, or \(\neg P \land \neg Q\text{.}\) Again, using a truth table,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{cc|ccc|cc}
+P \amp Q \amp \neg P \amp \neg Q \amp P \lor Q \amp \neg (P \lor Q) \amp \neg P \land \neg Q \\ \hline
+T \amp T \amp F \amp F \amp T \amp F \amp F \\ \hline
+T \amp F \amp F \amp T \amp T \amp F \amp F \\ \hline
+F \amp T \amp T \amp F \amp T \amp F \amp F \\ \hline
+F \amp F \amp T \amp T \amp F \amp T \amp T
+\end{array}
+\end{equation*}
+</div>
+<p id="p-86">In summary,</p>
 <article class="theorem theorem-like" id="theorem-1"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">DeMorgan's laws.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">DeMorgan's laws.</span>
 </h4>
-<ul id="p-76" class="disc">
-<li id="li-32"><p id="p-derived-li-32"><dfn class="terminology">Negation of a conjunction</dfn>, \(\neg (P \land Q) \equiv (\neg P) \lor (\neg Q)\)</p></li>
-<li id="li-33"><p id="p-derived-li-33"><dfn class="terminology">Negation of a disjunction</dfn>, \(\neg (P \lor Q) \equiv (\neg P) \land (\neg Q)\)</p></li>
-</ul></article><article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Associative property.</span>
+<ul id="p-87" class="disc">
+<li id="li-36"><p id="p-derived-li-36"><dfn class="terminology">Negation of a conjunction</dfn>. THe negation of an “and” statement is logically equivalent to the “or” statement where each component is negated,<div class="displaymath">
+\begin{equation*}
+\neg (P \land Q) \equiv (\neg P) \lor (\neg Q)
+\end{equation*}
+</div></p></li>
+<li id="li-37"><p id="p-derived-li-37"><dfn class="terminology">Negation of a disjunction</dfn>. The negation of an “or” statement is logically equivalent to the “and” statement where each component is negated,<div class="displaymath">
+\begin{equation*}
+\neg (P \lor Q) \equiv (\neg P) \land (\neg Q)
+\end{equation*}
+</div></p></li>
+</ul></article><p id="p-88">These logical equivalences are named after Augustus De Morgan (1806-1871), who was the first to state them in formal mathematical terms.</p></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.2</span> <span class="title">Properties of Compound Statements</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Associative property.</span>
 </h4>
-<div class="displaymath" id="p-77">
+<div class="displaymath" id="p-89">
 \begin{gather*}
 P \land (Q \land R) \equiv (P \land Q) \land R\\
 P \lor (Q \lor R) \equiv (P \lor Q) \lor R
 \end{gather*}
-</div></article><p id="p-78">This means that parentheses are unnecessary for a sequence of only conjunctions or only disjunctions.</p>
+</div></article><p id="p-90">This means that parentheses are unnecessary for a sequence of only conjunctions or only disjunctions.</p>
 <article class="theorem theorem-like" id="theorem-3"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Commutative property.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Commutative property.</span>
 </h4>
-<ul id="p-79" class="disc">
-<li id="li-34"><p id="p-derived-li-34">\(\displaystyle P \land Q \equiv Q \land P\)</p></li>
-<li id="li-35"><p id="p-derived-li-35">\(\displaystyle P \lor Q \equiv Q \lor P\)</p></li>
-</ul></article><p id="p-80">This intuitively means that order doesn't matter for disjunctions and conjunctions.</p>
+<ul id="p-91" class="disc">
+<li id="li-38"><p id="p-derived-li-38">\(\displaystyle P \land Q \equiv Q \land P\)</p></li>
+<li id="li-39"><p id="p-derived-li-39">\(\displaystyle P \lor Q \equiv Q \lor P\)</p></li>
+</ul></article><p id="p-92">This intuitively means that order doesn't matter for disjunctions and conjunctions.</p>
 <article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Distribution properties.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Distribution properties.</span>
 </h4>
-<ul id="p-81" class="disc">
-<li id="li-36"><p id="p-derived-li-36">Distribution of conjunction over disjunction, \(P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)\)</p></li>
-<li id="li-37"><p id="p-derived-li-37">Distribution of disjunction over conjunction, \(P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)\)</p></li>
-</ul></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Truth Tables for Compound Propositions</span>
+<ul id="p-93" class="disc">
+<li id="li-40"><p id="p-derived-li-40">Distribution of conjunction over disjunction, \(P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)\)</p></li>
+<li id="li-41"><p id="p-derived-li-41">Distribution of disjunction over conjunction, \(P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)\)</p></li>
+</ul></article></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.3</span> <span class="title">Tautologies and Contradictions</span>
 </h3>
-<p id="p-82">In general, there are \(2^n\) rows in a truth table for \(n\) simple statements.</p></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Logical Inference</span>
+<article class="definition definition-like" id="definition-18"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
+</h4>
+<p id="p-94">A <dfn class="terminology">tautology</dfn> is a statement form that is always <em class="emphasis">true</em> regarless of the truth values of the individual statements substituted for its statement variables. A statement whose form is a tautology is a <dfn class="terminology">tautological statement</dfn>.</p>
+<p id="p-95">A <dfn class="terminology">contradiction</dfn> is a statement form that is always <em class="emphasis">false</em> regarless of the truth values of the individual statements substituted for its statement variables. A statement whose form is a contradiction is a <dfn class="terminology">contradictiory statement</dfn>.</p></article><p id="p-96">For example, \(P \lor \neg P\) is a tautology, and \(P \land \neg P\) is a contradiction. If \(T\) is a tautology, then \(P \land T \equiv P\) and \(P \lor T \equiv T\text{.}\) If \(C\) is a contradiction, then \(P \land C = C\) and \(P \lor C = P\text{.}\)</p></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.4</span> <span class="title">Truth Tables for Compound Propositions</span>
+</h3>
+<p id="p-97">In general, there are \(2^n\) rows in a truth table for \(n\) simple statements.</p></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.5</span> <span class="title">Logical Inference</span>
 </h3>
 <ul class="disc">
-<li id="li-38"><p id="p-derived-li-38">Modus Ponens, \(((P \rightarrow Q) \land P) \rightarrow Q\)</p></li>
-<li id="li-39"><p id="p-derived-li-39">Modus Tollens, \(((P \rightarrow Q) \land (\neg Q)) \rightarrow (\neg P)\)</p></li>
-<li id="li-40"><p id="p-derived-li-40">Elimination, \(((P \lor Q) \land (\neg P)) \rightarrow Q\)</p></li>
+<li id="li-42"><p id="p-derived-li-42">Modus Ponens, \(((P \rightarrow Q) \land P) \rightarrow Q\)</p></li>
+<li id="li-43"><p id="p-derived-li-43">Modus Tollens, \(((P \rightarrow Q) \land (\neg Q)) \rightarrow (\neg P)\)</p></li>
+<li id="li-44"><p id="p-derived-li-44">Elimination, \(((P \lor Q) \land (\neg P)) \rightarrow Q\)</p></li>
 </ul>
 <article class="theorem theorem-like" id="theorem-5"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Chain of implications.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Chain of implications.</span>
 </h4>
-<ul id="p-83" class="disc">
-<li id="li-41"><p id="p-derived-li-41">\(\displaystyle ((P \rightarrow Q) \land (Q \rightarrow R)) \rightarrow (P \rightarrow R)\)</p></li>
-<li id="li-42"><p id="p-derived-li-42">\(\displaystyle ((P \rightarrow P_1) \land (P_1 \rightarrow P_2) \land \dots \land (P_n \rightarrow Q)) \rightarrow (P \rightarrow Q)\)</p></li>
+<ul id="p-98" class="disc">
+<li id="li-45"><p id="p-derived-li-45">\(\displaystyle ((P \rightarrow Q) \land (Q \rightarrow R)) \rightarrow (P \rightarrow R)\)</p></li>
+<li id="li-46"><p id="p-derived-li-46">\(\displaystyle ((P \rightarrow P_1) \land (P_1 \rightarrow P_2) \land \dots \land (P_n \rightarrow Q)) \rightarrow (P \rightarrow Q)\)</p></li>
 </ul></article></section></section></div></main>
 </div>
 </body>

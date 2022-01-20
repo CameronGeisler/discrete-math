@@ -9,7 +9,9 @@
     </introduction>
 
     <xi:include href="./chapter-L/section-ITL.ptx"/>
-    <xi:include href="./chapter-L/section-CCICAB.ptx"/>
+    <xi:include href="./chapter-L/section-CCIAC.ptx"/>
+    <xi:include href="./chapter-L/section-BLE.ptx"/>
     <xi:include href="./chapter-L/section-POL.ptx"/>
+    <xi:include href="./chapter-L/section-Q.ptx"/>
 
 </chapter>
