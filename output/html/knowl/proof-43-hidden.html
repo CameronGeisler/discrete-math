@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-19T15:51:41-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>By induction, for \(n = 1\) (and \(r \neq 1\)) we have,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sum_{i=1}^1 r^{i-1} = r^0 = 1 = \frac{r - 1}{r - 1}
+\end{equation*}
+</div>
+<p>Then, assume the result is true for some \(n = k \in \mathbb{N}\text{.}\) Then, we want to show that,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1 + r + r^2 + \dots + r^{k-1} + r^k = \frac{r^{k+1} - 1}{r - 1}
+\end{equation*}
+</div>
+<p>Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+1 + r + r^2 + \dots + r^{k-1} + r^k \amp = \sum_{i=1}^{k+1} r^{i-1}\\
+\amp = \sum_{i=1}^k r^{i-1} + r^k \amp\amp \text{separating off the final term}\\
+\amp = \frac{r^k - 1}{r - 1} + r^k \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{r^k - 1}{r - 1} + \frac{r^k(r - 1)}{r - 1} \amp\amp \text{combining the fractions over a common denominator}\\
+\amp = \frac{r^{k+1} - 1}{r - 1} \amp\amp \text{simplifying}
+\end{align*}
+</div>
+<p>Thus, by induction, the result is true for all \(n \in \mathbb{N}\text{.}\)</p></article></body>
+</html>

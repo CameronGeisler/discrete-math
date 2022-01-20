@@ -8,6 +8,7 @@
         </p>
     </introduction>
 
-    <xi:include href="./chapter-SE/section-ITS.ptx"/>
+    <xi:include href="./chapter-SE/section-ITSE.ptx"/>
+    <xi:include href="./chapter-SE/section-SSN.ptx"/>
 
 </chapter>

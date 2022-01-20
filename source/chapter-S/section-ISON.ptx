@@ -35,7 +35,7 @@
             </li>
         </ul>
         <p>
-            To avoid ambiguity, some people write <m>\mathbb{Z}^{+}</m> to represent the <term>postive integers</term>, rather than using the term natural numbers.
+            To avoid ambiguity, sometimes the notation <m>\mathbb{Z}^{+}</m> is used to represent the <term>postive integers</term>, rather than using the term natural numbers.
         </p>
         <p>
             Also, sometimes, the set of whole numbers is referred to as the <term>non-negative integers</term>.
@@ -53,7 +53,7 @@
                 <term>Irrational numbers</term>. The set of all numbers which cannot be represented as quotients of integers, and whose decimal representations are neither terminating nor repeating. Sometimes, it is denoted by <m>\mathbb{I}</m>.
             </li>
             <li>
-                <term>Real numbers</term> <m>\mathbb{R}</m>. The set including all rational and irrational numbers. Broadly, it is the set of all decimal numbers.
+                <term>Real numbers</term> <m>\mathbb{R}</m>. The set including all rational and irrational numbers. Roughly, it is the set of all decimal numbers.
             </li>
             <li>
                 <term>Complex numbers</term> <m>\mathbb{C}</m>. The set of all numbers of the form <m>a + bi</m>, where <m>a, b \in \mathbb{R}</m>, and <m>i</m> is the imaginary unit which satisfies <m>i^2 = -1</m>. In other words,

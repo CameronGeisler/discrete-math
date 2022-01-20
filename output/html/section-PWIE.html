@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-18T15:53:53-08:00       *-->
+<!--*       on 2022-01-19T15:51:37-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -86,7 +86,7 @@
 <li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
 <li><a href="section-PWIE.html" data-scroll="section-PWIE" class="active">Permutations with Identical Elements</a></li>
 <li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
-<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Summary of Permutations and Combinations</a></li>
 </ul>
 </li>
 <li class="link">
@@ -112,11 +112,15 @@
 </ul>
 </li>
 <li class="link">
-<a href="chapter-SE.html" data-scroll="chapter-SE"><span class="codenumber">5</span> <span class="title">Sequences</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sequences</a></li></ul>
+<a href="chapter-SE.html" data-scroll="chapter-SE"><span class="codenumber">5</span> <span class="title">Sequences</span></a><ul>
+<li><a href="section-ITSE.html" data-scroll="section-ITSE">Introduction to Sequences</a></li>
+<li><a href="section-SSN.html" data-scroll="section-SSN">Sums, Summation Notation</a></li>
+</ul>
 </li>
 <li class="link">
 <a href="chapter-MI.html" data-scroll="chapter-MI"><span class="codenumber">6</span> <span class="title">Mathematical Induction</span></a><ul>
 <li><a href="section-PBMI.html" data-scroll="section-PBMI">Proof by Mathematical Induction</a></li>
+<li><a href="section-IE.html" data-scroll="section-IE">Induction Examples</a></li>
 <li><a href="section-SI.html" data-scroll="section-SI">Strong Induction</a></li>
 <li><a href="section-FOTPOMI.html" data-scroll="section-FOTPOMI">Foundations of the Principle of Math Induction</a></li>
 </ul>
@@ -133,10 +137,10 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-PWIE"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Permutations with Identical Elements</span>
 </h2>
-<section class="introduction" id="introduction-5"><p id="p-51">Recall that the number of permutations of \(n\) unique objects \(n\) at a time is \(n!\text{.}\) However, if some of those \(n\) objects are identical, this number is reduced, because some permutations are indistinguishable.</p>
+<section class="introduction" id="introduction-5"><p id="p-52">Recall that the number of permutations of \(n\) unique objects \(n\) at a time is \(n!\text{.}\) However, if some of those \(n\) objects are identical, this number is reduced, because some permutations are indistinguishable.</p>
 <article class="example example-like" id="example-14"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-14"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-14"><article class="example example-like"><p id="p-52">For example, consider the number of permutation of letters in the word \(WOOD\text{.}\) If all the letters were distinct, the number of arrangements would be \(4! = 24\text{.}\) However, \(WOOD\) contains two \(O\)s (say, \(O_1\) and \(O_2\)) and so the permutation \(WO_1 O_2 D\) is indistinguishable to \(WO_2 O_1 D\) (they are both \(WOOD\)). When counting only unique permutations, these two (\(2! = 2\) are counted as one. Each permutation of \(WO_1 O_2 D\) (with subscripts) can be arranged in groups of \(2 = 2!\text{,}\) where every group corresponds to a single permutation of \(WOOD\) (without subscripts). Then, the number of permutations of \(WOOD\) is,</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-14"><article class="example example-like"><p id="p-53">For example, consider the number of permutation of letters in the word \(WOOD\text{.}\) If all the letters were distinct, the number of arrangements would be \(4! = 24\text{.}\) However, \(WOOD\) contains two \(O\)s (say, \(O_1\) and \(O_2\)) and so the permutation \(WO_1 O_2 D\) is indistinguishable to \(WO_2 O_1 D\) (they are both \(WOOD\)). When counting only unique permutations, these two (\(2! = 2\) are counted as one. Each permutation of \(WO_1 O_2 D\) (with subscripts) can be arranged in groups of \(2 = 2!\text{,}\) where every group corresponds to a single permutation of \(WOOD\) (without subscripts). Then, the number of permutations of \(WOOD\) is,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{4!}{2!} = 4 \cdot 3 = 12
@@ -164,7 +168,7 @@
 </div></article></div>
 <article class="example example-like" id="example-15"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-15"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-15"><article class="example example-like"><p id="p-53">Similarly, consider the word \(BUBBLE\text{.}\) There are three \(B\)s (say \(B_1, B_2, B_3\)) and so the 6 permutations,</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-15"><article class="example example-like"><p id="p-54">Similarly, consider the word \(BUBBLE\text{.}\) There are three \(B\)s (say \(B_1, B_2, B_3\)) and so the 6 permutations,</p>
 <div class="displaymath">
 \begin{equation*}
 B_1 U B_2 B_3 LE \quad B_1 U B_3 B_2 LE \quad B_2 U B_1 B_3 LE \quad B_2 U B_3 B_1 LE \quad B_3 U B_1 B_2 LE \quad B_3 U B_2 B_1 LE
@@ -176,21 +180,21 @@ B_1 U B_2 B_3 LE \quad B_1 U B_3 B_2 LE \quad B_2 U B_1 B_3 LE \quad B_2 U B_3 B
 \frac{6!}{3!} = 6 \cdot 5 \cdot 4 = 120
 \end{equation*}
 </div></article></div>
-<p id="p-54">More generally,</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<p id="p-55">More generally,</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Permutations with Identical Objects</span>
 </h3>
 <article class="theorem theorem-like" id="theorem-5"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Permutation with identical objects.</span>
 </h4>
-<p id="p-55">The number of permutations of \(n\) objects with \(n\) identical objects is,</p>
+<p id="p-56">The number of permutations of \(n\) objects with \(n\) identical objects is,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\frac{n!}{r!}}
 \end{equation*}
-</div></article><p id="p-56">This can be extended to permutations with multiple groups of identical objects.</p>
+</div></article><p id="p-57">This can be extended to permutations with multiple groups of identical objects.</p>
 <article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-16"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-57">Consider 5 soup cans, made up of 3 noodle soup cans and 2 tomato soup cans. The 3 noodle soup cans are identical, so they can be arranged in \(3! = 6\) indistinguishable ways. Similarly, the 2 tomato soup cans can be arranged in \(2! = 2\) indistinguishable ways. Then, the number of permutations is,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-58">Consider 5 soup cans, made up of 3 noodle soup cans and 2 tomato soup cans. The 3 noodle soup cans are identical, so they can be arranged in \(3! = 6\) indistinguishable ways. Similarly, the 2 tomato soup cans can be arranged in \(2! = 2\) indistinguishable ways. Then, the number of permutations is,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{5!}{3! 2!} = \frac{5 \cdot 4}{2} = 10
@@ -199,21 +203,21 @@ B_1 U B_2 B_3 LE \quad B_1 U B_3 B_2 LE \quad B_2 U B_1 B_3 LE \quad B_2 U B_3 B
 <article class="theorem theorem-like" id="theorem-6"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Permutations with multiple groups of identical objects.</span>
 </h4>
-<p id="p-58">The number of permutations of \(n\) objects with \(n_1\) identical objects of one kind, \(n_2\) identical objects of another kind, and so on for \(k\) kinds of objects, is,</p>
+<p id="p-59">The number of permutations of \(n\) objects with \(n_1\) identical objects of one kind, \(n_2\) identical objects of another kind, and so on for \(k\) kinds of objects, is,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\frac{n!}{n_1! n_2! \cdots n_k!}}
 \end{equation*}
 </div>
-<p id="p-59">Here, \(n_1 + n_2 + \dots + n_k = n\text{.}\)</p></article><p id="p-60">Note that if all of the objects are unique, then \(n_i = 1\) for every \(i\text{,}\) and the expression simplifies to \(n!\text{,}\) as from before.</p></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<p id="p-60">Here, \(n_1 + n_2 + \dots + n_k = n\text{.}\)</p></article><p id="p-61">Note that if all of the objects are unique, then \(n_i = 1\) for every \(i\text{,}\) and the expression simplifies to \(n!\text{,}\) as from before.</p></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Anagrams</span>
 </h3>
-<p id="p-61">An <dfn class="terminology">anagram</dfn> is a word or phrase formed by rearranging (i.e. permuting) the letters of a different word or phrase.</p>
-<p id="p-62">So, anagrams are a type of permutation, and so given a certain word (simplify this by not counting multiple words with spaces), how many anagrams of that word exist? Again, simplify things by saying that any arrangement of letters is a “word” whether or not that word is a real word or even pronounceable.</p>
+<p id="p-62">An <dfn class="terminology">anagram</dfn> is a word or phrase formed by rearranging (i.e. permuting) the letters of a different word or phrase.</p>
+<p id="p-63">So, anagrams are a type of permutation, and so given a certain word (simplify this by not counting multiple words with spaces), how many anagrams of that word exist? Again, simplify things by saying that any arrangement of letters is a “word” whether or not that word is a real word or even pronounceable.</p>
 <article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-63">Determine the number of anagrams that can be formed from the word COMBINATORICS.</p>
-<p id="p-64">There are 13 letters, with O and I both repeated twice. Thus, the number of anagrams is,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-64">Determine the number of anagrams that can be formed from the word COMBINATORICS.</p>
+<p id="p-65">There are 13 letters, with O and I both repeated twice. Thus, the number of anagrams is,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{13!}{2!2!} = 1556755200

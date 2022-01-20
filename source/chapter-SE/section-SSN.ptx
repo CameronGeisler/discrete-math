@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-SSN">
+    <title>Sums, Summation Notation</title>
+
+    <subsection>
+        <title>Sigma Notation</title>
+        <p>
+            <term>Sigma notation</term> uses the uppercase Greek letter sigma (<m>\Sigma</m>) as a convenient way to represent the sum of a sequence of terms. This is particularly helpful for sums with a large numbers of terms, including infinite sequences.
+        </p>
+
+        <definition>
+            <p>
+                Let <m>\set{a_1, a_2, \dots, a_n}</m> be a finite sequence of numbers. Then, the sum of the terms of the sequence is represented by,
+                <me>
+                    \sum_{i=1}^n a_i = a_1 + a_2 + \dots + a_n
+                </me>
+                The symbol <m>\sum</m> can be read as <q>the sum of</q>. The expression <q><m>\sum_{i=1}^n a_i</m></q> is read as the <term>sum of <m>a_i</m> from <m>i = 1</m> to <m>i = n</m></term>.
+            </p>
+        </definition>
+
+        <p>
+            The terms <m>a_i</m> are an expression in <m>i</m>.
+        </p>
+
+
+        <p>
+            More generally, a summation can start at an integer other than 1.
+        </p>
+        <definition>
+            <p>
+                Let <m>\set{a_m, a_{m+1}, \dots, a_n}</m> be a finite sequence. Then, the sum of,
+                <me>
+                    \sum_{i=m}^n a_i = a_m + a_{m+1} + a_{m+2} + \dots + a_{n-1} + a_n
+                </me>
+                <ul>
+                    <li>The <m>i</m> in the symbol is called the <term>index of summation</term>. Common letters include <m>i, j, k</m>, and sometimes <m>l</m>.</li>
+                    <li><m>m</m> and <m>n</m> are the <term>limits of summation</term>, called the <term>lower limit</term> and the <term>upper limit</term>, respectively.</li>
+                </ul>
+            </p>
+        </definition>
+
+        <p>
+            The explicit evaluation of a sum (i.e. the right hand side of the equation) is called its <term>expansion</term>. To evaluate <m>\sum_{i=m}^n a_i</m>, evaluate <m>f</m> at each integer <m>m, m + 1, \dots, n</m> successively, and sum the results.
+        </p>
+        <p>
+            Note that the value of the summation is a number, and does not depend on the letter used for the index (it is a dummy variable). That is,
+        </p>
+        <me>
+            \sum_{i=1}^n a_i = \sum_{j=1}^n a_j
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Evaluating Sums in Summation Notation</title>
+        <p>
+            
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Evaluating Sums in Summation Notation Using Python</title>
+        <p>
+            Summations can be computed using Python. Recall that we defined a sequence using,
+        </p>
+        <cd>
+            seq = [a(i) for i in range(1,n+1)]
+        </cd>
+        <p>
+            Then, we can use this to define a function which acts like sigma notation,
+        </p>
+        <cd>
+            def sigma(a,m,n):
+                seq = [a(i) for i in range(m,n+1)]
+                return(sum(seq))
+        </cd>
+        <p>
+            This function creates the sequence <c>seq</c>, and return the sum of the terms in this sequence. This is basically the same as,
+        </p>
+        <me>
+            \sum_{i=m}^n a_i
+        </me>
+        <p>
+            where <m>a_i = a(i)</m> are the terms of the sequence. Notice that in the function <c>sigma</c>, the index variable <c>i</c> is a dummy variable, just as it is in the summation.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Linearity of Summation</title>
+        <p>
+            Summation, or the sigma symbol, is linear, in that for functions <m>f, g</m>, and <m>a, b \in \mathbb{R}</m>,
+        </p>
+        <me>
+            \sum_{i=m}^n (af(i) + bg(i)) = a \sum_{i=m}^n f(i) + b \sum_{i=m}^n g(i)
+        </me>
+        <p>
+            Intuitively, when summing finitely many numbers, the order in which they are added doesn't affect the value of the sum. Also, if all the numbers have a common factor, then it can be factored out and multiplied after the summation.
+        </p>
+        <me>
+            \sum_{i=1}^n (a_n + b_n) = (a_1 + b_1) + (a_2 + b_2) + \dots + (a_n + b_n)
+        </me>
+        <p>
+            By the commutativity and associativity of addition, this sum can be rearranged with all the <q><m>a</m></q> terms first, and all the <q><m>b</m></q> terms after,
+        </p>
+        <md>
+            <mrow>\amp = (a_1 + a_2 + \dots + a_n) + (b_1 + b_2 + \dots + b_n)</mrow>
+            <mrow>\amp = \sum_{i=1}^n a_n + \sum_{i=1}^n b_n</mrow>
+        </md>
+        <p>
+            Similarly,
+        </p>
+        <md>
+            <mrow>\sum_{i=1}^n ca_i \amp = ca_1 + ca_2 + \dots + ca_n</mrow>
+            <mrow>\amp = c\brac{a_1 + a_2 + \dots + a_n}</mrow>
+            <mrow>\amp = c \sum_{i=1}^n a_i</mrow>
+        </md>
+    </subsection>
+
+    <subsection>
+        <title>Change of Index</title>
+        <p>
+            Sums can start from any integer value. However, sums are often more convenient to manipulate and evaluate when the lower limit of summation is 1 (or 0 in some cases). Using a change of variable, we can change the starting index of a sum, and in particular convert a sum into an equivalent sum that starts at 1.
+        </p>
+
+        <example>
+            <p>
+                Consider the sum,
+            </p>
+            <me>
+                \sum_{i=3}^5 i^2 = 3^2 + 4^2 + 5^2
+            </me>
+            <p>
+                To convert the sum so it starts at 1, define a new variable <m>j</m>, given by <m>j = i - 2</m>. Then, when <m>i</m> starts at <m>i = 3</m>, the new variable will start at <m>j = 1</m>, as desired. Also, when <m>i</m> ends at <m>i = 5</m>, we have <m>j = 3</m>, so this is the upper limit of the summation. This means the sum is now of the form,
+            </p>
+            <me>
+                \sum_{j=1}^3
+            </me>
+            <p>
+                Finally, the expression for the general term <m>i^2</m> must be written in terms of the new variable <m>j</m>. To do this, substitute <m>i = j + 2</m> in the summation. This gives,
+            </p>
+            <me>
+                \sum_{j=1}^3 (j + 2)^2
+            </me>
+            <p>
+                Notice that evaluating this sum gives the same numbers, in particular,
+            </p>
+            <me>
+                \sum_{j=1}^3 (j + 2)^2 = 3^2 + 4^2 + 5^2
+            </me>
+            <p>
+                Also, since <m>j</m> is a dummy variable, it can be replaced by any other letter, including the original letter <m>i</m>. Then, the sum is also,
+            </p>
+            <me>
+                \sum_{i=1}^3 (i + 2)^2
+            </me>
+            <p>
+                Thus,
+            </p>
+            <me>
+                \sum_{i=3}^5 i^2 = \sum_{i=1}^3 (i + 2)^2
+            </me>
+
+        </example>
+        <p>
+            Note that all of the sums,
+        </p>
+        <me>
+            \sum_{i=m}^{m+n} f(i) \qquad \sum_{i=0}^n f(i+m) \qquad \sum_{i=1}^{n+1} f(i+m-1)
+        </me>
+        <p>
+            represent the same expansion, in particular,
+        </p>
+        <me>
+            f(m) + f(m+1) + f(m+2) + \dots + f(n)
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Evaluating Sums</title>
+        <p>
+            Some sums can be written as a <term>closed form</term> expression, which in this case basically means an expression, or formula, that doesn't include the <m>\sum</m> notation, and without <q><m>\dots</m></q>.
+        </p>
+
+        <theorem>
+            <ol>
+                <li>
+                    <term>Sum of 1s</term>.
+                    <me>
+                        \sum_{i=1}^n 1 = \underbrace{1 + 1 + \dots + 1}_{\text{$n$ terms}} = n
+                    </me>
+                </li>
+                <li>
+                    <term>Sum of the first n natural numbers</term>.
+                    <me>
+                        \sum_{i=1}^n i = 1 + 2 + 3 + \dots + n = \frac{n(n + 1)}{2}
+                    </me>
+                </li>
+                <li>
+                    <term>Sum of the first n squares of natural numbers</term>.
+                    <me>
+                        \sum_{i=1}^n i^2 = 1^2 + 2^2 + 3^2 + \dots + n^2 = \frac{n(n + 1)(2n + 1)}{6}
+                    </me>
+                </li>
+                <li>
+                    <term>Sum of finite geometric series</term>. For <m>r \neq 1</m>,
+                    <me>
+                        \sum_{i=1}^n r^{i-1} = 1 + r + r^2 + \dots + r^{n-1} = \frac{r^n - 1}{r - 1}
+                    </me>
+                </li>
+            </ol>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Sum of the First n Natural Numbers (Gauss's Problem)</title>
+        <p>
+            One of the most famous stories in mathematics is the story of the mathematician Gauss. However, it is not known whether or not this actually took place. It goes as follows: In elementary school, the teacher asked Gauss's class to add up the first 100 positive integers (i.e. <m>1 + 2 + 3 + \dots + 99 + 100</m>). The idea was that it would be a time-killer, however Gauss (being gifted in math) recognized a pattern and figured out a method to calculate the sum quickly.
+        </p>
+        <p>
+            He noticed that if you split the <q>bent</q> the sum in half and <q>wrapped</q> it around the bottom, the numbers could be arranged as,
+        </p>
+        <md>
+            <mrow>\amp 1 \quad + 2 \:\: + \: 3 + \cdots + 48 + 49 + 50</mrow>
+            <mrow>\amp 100 + 99 + 98 + \cdots + 53 + 52 + 51</mrow>
+        </md>
+        <p>
+            Each vertical pair (<m>1 + 100, 2 + 99, 3 + 98</m>, and <m>48 + 53</m>, etc.) each add up to 101. Also, there are 50 of these pairs, so the total sum is <m>50(101) = 5050</m>. However, you'll notice that this specific method only works for an even count of numbers, since they will have to be paired up.
+        </p>
+        <p>
+            More generally, a similar method can be applied to find a formula for the sum of the first <m>n</m> natural numbers.
+        </p>
+        <theorem>
+            <p>
+                The sum of the first <m>n</m> natural numbers is <m>\frac{n(n+1)}{2}</m>. In other words,
+                <me>
+                    \boxed{1 + 2 + 3 + \dots + (n-1) + n = \sum_{i=1}^n k = \frac{n(n+1)}{2}}
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <title>Gauss's method</title>
+            <p>
+                Let <m>S</m> be the desired sum, so that,
+                <me>
+                    S = 1 + 2 + 3 + \dots + (n - 1) + n
+                </me>
+                Then, copy the sum and arrange the terms in opposite order, as,
+                <md>
+                    <mrow>S \amp = 1 + \quad \ 2 \quad \ + \quad \ 3 \quad \ + \dots + (n - 2) + (n - 1) + n</mrow>
+                    <mrow>S \amp = n + (n - 1) + (n - 2) + \dots + \quad \ 3 \quad \ + \quad \ 2 \quad \ + 1</mrow>
+                </md>
+                Each vertical pair (<m>1 + n</m>, <m>2 + (n - 1)</m>, <m>3 + (n - 2)</m>, etc.) adds up to <m>n + 1</m>, and there are <m>n</m> terms. Thus, adding the two rows,
+                <me>
+                    2S \amp = n(n + 1)
+                </me>
+                Finally, solving for <m>S</m>, by dividing both sides by 2,
+                <me>
+                    S = \frac{n(n + 1)}{2}
+                </me>
+            </p>
+        </proof>
+        
+        <proof>
+            <title>Geometric proof, connection to triangular numbers</title>
+            <p>
+                Consider a staircase arrangement, which represents <m>1 + 2 + \dots + n</m>. This forms a staircase with length <m>n</m> along the bottom, and <m>n</m> along the left. Doubling this arrangement gives a rectangular array of length <m>n</m> and <m>n + 1</m>, which makes it clear that twice the sum <m>1 + 2 + \dots + n</m> is equal to the area of the rectangle <m>n(n + 1)</m>. Thus, the sum itself is half this amount, or <m>1 + 2 + \dots + n = \frac{n(n + 1)}{2}</m>. Note that this is equivalent to the fact that the <m>n</m>th <term>triangular number</term> is given by <m>T_n = \frac{n(n + 1)}{2}</m>.
+            </p>
+
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Sum of the First n Odd Natural Numbers</title>
+        <p>
+            Consider adding consecutive odd numbers,
+        </p>
+        <md>
+            <mrow>1 \amp + 3 = 4</mrow>
+            <mrow>1 \amp + 3 + 5 = 9</mrow>
+            <mrow>1 \amp + 3 + 5 + 7 = 16</mrow>
+            <mrow>1 \amp + 3 + 5 + 7 + 9 = 25</mrow>
+            <mrow>\amp \vdots</mrow>
+        </md>
+        <p>
+            There is a pattern that every sum is a perfect square, <m>4 = 2^2, 9 = 3^2, 16 = 4^2, 25 = 5^2</m>, etc.
+        </p>
+
+        <theorem>
+            <p>
+                The sum of the first <m>n</m> odd natural numbers is <m>n^2</m>. In other words,
+                <me>
+                    \boxed{1 + 3 + 5 + \dots + (2n - 3) + (2n - 1) = \sum_{k=1}^n (2k - 1) = n^2}
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <title>Geometric proof</title>
+            <p>
+                The key insight is that odd numbers create <q>L</q> shapes. Arranging these pieces of area <m>1, 3, 5, 7, \dots,</m> up to <m>2n-1</m>, next to each other, forms a square, of side length <m>n</m>, which has area <m>n^2</m>.
+            </p>
+            <!-- \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.4]{images/sum-of-odd-numbers.png}
+            \end{figure} -->
+        </proof>
+
+        <proof>
+            <title>Proof using sum of first <m>n</m> natural numbers and linearity of summation</title>
+            <p>
+                By linearity of summation,
+                <me>
+                    \sum_{k=1}^n (2k - 1) = 2 \sum_{k=1}^n k - \sum_{k=1}^n 1
+                </me>
+                Then, applying the sum of the first <m>n</m> natural numbers, and that <m>\sum_{k=1}^n 1 = n</m>,
+                <md>
+                    <mrow>\amp = 2 \cdot \frac{n(n + 1)}{2} - n</mrow>
+                    <mrow>\amp = n(n + 1) - n</mrow>
+                    <mrow>\amp = n^2</mrow>
+                </md>
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Telescoping Sums</title>
+        <example>
+            <p>
+                Consider the sum,
+            </p>
+            <me>
+                \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \frac{1}{3 \cdot 4} + \dots + \frac{1}{n(n + 1)} = \sum_{k=1}^n \frac{1}{k(k + 1)}
+            </me>
+            <p>
+                Evaluating this sum requires using the <q>trick</q> of the algebraic identity,
+            </p>
+            <me>
+                \frac{1}{k(k + 1)} = \frac{1}{k} - \frac{1}{k + 1}
+            </me>
+            <p>
+                Thus, the sum can be written as,
+            </p>
+            <md>
+                <mrow>\sum_{k=1}^n \frac{1}{k(k + 1)} \amp = \sum_{k=1}^n \brac{\frac{1}{k} - \frac{1}{k + 1}}</mrow>
+                <mrow>\amp = \brac{1 - \frac{1}{2}} + \brac{\frac{1}{2} - \frac{1}{3}} + \dots + \brac{\frac{1}{n - 1} - \frac{1}{n}} + \brac{\frac{1}{n} - \frac{1}{n + 1}}</mrow>
+            </md>
+            <p>
+                All of the terms cancel out, except for the leading 1 and the ending <m>-\frac{1}{n+1}</m>.
+            </p>
+            <md>
+                <mrow>\amp = 1 - \frac{1}{n + 1}</mrow>
+                <mrow>\amp = \frac{n}{n + 1}</mrow>
+            </md>
+            <p>
+                Thus,
+            </p>
+            <me>
+                \boxed{\sum_{k=1}^n \frac{1}{k(k + 1)} = \frac{n}{n + 1}}
+            </me>
+        </example>
+        
+        <p>
+            More generally, a telescoping sum is of the form,
+        </p>
+        <me>
+            \sum_{i=m}^n \brac{f(i + 1) - f(i)}
+        </me>
+        <p>
+            Expanding this sum,
+        </p>
+        <md>
+            <mrow>\amp \sum_{i=m}^n \brac{f(i + 1) - f(i)}</mrow>
+            <mrow>\amp = \brac{f(m + 1) - f(m)} + \brac{f(m + 2) - f(m + 1)} + \brac{f(m + 3) - f(m + 2)} + \dots</mrow>
+            <mrow>\amp \qquad \dots + \brac{f(n - 1) - f(n - 2)} + \brac{f(n) - f(n-1)} + \brac{f(n + 1) - f(n)}</mrow>
+        </md>
+        <p>
+            All of the terms cancel out except for the first and last terms, and the result is,
+        </p>
+        <me>
+            \sum_{i=m}^n \brac{f(i + 1) - f(i)} = \underbrace{f(n + 1)}_{\text{last term}} - \underbrace{f(m)}_{\text{first term}}
+        </me>
+        <p>
+            Intuitively, it is called a telescoping sum because the sum expands like a telescope, and then collapses back into a short expression.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Algebraic Proofs of Sum of Natural Numbers and Squares</title>
+        <proof>
+            <title>Proof of sum of natural numbers using telescoping sums</title>
+            <p>
+                First, consider the algebraic identity,
+            </p>
+            <me>
+                (k + 1)^2 - k^2 = 2k + 1
+            </me>
+            <p>
+                which is a rearrangement of the familiar expansion <m>(k + 1)^2 = k^2 + 2k + 1</m>, and is true for all integers <m>k</m>. Then, consider the summation,
+            </p>
+            <me>
+                \sum_{k=1}^n \brac{(k + 1)^2 - k^2} = \sum_{k=1}^n (2k + 1)
+            </me>
+            <p>
+                The right-hand side, by linearity of summation, is equal to,
+            </p>
+            <me>
+                \sum_{k=1}^n (2k + 1) = 2\sum_{k=1}^n k + \underbrace{\sum_{k=1}^n 1}_{n} = 2 \sum_{k=1}^n k + n
+            </me>
+            <p>
+                The left hand side is a telescoping sum,
+            </p>
+            <md>
+                <mrow>\sum_{k=1}^n \brac{(k + 1)^2 - k^2} \amp = \brac{2^2 - 1^2} + \brac{3^2 - 2^2} + \dots + \brac{n^2 - (n-1)^2} + \brac{(n+1)^2 - n^2}</mrow>
+                <mrow>\amp = (n + 1)^2 - 1</mrow>
+            </md>
+            <p>
+                Thus, after simplification, the identity becomes,
+            </p>
+            <me>
+                (n + 1)^2 - 1 = 2 \sum_{k=1}^n k + n
+            </me>
+            <p>
+                Then, the summation <m>\sum_{k=1}^n k</m> can be solved for algebraically in terms of <m>n</m>,
+            </p>
+            <md>
+                <mrow>\sum_{k=1}^n k \amp = \frac{(n + 1)^2 - 1 - n}{2}</mrow>
+                <mrow>\amp = \frac{\brac{n^2 + 2n + 1} - 1 - n}{2}</mrow>
+                <mrow>\amp = \frac{n^2 + n}{2}</mrow>
+                <mrow>\amp = \frac{n(n + 1)}{2}</mrow>
+            </md>
+        </proof>
+        
+        <p>
+            A similar method can be used to prove the sum of the first <m>n</m> squares. This uses a binomial expansion, a telescoping sum, and the previous sums <m>\sum_{k=1}^n k</m> and <m>\sum_{k=1}^n 1</m>.
+        </p>
+
+        <proof>
+            <title>Sum of the first n squares using a telescoping sum</title>
+            <p>
+                First, consider the algebraic identity,
+            </p>
+            <me>
+                (k + 1)^3 - k^3 = 3k^2 + 3k + 1
+            </me>
+            <p>
+                which, again, is a rearrangement of the binomial expansion,
+            </p>
+            <me>
+                (k + 1)^3 = k^3 + 3k^2 + 3k + 1
+            </me>
+            <p>
+                Then, summing both sides the of equation,
+            </p>
+            <md>
+                <mrow>\sum_{k=1}^n \brac{(k + 1)^3 - k^3} \amp = \brac{2^3 - 1^3} + \brac{3^2 - 2^2} + \dots + \brac{n^3 - (n-1)^3} + \brac{(n+1)^3 - n^3}</mrow>
+                <mrow>\amp = (n+1)^3 - 1</mrow>
+            </md>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>(n+1)^3 - 1 \amp = \sum_{k=1}^n \brac{3k^2 + 3k + 1}</mrow>
+                <mrow>\amp = 3 \sum_{k=1}^n k^2 + 3 \sum_{k=1}^n k + \sum_{k=1}^n 1</mrow>
+                <mrow>(n+1)^3 - 1 \amp = 3 \sum_{k=1}^n k^2 + 3 \cdot \frac{n(n + 1)}{2} + n</mrow>
+            </md>
+            <p>
+                Then, solving for the sum <m>\sum_{k=1}^n k^2</m> gives the formula,
+            </p>
+            <md>
+                <mrow>\brac{n^3 + 3n^2 + 3n + 1} - 1 \amp = 3 \sum_{k=1}^n k^2 + \frac{3n(n + 1) + 2n}{2}</mrow>
+                <mrow>n^3 + 3n^2 + 3n \amp = 3 \sum_{k=1}^n k^2 + \frac{3n^2 + 5n}{2}</mrow>
+            </md>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>3 \sum_{k=1}^n k^2 \amp = \frac{2(n^3 + 3n^2 + 3n) - (3n^2 + 5n)}{2}</mrow>
+                <mrow>\amp = \frac{2n^3 + 3n^2 + n}{2}</mrow>
+                <mrow>\amp = \frac{n(2n^2 + 3n + 1)}{2}</mrow>
+                <mrow>\amp = \frac{n(n + 1)(2n + 1)}{2}</mrow>
+            </md>
+            <p>
+                Thus,
+            </p>
+            <me>
+                \sum_{k=1}^n k^2 = \frac{n(n + 1)(2n + 1)}{6}
+            </me>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Sum of First n Cubes</title>
+        <theorem>
+            <p>
+                For all <m>n \in \mathbb{N}</m>,
+                <me>
+                    1^3 + 2^3 + 3^3 + \dots + (n - 1)^3 + n^3 = \sum_{i=1}^n i^3 = \brac{\frac{n(n + 1)}{2}}^2
+                </me>
+                Notice that in particular,
+                <me>
+                    \sum_{i=1}^n i^3 = \brac{\sum_{i=1}^n i}^2
+                </me>
+            </p>
+        </theorem>
+
+        <proof>
+            <title>Geometric proof</title>
+            <p>
+                Consider the picture
+            </p>
+            <!-- \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{images/sum-of-n-cubes.png}
+            \end{figure} -->
+            <p>
+                On the one hand, the area of this square, which has side length <m>1 + 2 + \dots + n = \frac{n(n + 1)}{2}</m>, is <m>\brac{\frac{n(n + 1)}{2}}^2</m>. On the other hand, we can determine it's area by adding up the individual L-shaped pieces. The area of the small square is <m>1^2 = 1</m>. The area of the second region is <m>(1 + 2) \cdot (1 + 2) = 3^2</m>, minus the area of the first region, or,
+            </p>
+            <me>
+                3^2 - 1^2 = 8 = 2^3
+            </me>
+            <p>
+                Similarly, the area of the third region is <m>(1 + 2 + 3)^2 = 6^2</m>, minus the area of the second region,
+            </p>
+            <me>
+                6^2 - 3^2 = 27 = 3^3
+            </me>
+            <p>
+                In general, the area of the <m>k</m>th region is the area of the square of side <m>1 + 2 + \dots + k = \frac{k(k + 1)}{2}</m>, minus the area of the <m>(k-1)</m>-th region which is a square with side length <m>1 + 2 + \dots + (k-1) = \frac{k(k - 1)}{2}</m>. Thus, the area of the <m>k</m>th region is,
+            </p>
+            <md>
+                <mrow>\brac{\frac{k(k + 1)}{2}}^2 - \brac{\frac{k(k - 1)}{2}}^2 \amp = \frac{k^2(k+1)^2 - k^2(k-1)^2}{4}</mrow>
+                <mrow>\amp = \frac{k^2 (k^2 + 2k + 1 - (k^2 - 2k + 1))}{4}</mrow>
+                <mrow>\amp = \frac{k^2(4k)}{4}</mrow>
+                <mrow>\amp = k^3</mrow>
+            </md>
+            <p>
+                Thus, the sum of the area of the <m>n</m> L-shaped regions is precisely <m>\sum_{k=1}^n k^3</m>, and so,
+            </p>
+            <me>
+                \sum_{k=1}^n k^3 = \brac{\frac{n(n + 1)}{2}}^2
+            </me>
+        </proof>
+
+        <proof>
+            <title>Proof of sum of cubes using telescoping sums</title>
+            <p>
+                First,
+            </p>
+            <me>
+                (k + 1)^4 - k^4 = 4k^3 + 6k^2 + 4k + 1
+            </me>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>\sum_{k=1}^n \brac{(k + 1)^4 - k^4} \amp = \sum_{k=1}^n \brac{4k^3 + 6k^2 + 4k + 1}</mrow>
+                <mrow>(n + 1)^4 - 1 \amp = 4 \sum_{k=1}^n k^3 + 6 \sum_{k=1}^n k^2 + 4 \sum_{k=1}^n k + \sum_{k=1}^n 1</mrow>
+                <mrow>\amp = 4 \sum_{k=1}^n k^3 + 6 \cdot \frac{n(n + 1)(2n + 1)}{6} + 4 \cdot \frac{n(n + 1)}{2} + n</mrow>
+            </md>
+            <p>
+                Then, solving for <m>\sum_{k=1}^n k^3</m> gives the formula,
+            </p>
+            <me>
+                \sum_{k=1}^n k^3 = \frac{n^2 (n + 1)^2}{4}
+            </me>
+        </proof>
+
+    </subsection>
+
+    <subsection>
+        <title>Sums of Higher Powers</title>
+        <p>
+            The technique of deriving the formula for the sum of powers of <m>k</m>, <m>k^p</m> where <m>p = 1, 2, 3</m> can be used for higher (integer) powers of <m>p</m>. In general, this technique involves using the binomial expansion of <m>(k + 1)^{p+1}</m>. Then, applying summation and recognize a telescoping sum. Then, use the closed-form formulas for all of the lower powers of <m>p</m>. Finally, solve algebraically for the sum <m>\sum_{k=1}^n k^p</m>. The method is the same, however, the algebra becomes more and more complicated. It is easier to use a computer algebra system to solve for the summation.
+        </p>
+
+        <example>
+            <title>Sum of first n 4th powers</title>
+            <md>
+                <mrow>(k + 1)^5 - k^5 \amp = 5k^4 + 10k^3 + 10k^2 + 5k + 1</mrow>
+                <mrow>\sum_{k=1}^n \brac{(k+1)^5 - k^5} \amp = \sum_{k=1}^n \brac{5k^4 + 10k^3 + 10k^2 + 5k + 1}</mrow>
+                <mrow>(n + 1)^5 - 1 \amp = 5 \sum_{k=1}^n k^4 + 10 \sum_{k=1}^n k^3 + 10 \sum_{k=1}^n k^2 + 5 \sum_{k=1}^n k + \sum_{k=1}^n 1</mrow>
+                <mrow>\amp = 5 \sum_{k=1}^n k^4 + 10 \cdot \frac{n^2(n+1)^2}{4} + 10 \cdot \frac{n(n+1)(2n+1)}{6} + 5 \cdot \frac{n(n + 1)}{2} + n</mrow>
+            </md>
+            <p>
+                Then, solving for <m>\sum_{k=1}^n k^4</m> gives,
+            </p>
+            <me>
+                \boxed{\sum_{k=1}^n k^4 = \frac{n(n + 1)(2n + 1)(3n^2 + 3n - 1)}{30}}
+            </me>
+        </example>
+
+        <p>
+            An observation is that in general, the summation of <m>n</m> terms of <m>k^p</m> is roughly proportional to <m>n^{p+1}</m>.
+        </p>
+
+    </subsection>
+    
+    <subsection>
+        <title>Advanced Summation</title>
+        <theorem>
+            <p>
+                For all <m>n \in \mathbb{N}</m>,
+                <me>
+                    1 \cdot 2^0 + 2 \cdot 2^1 + 3 \cdot 2^2 + \dots + n2^{n-1} = \sum_{k=1}^n k2^{k-1} = ?
+                </me>
+            </p>
+        </theorem>
+    </subsection>
+</section>

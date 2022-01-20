@@ -17,7 +17,15 @@
         <subtitle></subtitle>
 
         <introduction>
-            Discrete math notes.
+            <p>
+                These notes are roughly based on:
+            </p>
+            <ul>
+                <li>MATH 220 Mathematical Proof (University of British Columbia)</li>
+                <li>MATH 341 Introduction to Discrete Mathematics (University of British Columbia)</li>
+                <li>Pre-calculus 12 (BC Curriculum)</li>
+            </ul>
+
         </introduction>
         <!-- Now we include files containing each main devision.       -->
 

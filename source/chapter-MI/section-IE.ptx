@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-IE">
+    <title>Induction Examples</title>
+
+    <subsection>
+        <title>Summations</title>
+
+        <p>
+            Induction can be used to prove various summation formulas.
+        </p>
+
+        <theorem>
+            <p>
+                The sum of the first <m>n</m> natural numbers is <m>\frac{n(n+1)}{2}</m>. In other words,
+                <me>
+                    1 + 2 + 3 + \dots + (n-1) + n = \sum_{i=1}^n i = \frac{n(n+1)}{2}
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 1</m>, we have,
+                <me>
+                    \sum_{i=1}^1 i = 1 = \frac{1(1 + 1)}{2}
+                </me>
+                Then, assume the result is true for some <m>n = k \in \mathbb{N}</m>, and we want to show that,
+                <me>
+                    \sum_{i=1}^{k+1} = \frac{(k + 1)((k + 1) + 1)}{2} = \frac{(k + 1)(k + 2)}{2}
+                </me>
+                Then,
+                <md>
+                    <mrow>1 + 2 + \dots + (k - 1) + k + (k + 1) \amp = \frac{k(k + 1)}{2} + (k + 1) \amp\amp \text{by the induction hypothesis}</mrow>
+                    <mrow>\amp = \frac{k(k + 1)}{2} + \frac{2(k + 1)}{2}</mrow>
+                    <mrow>\amp = \frac{k^2 + 3k + 2}{2} \amp\amp \text{combining fractions and simplifying}</mrow>
+                    <mrow>\amp = \frac{(k + 1)(k + 2)}{2} \amp\amp \text{factoring the quadratic expression}</mrow>
+                </md>
+                By induction, the result is true for all <m>n \in \mathbb{N}</m>.
+            </p>
+        </proof>
+
+        <theorem>
+            <title>Sum of the first n squares of natural numbers</title>
+            <p>
+                The sum of the first <m>n</m> squares of natural numbers is given by,
+                <me>
+                    \frac{n(n + 1)(2n + 1)}{6}
+                </me>
+                In other words,
+                <me>
+                    1^2 + 2^2 + 3^2 + \cdots + (n - 1)^2 + n^2 = \sum_{i=1}^n ^2 = \frac{n(n + 1)(2n + 1)}{6}
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 1</m>, we have,
+            </p>
+            <me>
+                \sum_{i=1}^1 i^2 = 1 = \frac{1(1 + 1)(2 + 1)}{6}
+            </me>
+            <p>
+                Then, assume the result is true for some <m>n = k \in \mathbb{N}</m>, and we want to show that,
+            </p>
+            <md>
+                <mrow>1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 = \sum_{i=1}^{k+1} i^2 \amp = \frac{(k + 1)(k + 2)(2(k + 1) + 1)}{6}</mrow>
+                <mrow>\amp = \frac{(k + 1)(k + 2)(2k + 3)}{6}</mrow>
+            </md>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 \amp = \sum_{i=1}^{k+1} i^2</mrow>
+                <mrow>\amp = \sum_{i=1}^k i^2 + (k + 1)^2 \amp\amp \text{separating off the final term}</mrow>
+                <mrow>\amp = \frac{k(k + 1)(2k + 1)}{6} + (k + 1)^2 \amp\amp \text{by the induction hypothesis}</mrow>
+                <mrow>\amp = \frac{k(k + 1)(2k + 1)}{6} + \frac{6(k + 1)^2}{6}</mrow>
+                <mrow>\amp = \frac{(k + 1) \brac{k(2k + 1) + 6(k + 1)}}{6} \amp\amp \text{combining fractions, factoring out $(k + 1)$}</mrow>
+                <mrow>\amp = \frac{(k + 1)(2k^2 + 7k + 6)}{6} \amp\amp \text{simplifying}</mrow>
+                <mrow>\amp = \frac{(k + 1)(k + 2)(2k + 3)}{6} \amp\amp \text{factoring the quadratic expression}</mrow>
+            </md>
+            Thus, by induction, the result is true for all <m>n \in \mathbb{N}</m>.
+        </proof>
+
+        <theorem>
+            <p>
+                For <m>n \in \mathbb{N}, r \neq 1</m>,
+                <me>
+                    1 + r + r^2 + \dots + r^{n-1} = \sum_{i=1}^n r^{i-1} = \frac{r^n - 1}{r - 1}
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 1</m> (and <m>r \neq 1</m>) we have,
+            </p>
+            <me>
+                \sum_{i=1}^1 r^{i-1} = r^0 = 1 = \frac{r - 1}{r - 1}
+            </me>
+            <p>
+                Then, assume the result is true for some <m>n = k \in \mathbb{N}</m>. Then, we want to show that,
+            </p>
+            <me>
+                1 + r + r^2 + \dots + r^{k-1} + r^k = \frac{r^{k+1} - 1}{r - 1}
+            </me>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>1 + r + r^2 + \dots + r^{k-1} + r^k \amp = \sum_{i=1}^{k+1} r^{i-1}</mrow>
+                <mrow>\amp = \sum_{i=1}^k r^{i-1} + r^k \amp\amp \text{separating off the final term}</mrow>
+                <mrow>\amp = \frac{r^k - 1}{r - 1} + r^k \amp\amp \text{by the induction hypothesis}</mrow>
+                <mrow>\amp = \frac{r^k - 1}{r - 1} + \frac{r^k(r - 1)}{r - 1} \amp\amp \text{combining the fractions over a common denominator}</mrow>
+                <mrow>\amp = \frac{r^{k+1} - 1}{r - 1} \amp\amp \text{simplifying}</mrow>
+            </md>
+            <p>
+                Thus, by induction, the result is true for all <m>n \in \mathbb{N}</m>.
+            </p>
+        </proof>
+
+        <theorem>
+            <title>Sum of the first n cubes of natural numbers</title>
+            <p>
+                For all <m>n \in \mathbb{N}</m>,
+                <me>
+                    1^3 + 2^3 + 3^3 + \dots + (n - 1)^3 + n^3 = \sum_{i=1}^n i^3 = \brac{\frac{n(n + 1)}{2}}^2
+                </me>
+                Notice that in particular,
+                <me>
+                    \sum_{i=1}^n i^3 = \brac{\sum_{i=1}^n i}^2
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 1</m>, we have,
+            </p>
+            <me>
+                \sum_{i=1}^1 i^3 = 1^3 = 1 = \brac{\frac{1(1 + 1)}{2}}^2
+            </me>
+            <p>
+                Then, assume that the result is true for some <m>n = k \in \mathbb{N}</m>. Then, we want to show that,
+            </p>
+            <md>
+                <mrow>1^3 + 2^3 + \dots + (n - 1)^3 + n^3 + (n + 1)^3 = \sum_{i=1}^{n+1} i^3 \amp = \brac{\frac{(n + 1)(n + 2)}{2}}^2</mrow>
+                <mrow>\amp = \frac{(n + 1)^2(n + 2)^2}{4}</mrow>
+            </md>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>1^3 + 2^3 + 3^3 + \dots + (n - 1)^3 + n^3 + (n + 1)^3 \amp = \sum_{i=1}^{n+1} i^3</mrow>
+                <mrow>\amp = \sum_{i=1}^n i^3 + (n + 1)^3 \amp\amp \text{separating off the final term}</mrow>
+                <mrow>\amp = \brac{\frac{n(n + 1)}{2}}^2 + (n + 1)^3 \amp\amp \text{by the induction hypothesis}</mrow>
+                <mrow>\amp = \frac{n^2(n + 1)^2}{4} + (n + 1)^3</mrow>
+                <mrow>\amp = \frac{n^2(n + 1)^2 + 4(n + 1)^3}{4}</mrow>
+                <mrow>\amp = \frac{(n + 1)^2 (n^2 + 4n + 4)}{4} \amp\amp \text{factoring $(n + 1)^2$ from both terms}</mrow>
+                <mrow>\amp = \frac{(n + 1)^2(n + 2)^2}{4}</mrow>
+            </md>
+        </proof>
+    </subsection>
+    
+    <subsection>
+        <title>Other Examples</title>
+
+        <theorem>
+            <title>Lines in the plane</title>
+            <p>
+                For any <m>n</m> lines in the plane, they subdivide the plane into <m>\frac{n(n+1)}{2} + 1</m> regions, if no two lines are parallel and no three lines pass through the same point.
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 1</m>, 1 line subdivides the plane into 2 regions, and,
+            </p>
+            <me>
+                2 = \frac{1(1 + 1)}{2} + 1
+            </me>
+            <p>
+                Then, assume the result is true for <m>n = k \in \mathbb{N}</m>. We want to show that <m>k+1</m> lines in general position subdivide the plane into the <m>\frac{(k + 1)(k + 2)}{2} + 1</m> regions. The <m>(k+1)</m>st line intersects the other <m>k</m> lines each at 1 point, for <m>k</m> total intersections, and that form <m>(k+1)</m> boundary lines, that each divide a subdivision into 2 segments each, i.e. create <m>(k+1)</m> new regions. Then,
+            </p>
+            <md>
+                <mrow>S_{k+1} \amp = S_k + (k + 1)</mrow>
+                <mrow>\amp = \frac{k(k + 1)}{2} + 1 + (k + 1) \amp\amp \text{by the induction hypothesis}</mrow>
+                <mrow>\amp = \frac{k(k + 1)}{2} + \frac{2(k + 2)}{2}</mrow>
+                <mrow>\amp = \frac{(k + 1)(k + 2)}{2}</mrow>
+            </md>
+        </proof>
+
+        <theorem>
+            <title>Powers grow faster than polynomials</title>
+            <p>
+                For all <m>n \in \mathbb{N}, n \geq 5</m>,
+                <me>
+                    2^n \geq n^2
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 5</m>. Then,
+            </p>
+            <me>
+                2^5 = 32 \geq 25 = 5^2
+            </me>
+            <p>
+                Then, assume the result is true for some <m>n = k \in \mathbb{N}, k \geq 5</m>. Then, we want to show that,
+            </p>
+            <me>
+                2^{k+1} \geq (k+1)^2
+            </me>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>2^{k+1} \amp = 2 \cdot 2^k</mrow>
+                <mrow>\amp \geq 2 \cdot k^2 \amp\amp \text{by the induction hypothesis}</mrow>
+            </md>
+            <p>
+                Then, we want to show that this quantity <m>2k^2</m> is greater than or equal to the desired result <m>(k + 1)^2</m>. In other words,
+            </p>
+            <md>
+                <mrow>2k^2 \geq (k + 1)^2</mrow>
+                <mrow>2k^2 \geq k^2 + 2k + 1</mrow>
+                <mrow>k^2 \geq 2k + 1</mrow>
+            </md>
+            <p>
+                To prove this, we can show that <m>(k - 1)^2 \geq 2</m>. Since <m>k \geq 5</m>, we have <m>(k - 1)^2 \geq (5 - 1)^2 = 4^2 \geq 2</m>. Then,
+            </p>
+            <md>
+                <mrow>2^{k+1} \amp \geq 2k^2</mrow>
+                <mrow>\amp = k^2 + k^2</mrow>
+                <mrow>\amp \geq k^2 + 2k + 1 \amp\amp \text{as $k^2 \geq 2k + 1$}</mrow>
+                <mrow>\amp = (k + 1)^2</mrow>
+            </md>
+            <p>
+                Thus, by induction, the result is true for all <m>n \in \mathbb{N}</m>.
+            </p>
+        </proof>
+
+        <theorem>
+            <title>Factorials grow faster than powers</title>
+            <p>
+                For all <m>n \in \mathbb{N}, n \geq 4</m>,
+                <me>
+                    n! > 2^n
+                </me>
+                In other words, the number of permutations of an <m>n</m>-element set <m>n!</m>, is greater than the number of subsets of an <m>n</m>-element set <m>2^n</m>.
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 4</m>,
+            </p>
+            <me>
+                4! = 24 > 16 = 2^4
+            </me>
+            <p>
+                Then, assume that the result is true for some <m>n = k \in \mathbb{N}, k \geq 4</m>. Then, we want to show that,
+            </p>
+            <me>
+                (k + 1)! > 2^{k+1}
+            </me>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>(n + 1)! \amp = (n + 1)n!</mrow>
+                <mrow>\amp > (n + 1) \cdot 2^n \amp\amp \text{by the induction hypothesis}</mrow>
+                <mrow>\amp > 2 \cdot 2^n \amp\amp \text{since $n \geq 4$, $n + 1 \geq 5 > 2$}</mrow>
+                <mrow>\amp = 2^{n + 1}</mrow>
+            </md>
+            <p>
+                Thus, by induction, the result is true for all <m>n \in \mathbb{N}, n \geq 4</m>.
+            </p>
+        </proof>
+
+        <theorem>
+            <title>Sum of reciprocal product</title>
+            <p>
+                For all <m>n \in \mathbb{N}</m>,
+            </p>
+            <me>
+                \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \frac{1}{3 \cdot 4} + \dots + \frac{1}{n(n + 1)} = \sum_{i=1}^n \frac{1}{i(i + 1)} = \frac{n}{n + 1}
+            </me>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 1</m>, we have,
+            </p>
+            <me>
+                \sum_{i=1}^1 \frac{1}{i(i + 1)} = \frac{1}{1(1 + 1)} = \frac{1}{2} = \frac{1}{1 + 1}
+            </me>
+            <p>
+                Then, assume the result is true for some <m>n = k \in \mathbb{N}</m>. Then, we want to show that,
+            </p>
+            <me>
+                \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \frac{1}{3 \cdot 4} + \dots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)} = \sum_{i=1}^{n+1} \frac{1}{i(i + 1)} = \frac{k + 1}{k + 2}
+            </me>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>\amp \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}</mrow>
+                <mrow>\amp = \sum_{i=1}^{k+1} \frac{1}{i(i+1)}</mrow>
+                <mrow>\amp = \sum_{i=1}^k \frac{1}{i(i+1)} + \frac{1}{(k+1)(k+2)}</mrow>
+                <mrow>\amp = \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)} \amp\amp \text{by the induction hypothesis}</mrow>
+                <mrow>\amp = \frac{k(k + 2)}{(k + 1)(k + 2)} + \frac{1}{(k + 1)(k + 2)}</mrow>
+                <mrow>\amp = \frac{k^2 + 2k + 1}{(k + 1)(k + 2)}</mrow>
+                <mrow>\amp = \frac{(k + 1)^2}{(k + 1)(k + 2)}</mrow>
+                <mrow>\amp = \frac{k + 1}{k + 2}</mrow>
+            </md>
+        </proof>
+
+        <theorem>
+            <title>Sum of reciprocals of square roots inequality</title>
+            <p>
+                For all <m>n \in \mathbb{N}</m>,
+            </p>
+            <me>
+                \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \dots + \frac{1}{\sqrt{n}} \geq \sqrt{n}
+            </me>
+        </theorem>
+        <proof>
+            <p>
+                By induction, for <m>n = 1</m>, we have,
+            </p>
+            <me>
+                \frac{1}{\sqrt{1}} = 1 \geq \sqrt{1}
+            </me>
+            <p>
+                Then, assume the result is true for some <m>n \in \mathbb{N}</m>. Then, we want to show that,
+            </p>
+            <me>
+                \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \dots + \frac{1}{\sqrt{n}} + \frac{1}{\sqrt{n + 1}} \geq \sqrt{n + 1}
+            </me>
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>\amp \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \dots + \frac{1}{\sqrt{n}} + \frac{1}{\sqrt{n + 1}}</mrow>
+                <mrow>\amp \geq \sqrt{n} + \frac{1}{\sqrt{n + 1}} \amp\amp \text{by the induction hypothesis}</mrow>
+                <mrow>\amp = \frac{\sqrt{n} \cdot \sqrt{n + 1} + 1}{\sqrt{n + 1}}</mrow>
+                <mrow>\amp \geq \frac{\sqrt{n} \sqrt{n} + 1}{\sqrt{n + 1}} \amp\amp \text{as $\sqrt{n + 1} \geq \sqrt{n}$}</mrow>
+                <mrow>\amp = \frac{n + 1}{\sqrt{n + 1}}</mrow>
+                <mrow>\amp = \sqrt{n + 1}</mrow>
+            </md>
+            <p>
+                Thus, by induction, the result is true for all <m>n \in \mathbb{N}</m>.
+            </p>
+        </proof>
+
+        <theorem>
+            <title>Sum of interior angles of a polygon</title>
+            <p>
+                The sum of the measures of the interior angles of an <m>n</m>-gon is <m>180(n - 2)</m> (where <m>n \geq 3</m>).
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                For <m>n = 3</m>, the sum of the angles in a triangle is <m>180 = 180(3 - 2)</m> Then, assume the result is true for some <m>n</m>, and consider an <m>(n + 1)</m>-sided polygon. Let <m>S_n</m> be the sum of the interior angles of an <m>n</m>-gon. Then, we want to show that,
+            </p>
+            <me>
+                S_{n+1} = 180((n + 1) - 2) = 180(n - 1)
+            </me>
+            <p>
+                Then, <q>collapse</q> two sides into one, to split the <m>(n+1)</m>-gon into an <m>n</m>-gon, and a triangle.
+            </p>
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{images/polygon.png}
+            \end{figure}
+            <p>
+                Then,
+            </p>
+            <md>
+                <mrow>S_{n+1} \amp = S_n + S_3</mrow>
+                <mrow>\amp = 180(n - 2) + 180 \amp\amp \text{by the induction hypothesis, and the base case}</mrow>
+                <mrow>\amp = 180(n - 1)</mrow>
+            </md>
+            <p>
+                Thus, by induction, the result is true for all <m>n \in \mathbb{N}, n \geq 3</m>.
+            </p>
+        </proof>
+    </subsection>
+    
+    <!-- \section*{Square Roots are Constructable}
+    \begin{theorem}
+    Given a unit length (length of 1 unit), a length $\sqrt{n}$ can be constructed using only a straightedge and compass, for every $n$.
+    \end{theorem}
+    
+    \begin{proof}
+    By induction, for $n = 1$, a length $\sqrt{1} = 1$ is the unit length, which is given. Then, assume that we can construct a length $\sqrt{n}$ using straightedge and compass. Then, construct a right angle, using the compass. Extend the two sides of the right angle to be a unit length and length $\sqrt{n}$. Then, connect the ends to form a right triangle, with legs 1 and $\sqrt{n}$. By the Pythagorean theorem, the hypotenuse has length $\sqrt{n+1}$.
+    \end{proof}
+    
+    \section*{Misc Examples}
+    \begin{result}
+    If $n$ is odd, then $n^2 - 1$ is a multiple of 8.
+    \end{result}
+    \begin{proof}
+    We will prove the result for odd positive integers (for odd $n \in \mathbb{N}$), and then the result for odd negative integers, since $(-n)^2 - 1 = n^2 - 1$.
+   </mrow></mrow> By induction, for $n = 1$, we have $n^2 - 1 = 1^2 - 1 = 0$, which is a multiple of 8.
+   </mrow></mrow> Then, assume the result is true for some odd $n \in \mathbb{N}$, that $n^2 - 1$ is a multiple of 8. Then, we want to show that for the next odd integer $n + 2$, $(n + 2)^2 - 2$ is divisible by 8. Then,
+    \begin{align*}
+        (n + 2)^2 - 1 \amp = n^2 + 4n + 4 - 1</mrow>
+        \amp = (n^2 - 1) + 4(n + 1)
+    \end{align*}
+    By the induction hypothesis, $n^2 - 1$ is divisible by 8. Also, $n$ is odd, so $(n + 1)$ is even, and so $4(n + 1) = 4(2l) = 8l$ for some $l \in \mathbb{Z}$, which is divisible by 8. Thus, their sum $(n^2 - 1) + 4(n + 1)$ is divisible by 8.
+    \end{proof}
+    
+    \begin{result}
+    For all $n \in \mathbb{N}$, $n^3 - n$ is divisible by 6.
+    \end{result}
+    \begin{proof}
+    By induction, for $n = 1$, $n^3 - n = 1^3 - 1 = 0$ which is divisible by 6.
+   </mrow></mrow> Then, assume that for some $n \in \mathbb{N}$, $n^3 - n$ is divisible by 6. Then,
+    \begin{align*}
+        (n + 1)^3 - (n + 1) \amp = (n^3 + 3n^3 + 3n + 1) - n - 1</mrow>
+        \amp = (n^3 - n) + (3n^2 + 3n)</mrow>
+        \amp = (n^3 - n) + 3n(n + 1)
+    \end{align*}
+    By the induction hypothesis, $n^3 - n$ is divisible by 6. Also, at least one of $n$ and $n + 1$ is even, and so $n(n + 1)$ is even, so $n(n + 1) = 2m$ for some $m \in \mathbb{Z}$. Thus, $3n(n + 1) = 3(2m) = 6m$ is divisible by 6.
+    \end{proof}
+    
+    \begin{result}
+    For all $n \in \mathbb{N}, n \geq 0$,
+    \begin{equation*}
+        \sum_{i=0}^n i \cdot 3^i = \frac{3^{n+1}(2n - 1) + 3}{4}
+    \end{equation*}
+    \end{result}
+    \begin{proof}
+    By induction, let $n = 0$. Then,
+    \begin{equation*}
+        \sum_{i=0}^0 i \cdot 3^i = 0 = \frac{3^1(2 \cdot 0 - 1) + 3}{4}
+    \end{equation*}
+    Then, assume our result is true for $n = k \in \mathbb{N}$. We want to show that
+    \begin{equation*}
+        \sum_{i=0}^{k+1} i \cdot 3^i = \frac{3^{k+2}(2(k+1) - 1) + 3}{4} = \frac{3^{k+2}(2k + 1) + 3}{4}
+    \end{equation*}
+    Then,
+    \begin{align*}
+        \sum_{i=0}^{k+1} i \cdot 3^i \amp = \sum_{i=0}^k i \cdot 3^i + \sum_{i=k+1}^{k+1} i \cdot 3^i</mrow>
+        \amp = \frac{3^{k+1}(2k - 1) + 3}{4} + (k+1) 3^{k+1} \amp\amp \text{by the induction hypothesis}</mrow>
+        \amp = \frac{3^{k+1}(2k - 1) + 3 + 4(k+1) 3^{k+1}}{4}</mrow>
+        \amp = \frac{(6k + 3)3^{k+1} + 3}{4}</mrow>
+        \amp = \frac{3^{k+1}(2k + 1) + 3}{4}
+    \end{align*}
+    By induction, the result is true for all $n \in \mathbb{Z}, n \geq 0$.
+    \end{proof}
+    
+    \begin{result}
+    For all $n \in \mathbb{N}, n \geq 2$, we have $3 \mid (n^3 - n)$.
+    \end{result}
+    \begin{proof}
+    By induction, for $n = 2$ we have $3 \mid (2^3 - 2)$ or $3 \mid 6$, which is true.
+   </mrow></mrow> Then, assume the result is true for some $n \in \mathbb{N}$, that $3 \mid (n^3 - n)$. We want to show that
+    \begin{equation*}
+        3 \mid ((n + 1)^3 - (n + 1))
+    \end{equation*}
+    Then,
+    \begin{align*}
+        (n + 1)^3 - (n + 1) \amp = (n^3 + 3n^2 + 3n + 1) - n - 1</mrow>
+        \amp = n^3 + 3n^2 + 2n</mrow>
+        \amp = n(n^2 + 3n + 2)</mrow>
+        \amp = n(n + 1)(n + 2)
+    \end{align*}
+    which is the product of 3 consecutive integers, at least one of which must be divisible by 3. Thus, $3 \mid ((n + 1)^3 - (n + 1))$, and so the result is true for all $n \in \mathbb{N}$, $n \geq 2$.
+    \end{proof} -->
+
+</section>

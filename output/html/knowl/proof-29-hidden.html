@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-18T15:53:56-08:00       *-->
+<!--*       on 2022-01-19T15:51:40-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,13 +13,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>By induction, for \(n = 1\text{,}\) we have \(1 \cdot (1 + 1) = 2\) which is even. Then, assume the result is true for some \(n \in \mathbb{Z}, n \geq 1\text{,}\) that \(n(n + 1)\) is even. Then, we want to show that \((n + 1)((n + 1) + 1) = (n + 1)(n + 2)\) is even. Then,</p>
+<body><article class="hiddenproof"><p>Let \(S\) be the desired sum, so that,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+S = 1 + 2 + 3 + \dots + (n - 1) + n
+\end{equation*}
+</div>
+<p class="continuation">Then, copy the sum and arrange the terms in opposite order, as,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-(n + 1)(n + 2) \amp = n^2 + 3n + 2\\
-\amp = (n^2 + n) + (2n + 2) \amp\amp \text{splitting up the terms to use the induction hypothesis}\\
-\amp = n(n + 1) + 2(n + 1)
+S \amp = 1 + \quad \ 2 \quad \ + \quad \ 3 \quad \ + \dots + (n - 2) + (n - 1) + n\\
+S \amp = n + (n - 1) + (n - 2) + \dots + \quad \ 3 \quad \ + \quad \ 2 \quad \ + 1
 \end{align*}
 </div>
-<p class="continuation">By the induction hypothesis, \(n(n + 1)\) is even, and also \(2(n + 1)\) is even, so their sum \((n + 1)(n + 2)\) is even.</p></article></body>
+<p class="continuation">Each vertical pair (\(1 + n\text{,}\) \(2 + (n - 1)\text{,}\) \(3 + (n - 2)\text{,}\) etc.) adds up to \(n + 1\text{,}\) and there are \(n\) terms. Thus, adding the two rows,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2S \amp = n(n + 1)
+\end{equation*}
+</div>
+<p class="continuation">Finally, solving for \(S\text{,}\) by dividing both sides by 2,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+S = \frac{n(n + 1)}{2}
+\end{equation*}
+</div></article></body>
 </html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-19T15:51:38-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Induction Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-PBMI.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-MI.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-SI.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-PBMI.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-MI.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-SI.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Summary of Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCICAB.html" data-scroll="section-CCICAB">Conditionals, Converse, Inverse, Contrapositive, and Biconditionals</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">3</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sets</span></a><ul>
+<li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li>
+<li><a href="section-ISON.html" data-scroll="section-ISON">Important Sets of Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-SE.html" data-scroll="chapter-SE"><span class="codenumber">5</span> <span class="title">Sequences</span></a><ul>
+<li><a href="section-ITSE.html" data-scroll="section-ITSE">Introduction to Sequences</a></li>
+<li><a href="section-SSN.html" data-scroll="section-SSN">Sums, Summation Notation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MI.html" data-scroll="chapter-MI"><span class="codenumber">6</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="section-PBMI.html" data-scroll="section-PBMI">Proof by Mathematical Induction</a></li>
+<li><a href="section-IE.html" data-scroll="section-IE" class="active">Induction Examples</a></li>
+<li><a href="section-SI.html" data-scroll="section-SI">Strong Induction</a></li>
+<li><a href="section-FOTPOMI.html" data-scroll="section-FOTPOMI">Foundations of the Principle of Math Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">7</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
+<li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
+<li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-IE"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Induction Examples</span>
+</h2>
+<section class="subsection" id="subsection-94"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.2.1</span> <span class="title">Summations</span>
+</h3>
+<p id="p-388">Induction can be used to prove various summation formulas.</p>
+<article class="theorem theorem-like" id="theorem-23"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
+</h4>
+<p id="p-389">The sum of the first \(n\) natural numbers is \(\frac{n(n+1)}{2}\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+1 + 2 + 3 + \dots + (n-1) + n = \sum_{i=1}^n i = \frac{n(n+1)}{2}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-41"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-41"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-41"><article class="hiddenproof"><p id="p-390">By induction, for \(n = 1\text{,}\) we have,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^1 i = 1 = \frac{1(1 + 1)}{2}
+\end{equation*}
+</div>
+<p class="continuation">Then, assume the result is true for some \(n = k \in \mathbb{N}\text{,}\) and we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^{k+1} = \frac{(k + 1)((k + 1) + 1)}{2} = \frac{(k + 1)(k + 2)}{2}
+\end{equation*}
+</div>
+<p class="continuation">Then,</p>
+<div class="displaymath">
+\begin{align*}
+1 + 2 + \dots + (k - 1) + k + (k + 1) \amp = \frac{k(k + 1)}{2} + (k + 1) \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{k(k + 1)}{2} + \frac{2(k + 1)}{2}\\
+\amp = \frac{k^2 + 3k + 2}{2} \amp\amp \text{combining fractions and simplifying}\\
+\amp = \frac{(k + 1)(k + 2)}{2} \amp\amp \text{factoring the quadratic expression}
+\end{align*}
+</div>
+<p class="continuation">By induction, the result is true for all \(n \in \mathbb{N}\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-24"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of the first n squares of natural numbers.</span>
+</h4>
+<p id="p-391">The sum of the first \(n\) squares of natural numbers is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{n(n + 1)(2n + 1)}{6}
+\end{equation*}
+</div>
+<p class="continuation">In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+1^2 + 2^2 + 3^2 + \cdots + (n - 1)^2 + n^2 = \sum_{i=1}^n ^2 = \frac{n(n + 1)(2n + 1)}{6}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"><p id="p-392">By induction, for \(n = 1\text{,}\) we have,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^1 i^2 = 1 = \frac{1(1 + 1)(2 + 1)}{6}
+\end{equation*}
+</div>
+<p id="p-393">Then, assume the result is true for some \(n = k \in \mathbb{N}\text{,}\) and we want to show that,</p>
+<div class="displaymath">
+\begin{align*}
+1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 = \sum_{i=1}^{k+1} i^2 \amp = \frac{(k + 1)(k + 2)(2(k + 1) + 1)}{6}\\
+\amp = \frac{(k + 1)(k + 2)(2k + 3)}{6}
+\end{align*}
+</div>
+<p id="p-394">Then,</p>
+<div class="displaymath">
+\begin{align*}
+1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 \amp = \sum_{i=1}^{k+1} i^2\\
+\amp = \sum_{i=1}^k i^2 + (k + 1)^2 \amp\amp \text{separating off the final term}\\
+\amp = \frac{k(k + 1)(2k + 1)}{6} + (k + 1)^2 \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{k(k + 1)(2k + 1)}{6} + \frac{6(k + 1)^2}{6}\\
+\amp = \frac{(k + 1) \brac{k(2k + 1) + 6(k + 1)}}{6} \amp\amp \text{combining fractions, factoring out $(k + 1)$}\\
+\amp = \frac{(k + 1)(2k^2 + 7k + 6)}{6} \amp\amp \text{simplifying}\\
+\amp = \frac{(k + 1)(k + 2)(2k + 3)}{6} \amp\amp \text{factoring the quadratic expression}
+\end{align*}
+</div>Thus, by induction, the result is true for all \(n \in \mathbb{N}\text{.}\)</article></div>
+<article class="theorem theorem-like" id="theorem-25"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
+</h4>
+<p id="p-395">For \(n \in \mathbb{N}, r \neq 1\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+1 + r + r^2 + \dots + r^{n-1} = \sum_{i=1}^n r^{i-1} = \frac{r^n - 1}{r - 1}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-43"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof"><p id="p-396">By induction, for \(n = 1\) (and \(r \neq 1\)) we have,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^1 r^{i-1} = r^0 = 1 = \frac{r - 1}{r - 1}
+\end{equation*}
+</div>
+<p id="p-397">Then, assume the result is true for some \(n = k \in \mathbb{N}\text{.}\) Then, we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+1 + r + r^2 + \dots + r^{k-1} + r^k = \frac{r^{k+1} - 1}{r - 1}
+\end{equation*}
+</div>
+<p id="p-398">Then,</p>
+<div class="displaymath">
+\begin{align*}
+1 + r + r^2 + \dots + r^{k-1} + r^k \amp = \sum_{i=1}^{k+1} r^{i-1}\\
+\amp = \sum_{i=1}^k r^{i-1} + r^k \amp\amp \text{separating off the final term}\\
+\amp = \frac{r^k - 1}{r - 1} + r^k \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{r^k - 1}{r - 1} + \frac{r^k(r - 1)}{r - 1} \amp\amp \text{combining the fractions over a common denominator}\\
+\amp = \frac{r^{k+1} - 1}{r - 1} \amp\amp \text{simplifying}
+\end{align*}
+</div>
+<p id="p-399">Thus, by induction, the result is true for all \(n \in \mathbb{N}\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-26"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of the first n cubes of natural numbers.</span>
+</h4>
+<p id="p-400">For all \(n \in \mathbb{N}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+1^3 + 2^3 + 3^3 + \dots + (n - 1)^3 + n^3 = \sum_{i=1}^n i^3 = \brac{\frac{n(n + 1)}{2}}^2
+\end{equation*}
+</div>
+<p class="continuation">Notice that in particular,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^n i^3 = \brac{\sum_{i=1}^n i}^2
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof"><p id="p-401">By induction, for \(n = 1\text{,}\) we have,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^1 i^3 = 1^3 = 1 = \brac{\frac{1(1 + 1)}{2}}^2
+\end{equation*}
+</div>
+<p id="p-402">Then, assume that the result is true for some \(n = k \in \mathbb{N}\text{.}\) Then, we want to show that,</p>
+<div class="displaymath">
+\begin{align*}
+1^3 + 2^3 + \dots + (n - 1)^3 + n^3 + (n + 1)^3 = \sum_{i=1}^{n+1} i^3 \amp = \brac{\frac{(n + 1)(n + 2)}{2}}^2\\
+\amp = \frac{(n + 1)^2(n + 2)^2}{4}
+\end{align*}
+</div>
+<p id="p-403">Then,</p>
+<div class="displaymath">
+\begin{align*}
+1^3 + 2^3 + 3^3 + \dots + (n - 1)^3 + n^3 + (n + 1)^3 \amp = \sum_{i=1}^{n+1} i^3\\
+\amp = \sum_{i=1}^n i^3 + (n + 1)^3 \amp\amp \text{separating off the final term}\\
+\amp = \brac{\frac{n(n + 1)}{2}}^2 + (n + 1)^3 \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{n^2(n + 1)^2}{4} + (n + 1)^3\\
+\amp = \frac{n^2(n + 1)^2 + 4(n + 1)^3}{4}\\
+\amp = \frac{(n + 1)^2 (n^2 + 4n + 4)}{4} \amp\amp \text{factoring $(n + 1)^2$ from both terms}\\
+\amp = \frac{(n + 1)^2(n + 2)^2}{4}
+\end{align*}
+</div></article></div></section><section class="subsection" id="subsection-95"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.2.2</span> <span class="title">Other Examples</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-27"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Lines in the plane.</span>
+</h4>
+<p id="p-404">For any \(n\) lines in the plane, they subdivide the plane into \(\frac{n(n+1)}{2} + 1\) regions, if no two lines are parallel and no three lines pass through the same point.</p></article><article class="hiddenproof" id="proof-45"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-45"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-45"><article class="hiddenproof"><p id="p-405">By induction, for \(n = 1\text{,}\) 1 line subdivides the plane into 2 regions, and,</p>
+<div class="displaymath">
+\begin{equation*}
+2 = \frac{1(1 + 1)}{2} + 1
+\end{equation*}
+</div>
+<p id="p-406">Then, assume the result is true for \(n = k \in \mathbb{N}\text{.}\) We want to show that \(k+1\) lines in general position subdivide the plane into the \(\frac{(k + 1)(k + 2)}{2} + 1\) regions. The \((k+1)\)st line intersects the other \(k\) lines each at 1 point, for \(k\) total intersections, and that form \((k+1)\) boundary lines, that each divide a subdivision into 2 segments each, i.e. create \((k+1)\) new regions. Then,</p>
+<div class="displaymath">
+\begin{align*}
+S_{k+1} \amp = S_k + (k + 1)\\
+\amp = \frac{k(k + 1)}{2} + 1 + (k + 1) \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{k(k + 1)}{2} + \frac{2(k + 2)}{2}\\
+\amp = \frac{(k + 1)(k + 2)}{2}
+\end{align*}
+</div></article></div>
+<article class="theorem theorem-like" id="theorem-28"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Powers grow faster than polynomials.</span>
+</h4>
+<p id="p-407">For all \(n \in \mathbb{N}, n \geq 5\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+2^n \geq n^2
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-46"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-46"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-46"><article class="hiddenproof"><p id="p-408">By induction, for \(n = 5\text{.}\) Then,</p>
+<div class="displaymath">
+\begin{equation*}
+2^5 = 32 \geq 25 = 5^2
+\end{equation*}
+</div>
+<p id="p-409">Then, assume the result is true for some \(n = k \in \mathbb{N}, k \geq 5\text{.}\) Then, we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+2^{k+1} \geq (k+1)^2
+\end{equation*}
+</div>
+<p id="p-410">Then,</p>
+<div class="displaymath">
+\begin{align*}
+2^{k+1} \amp = 2 \cdot 2^k\\
+\amp \geq 2 \cdot k^2 \amp\amp \text{by the induction hypothesis}
+\end{align*}
+</div>
+<p id="p-411">Then, we want to show that this quantity \(2k^2\) is greater than or equal to the desired result \((k + 1)^2\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{gather*}
+2k^2 \geq (k + 1)^2\\
+2k^2 \geq k^2 + 2k + 1\\
+k^2 \geq 2k + 1
+\end{gather*}
+</div>
+<p id="p-412">To prove this, we can show that \((k - 1)^2 \geq 2\text{.}\) Since \(k \geq 5\text{,}\) we have \((k - 1)^2 \geq (5 - 1)^2 = 4^2 \geq 2\text{.}\) Then,</p>
+<div class="displaymath">
+\begin{align*}
+2^{k+1} \amp \geq 2k^2\\
+\amp = k^2 + k^2\\
+\amp \geq k^2 + 2k + 1 \amp\amp \text{as $k^2 \geq 2k + 1$}\\
+\amp = (k + 1)^2
+\end{align*}
+</div>
+<p id="p-413">Thus, by induction, the result is true for all \(n \in \mathbb{N}\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-29"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Factorials grow faster than powers.</span>
+</h4>
+<p id="p-414">For all \(n \in \mathbb{N}, n \geq 4\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+n! &gt; 2^n
+\end{equation*}
+</div>
+<p class="continuation">In other words, the number of permutations of an \(n\)-element set \(n!\text{,}\) is greater than the number of subsets of an \(n\)-element set \(2^n\text{.}\)</p></article><article class="hiddenproof" id="proof-47"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-47"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-47"><article class="hiddenproof"><p id="p-415">By induction, for \(n = 4\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+4! = 24 &gt; 16 = 2^4
+\end{equation*}
+</div>
+<p id="p-416">Then, assume that the result is true for some \(n = k \in \mathbb{N}, k \geq 4\text{.}\) Then, we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+(k + 1)! &gt; 2^{k+1}
+\end{equation*}
+</div>
+<p id="p-417">Then,</p>
+<div class="displaymath">
+\begin{align*}
+(n + 1)! \amp = (n + 1)n!\\
+\amp &gt; (n + 1) \cdot 2^n \amp\amp \text{by the induction hypothesis}\\
+\amp &gt; 2 \cdot 2^n \amp\amp \text{since $n \geq 4$, $n + 1 \geq 5 &gt; 2$}\\
+\amp = 2^{n + 1}
+\end{align*}
+</div>
+<p id="p-418">Thus, by induction, the result is true for all \(n \in \mathbb{N}, n \geq 4\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-30"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of reciprocal product.</span>
+</h4>
+<p id="p-419">For all \(n \in \mathbb{N}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \frac{1}{3 \cdot 4} + \dots + \frac{1}{n(n + 1)} = \sum_{i=1}^n \frac{1}{i(i + 1)} = \frac{n}{n + 1}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-48"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-48"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-48"><article class="hiddenproof"><p id="p-420">By induction, for \(n = 1\text{,}\) we have,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^1 \frac{1}{i(i + 1)} = \frac{1}{1(1 + 1)} = \frac{1}{2} = \frac{1}{1 + 1}
+\end{equation*}
+</div>
+<p id="p-421">Then, assume the result is true for some \(n = k \in \mathbb{N}\text{.}\) Then, we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \frac{1}{3 \cdot 4} + \dots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)} = \sum_{i=1}^{n+1} \frac{1}{i(i + 1)} = \frac{k + 1}{k + 2}
+\end{equation*}
+</div>
+<p id="p-422">Then,</p>
+<div class="displaymath">
+\begin{align*}
+\amp \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{k(k + 1)} + \frac{1}{(k + 1)(k + 2)}\\
+\amp = \sum_{i=1}^{k+1} \frac{1}{i(i+1)}\\
+\amp = \sum_{i=1}^k \frac{1}{i(i+1)} + \frac{1}{(k+1)(k+2)}\\
+\amp = \frac{k}{k + 1} + \frac{1}{(k + 1)(k + 2)} \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{k(k + 2)}{(k + 1)(k + 2)} + \frac{1}{(k + 1)(k + 2)}\\
+\amp = \frac{k^2 + 2k + 1}{(k + 1)(k + 2)}\\
+\amp = \frac{(k + 1)^2}{(k + 1)(k + 2)}\\
+\amp = \frac{k + 1}{k + 2}
+\end{align*}
+</div></article></div>
+<article class="theorem theorem-like" id="theorem-31"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of reciprocals of square roots inequality.</span>
+</h4>
+<p id="p-423">For all \(n \in \mathbb{N}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \dots + \frac{1}{\sqrt{n}} \geq \sqrt{n}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-49"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-49"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-49"><article class="hiddenproof"><p id="p-424">By induction, for \(n = 1\text{,}\) we have,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\sqrt{1}} = 1 \geq \sqrt{1}
+\end{equation*}
+</div>
+<p id="p-425">Then, assume the result is true for some \(n \in \mathbb{N}\text{.}\) Then, we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \dots + \frac{1}{\sqrt{n}} + \frac{1}{\sqrt{n + 1}} \geq \sqrt{n + 1}
+\end{equation*}
+</div>
+<p id="p-426">Then,</p>
+<div class="displaymath">
+\begin{align*}
+\amp \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \dots + \frac{1}{\sqrt{n}} + \frac{1}{\sqrt{n + 1}}\\
+\amp \geq \sqrt{n} + \frac{1}{\sqrt{n + 1}} \amp\amp \text{by the induction hypothesis}\\
+\amp = \frac{\sqrt{n} \cdot \sqrt{n + 1} + 1}{\sqrt{n + 1}}\\
+\amp \geq \frac{\sqrt{n} \sqrt{n} + 1}{\sqrt{n + 1}} \amp\amp \text{as $\sqrt{n + 1} \geq \sqrt{n}$}\\
+\amp = \frac{n + 1}{\sqrt{n + 1}}\\
+\amp = \sqrt{n + 1}
+\end{align*}
+</div>
+<p id="p-427">Thus, by induction, the result is true for all \(n \in \mathbb{N}\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-32"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of interior angles of a polygon.</span>
+</h4>
+<p id="p-428">The sum of the measures of the interior angles of an \(n\)-gon is \(180(n - 2)\) (where \(n \geq 3\)).</p></article><article class="hiddenproof" id="proof-50"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-50"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof"><p id="p-429">For \(n = 3\text{,}\) the sum of the angles in a triangle is \(180 = 180(3 - 2)\) Then, assume the result is true for some \(n\text{,}\) and consider an \((n + 1)\)-sided polygon. Let \(S_n\) be the sum of the interior angles of an \(n\)-gon. Then, we want to show that,</p>
+<div class="displaymath">
+\begin{equation*}
+S_{n+1} = 180((n + 1) - 2) = 180(n - 1)
+\end{equation*}
+</div>
+<p id="p-430">Then, “collapse” two sides into one, to split the \((n+1)\)-gon into an \(n\)-gon, and a triangle.</p> \​begin{figure}[H] \centering \includegraphics[scale=0.3]{images/polygon.png} \end{figure} <p id="p-431">Then,</p>
+<div class="displaymath">
+\begin{align*}
+S_{n+1} \amp = S_n + S_3\\
+\amp = 180(n - 2) + 180 \amp\amp \text{by the induction hypothesis, and the base case}\\
+\amp = 180(n - 1)
+\end{align*}
+</div>
+<p id="p-432">Thus, by induction, the result is true for all \(n \in \mathbb{N}, n \geq 3\text{.}\)</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

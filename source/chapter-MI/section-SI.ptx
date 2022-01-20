@@ -14,7 +14,10 @@
         </p>
 
         <p>
-            To contrast with strong induction, <q>regular</q> induction is sometimes called <term>weak induction</term>. Induction allows us to use <em>all</em> of the previous information, and it is also logically valid. In some sense, strong induction logically contains regular induction. In this way, when proving something by induction, you should always keep in mind that you can use strong induction if you need to. That is, you can assume all of the previous statements <m>n = 1, 2, 3, \dots, k</m> are true, not just the immediately previous case <m>n = k</m>.
+            To contrast with strong induction, <q>regular</q> induction is sometimes called <term>weak induction</term>. Induction allows us to use <em>all</em> of the previous information, and it is also logically valid. It is called strong induction, because of the stronger hypotheses that are assumed.
+        </p>
+        <p>
+            In some sense, strong induction logically contains regular induction. In this way, when proving something by induction, you should always keep in mind that you can use strong induction if you need to. That is, you can assume all of the previous statements <m>n = 1, 2, 3, \dots, k</m> are true, not just the immediately previous case <m>n = k</m>.
         </p>
 
         <example>

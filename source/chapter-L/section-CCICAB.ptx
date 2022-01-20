@@ -69,31 +69,29 @@
 
         <definition>
             <title>Inverse</title>
-            <definition>
-                <p>
-                    The <term>inverse</term>, <m>\neg P \rightarrow \neg Q</m>, negates the hypothesis and conclusion.
-                </p>
-            </definition>
             <p>
-                The truth table is given by,
+                The <term>inverse</term>, <m>\neg P \rightarrow \neg Q</m>, negates the hypothesis and conclusion.
             </p>
-            <me>
-                \begin{array}{c|c|c|c|c|c}
-                    P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg P \rightarrow \neg Q \\ \hline
-                    T \amp T \amp F \amp F \amp T \amp T \\ \hline
-                    T \amp F \amp F \amp T \amp F \amp T \\ \hline
-                    F \amp T \amp T \amp F \amp T \amp F \\ \hline
-                    F \amp F \amp T \amp T \amp T \amp T
-                \end{array}
-            </me>
         </definition>
+        <p>
+            The truth table is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c|c|c|c}
+                P \amp Q \amp \neg P \amp \neg Q \amp P \rightarrow Q \amp \neg P \rightarrow \neg Q \\ \hline
+                T \amp T \amp F \amp F \amp T \amp T \\ \hline
+                T \amp F \amp F \amp T \amp F \amp T \\ \hline
+                F \amp T \amp T \amp F \amp T \amp F \\ \hline
+                F \amp F \amp T \amp T \amp T \amp T
+            \end{array}
+        </me>
     </subsection>
 
     <subsection>
         <title>Contrapositive</title>
         <definition>
             <p>
-                The <term>contrapositive</term>, <m>\neq Q \rightarrow \neq P</m>, negates both statements, and reverses the order of the conditional.
+                The <term>contrapositive</term>, <m>\neg Q \rightarrow \neg P</m>, negates both statements, and reverses the order of the conditional.
             </p>
         </definition>
         <p>
@@ -109,7 +107,7 @@
             \end{array}
         </me>
         <p>
-            Notice that the truth values for the contrapositive <m>\neq Q \rightarrow \neg P</m> are the same as the original condition <m>P \rightarrow Q</m>.
+            Notice that the truth values for the contrapositive <m>\neg Q \rightarrow \neg P</m> are the same as the original condition <m>P \rightarrow Q</m>.
         </p>
 
     </subsection>
@@ -138,7 +136,13 @@
             \end{array}
         </me>
         <p>
-            With a biconditional, either both statements are true, or both are false. If one is true, then so is the other, and if one is false, then so is the other. Sometimes we say that <q><m>P</m> occurs <em>precisely when</em> <m>Q</m> occurs.</q>
+            With a biconditional, either both statements are true, or both are false. If one is true, then so is the other, and if one is false, then so is the other.
+        </p>
+        <p>
+            Other ways to say <m>P \leftrightarrow Q</m> include <q><m>P</m> occurs <em>precisely when</em> <m>Q</m> occurs.</q>, <q>If <m>P</m>, then <m>Q</m>, and conversely.</q>, <q><m>P</m> is a necessary and sufficient condition for <m>Q</m>.</q>
+        </p>
+        <p>
+            In English, some conditionals are implicitly biconditionals. In mathematics, we try to be more precise.
         </p>
     </subsection>
 
@@ -168,7 +172,14 @@
             <me>
                 \neg (P \rightarrow Q) \equiv P \land \neg Q
             </me></li>
+            <li>The converse of a condition is logically equivalent to the inverse. This can be seen by comparing the truth tables.</li>
+            <li>The converse is not logically equivalent to the original conditional. Incorrectly assuming this this is called the <term>fallacy of the converse</term>.</li>
+            <li>The inverse of a conditional is not logically equivalent to the conditional. Incorrectly assuming this is called <term>denying the antecedent</term>, or <term>fallacy of the inverse</term>.</li>
         </ul>
+    </subsection>
+
+    <subsection>
+        <title>Order of Operations for Logical Operators</title>
     </subsection>
 
 </section>
