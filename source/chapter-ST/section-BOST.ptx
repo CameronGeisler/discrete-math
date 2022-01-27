@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-MAS">
+    <title>Basics of Set Theory</title>
+
+    <subsection>
+        <title>Set Basics</title>
+        <p>
+            The term <em>set</em> was first introduced by Georg Cantor (1845-1918).
+        </p>
+        <p>
+            Recall the set-builder notation <m>A = \set{x \in S: P(x)}</m>. This means that the set <m>A</m> is the set of all elements <m>x \in S</m> such that <m>P(x)</m> is true. Using mathematical logic,
+        </p>
+        <me>
+            \brac{x \in A} \equiv \brac{x \in S \land P(x)}
+        </me>
+        <p>
+            Using mathematical logic, the definition of set equality can be written as,
+        </p>
+        <me>
+            A = B \equiv \brac{x \in A \leftrightarrow x \in B}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Cardinality, Finite and Infinite Sets</title>
+        <definition>
+            <p>
+                Let <m>A</m> be a set. The <term>cardinality</term> (or <term>size</term> or <term>cardinal number</term>) of a set <m>A</m>, denoted by <m>n(A)</m> or <m>\abs{A}</m>, is the number of elements in <m>A</m>.
+                <ul>
+                    <li>The empty set has cardinality zero, <m>\abs{\emptyset} = 0</m>, and it is the unique set with this property.</li>
+                </ul>
+            </p>
+        </definition>
+
+        <p>
+            Some sets have infinitely many elements. In roster notation, which can be indicated by an ellipsis <q><m>\dots</m></q>.
+        </p>
+        <definition>
+            <p>
+                Intuitively, a <term>finite</term> set has a finite number of elements, i.e. the number of elements in the set is a whole number. An <term>infinite</term> set has infinitely many elements, i.e. the number of elements in the set is not a whole number.
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Sets Inside Sets</title>
+        <p>
+            A set is a collection of objects, and sets are themselves objects. Then, a set can include other sets among its elements.
+        </p>
+        <example>
+            <p>
+                Note that <m>1 \in \set{1,3}</m> (the object 1 is in the set containing 1 and 3), but <m>\set{1} \not\in \set{1,3}</m> (the set containing 1 is not an element of the set containing 1 and 3). However, <m>\set{1} \in \set{\set{1},3}</m> (the set containing 1 is an element of the set containing 3 and the set containing 1). In general, an object is not the same as a set containing that object.
+            </p>
+        </example>
+        <!-- \begin{figure}[H]
+            \centering
+            \includegraphics[scale = 0.7]{../images/sets1.jpg}
+            \caption*{For example, $A = \set{\text{cat}, \set{\text{cat}}}$. This set <m>A</m> contains a cat, and a set that contains a cat. Representing sets as a box, we have a box that contains a cat and a box with a cat inside it.}
+        \end{figure} -->
+    </subsection>
+
+    <subsection>
+        <title>Subsets</title>
+        <definition>
+            <p>
+                A set <m>A</m> is a <term>subset</term> of a set <m>B</m>, denoted by <m>A \subseteq B</m>, if every element of <m>A</m> is also an element of <m>B</m>.
+            </p>
+            <p>
+                Using mathematical logic, this means, 
+            </p>
+            <me>
+                (A \subseteq B) \equiv (\forall a \in A, a \in B) \equiv (a \in A \implies a \in B)
+            </me>
+            <p>
+                Also, <m>A</m> is a <term>proper subset</term> of <m>B</m>, denoted by <m>A \subset B</m>, if <m>A</m> is a subset of <m>B</m> and <m>A \neq B</m>. In other words, <m>B</m> contains at least one element that is not in <m>A</m>.
+            </p>
+        </definition>
+
+        <example>
+            <p>
+                The set of holidays is a (proper) subset of the set of all days in the calendar year.
+            </p>
+        </example>
+
+        <example>
+            <title>Every set is a subset of itself</title>
+            <p>
+                All sets are subsets of themselves. In other words, for all <m>A</m>, <m>A \subseteq A</m>. Note that a set is not a strict subset of itself.
+            </p>
+            <p>
+                This is because, for every element in <m>A</m>, that element is in <m>A</m>.
+            </p>
+        </example>
+
+        <example>
+            <title>Empty set is a subset of every set</title>
+            <p>
+                The empty set is a subset of all other sets. In other words, for all <m>A</m>, <m>\emptyset \subseteq A</m>.
+            </p>
+            <p>
+                The empty set is a strict subset of every set, except for the empty set.
+            </p>
+            <p>
+                This is because <m>\emptyset \subseteq A</m> means that for all <m>a \in \emptyset</m>, <m>a \in A</m>. This statement is vacuously true, because <q>all</q> of the zero elements in <m>\emptyset</m> are indeed in <m>A</m>.
+            </p>
+        </example>
+
+        <p>
+            The important number sets have the following inclusion relationship,
+        </p>
+        <me>
+            \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}
+        </me>
+
+        <theorem>
+            <title>Subsets and cardinality</title>
+            <p>
+                If <m>A, B</m> are finite sets with <m>A \subseteq B</m>, then <m>\abs{A} \leq \abs{B}</m>. If <m>A \subset B</m>, then <m>\abs{A} \lt \abs{B}</m>.
+            </p>
+        </theorem>
+
+        <p>
+            Note that only sets can be subsets of other sets. In particular, elements are not subsets of other sets. For example, <m>1 \subseteq \set{1, 2, 3}</m> is false, whereas <m>\set{1} \subseteq \set{1, 2, 3}</m>. Instead, we have <m>1 \in \set{1,2,3}</m>.
+        </p>
+        <p>
+            Sometimes, we want to refer to a set containing another set, rather than being contained within another set.
+        </p>
+        <definition>
+            <p>
+                <m>B</m> is a <term>superset</term> of <m>A</m>, <m>B \supseteq A</m>, if <m>A</m> is a subset of <m>B</m>.
+            </p>
+            <p>
+                <m>B</m> is a <term>proper superset</term> of <m>A</m>, <m>B \supset A</m>, if <m>A</m> is a proper subset of <m>B</m>.
+            </p>
+        </definition>
+        <p>
+            Intuitively, the prefix <q>super-</q> means bigger, and <q>sub-</q> means lesser, somewhat similar to <m>></m> and <m>\lt</m> for comparing numbers.
+        </p>
+
+        <theorem>
+            <p>
+                Sets <m>A</m> and <m>B</m> are equal if and only if <m>A</m> is a subset of <m>B</m> and <m>B</m> is a subset of <m>A</m>. In mathematical logic,
+            </p>
+            <me>
+                (A = B) \equiv (A \subseteq B) \land (B \subseteq A) \equiv (\forall a \in A, a \in B) \land (\forall b \in B, b \in A)
+            </me>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Remark on Subset Notation</title>
+        <p>
+            Mathematicians are somewhat divided on how to write subsets and strict subsets. Here, <m>A \subseteq B</m> represents <m>A</m> being a subset of <m>B</m>, and <m>A \subset B</m> (without the horizontal line) being a <em>strict</em> subset of <m>B</m>. However, in some textbooks, <m>A \subset B</m> is used to mean <m>A</m> being any subset of <m>B</m>, not just strict subsets. Unfortunately, this convention contradicts the previous notation, however is it also widely used. In light of this, somtimes <m>A \subsetneq B</m> is used instead of <m>A \subset B</m> to denote a strict subset, since the latter can be used to mean a general subset.
+        </p>
+    </subsection>
+    
+    <subsection>
+        <title>Transitivity of Subsets</title>
+        <theorem>
+            <p>
+                Let <m>A, B, C</m> be sets. If <m>A \subseteq B</m> and <m>B \subseteq C</m>, then <m>A \subseteq C</m>.
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                We want to show that for all <m>a \in A</m>, we have <m>a \in C</m>. Let <m>a \in A</m>. Since <m>A \subseteq B</m>, this implies that <m>a \in B</m>. Then, since <m>B \subseteq C</m>, this implies that <m>a \in C</m>, as desired.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Number of Subsets</title>
+        <p>
+            Consider a finite set <m>A</m> with <m>n</m> elements. How many possible subsets does <m>A</m> have? Consider this for <m>n = 0, 1, 2, 3</m> etc.
+        </p>
+        <ul>
+            <li>
+                For <m>n = 0</m>, <m>A = \emptyset</m>, which has 1 subset, <m>A</m> itself.
+            </li>
+            <li>
+                For <m>n = 1</m>, say, <m>A = \set{a}</m>, there are 2 subsets, <m>A</m> itself and the empty set.
+            </li>
+            <li>
+                For <m>n = 2</m>, <m>A = \set{a, b}</m>, there are 4 subsets: <m>\set{a, b}, \set{a}, \set{b}</m>, and <m>\emptyset</m>.
+            </li>
+            <li>
+                For <m>n = 3</m>, <m>A = \set{a, b, c}</m>, there are 8 subsets: <m>\set{a, b, c}, \set{a,b}, \set{a,c}, \set{b,c}, \set{a}, \set{b}, \set{c}</m>, and <m>\emptyset</m>.
+            </li>
+        </ul>
+        <p>
+            In summary,
+        </p>
+        <me>
+            \begin{array}{c|c|c|c|c}
+                \text{Number of elements} \amp 0 \amp 1 \amp 2 \amp 3 \\ \hline
+                \text{Number of subsets} \amp 1 \amp 2 \amp 4 \amp 8
+            \end{array}
+        </me>
+        <p>
+            From these examples, we might conjecture that the number of subsets of a set with <m>n</m> elements is <m>2^n</m>.
+        </p>
+
+        <theorem>
+            <p>
+                Let <m>A</m> be a set with <m>n</m> elements. Then <m>A</m> has $2^n$ subsets. In other words, if <m>\abs{A} = n</m>, then <m>\abs{P(A)} = 2^n</m>.
+            </p>
+        </theorem>
+        <proof>
+            <title>Proof using fundamental counting principle</title>
+            <p>
+                A subset of <m>A</m> is a set with some selection of the elements of <m>A</m>. The number of possible subsets is the number of selections of the elements of <m>A</m>. Using the fundamental counting principle, there are two choices for each element (each element can either be in the subset or not in the subset), and there are <m>n</m> choices to be made (one for each element). Thus, the number of ways to make this selection, is,
+            </p>
+            <me>
+                \underbrace{2 \cdot 2 \cdot 2 \cdots 2}_{\text{$n$ factors of 2}} = 2^n
+            </me>
+            <p>
+                Thus, there are <m>2^n</m> possible subsets.
+            </p>
+        </proof>
+
+        <proof>
+            <title>Proof using induction</title>
+            <p>
+                By induction, for <m>n = 0</m>, <m>A = \emptyset</m> has <m>1 = 2^0</m> subsets.
+            </p>
+            <p>
+                Then, assume the result is true for <m>n = k \in \mathbb{N}</m>, that every set with <m>n</m> elements has <m>2^n</m> subsets. Then, let <m>B = \set{a_1, a_2, \dots, a_n, a_{n+1}</m> be a set with <m>n+1</m> elements, and we want to show that <m>B</m> has <m>2^{n+1}</m> subsets.
+            </p>
+            <p>
+                Then, let <m>B = A \cup \set{a_{n+1}}</m> where <m>A = \set{a_1, \dots, a_n}</m> has <m>n</m> elements. Each subset <m>X</m> of <m>A</m> corresponds to 2 subsets of <m>B</m>. One is simply <m>X</m> itself, since every subset of <m>A</m> is also a subset of <m>B</m>. The other is the set <m>X \cup \set{a_{n+1}}</m>. Since there are <m>2^n</m> subsets of <m>A</m> and each corresponds to 2 subsets of <m>B</m>, this means there are at least <m>2 \cdot 2^n = 2^{n+1}</m> subsets of <m>B</m>.
+            </p>
+            <p>
+                Also, any subset of <m>B</m> must either include <m>a_{n+1}</m> or not include <m>a_{n+1}</m>. If it includes <m>a_{n+1}</m>, then it must be of the form <m>X \cup \set{a_{n+1}}</m> for some subset <m>X</m> of <m>A</m>. If it doesn't include <m>a_{n+1}</m>, then it is a subset of <m>A</m>. In this way, we have accounted for every possible subset of <m>B</m>.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Power Sets</title>
+        <theorem>
+            <p>
+                Let <m>A</m> be a set. The <term>power set</term> of <m>A</m>, <m>P(A)</m>, is the set that contains all subsets of <m>A</m>. In other words,
+            </p>
+            <me>
+                P(A) = \set{X: X \subseteq A}
+            </me>
+        </theorem>
+        <p>
+            Don't confuse <m>P(A)</m> to mean the probability of the event <m>A</m>. In this context, this means the power set of <m>A</m>.
+        </p>
+
+        <example>
+            <ul>
+                <li><m>P(\set{1, 2}) = \set{\emptyset, \set{1}, \set{2}, \set{1, 2}}</m></li>
+                <li><m>P(\set{1, 2, 3} = \set{\emptyset, \set{1}, \set{2}, \set{3}, \set{1, 2}, \set{1, 3}, \set{2, 3}, \set{1, 2, 3}}</m></li>
+                <li><m>P(\set{5}) = \set{\emptyset, \set{5}}</m></li>
+                <li><m>P(\emptyset) = \set{\emptyset}</m></li>
+                <li><m>P(P(\emptyset)) = P(\set{\emptyset}) = \set{\emptyset, \set{\emptyset}}</m></li>
+            </ul>
+        </example>
+
+        <p>
+            Recall that a set <m>A</m> with <m>n</m> elements has <m>2^n</m> subsets. Using this notation, <m>\abs{P(A)} = 2^n</m>.
+        </p>
+
+        <theorem>
+            <p>
+                Let <m>A, B</m> be sets. Then, <m>P(A) \cup P(B) \subseteq P(A \cup B)</m>.
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                Let <m>X \in P(A) \cup P(B)</m>. Then, by definition of union, <m>X \in P(A)</m> or <m>X \in P(B)</m>. By definition of a power set, <m>X \subseteq A</m> or <m>X \subseteq B</m>. Without loss of generality, let <m>X \subseteq A</m>. Then, let <m>x \in X</m>. Since <m>X \subseteq A</m>, <m>x \in A</m>. Then, since <m>A \subseteq A \cup B</m>, we have <m>x \in A \cup B</m>. Therefore, <m>X \subseteq A \cup B</m>, and so <m>X \in P(A \cup B)</m>.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <p>
+            In fact, the unrestricted use of this notation <m>\set{x: P(x)}</m> leads to real contradictions in set theory (naive set theory).
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Well-Defined Sets</title>
+        <p>
+            Sets must be <term>well-defined</term>, in that it must be clear and unambiguous which elements are in the set and which are not. In other words, given any object, it must be clear whether that object is in the set or not.
+        </p>
+        <example>
+            <p>
+                The set of all young adults is not well-defined, because it depends on the definition of <q>young adult</q>. The set of all people aged 20 or older is well-defined.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                The set of the top 5 airports in the country is not well-defined, because the quality of an airport is subjective and up to interpretation.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Aside on Definitions</title>
+        <p>
+            Definitions are very important in mathematics to facilitate clear communication of ideas. However, it is an unfortunate fact that it is impossible to define every concept. Recall that a set is defined as a <q>collection of distinct objects</q>. This naturally leads to the question of how a collection is defined. After all, <q>set</q> and <q>collection</q> seem to be almost synonyms, so defining one in terms of the other seems unhelpful. Theoretically, we could define <q>collection</q>, say as an group or aggregate of things. This isn't much more helpful, since now we would have to define a group or aggregate. This could continue indefinitely, until we run out of suitable words.
+        </p>
+        <p>
+            In this way, a concept like a set is simply defined intuitively. For most purposes, this will be sufficient.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Aside on Sets and Math Definitions</title>
+        <p>
+            Today, most mathematical objects are <q>formally</q> defined in terms of sets. For example, functions are defined as a particular kind of set. In fact, numbers, such as natural numbers <m>1, 2, \dots</m>, can be defined using sets.
+        </p>
+    </subsection>
+   
+    <!-- \section*{Venn Diagrams, Euler Diagrams}
+    Relationships between sets can be represented graphically using a Venn diagram, or a Euler diagram.
+    
+    \section*{Applications of Venn Diagrams}
+    \begin{theorem}[Addition Rule for Counting]
+    \begin{equation*}
+        n(A \cup B) = n(A) + n(B) - n(A \cap B)
+    \end{equation*}
+    \end{theorem} -->
+   
+</section>

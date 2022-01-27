@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TCP">
+    <title>The Cartesian Product</title>
+
+    <introduction>
+        <p>
+            You may recall ordered pairs <m>(a,b)</m>, which are used to represents points in the Cartesian plane. Roughly, ordered pairs are an ordered arrangement of two numbers, i.e. where <m>(a,b)</m> and <m>(b,a)</m> are not considered the same. More generally, we can considered ordered triples <m>(a,b,c) </m>, or ordered <em>tuples</em> of <m>n</m> elements, <m>(x_1, x_2, \dots, x_n)</m>,
+        </p>
+        
+        <p>
+            Ordered pairs of numbers can be defined in terms of another set operation, called the <em>Cartesian product</em>.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Ordered Pairs, Triples, and n-Tuples</title>
+        <definition>
+            <p>
+                An <term>ordered pair</term> <m>(a,b)</m>, is an ordered list of two elements <m>a</m> and <m>b</m>. Two ordered pairs are equal if and only if their corresponding components are equal. In other words, <m>(a,b) = (c,d)</m> are equal if and only if <m>a = c</m> and <m>b = d</m>.
+            </p>
+        </definition>
+
+        <definition>
+            <p>
+                An <term>ordered triple</term> <m>(a,b,c)</m> is an ordered list of three elements <m>a, b</m>, and <m>c</m>. Two ordered triples are equal if and only if their corresponding components are equal.
+            </p>
+        </definition>
+
+        <p>
+            More generally, we can consider ordered lists with any finite number of elements.
+        </p>
+
+        <definition>
+            <p>
+                Let <m>n</m> be a positive integer. An <term>ordered <m>n</m>-tuple</term> <m>(x_1, x_2, \dots, x_n)</m> is an ordered list of <m>n</m> elements. Two <m>n</m>-tuples are equal if and only if their corresponding components are equal. In other words,
+            </p>
+            <me>
+                (x_1, x_2, \dots, x_n) = (y_1, y_2, \dots, y_n) \quad \iff \quad x_1 = y_1, x_2 = y_2, \dots, x_n = y_n
+            </me>
+        </definition>
+
+        <p>
+            Then, an ordered pair is a 2-tuple, and an ordered triple is a 3-tuple.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Cartesian Product</title>
+        <definition>
+            <p>
+                Let <m>A</m> and <m>B</m> be sets. The <term>Cartesian product</term> of <m>A</m> and <m>B</m>, denoted by <m>A \times B</m>, is the set of all ordered pairs with elements in <m>A</m> as the first element and elements in <m>B</m> as the second element.
+            </p>
+            <me>
+                \boxed{A \times B = \set{(a,b): a \in A \text{ and } b \in B}}
+            </me>
+        </definition>
+
+        <p>
+            Using mathematical logic,
+        </p>
+        <me>
+            (x,y) \in A \times B \quad \iff \quad (x \in A) \land (x \in B)
+        </me>
+        <p>
+            In general, the Cartesian product is not commutative. In other words, in general <m>A \times B \neq B \times A</m> (unless <m>A = B</m>).
+        </p>
+
+        <example>
+            <p>
+                Let <m>A = \set{a,b,c}</m> and <m>B = \set{1,2}</m>. Then,
+            </p>
+            <me>
+                A \times B = \set{(a,1),(a,2),(b,1),(b,2),(c,1),(c,2)}
+            </me>
+        </example>
+        
+        <p>
+            The definition of the Cartesian product of two sets can be generalized to <m>n</m> sets.
+        </p>
+        <definition>
+            <p>
+                Let <m>A_1, A_2, \dots, A_n</m> be sets. Then, the Cartesian product <m>A_1 \times A_2 \times \dots \times A_n</m> is the set of all <m>n</m>-tuples <m>(a_1, a_2, \dots, a_n)</m> where <m>a_1 \in A_1, a_2 \in A_2, \dots, a_n \in A_n</m>. In other words,
+            </p>
+            <me>
+                A_1 \times \dots \times A_n = \set{(a_1, \dots, a_n): a_1 \in A_1, \dots, a_n \in A_n}
+            </me>
+        </definition>
+
+        <example>
+            <p>
+                <m>\mathbb{R} \times \mathbb{R} = \mathbb{R}^2</m> is the familiar Cartesian plane, and <m>\mathbb{R} \times \mathbb{R} \times \mathbb{R} = \mathbb{R}^3</m> is three-dimensional Euclidean space. In general, <m>\mathbb{R}^n</m> is the set of all <m>n</m>-tuples of real numbers.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Formalization of the Cartesian Product</title>
+        <p>
+            In the development of set theory as the foundation of mathematics, mathematicians wanted to formally define ordered tuples in terms of sets. however, sets are not ordered, in that <m>\set{a,b}</m> and <m>\set{b,a}</m> both represent the same set.
+        </p>
+        <p>
+            In 1914, <term>Norbert Wiener</term> (1894-1964), American mathematician, proposed a formal definition of an ordered pair as,
+        </p>
+        <me>
+            (a,b) = \set{\set{\set{a}, \emptyset}, \set{\set{b}}}
+        </me>
+        <p>
+            Here, the <m>\emptyset</m> is associated with the first element, which indicates the ordering of the elements. The nesting of the set <m>\set{\set{b}}</m> was for more technical reasons.
+        </p>
+        <p>
+            In around the same time in 1914, <term>Felix Hausdorff</term> (1868-1942), German mathematician, proposed a similar, slightly more intuitive definition,
+        </p>
+        <me>
+            (a,b) = \set{\set{a,1}, \set{b,2}}
+        </me>
+        <p>
+            where the 1 and 2 indicate which of <m>a</m> and <m>b</m> are the first and second element.
+        </p>
+        <p>
+            Then, in 1921, <term>Kazimierz Kuratowski</term> (1896-1980) proposed another definition,
+        </p>
+        <me>
+            (a,b) = \set{\set{a}, \set{a,b}}
+        </me>
+        <p>
+            This is the currently accepted definition. Here, the first element is in the set with 1 element, and the second is identified by being in the set with 2 elements that is not the first element. If <m>a = b</m>, then,
+        </p>
+        <me>
+            (a,b) = \set{\set{a}, \set{a,a}} = \set{\set{a}, \set{a}} = \set{a}
+        </me>
+    </subsection>
+</section>
