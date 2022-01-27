@@ -3,6 +3,12 @@
 <section xml:id="section-Q">
     <title>Quantifiers</title>
 
+    <introduction>
+        <p>
+            Propositional functions can be converted to statements using quantifiers.
+        </p>
+    </introduction>
+
     <subsection>
         <title>Quantifiers</title>
 
@@ -11,6 +17,16 @@
                 The <term>existential quantifier</term>, denoted by <m>\exists</m>, represents <q>there exists</q>, <q>there is a</q>, or <q>there is at least one</q>.
             </p>
         </definition>
+        <p>
+            Then,
+        </p>
+        <me>
+            \exists x, P(x)
+        </me>
+        <p>
+            represents the statement, <q>there exists <m>x</m> such that <m>P(x)</m> is false</q>.
+        </p>
+
 
         <definition>
             <p>
@@ -19,11 +35,108 @@
         </definition>
 
         <p>
-            The statement, <m>\forall x \in S, P(x)</m> means that for all elements <m>x</m> in the set
-            <m>S</m>, the statement <m>P(x)</m> is true. This is equivalent to saying that the conditional, <q>If <m>x \in S</m>, then <m>P(x)</m> is true</q>. In symbols, this can be summarized as,
+            Then,
         </p>
         <me>
-            (\forall x \in S, P(x)) \equiv (x \in S) \rightarrow P(x)
+            \forall x, P(x)
+        </me>
+        <p>
+            represents the statement, <q>for all <m>x</m>, <m>P(x)</m> is true</q>. This means that <m>P(x)</m> is true for all values of <m>x</m> in the domain of <m>P</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Using Quantifiers</title>
+
+        <example>
+            <p>
+                <q>You miss 100% of the shots you don't take.</q> This means that for all shots that you don't take, you will miss.
+            </p>
+        </example>
+        <p>
+            To show that a existential statement is true, it is sufficient to provide a single example <m>x</m> that satisfies <m>P(x)</m>. To prove it is false requires proving that <m>P(x)</m> is false for all values of <m>x</m>.
+        </p>
+        <p>
+            To show that an universal statement is true, this requires proving that <m>P(x)</m> is true for all values of <m>x</m>. To prove it is false, it is sufficient to provide one example where it is false (called a <term>counterexample</term>).
+        </p>
+        <p>
+            If the domain of <m>P(x)</m> is finite, say <m>\set{x_1, \dots, x_n}</m>, then,
+        </p>
+        <me>
+            \forall x, P(x) \equiv P(x_1) \land \dots \land P(x_n) \qquad \text{and} \qquad \exists x, P(x) \equiv P(x_1) \lor \dots \lor P(x_n)
+        </me>
+        <p>
+            In this case, proving the universal statement can be reduced to showing that each of the statements <m>P(x_1), \dots, P(x_n)</m> is true. However, this method can't be used if the set is infinite.
+        </p>
+        <p>
+            This makes it clear that <m>\forall x, P(x)</m> is a stronger statement than <m>\exists x, P(x)</m>. In other words,
+        </p>
+        <me>
+            \brac{\forall x, P(x)} \rightarrow \brac{\exists x, P(x)}
+        </me>
+        <p>
+            The statement, <m>\forall x \in S, P(x)</m> means that for all elements <m>x</m> in the set <m>S</m>, the statement <m>P(x)</m> is true. This is equivalent to saying that the conditional, <q>If <m>x \in S</m>, then <m>P(x)</m> is true</q>. In symbols, this can be summarized as,
+        </p>
+        <me>
+            \forall x \in S, P(x) \equiv x \in S \rightarrow P(x)
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Uniquness Quantifier</title>
+        <definition>
+            <p>
+                The <term>uniqueness quantifier</term>, denoted by <m>\exists !</m>, represents <q>there exists a unique</q>, <q>there exists exactly one</q>.
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Negating Quantifiers (De Morgan's Laws)</title>
+        <me>
+            \neg \brac{\forall x, P(x)} \equiv \exists x, \neg P(x)
+        </me>
+        <me>
+            \neg \brac{\exists x, P(x)} \equiv \forall x, \neg P(x)
+        </me>
+        <p>
+            In other words, the negation of a universal statement is an existential statement, and the negation of an existential statement is a universal statement.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Nested Quantifiers</title>
+
+        <p>
+            With multiple quantifiers, we proceed from left to right.
+        </p>
+
+        <ul>
+            <li>
+                <m>\exists x, \exists y, P(x,y)</m> means that there exists <m>x</m> and <m>y</m> such that <m>P(x,y)</m> is true.
+            </li>
+            <li>
+                <m>\forall x, \forall y, P(x,y)</m> means that for all <m>x</m> and <m>y</m>, <m>P(x,y)</m> is true.
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <m>\forall x, \exists y, P(x,y)</m> means that for all <m>x</m>, there exists a <m>y</m> such that <m>P(x,y)</m> is true.
+            </li>
+            <li>
+                <m>\exists x, \forall y, P(x,y)</m> means that there exists <m>x</m>, such that for all <m>y</m>, <m>P(x,y)</m> is true.
+            </li>
+        </ul>
+        <p>
+            The first statement means that given a particular value of <m>x</m>, there exists a <m>y</m> (which can depend on <m>x</m>) such that <m>P(x,y)</m> is true. In contrast, the second statement says that there exists a value of <m>x</m> (which is chosen first), such that <m>P(x,y)</m> is true for all values of <m>y</m>. The difference is the order in which the variables are chosen. The second kind of mixed quantifiers is often a stronger statement.
+        </p>
+
+        <me>
+            \neg \brac{\forall x, \exists y, P(x,y)} = \exists x, \forall y, \neg P(x,y)
+        </me>
+        <me>
+            \neg \brac{\exists x, \forall y, P(x,y)} = \forall x, \exists y, P(x,y)
         </me>
     </subsection>
 

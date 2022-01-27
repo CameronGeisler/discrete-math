@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-PL">
+    <title>Predicate Logic</title>
+
+    <introduction>
+        <p>
+            Many statements in mathematics can't be modelled using propositional logic. In particular, statements that include words such as <q>all</q>, <q>some</q>, <q>no</q>, etc.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Predicate Logic</title>
+
+        <definition>
+            <p>
+                A <term>predicate</term> is a sentence that includes variables, that becomes a statement when specific values are substituted for the variables.
+            </p>
+        </definition>
+
+        <p>
+            For example, equations involving variables, or inequalities, are predicates.
+        </p>
+        <p>
+            Predicates are denoted by <m>P(x)</m>, where <m>P</m> represetns the predicate, and <m>x</m> is the variables. This is called a <term>propositional function</term>. Its input are the values of the variables, and its output is a truth value. For a specific value of <m>x</m>, <m>P(x)</m> becomes a statement which is either true or false.
+        </p>
+        <p>
+            The <term>domain</term> of a propositional function is the set of all possible values that the input variable can take on.
+        </p>
+        <p>
+            Proportional functions can be combined with logical operators, such as negation, conjunction, disjunction, etc.
+        </p>
+
+    </subsection>
+
+</section>

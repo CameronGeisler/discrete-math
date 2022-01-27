@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T14:09:52-08:00       *-->
+<!--*       on 2022-01-27T11:49:32-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -89,6 +89,7 @@
 <li><a href="section-CCIAC.html" data-scroll="section-CCIAC">Conditionals, Converse, Inverse, and Contrapositive</a></li>
 <li><a href="section-BLE.html" data-scroll="section-BLE">Biconditionals, Logical Equivalence</a></li>
 <li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+<li><a href="section-PL.html" data-scroll="section-PL">Predicate Logic</a></li>
 <li><a href="section-Q.html" data-scroll="section-Q">Quantifiers</a></li>
 </ul>
 </li>
@@ -207,73 +208,71 @@
 <article class="definition definition-like" id="definition-4"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h4>
-<p id="p-20">Intuitively, a <dfn class="terminology">finite</dfn> set has a finite number of elements, i.e. the number of elements in the set is a whole number. An <dfn class="terminology">infinite</dfn> set has infinitely many elements, i.e. the number of elements in the set is not a whole number.</p></article></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">Cardinality</span>
-</h3>
-<article class="definition definition-like" id="definition-5"><h4 class="heading">
+<p id="p-20">Intuitively, a <dfn class="terminology">finite</dfn> set has a finite number of elements, i.e. the number of elements in the set is a whole number. An <dfn class="terminology">infinite</dfn> set has infinitely many elements, i.e. the number of elements in the set is not a whole number.</p></article><article class="definition definition-like" id="definition-5"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
 </h4>
-<p id="p-21">Let \(A\) be a finite set. The <dfn class="terminology">cardinality</dfn> (or <dfn class="terminology">size</dfn> or <dfn class="terminology">cardinal number</dfn>) of a set \(A\text{,}\) denoted by \(n(A)\) or \(\abs{A}\text{,}\) is the number of elements in \(A\text{.}\)</p>
-<ul class="disc"><li id="li-6"><p id="p-derived-li-6">The empty set has cardinality zero, \(\abs{\emptyset} = 0\text{,}\) and it is the unique set with this property.</p></li></ul></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<p id="p-21">The <dfn class="terminology">empty set</dfn> (or <dfn class="terminology">null set</dfn>), denoted by \(\emptyset\) or \(\set{}\text{,}\) is the unique set with no elements.</p></article></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">Cardinality</span>
+</h3>
+<article class="definition definition-like" id="definition-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+</h4>
+<p id="p-22">Let \(A\) be a finite set. The <dfn class="terminology">cardinality</dfn> (or <dfn class="terminology">size</dfn> or <dfn class="terminology">cardinal number</dfn>) of a set \(A\text{,}\) denoted by \(n(A)\) or \(\abs{A}\text{,}\) is the number of elements in \(A\text{.}\)</p></article><article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-23">The empty set has cardinality zero, \(\abs{\emptyset} = 0\text{,}\) and it is the unique set with this property.</p></article></div></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.5</span> <span class="title">Important Sets of Numbers</span>
 </h3>
-<p id="p-22">In mathematics, naturally, the most important sets are sets containing numbers. Many of these sets are used frequently enough to be worthy of a term, symbols and notation to denote them.</p>
+<p id="p-24">In mathematics, naturally, the most important sets are sets containing numbers. Many of these sets are used frequently enough to be worthy of a term, symbols and notation to denote them.</p>
 <ul class="disc">
-<li id="li-7"><p id="p-derived-li-7"><dfn class="terminology">Natural numbers</dfn>. These are the numbers used for counting,<div class="displaymath">
+<li id="li-6"><p id="p-derived-li-6"><dfn class="terminology">Natural numbers</dfn>. These are the numbers used for counting,<div class="displaymath">
 \begin{equation*}
 \mathbb{N} = \set{1, 2, 3, \dots}
 \end{equation*}
 </div>Note that some mathematicians, and especially computer scientists, include 0 as a natural number.</p></li>
-<li id="li-8"><p id="p-derived-li-8"><dfn class="terminology">Whole numbers</dfn>. If one considers the natural numbers to not include zero, then the whole numbers are the natural numbers, including zero.<div class="displaymath">
+<li id="li-7"><p id="p-derived-li-7"><dfn class="terminology">Whole numbers</dfn>. If one considers the natural numbers to not include zero, then the whole numbers are the natural numbers, including zero.<div class="displaymath">
 \begin{equation*}
 \set{0, 1, 2, 3, \dots}
 \end{equation*}
 </div>Sometimes, the whole numbers are represented by \(\mathbb{W}\text{.}\)</p></li>
-<li id="li-9"><p id="p-derived-li-9"><dfn class="terminology">Integers</dfn>. The set including all whole numbers and the negatives of the natural numbers,<div class="displaymath">
+<li id="li-8"><p id="p-derived-li-8"><dfn class="terminology">Integers</dfn>. The set including all whole numbers and the negatives of the natural numbers,<div class="displaymath">
 \begin{equation*}
 \mathbb{Z} = \set{\dots, -3, -2, -1, 0, 1, 2, 3, \dots}
 \end{equation*}
 </div>The integers are denoted by Z because the German word for number is <em class="emphasis">Zahlen</em>.</p></li>
 </ul>
-<p id="p-23">Note that infinite sets can be listed using an ellipsis “\(\dots\)”.</p>
-<p id="p-24">To avoid ambiguity, sometimes the notation \(\mathbb{Z}^{+}\) is used to represent the <dfn class="terminology">postive integers</dfn>, rather than using the term natural numbers.</p>
-<p id="p-25">Also, sometimes, the set of whole numbers is referred to as the <dfn class="terminology">non-negative integers</dfn>.</p>
+<p id="p-25">Note that infinite sets can be listed using an ellipsis “\(\dots\)”.</p>
+<p id="p-26">To avoid ambiguity, sometimes the notation \(\mathbb{Z}^{+}\) is used to represent the <dfn class="terminology">postive integers</dfn>, rather than using the term natural numbers.</p>
+<p id="p-27">Also, sometimes, the set of whole numbers is referred to as the <dfn class="terminology">non-negative integers</dfn>.</p>
 <ul class="disc">
-<li id="li-10"><p id="p-derived-li-10"><dfn class="terminology">Rational numbers</dfn> (or <dfn class="terminology">fractions</dfn>, or simply <dfn class="terminology">rationals</dfn>). The set of all numbers that can be represented as a quotient of two integers (of course, such that the denominator isn't 0). Represented as decimals, rational numbers are terminating or repeating decimals.<div class="displaymath">
+<li id="li-9"><p id="p-derived-li-9"><dfn class="terminology">Rational numbers</dfn> (or <dfn class="terminology">fractions</dfn>, or simply <dfn class="terminology">rationals</dfn>). The set of all numbers that can be represented as a quotient of two integers (of course, such that the denominator isn't 0). Represented as decimals, rational numbers are terminating or repeating decimals.<div class="displaymath">
 \begin{equation*}
 \mathbb{Q} = \set{\frac{a}{b}: a, b \in \mathbb{Z}, b \neq 0}
 \end{equation*}
 </div>The rationals are denoted by Q for “quotient”.</p></li>
-<li id="li-11"><p id="p-derived-li-11"><dfn class="terminology">Irrational numbers</dfn>. The set of all numbers which cannot be represented as quotients of integers. Sometimes, it is denoted by \(\mathbb{I}\text{.}\) Represented as decimals, irrational numbers are neither terminating nor repeating.</p></li>
-<li id="li-12"><p id="p-derived-li-12"><dfn class="terminology">Real numbers</dfn> \(\mathbb{R}\text{.}\) The set including all rational and irrational numbers. Roughly, it is the set of all decimal numbers. Or, it can be thought of as the set of all numbers on a number line.</p></li>
+<li id="li-10"><p id="p-derived-li-10"><dfn class="terminology">Irrational numbers</dfn>. The set of all numbers which cannot be represented as quotients of integers. Sometimes, it is denoted by \(\mathbb{I}\text{.}\) Represented as decimals, irrational numbers are neither terminating nor repeating.</p></li>
+<li id="li-11"><p id="p-derived-li-11"><dfn class="terminology">Real numbers</dfn> \(\mathbb{R}\text{.}\) The set including all rational and irrational numbers. Roughly, it is the set of all decimal numbers. Or, it can be thought of as the set of all numbers on a number line.</p></li>
 </ul>
-<p id="p-26">The real numbers \(\mathbb{R}\) is said to be <dfn class="terminology">continuous</dfn>, because it is thought of to have no “holes”. In contrast, the integers \(\mathbb{Z}\) are said to be <dfn class="terminology">discrete</dfn>, because they are all separated from each other. This is why it is called discrete mathematics.</p>
-<ul class="disc"><li id="li-13"><p id="p-derived-li-13"><dfn class="terminology">Complex numbers</dfn> \(\mathbb{C}\text{.}\) The set of all numbers of the form \(a + bi\text{,}\) where \(a, b \in \mathbb{R}\text{,}\) and \(i\) is the imaginary unit which satisfies \(i^2 = -1\text{.}\) In other words,<div class="displaymath">
+<p id="p-28">The real numbers \(\mathbb{R}\) is said to be <dfn class="terminology">continuous</dfn>, because it is thought of to have no “holes”. In contrast, the integers \(\mathbb{Z}\) are said to be <dfn class="terminology">discrete</dfn>, because they are all separated from each other. This is why it is called discrete mathematics.</p>
+<ul class="disc"><li id="li-12"><p id="p-derived-li-12"><dfn class="terminology">Complex numbers</dfn> \(\mathbb{C}\text{.}\) The set of all numbers of the form \(a + bi\text{,}\) where \(a, b \in \mathbb{R}\text{,}\) and \(i\) is the imaginary unit which satisfies \(i^2 = -1\text{.}\) In other words,<div class="displaymath">
 \begin{equation*}
 \mathbb{C} = \set{a + bi: a, b \in \mathbb{R}}
 \end{equation*}
 </div></p></li></ul></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.6</span> <span class="title">The Empty Set</span>
+<span class="type">Subsection</span> <span class="codenumber">1.1.6</span> <span class="title">Intervals of Real Numbers</span>
 </h3>
-<article class="definition definition-like" id="definition-6"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
-</h4>
-<p id="p-27">The <dfn class="terminology">empty set</dfn> (or <dfn class="terminology">null set</dfn>), denoted by \(\emptyset\) or \(\set{}\text{,}\) is the unique set with no elements.</p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.7</span> <span class="title">Intervals of Real Numbers</span>
-</h3>
-<p id="p-28">Intervals are a particular kind of subset of real numbers. Roughly, they represent a range of numbers which lie between two given numbers. Let \(a \leq b\text{.}\) Then,</p>
+<p id="p-29">Intervals are a particular kind of subset of real numbers. Roughly, they represent a range of numbers which lie between two given numbers. Let \(a \leq b\text{.}\) Then,</p>
 <ul class="disc">
-<li id="li-14"><p id="p-derived-li-14">A <dfn class="terminology">closed interval</dfn> \([a,b]\) is the set,<div class="displaymath">
+<li id="li-13"><p id="p-derived-li-13">A <dfn class="terminology">closed interval</dfn> \([a,b]\) is the set,<div class="displaymath">
 \begin{equation*}
 [a, b] = \set{x \in \mathbb{R}: a \leq x \leq b}
 \end{equation*}
 </div></p></li>
-<li id="li-15"><p id="p-derived-li-15">An <dfn class="terminology">open interval</dfn> \((a,b)\) is the set,<div class="displaymath">
+<li id="li-14"><p id="p-derived-li-14">An <dfn class="terminology">open interval</dfn> \((a,b)\) is the set,<div class="displaymath">
 \begin{equation*}
 (a, b) = \set{x \in \mathbb{R}: a \lt x \lt b}
 \end{equation*}
 </div></p></li>
-<li id="li-16"><p id="p-derived-li-16">A <dfn class="terminology">half-open interval</dfn> is the set,<div class="displaymath">
+<li id="li-15"><p id="p-derived-li-15">A <dfn class="terminology">half-open interval</dfn> is the set,<div class="displaymath">
 \begin{equation*}
 (a, b] = \set{x \in \mathbb{R}: a \lt x \leq b}
 \end{equation*}
@@ -282,13 +281,13 @@
 [a, b) = \set{x \in \mathbb{R}: a \leq x \lt b}
 \end{equation*}
 </div></p></li>
-<li id="li-17"><p id="p-derived-li-17"><dfn class="terminology">Infinite intervals</dfn>. Can be of the form,<div class="displaymath">
+<li id="li-16"><p id="p-derived-li-16"><dfn class="terminology">Infinite intervals</dfn>. Can be of the form,<div class="displaymath">
 \begin{align*}
 (a, \infty) \amp = \set{x \in \mathbb{R}: x &gt; a}\\
-[a, \infty) = \set{x \in \mathbb{R}: x \geq a}\\
-(-\infty, b) = \set{x \in \mathbb{R}: x \lt b}\\
-(-\infty, b] = \set{x \in \mathbb{R}: x \leq b}\\
-(-\infty, \infty) = \mathbb{R}
+[a, \infty) \amp = \set{x \in \mathbb{R}: x \geq a}\\
+(-\infty, b) \amp = \set{x \in \mathbb{R}: x \lt b}\\
+(-\infty, b] \amp = \set{x \in \mathbb{R}: x \leq b}\\
+(-\infty, \infty) \amp = \mathbb{R}
 \end{align*}
 </div></p></li>
 </ul></section></section></div></main>

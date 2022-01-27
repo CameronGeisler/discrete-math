@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T14:09:53-08:00       *-->
+<!--*       on 2022-01-27T11:49:33-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -89,6 +89,7 @@
 <li><a href="section-CCIAC.html" data-scroll="section-CCIAC">Conditionals, Converse, Inverse, and Contrapositive</a></li>
 <li><a href="section-BLE.html" data-scroll="section-BLE">Biconditionals, Logical Equivalence</a></li>
 <li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+<li><a href="section-PL.html" data-scroll="section-PL">Predicate Logic</a></li>
 <li><a href="section-Q.html" data-scroll="section-Q">Quantifiers</a></li>
 </ul>
 </li>
@@ -137,76 +138,76 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-PBPW"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Proof Basics, Proof Writing</span>
 </h2>
-<section class="introduction" id="introduction-15"><p id="p-275">One of the great goals of mathematics is to prove statements.</p></section><section class="subsection" id="subsection-54"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-17"><p id="p-298">One of the great goals of mathematics is to prove statements.</p></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.1</span> <span class="title">Introduction to Proof</span>
 </h3>
-<article class="definition definition-like" id="definition-28"><h4 class="heading">
+<article class="definition definition-like" id="definition-30"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
 </h4>
-<p id="p-276">A <dfn class="terminology">proof</dfn> is a logical argument that establishes the truth of a statement.</p></article><p id="p-277">The goal of a proof is to logically convince the reader that the statement is true.</p>
-<p id="p-278">In fact, the history of proofs goes back to the ancient Greeks. The ancient Greeks were one of the first to believe that it was desirable to prove statements and theorems from more simpler facts.</p></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
+<p id="p-299">A <dfn class="terminology">proof</dfn> is a logical argument that establishes the truth of a statement.</p></article><p id="p-300">The goal of a proof is to logically convince the reader that the statement is true.</p>
+<p id="p-301">In fact, the history of proofs goes back to the ancient Greeks. The ancient Greeks were one of the first to believe that it was desirable to prove statements and theorems from more simpler facts.</p></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.2</span> <span class="title">Proof Terminology</span>
 </h3>
-<article class="definition definition-like" id="definition-29"><h4 class="heading">
+<article class="definition definition-like" id="definition-31"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
 </h4>
-<p id="p-279">Roughly, an <dfn class="terminology">axiom</dfn> is a statement accepted as true without proof.</p></article><p id="p-280">For example, some axioms could be:</p>
+<p id="p-302">Roughly, an <dfn class="terminology">axiom</dfn> is a statement accepted as true without proof.</p></article><p id="p-303">For example, some axioms could be:</p>
 <ul class="disc">
-<li id="li-62"><p id="p-derived-li-62">The sum, difference, and product of integers, is an integer. In other words, if \(n, m \in \mathbb{Z}\text{,}\) then \(n + m, n - m, -n, -m, nm \in \mathbb{Z}\text{.}\)</p></li>
-<li id="li-63"><p id="p-derived-li-63">If \(x \in \mathbb{R}\text{,}\) then \(x^2 \geq 0\text{.}\)</p></li>
-<li id="li-64"><p id="p-derived-li-64">If \(a, b \in \mathbb{R}\text{,}\) and \(a \neq 0\) and \(b \neq 0\text{,}\) then \(ab \neq 0\text{.}\)</p></li>
+<li id="li-70"><p id="p-derived-li-70">The sum, difference, and product of integers, is an integer. In other words, if \(n, m \in \mathbb{Z}\text{,}\) then \(n + m, n - m, -n, -m, nm \in \mathbb{Z}\text{.}\)</p></li>
+<li id="li-71"><p id="p-derived-li-71">If \(x \in \mathbb{R}\text{,}\) then \(x^2 \geq 0\text{.}\)</p></li>
+<li id="li-72"><p id="p-derived-li-72">If \(a, b \in \mathbb{R}\text{,}\) and \(a \neq 0\) and \(b \neq 0\text{,}\) then \(ab \neq 0\text{.}\)</p></li>
 </ul>
-<article class="definition definition-like" id="definition-30"><h4 class="heading">
+<article class="definition definition-like" id="definition-32"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span>
 </h4>
-<p id="p-281">A <dfn class="terminology">theorem</dfn> is a statement in mathematics which is true (it has been proved) and is particularly useful and interesting.</p></article><article class="definition definition-like" id="definition-31"><h4 class="heading">
+<p id="p-304">A <dfn class="terminology">theorem</dfn> is a statement in mathematics which is true (it has been proved) and is particularly useful and interesting.</p></article><article class="definition definition-like" id="definition-33"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>
 </h4>
-<p id="p-282">A <dfn class="terminology">corollary</dfn> is a true statement that follows directly from a theorem.</p></article><article class="definition definition-like" id="definition-32"><h4 class="heading">
+<p id="p-305">A <dfn class="terminology">corollary</dfn> is a true statement that follows directly from a theorem.</p></article><article class="definition definition-like" id="definition-34"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span>
 </h4>
-<p id="p-283">A <dfn class="terminology">lemma</dfn> is a true statements whose main purpose is to help prove other statements.</p></article><blockquote class="blockquote" id="blockquote-1">“A proof, in mathematics, is an impeccable argument, using only the methods of pure logical reasoning, which enables one to infer the validity of a given mathematical assertion from the pre-established validity of other mathematical assertions, or from some particular primitive assertions--the axioms--whose validity is taken to be self-evident. Once such a mathematical assertion has been established in this way, it is referred to as a theorem.”<cite class="attribution">―Roger Penrose (1931-)</cite>
-</blockquote></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<p id="p-306">A <dfn class="terminology">lemma</dfn> is a true statements whose main purpose is to help prove other statements.</p></article><blockquote class="blockquote" id="blockquote-1">“A proof, in mathematics, is an impeccable argument, using only the methods of pure logical reasoning, which enables one to infer the validity of a given mathematical assertion from the pre-established validity of other mathematical assertions, or from some particular primitive assertions--the axioms--whose validity is taken to be self-evident. Once such a mathematical assertion has been established in this way, it is referred to as a theorem.”<cite class="attribution">―Roger Penrose (1931-)</cite>
+</blockquote></section><section class="subsection" id="subsection-60"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.3</span> <span class="title">General Proof-Writing Techniques</span>
 </h3>
-<p id="p-284">Proofs are constructed using definitions, axioms, and previously established theorems and facts. In this way, ability to write proofs is closely connected with knowledge of definitions and theorems. A good proof is (a) correct, (b) clear, and (c) concise.</p></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
+<p id="p-307">Proofs are constructed using definitions, axioms, and previously established theorems and facts. In this way, ability to write proofs is closely connected with knowledge of definitions and theorems. A good proof is (a) correct, (b) clear, and (c) concise.</p></section><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.4</span> <span class="title">Constructing a Proof</span>
 </h3>
 <ul class="disc">
-<li id="li-65"><p id="p-derived-li-65"><dfn class="terminology">Understand the problem</dfn>. First, this requires understanding what the meaning of all of the words in the problem. It can also be helpful to rewrite the hypotheses given in the statement, and the conclusion is to be proved, ideally in a more convenient form. Sometimes, this requires translating words to symbols. The hypotheses are what you have to work with, and the conclusion is the goal to be proved.</p></li>
-<li id="li-66"><p id="p-derived-li-66"><dfn class="terminology">Consider special cases</dfn>. When proving general statements, it can be helpful to first consider special cases of the statement. This makes the statement more concrete and less abstract. This can spark intuition about how the general case will behave like.</p></li>
-<li id="li-67"><p id="p-derived-li-67"><dfn class="terminology">Sketch a diagram</dfn>. It is often helpful to sketch a diagram of the situation involved.</p></li>
-</ul></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
+<li id="li-73"><p id="p-derived-li-73"><dfn class="terminology">Understand the problem</dfn>. First, this requires understanding what the meaning of all of the words in the problem. It can also be helpful to rewrite the hypotheses given in the statement, and the conclusion is to be proved, ideally in a more convenient form. Sometimes, this requires translating words to symbols. The hypotheses are what you have to work with, and the conclusion is the goal to be proved.</p></li>
+<li id="li-74"><p id="p-derived-li-74"><dfn class="terminology">Consider special cases</dfn>. When proving general statements, it can be helpful to first consider special cases of the statement. This makes the statement more concrete and less abstract. This can spark intuition about how the general case will behave like.</p></li>
+<li id="li-75"><p id="p-derived-li-75"><dfn class="terminology">Sketch a diagram</dfn>. It is often helpful to sketch a diagram of the situation involved.</p></li>
+</ul></section><section class="subsection" id="subsection-62"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.5</span> <span class="title">Structure of a Proof</span>
 </h3>
-<p id="p-285">First, write a brief <dfn class="terminology">introduction</dfn>.</p>
+<p id="p-308">First, write a brief <dfn class="terminology">introduction</dfn>.</p>
 <ul class="disc">
-<li id="li-68"><p id="p-derived-li-68">Define terms. Any variables used in the proof should be defined <em class="emphasis">before</em> they are used. Typically, we use words like “Let...” or “Consider...”. For example, “Let \(n\) be a natural number”, or “Consider an arbitrary point \((x,y)\)”.</p></li>
-<li id="li-69"><p id="p-derived-li-69">Sometimes, it is helpful to review relevant definitions or facts.</p></li>
-<li id="li-70"><p id="p-derived-li-70">If the solution is particularly complicated, it is helpful to state the overall direction of the general steps of the proof.</p></li>
+<li id="li-76"><p id="p-derived-li-76">Define terms. Any variables used in the proof should be defined <em class="emphasis">before</em> they are used. Typically, we use words like “Let...” or “Consider...”. For example, “Let \(n\) be a natural number”, or “Consider an arbitrary point \((x,y)\)”.</p></li>
+<li id="li-77"><p id="p-derived-li-77">Sometimes, it is helpful to review relevant definitions or facts.</p></li>
+<li id="li-78"><p id="p-derived-li-78">If the solution is particularly complicated, it is helpful to state the overall direction of the general steps of the proof.</p></li>
 </ul>
-<p id="p-286">In the <dfn class="terminology">main body</dfn>, derive the solution with a clear logical layout.</p>
+<p id="p-309">In the <dfn class="terminology">main body</dfn>, derive the solution with a clear logical layout.</p>
 <ul class="disc">
-<li id="li-71"><p id="p-derived-li-71">Use complete English sentences. This is still true even if the solution is mostly made up of equations and mathematical expressions.</p></li>
-<li id="li-72"><p id="p-derived-li-72">Use connective words such as “Then, ...”, “Therefore, ...”, “Now we see that...”, “Observe that...”, “Thus, ...”.</p></li>
-<li id="li-73"><p id="p-derived-li-73">Sometimes, a diagram can be helpful, but typically “picture” proofs are not sufficient. If you do include a diagram, utilize a straightedge when drawing straight lines.</p></li>
-<li id="li-74"><p id="p-derived-li-74">If a solution is particularly complicated, structure your solution appropriately. For example, at the beginning, say “First, we will show that...”. Then, “Next, we will show that...”. And, “Finally, ...”.</p></li>
+<li id="li-79"><p id="p-derived-li-79">Use complete English sentences. This is still true even if the solution is mostly made up of equations and mathematical expressions.</p></li>
+<li id="li-80"><p id="p-derived-li-80">Use connective words such as “Then, ...”, “Therefore, ...”, “Now we see that...”, “Observe that...”, “Thus, ...”.</p></li>
+<li id="li-81"><p id="p-derived-li-81">Sometimes, a diagram can be helpful, but typically “picture” proofs are not sufficient. If you do include a diagram, utilize a straightedge when drawing straight lines.</p></li>
+<li id="li-82"><p id="p-derived-li-82">If a solution is particularly complicated, structure your solution appropriately. For example, at the beginning, say “First, we will show that...”. Then, “Next, we will show that...”. And, “Finally, ...”.</p></li>
 </ul>
-<p id="p-287">After completing the proof, state a concise summary of what you proved, addressing the original statement. Clearly indicate what the answer is, if there is one.</p></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
+<p id="p-310">After completing the proof, state a concise summary of what you proved, addressing the original statement. Clearly indicate what the answer is, if there is one.</p></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.6</span> <span class="title">Other Tips</span>
 </h3>
 <ul class="disc">
-<li id="li-75"><p id="p-derived-li-75">Write neatly, are write large enough, to make it easy for the reader.</p></li>
-<li id="li-76"><p id="p-derived-li-76">If necessary, typeset your work (use LaTeX) and print it.</p></li>
-<li id="li-77"><p id="p-derived-li-77">If you cannot fully solve a question, be honest about it, and state what you have done.</p></li>
-</ul></section><section class="subsection" id="subsection-60"><h3 class="heading hide-type">
+<li id="li-83"><p id="p-derived-li-83">Write neatly, are write large enough, to make it easy for the reader.</p></li>
+<li id="li-84"><p id="p-derived-li-84">If necessary, typeset your work (use LaTeX) and print it.</p></li>
+<li id="li-85"><p id="p-derived-li-85">If you cannot fully solve a question, be honest about it, and state what you have done.</p></li>
+</ul></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.7</span> <span class="title">Proof by Cases</span>
 </h3>
-<p id="p-288">Many proofs require two or more cases, each with slightly different assumptions. This is somewhat a “brute force” method, especially if there are many cases.</p></section><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
+<p id="p-311">Many proofs require two or more cases, each with slightly different assumptions. This is somewhat a “brute force” method, especially if there are many cases.</p></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.1.8</span> <span class="title">Proof Intuition</span>
 </h3>
-<p id="p-289">In a proof, we must start from assumptions and definitions, and successively deduce statements, towards the final conclusion. However, when actually discovering or developing a proof, it is often helpful to proceed both forwards <em class="emphasis">and</em> backwards, trying to find links between the premises and conclusion.</p>
-<p id="p-290">Also, in general in mathematics, intuition comes first, and rigor comes later. Intuition, imagination, and creativity plays a larger role than many believe. This is partly because math textbooks are finished mathematics that has been refined for often hundreds of years.</p></section></section></div></main>
+<p id="p-312">In a proof, we must start from assumptions and definitions, and successively deduce statements, towards the final conclusion. However, when actually discovering or developing a proof, it is often helpful to proceed both forwards <em class="emphasis">and</em> backwards, trying to find links between the premises and conclusion.</p>
+<p id="p-313">Also, in general in mathematics, intuition comes first, and rigor comes later. Intuition, imagination, and creativity plays a larger role than many believe. This is partly because math textbooks are finished mathematics that has been refined for often hundreds of years.</p></section></section></div></main>
 </div>
 </body>
 </html>

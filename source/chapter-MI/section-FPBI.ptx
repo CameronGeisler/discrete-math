@@ -6,7 +6,9 @@
     <subsection>
         <title>All Cows are the Same Color</title>
         <fact>
-            All cows are the same colour. More precisely, for any set of cows, all cows in that set will have the same colour.
+            <p>
+                All cows are the same colour. More precisely, for any set of cows, all cows in that set will have the same colour.
+            </p>
         </fact>
         <proof>
             <title>False proof</title>

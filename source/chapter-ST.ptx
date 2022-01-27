@@ -8,5 +8,8 @@
         </p>
     </introduction>
 
-    <xi:include href="./chapter-ST/section-MAS.ptx"/>
+    <xi:include href="./chapter-ST/section-BOST.ptx"/>
+    <xi:include href="./chapter-ST/section-SOUIC.ptx"/>
+    <xi:include href="./chapter-ST/section-TCP.ptx"/>
+    <xi:include href="./chapter-ST/section-ST.ptx"/>
 </chapter>

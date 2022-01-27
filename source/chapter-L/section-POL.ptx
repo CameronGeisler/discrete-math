@@ -54,7 +54,7 @@
             </p>
         </theorem>
         <p>
-            These logical equivalences are named after Augustus De Morgan (1806-1871), who was the first to state them in formal mathematical terms.
+            These logical equivalences are named after <term>Augustus De Morgan</term> (1806-1871), British mathematician, who was the first to state them in formal mathematical terms.
         </p>
     </subsection>
 
@@ -125,10 +125,32 @@
 
     <subsection>
         <title>Logical Inference</title>
+
+        <p>
+            Logical inference rules are basically tautologies. They are used to construct valid arguments. The validity of an argument is completely dependent on the validity of its logical form.
+        </p>
         <ul>
             <li>Modus Ponens, <m>((P \rightarrow Q) \land P) \rightarrow Q</m></li>
             <li>Modus Tollens, <m>((P \rightarrow Q) \land (\neg Q)) \rightarrow (\neg P)</m></li>
             <li>Elimination, <m>((P \lor Q) \land (\neg P)) \rightarrow Q</m></li>
+        </ul>
+
+        <p>
+            Modus Ponens is basically the definition of conditional. Modus Tollens works because the contrapositive is logically equivalent to the original conditional.
+        </p>
+
+        <ul>
+            <li>Transitivity (hypothetical syllogism), <m>\brac{(P \rightarrow Q) \land (Q \rightarrow R)} \rightarrow (P \rightarrow R)</m></li>
+            <li>Elimination (disjunctive syllogism), <m>\brac{(P \lor Q) \land \neg P} \rightarrow Q</m></li>
+        </ul>
+
+        <ul>
+            <li>Addition, <m>P \rightarrow (P \lor Q)</m></li>
+            <li>Simplication, <m>(P \land Q) \rightarrow P</m>.</li>
+        </ul>
+
+        <ul>
+            <li>Resolution, <m>\brac{(\neg P \lor R) \land (P \lor Q)} \rightarrow (Q \lor R)</m></li>
         </ul>
 
         <theorem>

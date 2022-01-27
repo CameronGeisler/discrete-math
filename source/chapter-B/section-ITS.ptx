@@ -106,6 +106,12 @@
                 Intuitively, a <term>finite</term> set has a finite number of elements, i.e. the number of elements in the set is a whole number. An <term>infinite</term> set has infinitely many elements, i.e. the number of elements in the set is not a whole number.
             </p>
         </definition>
+
+        <definition>
+            <p>
+                The <term>empty set</term> (or <term>null set</term>), denoted by <m>\emptyset</m> or <m>\set{}</m>, is the unique set with no elements.
+            </p>
+        </definition>
     </subsection>
 
     <subsection>
@@ -113,11 +119,14 @@
         <definition>
             <p>
                 Let <m>A</m> be a finite set. The <term>cardinality</term> (or <term>size</term> or <term>cardinal number</term>) of a set <m>A</m>, denoted by <m>n(A)</m> or <m>\abs{A}</m>, is the number of elements in <m>A</m>.
-                <ul>
-                    <li>The empty set has cardinality zero, <m>\abs{\emptyset} = 0</m>, and it is the unique set with this property.</li>
-                </ul>
             </p>
         </definition>
+
+        <example>
+            <p>
+                The empty set has cardinality zero, <m>\abs{\emptyset} = 0</m>, and it is the unique set with this property.
+            </p>
+        </example>
     </subsection>
 
     <subsection>
@@ -184,15 +193,6 @@
             </li>
         </ul>
     </subsection>
-    
-    <subsection>
-        <title>The Empty Set</title>
-        <definition>
-            <p>
-                The <term>empty set</term> (or <term>null set</term>), denoted by <m>\emptyset</m> or <m>\set{}</m>, is the unique set with no elements.
-            </p>
-        </definition>
-    </subsection>    
 
     <subsection>
         <title>Intervals of Real Numbers</title>
@@ -226,10 +226,10 @@
                 <term>Infinite intervals</term>. Can be of the form,
                 <md>
                     <mrow>(a, \infty) \amp = \set{x \in \mathbb{R}: x > a}</mrow>
-                    <mrow>[a, \infty) = \set{x \in \mathbb{R}: x \geq a}</mrow>
-                    <mrow>(-\infty, b) = \set{x \in \mathbb{R}: x \lt b}</mrow>
-                    <mrow>(-\infty, b] = \set{x \in \mathbb{R}: x \leq b}</mrow>
-                    <mrow>(-\infty, \infty) = \mathbb{R}</mrow>
+                    <mrow>[a, \infty) \amp = \set{x \in \mathbb{R}: x \geq a}</mrow>
+                    <mrow>(-\infty, b) \amp = \set{x \in \mathbb{R}: x \lt b}</mrow>
+                    <mrow>(-\infty, b] \amp = \set{x \in \mathbb{R}: x \leq b}</mrow>
+                    <mrow>(-\infty, \infty) \amp = \mathbb{R}</mrow>
                 </md>
             </li>
         </ul>

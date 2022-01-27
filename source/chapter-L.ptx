@@ -12,6 +12,7 @@
     <xi:include href="./chapter-L/section-CCIAC.ptx"/>
     <xi:include href="./chapter-L/section-BLE.ptx"/>
     <xi:include href="./chapter-L/section-POL.ptx"/>
+    <xi:include href="./chapter-L/section-PL.ptx"/>
     <xi:include href="./chapter-L/section-Q.ptx"/>
 
 </chapter>

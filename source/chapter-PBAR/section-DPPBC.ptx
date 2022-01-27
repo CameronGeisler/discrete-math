@@ -132,7 +132,9 @@
     <subsection>
         <title>Product of Rational Numbers is Rational</title>
         <fact>
-            If <m>x, y</m> are rational numbers, then their product <m>xy</m> is rational.
+            <p>
+                If <m>x, y</m> are rational numbers, then their product <m>xy</m> is rational.
+            </p>
         </fact>
         <p>
             This is only a slight generalization from the fact that the square of a rational number is rational. Here, we consider two different numbers, but the structure of the proof is similar.
@@ -170,7 +172,9 @@
         <title>More Examples</title>
 
         <fact>
-            If <m>a \lt b</m>, then <m>4ab \lt (a + b)^2</m>.
+            <p>
+                If <m>a \lt b</m>, then <m>4ab \lt (a + b)^2</m>.
+            </p>
         </fact>
         <p>
             First, expanding the right-hand side,
@@ -225,7 +229,7 @@
     <subsection>
         <title>Proving <q>Or</q> Statements</title>
         <p>
-            Consider an <q>or</q> statement, that <m>P \implies (A \lor B)</m>, i.e. that given the hypotheses, either one of <m>A</m> or <m>B</m> is true (or both).
+            Consider an <q>or</q> statement, that <m>P \rightarrow (A \lor B)</m>, i.e. that given the hypotheses <m>P</m>, either one of <m>A</m> or <m>B</m> is true (or both).
         </p>
         <p>
             To prove a statement of this form, we can split up the proof into two cases: (1) if <m>A</m> is true, or (2) <m>A</m> is false. These two cases cover all possible scenarios, so if the statement is true in both of these cases, it will be true in all cases. 

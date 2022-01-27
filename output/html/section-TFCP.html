@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T14:09:52-08:00       *-->
+<!--*       on 2022-01-27T11:49:32-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -89,6 +89,7 @@
 <li><a href="section-CCIAC.html" data-scroll="section-CCIAC">Conditionals, Converse, Inverse, and Contrapositive</a></li>
 <li><a href="section-BLE.html" data-scroll="section-BLE">Biconditionals, Logical Equivalence</a></li>
 <li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+<li><a href="section-PL.html" data-scroll="section-PL">Predicate Logic</a></li>
 <li><a href="section-Q.html" data-scroll="section-Q">Quantifiers</a></li>
 </ul>
 </li>
@@ -137,18 +138,18 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-TFCP"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">The Fundamental Counting Principle</span>
 </h2>
-<section class="introduction" id="introduction-7"><p id="p-103">Use a tree diagram.</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-9"><p id="p-126">Use a tree diagram.</p></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Fundamental Counting Principle</span>
 </h3>
 <article class="theorem theorem-like" id="theorem-6"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental counting principle.</span>
 </h4>
-<p id="p-104">If there are \(n_1\) ways to make choice 1, and \(n_2\) ways to make choice 2, then there are \(n_1 \cdot n_2\) ways to make both choices together.</p></article><p id="p-105">More precisely, if there are \(n_1\) distinct objects in one set and \(n_1\) distinct objects in another set, then there are \(n_1 n_2\) ways to choose one object from each set.</p>
-<p id="p-106">This can be generalized to \(k\) choices.</p>
+<p id="p-127">If there are \(n_1\) ways to make choice 1, and \(n_2\) ways to make choice 2, then there are \(n_1 \cdot n_2\) ways to make both choices together.</p></article><p id="p-128">More precisely, if there are \(n_1\) distinct objects in one set and \(n_1\) distinct objects in another set, then there are \(n_1 n_2\) ways to choose one object from each set.</p>
+<p id="p-129">This can be generalized to \(k\) choices.</p>
 <article class="theorem theorem-like" id="theorem-7"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental counting principle.</span>
 </h4>
-<p id="p-107">Let there be \(k\) choices, with \(n_1\) ways to make choice 1, \(n_1\) ways to make choice \(2, \dots, n_k\) ways to make choice \(k\) (in general for choice \(i\text{,}\) there are \(n_i\) ways). Then, there are,</p>
+<p id="p-130">Let there be \(k\) choices, with \(n_1\) ways to make choice 1, \(n_1\) ways to make choice \(2, \dots, n_k\) ways to make choice \(k\) (in general for choice \(i\text{,}\) there are \(n_i\) ways). Then, there are,</p>
 <div class="displaymath">
 \begin{equation*}
 n_1 n_2 \cdots n_k
@@ -157,17 +158,17 @@ n_1 n_2 \cdots n_k
 <p class="continuation">ways to make the entire sequence of choices. More precisely, if there are \(n_1\) distinct objects in set 1, \(n_1\) in set \(2, \dots, n_k\) in set \(k\text{,}\) then there are \(n_1 n_2 \cdots n_k\) ways to choose one object from each set.</p></article><article class="corollary theorem-like" id="corollary-1"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h4>
-<p id="p-108">Let there be $k$ choices with $n$ ways to make each choice. Then, there are,</p>
+<p id="p-131">Let there be $k$ choices with $n$ ways to make each choice. Then, there are,</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{n \cdot n \cdots n}_{\text{$k$ factors of $n$}} = n^k
 \end{equation*}
 </div>
-<p class="continuation">ways to make the sequence of choices.</p></article></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<p class="continuation">ways to make the sequence of choices.</p></article></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Morse Code</span>
 </h3>
-<p id="p-109">Morse code is a method of representing letters and words using a sequence of dots and dashes. It uses up to 4 of these symbols to represent a single letter.</p>
-<p id="p-110">If using a sequence of only 1 symbol, there are 2 sequences (a dot or a dash). If using 2 symbols, there are 2 ways to choose each symbol, so there are \(2 \cdot 2 = 2^2 = 4\) total sequences. Continuing, we have,</p>
+<p id="p-132">Morse code is a method of representing letters and words using a sequence of dots and dashes. It uses up to 4 of these symbols to represent a single letter.</p>
+<p id="p-133">If using a sequence of only 1 symbol, there are 2 sequences (a dot or a dash). If using 2 symbols, there are 2 ways to choose each symbol, so there are \(2 \cdot 2 = 2^2 = 4\) total sequences. Continuing, we have,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c}
@@ -179,80 +180,80 @@ n_1 n_2 \cdots n_k
 \end{array}
 \end{equation*}
 </div>
-<p id="p-111">If we were limited to a maximum of 3 symbols, we would only have \(2 + 4 + 8 = 14\) total sequences, when we need 26 to represent every letter of the alphabet. Using 4 symbols, we have 16 more sequences for a total of \(32 &gt; 26\) sequences.</p></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<p id="p-134">If we were limited to a maximum of 3 symbols, we would only have \(2 + 4 + 8 = 14\) total sequences, when we need 26 to represent every letter of the alphabet. Using 4 symbols, we have 16 more sequences for a total of \(32 &gt; 26\) sequences.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Teams and Committees</span>
 </h3>
-<p id="p-112">If a club consists of 10 members, how many different choices of president, vice-president, and secretary are possible?</p>
-<p id="p-113">There are \(10 \cdot 9 \cdot 8 = 720\) total arrangements.</p></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<p id="p-135">If a club consists of 10 members, how many different choices of president, vice-president, and secretary are possible?</p>
+<p id="p-136">There are \(10 \cdot 9 \cdot 8 = 720\) total arrangements.</p></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.4</span> <span class="title">Numbers and Letters</span>
 </h3>
-<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
+<article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-114">Consider a pin code on a smartphone or for a bank login. Pin codes are typically made up of 4 digits from 0-9. Determine the number of possible pin codes.</p>
-<p id="p-115">There are 10 options 0-9 for each digit, so there are,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-137">Consider a pin code on a smartphone or for a bank login. Pin codes are typically made up of 4 digits from 0-9. Determine the number of possible pin codes.</p>
+<p id="p-138">There are 10 options 0-9 for each digit, so there are,</p>
 <div class="displaymath">
 \begin{equation*}
 10 \cdot 10 \cdot 10 \cdot 10 = 10^4 = 10000
 \end{equation*}
 </div>
-<p id="p-116">possible pin codes. With these many options, a criminal with no insight into the numbers chosen would have a difficult time trying to guess the code.</p></article></div>
-<article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
+<p id="p-139">possible pin codes. With these many options, a criminal with no insight into the numbers chosen would have a difficult time trying to guess the code.</p></article></div>
+<article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-117">Customer account “numbers” for a certain company consists of 2 letters followed by 4 numbers. How many different account numbers are possible if repetitions of letters and digits are allowed?</p>
-<p id="p-118">There are 26 ways to choose each letter, and 10 ways to choose each number. Thus, there are,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-140">Customer account “numbers” for a certain company consists of 2 letters followed by 4 numbers. How many different account numbers are possible if repetitions of letters and digits are allowed?</p>
+<p id="p-141">There are 26 ways to choose each letter, and 10 ways to choose each number. Thus, there are,</p>
 <div class="displaymath">
 \begin{equation*}
 26 \cdot 26 \cdot 10 \cdot 10 \cdot 10 \cdot 10 = 6760000
 \end{equation*}
 </div>
-<p id="p-119">ways to choose all 6 characters.</p></article></div>
-<article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h4 class="heading">
+<p id="p-142">ways to choose all 6 characters.</p></article></div>
+<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Postal codes.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-120">A postal code (in Canada) is given by a string of characters of the form \(A1A1A1\text{,}\) where each \(A\) is any letter, and each 1 is any number. Determine the number of possible postal codes.</p>
-<p id="p-121">There are 26 options for each letter and 10 for each digit. Then, the number of possible postal codes is given by,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-143">A postal code (in Canada) is given by a string of characters of the form \(A1A1A1\text{,}\) where each \(A\) is any letter, and each 1 is any number. Determine the number of possible postal codes.</p>
+<p id="p-144">There are 26 options for each letter and 10 for each digit. Then, the number of possible postal codes is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 26 \cdot 10 \cdot 26 \cdot 10 \cdot 26 \cdot 10 = 26^3 10^3 = 17576000
 \end{equation*}
-</div></article></div></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.5</span> <span class="title">Other Examples</span>
 </h3>
-<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-122">Pizza House offers 4 different salads, 5 different kinds of pizza, and 6 different desserts. How many different three-course meals can be ordered?</p>
-<p id="p-123">There are \(4 \cdot 5 \cdot 6 = 120\) different meals.</p></article></div>
 <article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-145">Pizza House offers 4 different salads, 5 different kinds of pizza, and 6 different desserts. How many different three-course meals can be ordered?</p>
+<p id="p-146">There are \(4 \cdot 5 \cdot 6 = 120\) different meals.</p></article></div>
+<article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-124">Determine the number of 5 digit integers such that no consecutive digits are the same.</p>
-<p id="p-125">There are 9 choices for the first digit, as it can be any integer except 0. The second digit can be anything except identical to the first digit, so there are also 9 choices. Similarly, the third digit can be any integer except the second, so there are 9 choices. And so on. Thus, the number of ways is,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-147">Determine the number of 5 digit integers such that no consecutive digits are the same.</p>
+<p id="p-148">There are 9 choices for the first digit, as it can be any integer except 0. The second digit can be anything except identical to the first digit, so there are also 9 choices. Similarly, the third digit can be any integer except the second, so there are 9 choices. And so on. Thus, the number of ways is,</p>
 <div class="displaymath">
 \begin{equation*}
 9 \cdot 9 \cdot 9 \cdot 9 \cdot 9 = 9^5 = 59049
 \end{equation*}
 </div></article></div>
-<article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h4 class="heading">
+<article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Rooks on a Chessboard.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-126">Determine the number of ways to place \(n\) identical rooks on an \(n \times n\) chessboard such that no two rooks attack each other.</p>
-<p id="p-127">No two rooks can share a rook or column. There are \(n\) rooks, and \(n\) rows and columns, so each row and column must contain exactly one rook. For the first column, there are \(n\) choices as to which row to place a rook. Once that row is taken, for the second column, there will be \(n-1\) choices for the row, and so on. Thus, the number of ways is given by,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-149">Determine the number of ways to place \(n\) identical rooks on an \(n \times n\) chessboard such that no two rooks attack each other.</p>
+<p id="p-150">No two rooks can share a rook or column. There are \(n\) rooks, and \(n\) rows and columns, so each row and column must contain exactly one rook. For the first column, there are \(n\) choices as to which row to place a rook. Once that row is taken, for the second column, there will be \(n-1\) choices for the row, and so on. Thus, the number of ways is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 n(n - 1) \cdots 3 \cdot 2 \cdot 1 = n!
 \end{equation*}
 </div>
-<p id="p-128">For a standard \(8 \times 8\) chessboard, this means there will be \(8!\) ways.</p></article></div>
-<article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
+<p id="p-151">For a standard \(8 \times 8\) chessboard, this means there will be \(8!\) ways.</p></article></div>
+<article class="example example-like" id="example-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-11"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-129">Determine the number of even 4-digit positive integers.</p>
-<p id="p-130">There are 4 digits to determine. The first digit must be from 1-9 (cannot be zero, otherwise it is a 3-digit number) so there are 9 choices. There are no restrictions on the middle 2 digits, so they have 10 choices each. The last digit must be even for the entire number to be even, so it must be one of 0, 2, 4, 6, 8, and so there are 5 choices. Thus, in total, the number of numbers ig given by,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-11"><article class="example example-like"><p id="p-152">Determine the number of even 4-digit positive integers.</p>
+<p id="p-153">There are 4 digits to determine. The first digit must be from 1-9 (cannot be zero, otherwise it is a 3-digit number) so there are 9 choices. There are no restrictions on the middle 2 digits, so they have 10 choices each. The last digit must be even for the entire number to be even, so it must be one of 0, 2, 4, 6, 8, and so there are 5 choices. Thus, in total, the number of numbers ig given by,</p>
 <div class="displaymath">
 \begin{equation*}
 9 \cdot 10 \cdot 10 \cdot 5 = 4500
 \end{equation*}
 </div></article></div>
-<article class="example example-like" id="example-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-11"><h4 class="heading">
+<article class="example example-like" id="example-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-12"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-11"><article class="example example-like"><p id="p-131">Determine the number of four digit positive integers which contain the digit 3 and are divisible by 5.</p>
-<p id="p-132">Four digit numbers cannot start with 0, and numbers divisible by 3 must end in either 0 or 5. Then, there are \(9 \cdot 10 \cdot 10 \cdot 2 = 1800\) four digit numbers which are divisible by 5. Also, there are \(8 \cdot 9 \cdot 9 \cdot 2 = 1296\) four digit numbers that divisible by 5 but do not contain any 3s. Thus, there are \(1800 - 1296 = 504\) four digit numbers that contain at least one 3 and are divisible by 5.</p></article></div></section></section></div></main>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-12"><article class="example example-like"><p id="p-154">Determine the number of four digit positive integers which contain the digit 3 and are divisible by 5.</p>
+<p id="p-155">Four digit numbers cannot start with 0, and numbers divisible by 3 must end in either 0 or 5. Then, there are \(9 \cdot 10 \cdot 10 \cdot 2 = 1800\) four digit numbers which are divisible by 5. Also, there are \(8 \cdot 9 \cdot 9 \cdot 2 = 1296\) four digit numbers that divisible by 5 but do not contain any 3s. Thus, there are \(1800 - 1296 = 504\) four digit numbers that contain at least one 3 and are divisible by 5.</p></article></div></section></section></div></main>
 </div>
 </body>
 </html>

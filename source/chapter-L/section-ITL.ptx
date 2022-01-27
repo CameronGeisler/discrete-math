@@ -13,7 +13,7 @@
         <definition>
             <ul>
                 <li><term>Universal statements</term>, of the form <q>All <m>X</m> have property <m>Y</m></q>.</li>
-                <li><term>Condiitional statements</term>, of the form <q>If <m>X</m> is true, then <m>Y</m> is true.</q></li>
+                <li><term>Conditional statements</term>, of the form <q>If <m>X</m> is true, then <m>Y</m> is true.</q></li>
                 <li><term>Existential statements</term>, of the form <q>There is at least one <m>X</m> for which property <m>Y</m> is true</q>.</li>
             </ul>
         </definition>
@@ -29,7 +29,7 @@
         </definition>
 
         <p>
-            Statements are typically are represented by the letters <m>P, Q, R</m>, and <m>S</m>. In applications, letters that represent the sentence are typically used. For example, for the statement <q>John is coming to the party</q> might be represented by <m>J</m> (for <m>John</m>).
+            Statements are typically are represented by the letters <m>P, Q, R</m>, and <m>S</m>. In applications, letters that represent the sentence are typically used. For example, for the statement <q>John is coming to the party</q> might be represented by <m>J</m> (for <q>John</q>).
         </p>
         <p>
             Or, more generally, letters can represent arbitrary statements, called a <term>propositional variable</term>. This is analogous to that letters like <m>x</m> represent arbitrary numbers.
