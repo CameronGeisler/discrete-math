@@ -71,6 +71,11 @@
             <li>The converse of a condition is logically equivalent to the inverse. This can be seen by comparing the truth tables.</li>
             <li>The converse is not logically equivalent to the original conditional. Incorrectly assuming this this is called the <term>fallacy of the converse</term>.</li>
             <li>The inverse of a conditional is not logically equivalent to the conditional. Incorrectly assuming this is called <term>denying the antecedent</term>, or <term>fallacy of the inverse</term>.</li>
+            <li>In terms of the (inclusive) or, the exclusive or can be written as,
+                <me>
+                    P \oplus Q \equiv (P \lor Q) \land \neg (P \land Q)
+                </me>
+            </li>
         </ul>
     </subsection>
 

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-27T11:49:37-08:00       *-->
+<!--*       on 2022-01-31T12:15:51-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,9 +15,21 @@
 </head>
 <body>
 <article class="example example-like"><h4 class="heading">
-<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">6.3.1</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="title">Postage stamps.</span>
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">4.2.9</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="title">Sum of first n 4th powers.</span>
 </h4>
-<p>Any amount of postage more than one cent can be formed using only two-cent and three-cent stamps.</p>
-<article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-51-hidden.html" title="Proof 6.3.1.1"><h5 class="heading"><span class="type">Proof<span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span></span></h5></a></article></article><span class="incontext"><a href="section-SI.html#example-31">in-context</a></span>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(k + 1)^5 - k^5 \amp = 5k^4 + 10k^3 + 10k^2 + 5k + 1\\
+\sum_{k=1}^n \brac{(k+1)^5 - k^5} \amp = \sum_{k=1}^n \brac{5k^4 + 10k^3 + 10k^2 + 5k + 1}\\
+(n + 1)^5 - 1 \amp = 5 \sum_{k=1}^n k^4 + 10 \sum_{k=1}^n k^3 + 10 \sum_{k=1}^n k^2 + 5 \sum_{k=1}^n k + \sum_{k=1}^n 1\\
+\amp = 5 \sum_{k=1}^n k^4 + 10 \cdot \frac{n^2(n+1)^2}{4} + 10 \cdot \frac{n(n+1)(2n+1)}{6} + 5 \cdot \frac{n(n + 1)}{2} + n
+\end{align*}
+</div>
+<p>Then, solving for \(\sum_{k=1}^n k^4\) gives,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\boxed{\sum_{k=1}^n k^4 = \frac{n(n + 1)(2n + 1)(3n^2 + 3n - 1)}{30}}
+\end{equation*}
+</div></article><span class="incontext"><a href="section-SSN.html#example-31">in-context</a></span>
 </body>
 </html>

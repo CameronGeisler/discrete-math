@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-DLC">
+    <title>Digital Logic Circuits</title>
+
+    <introduction>
+        <p>
+            In the late 1930s, <term>Claude Shannon</term> (1916-2001), American mathematician, discovered a connection between logical connectives and physical circuits. Then, <term>John Tukey</term> (1915-2000), American mathematician and statistician, coined the term <em>bits</em>, short for <em>binary digits</em>, which are digits that can either be 0 or 1, and can represent T and F in logic.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Digital Logic Circuits</title>
+        <p>
+            One or more inputs are combined according to some rule, to produce an output. This is similar to a function.
+        </p>
+        <p>
+            The 3 basic logic gates are:
+        </p>
+        <ul>
+            <li><term>NOT</term> gate, or <term>inverter</term>, which takes in a single input and outputs the opposite, like the negation operator.</li>
+            <li><term>AND</term> gate, which behaves like the conjunction operator.</li>
+            <li><term>OR</term> gate, which behaves like the disjunction operator.</li>
+        </ul>
+        <p>
+            By combining these gates in various ways, the inputs can be combined to form circuits that produce certain outputs. The output of a circuit can be summaried in an <term>input/output table</term>, which is analogous to a truth table for Boolean expressions.
+        </p>
+        <p>
+            There is a one-to-one correspondence between Boolean expressions and combinatorial circuits.
+        </p>
+        <p>
+            We can also consider a <term>multiple-input AND-gate</term>, or <term>multiple-input OR-gate</term>, which is an AND or OR gate which takes in multiple inputs.
+        </p>
+        <p>
+            With a combinatorial circuit, a single input can be split to be used as the input for two separate logic gates. Also, the output of a logic gate can be used as an input for another. Two input wires cannot be combined. Also, outputs can't loop back to be used as an input for the same logic gate.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title></title>
+        <definition>
+            <p>
+                Two logic circuits are <term>equivalent</term> if their input/ouput tables are identical.
+            </p>
+        </definition>
+
+        <definition>
+            <p>
+                Consider two equiavalent logic gates. One is said to be <term>simpler</term> than the other if it contains fewer logic gates.
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Converting Input/Output Table to Boolean Expression/Circuit</title>
+        <p>
+            Consider an input/output table. To determine an associated Boolean expression, first, we can simply examine the table to see if there is any obvious pattern.
+        </p>
+        <p>
+            Otherwise, there are multiple methods that can be considered. One method is to consider all rows which produce an output of 1 (the <q>true</q> rows), and construct a Boolean expression which is true in precisely each case, made up of conjunctions of the components. Then, combine each of these conjunctions with a disjunction. This expression will be a Boolean expression for the table.
+        </p>
+        <p>
+            On the other hand, it is possible that there is a simpler equivalent expression that describes the same table. The Boolean expression can be simplified to this by using the laws of logic.
+        </p>
+        <p>
+            Finally, to check your solution, your Boolean expression can be checked with the original input/output table, to see if it is correct.
+        </p>
+
+    </subsection>
+
+    <subsection>
+        <title>Karnaugh Maps (K-maps)</title>
+    </subsection>
+
+    <subsection>
+        <title>More Complex Logic Gates</title>
+        <p>
+            The <term>NAND-gate</term> is the negation of an AND-gate, and is denoted by <m>P \mid Q</m>, where the symbol <m>\mid</m> is called the <term>Scheffer stroke</term>.
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \mid Q \\ \hline
+                1 \amp 1 \amp 0 \\ \hline
+                1 \amp 0 \amp 1 \\ \hline
+                0 \amp 1 \amp 1 \\ \hline
+                0 \amp 0 \amp 1
+            \end{array}
+        </me>
+        <p>
+            The <term>NOR-gate</term> is the negation of an OR-gate, and is denoted by <m>P \downarrow Q</m>, where <m>\downarrow</m> is called the <term>Pierce arrow</term>.
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \downarrow Q \\ \hline
+                1 \amp 1 \amp 0 \\ \hline
+                1 \amp 0 \amp 0 \\ \hline
+                0 \amp 1 \amp 0 \\ \hline
+                0 \amp 0 \amp 1
+            \end{array}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Other Possible Combinations</title>
+        <p>
+            With 2 inputs <m>P</m> and <m>Q</m>, the number of possible output patterns of 4 digits is <m>2^4 = 16</m>.
+        </p>
+    </subsection>
+
+</section>

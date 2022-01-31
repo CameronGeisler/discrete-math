@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-19T15:51:41-08:00       *-->
+<!--*       on 2022-01-31T12:15:53-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,14 @@
 </head>
 <body>
 <article class="example example-like"><h4 class="heading">
-<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">7.2.6</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">7.3.2</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
 </h4>
-<p>A group of \(k\) earls are playing cards. Originally, they each have \(p\) pennies. At the end of the game, they count how much money they have. They do not borrow from each other, so that each cannot lose more than his \(p\) pennies. How many possible results are there?</p>
-<p>This is equivalent to determining the number of ways to distribute the \(kp\) total pennies (\(p\) pennies per earl and \(k\) earls) among \(k\) earls. Thus, there are,</p>
+<p>If \(n_1 = n_2 = \cdots = n_{k-1} = 1\) and \(n_k = n - k + 1\text{,}\) this represents giving all child 1 present, except the last child who gets the remaining \((n - k + 1)\) presents.</p>
+<p>This involves choosing \((k - 1)\) presents from the \(n\) available to give to the \((k-1)\) children (\(\binom{n}{k-1}\) ways), and then giving the remaining presents to the last child. From the formula, we get,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\binom{kp + k - 1}{k-1}
+\frac{n!}{1!1! \cdots (n - k + 1)!} = \frac{n!}{(n - (k - 1))!} = \binom{n}{k-1}
 \end{equation*}
-</div>
-<p>ways.</p></article><span class="incontext"><a href="section-DM.html#example-38">in-context</a></span>
+</div></article><span class="incontext"><a href="section-DP.html#example-38">in-context</a></span>
 </body>
 </html>

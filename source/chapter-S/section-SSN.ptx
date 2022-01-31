@@ -212,6 +212,26 @@
     </subsection>
 
     <subsection>
+        <title>Recursive Definition</title>
+        <p>
+            Summation has a <em>recursive definition</em>. This follow from the identity,
+        </p>
+        <me>
+            \sum_{i=m}^m a_i = a_m \qquad \text{and} \qquad \sum_{i=m}^n a_i = \sum_{i=m}^{n-1} a_i + a_n \quad \text{for integers $n > m$}
+        </me>
+        <p>
+            This can be written in Python as,
+        </p>
+        <cd>
+            def sigma(a,m,n):
+                if n == m:
+                    return(a(m))
+                else:
+                    return(sigma(a,m,n-1) + a(n))
+        </cd>
+    </subsection>
+
+    <subsection>
         <title>Sum of the First n Natural Numbers (Gauss's Problem)</title>
         <p>
             One of the most famous stories in mathematics is the story of the mathematician Gauss. However, it is not known whether or not this actually took place. It goes as follows: In elementary school, the teacher asked Gauss's class to add up the first 100 positive integers (i.e. <m>1 + 2 + 3 + \dots + 99 + 100</m>). The idea was that it would be a time-killer, however Gauss (being gifted in math) recognized a pattern and figured out a method to calculate the sum quickly.

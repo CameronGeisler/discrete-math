@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-BN">
+    <title>Two's Complement</title>
+    <introduction>
+        <p>
+            Consider the problem of representing an integer on a computer, especially integers which can be either positive or negative (i.e. <em>signed</em> integers). Ideally, we want a fixed number of bits is used.
+        </p>
+        <p>
+            One simple method is to use the left-most bit to represent the sign of the integer, and the other bits to represent the absolute value of the integer. However, this method makes addition and subtraction more complicated, and it makes it such that the representation of the number 0 is not unique.
+        </p>
+        <p>
+            Instead, a common method that is used is called <em>two's complement</em>.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Two's Complement</title>
+        <p>
+            Overall, two's complement uses a sequence of bits (binary digits) whose length is a power of 2, say 32. Since each digit can either be 0 or 1, this allows for representation of <m>2^{32}</m> decimal integers. This is used to represent all integers between <m>- 2^{31}</m> and <m>2^{31} - 1</m>, inclusive, which (again) is a total of <m>2^{32}</m> integers. This particular configuration allows for integers up to about 4 billion. Or, the next higher would be <m>2^{64}</m>. This is called <term>32-bit</term>, and <term>64-bit</term>, respectively.
+        </p>
+        <p>
+            For simplicity, we will explore the method and concepts using <term>8-bit</term> representations (i.e. with 8 bits). However, the method easily generalizes to 32-bit or 64-bit.
+        </p>
+
+        <definition>
+            <p>
+                The <term>two's complement</term> of an integer <m>a</m> between <m>-128</m> and <m>127</m> (inclusive) is the integer,
+            </p>
+            <me>
+                \begin{cases} a \amp a \geq 0 \\ 2^8 - \abs{a} \amp a \lt 0
+            </me>
+            <p>
+                represented in binary.
+            </p>
+        </definition>
+
+        <p>
+            To determine the two's complement of a negative integer <m>a</m>, first convert <m>\abs{a}</m> to binary. Then, flip each bit, i.e. change each 0 to 1 and 1 to 0. Finally, add 1.
+        </p>
+        <p>
+            The flipping of each bit corresponds to subtracting <m>\abs{a}_2</m> from <m>(2^8 - 1)_2 = 11111111_2</m>. Then, the adding of 1 gives the desired result,
+        </p>
+        <me>
+            (2^8 - 1)_2 - \abs{a}_2 + 1_2 = (2^8 - \abs{a})_2
+        </me>
+
+    </subsection>
+
+    <subsection>
+        <title>Addition and Subtraction with Two's Complement</title>
+        <p>
+            Consider <m>a + b</m> or <m>a - b</m>, using two's complements. First, notice that examining addition is sufficient, because subtraction is just addition of the negative, <m>a - b = a + (-b)</m>.
+        </p>
+        <p>
+            First, convert <m>a</m> and <m>b</m> to their two's complement representation. Then, add the integers using binary addition, but discard any carr bit that occurs in the <m>2^8</m>th digit position. Finally, convert the integer back to decimal form.
+        </p>
+        <p>
+            If the result of the sum is outside the range, this results in an <term>overflow error</term>. This occurs precisely when both integers are positive but the result is negative, or when both integers are negative but the result is positive.
+        </p>
+    </subsection>
+
+</section>

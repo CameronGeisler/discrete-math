@@ -198,6 +198,23 @@
 
     <subsection>
         <title>Exclusive Or</title>
+        <definition>
+            <p>
+                Let <m>P, Q</m> be statements. The <term>exclusive or</term> of <m>P</m> and <m>Q</m>, denoted by <m>P \oplus Q</m>, is a statement that is true if exactly one of <m>P</m> or <m>Q</m> are true.
+            </p>
+        </definition>
+        <p>
+            The truth table for exclusive or is given by,
+        </p>
+        <me>
+            \begin{array}{c|c|c}
+                P \amp Q \amp P \oplus Q \\ \hline
+                T \amp T \amp F \\ \hline
+                T \amp F \amp T \\ \hline
+                F \amp T \amp T \\ \hline
+                F \amp F \amp F
+            \end{array}
+        </me>
     </subsection>
 
 </section>

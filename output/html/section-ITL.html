@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-27T11:49:32-08:00       *-->
+<!--*       on 2022-01-31T12:15:47-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -145,14 +145,14 @@
 </h3>
 <ul class="disc">
 <li id="li-17"><p id="p-derived-li-17"><dfn class="terminology">Universal statements</dfn>, of the form “All \(X\) have property \(Y\)”.</p></li>
-<li id="li-18"><p id="p-derived-li-18"><dfn class="terminology">Condiitional statements</dfn>, of the form “If \(X\) is true, then \(Y\) is true.”</p></li>
+<li id="li-18"><p id="p-derived-li-18"><dfn class="terminology">Conditional statements</dfn>, of the form “If \(X\) is true, then \(Y\) is true.”</p></li>
 <li id="li-19"><p id="p-derived-li-19"><dfn class="terminology">Existential statements</dfn>, of the form “There is at least one \(X\) for which property \(Y\) is true”.</p></li>
 </ul></article><p id="p-33">These kinds of statements can be combined to form more complex statements.</p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Statements, Propositional Logic, and Symbolic Logic</span>
 </h3>
 <article class="definition definition-like" id="definition-8"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
-</h4>A <dfn class="terminology">statement</dfn> (or <dfn class="terminology">proposition</dfn>) is a declarative sentence (a sentence that declares a fact) that is either definitely true or definitely false, but not both or indeterminate.</article><p id="p-34">Statements are typically are represented by the letters \(P, Q, R\text{,}\) and \(S\text{.}\) In applications, letters that represent the sentence are typically used. For example, for the statement “John is coming to the party” might be represented by \(J\) (for \(John\)).</p>
+</h4>A <dfn class="terminology">statement</dfn> (or <dfn class="terminology">proposition</dfn>) is a declarative sentence (a sentence that declares a fact) that is either definitely true or definitely false, but not both or indeterminate.</article><p id="p-34">Statements are typically are represented by the letters \(P, Q, R\text{,}\) and \(S\text{.}\) In applications, letters that represent the sentence are typically used. For example, for the statement “John is coming to the party” might be represented by \(J\) (for “John”).</p>
 <p id="p-35">Or, more generally, letters can represent arbitrary statements, called a <dfn class="terminology">propositional variable</dfn>. This is analogous to that letters like \(x\) represent arbitrary numbers.</p>
 <p id="p-36">Examples of sentences which are not statements include:</p>
 <ul class="disc">
@@ -252,7 +252,22 @@ F \amp F \amp F
 \end{equation*}
 </div></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.6</span> <span class="title">Exclusive Or</span>
-</h3></section></section></div></main>
+</h3>
+<article class="definition definition-like" id="definition-13"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span>
+</h4>
+<p id="p-60">Let \(P, Q\) be statements. The <dfn class="terminology">exclusive or</dfn> of \(P\) and \(Q\text{,}\) denoted by \(P \oplus Q\text{,}\) is a statement that is true if exactly one of \(P\) or \(Q\) are true.</p></article><p id="p-61">The truth table for exclusive or is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c}
+P \amp Q \amp P \oplus Q \\ \hline
+T \amp T \amp F \\ \hline
+T \amp F \amp T \\ \hline
+F \amp T \amp T \\ \hline
+F \amp F \amp F
+\end{array}
+\end{equation*}
+</div></section></section></div></main>
 </div>
 </body>
 </html>

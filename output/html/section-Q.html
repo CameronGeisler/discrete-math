@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-27T11:49:32-08:00       *-->
+<!--*       on 2022-01-31T12:15:48-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -138,47 +138,50 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-Q"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Quantifiers</span>
 </h2>
-<section class="introduction" id="introduction-7"><p id="p-108">Propositional functions can be converted to statements using quantifiers.</p></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-7"><p id="p-110">Propositional functions can be converted to statements using quantifiers.</p></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.6.1</span> <span class="title">Quantifiers</span>
 </h3>
-<article class="definition definition-like" id="definition-20"><h4 class="heading">
+<article class="definition definition-like" id="definition-21"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span>
 </h4>
-<p id="p-109">The <dfn class="terminology">existential quantifier</dfn>, denoted by \(\exists\text{,}\) represents “there exists”, “there is a”, or “there is at least one”.</p></article><p id="p-110">Then,</p>
+<p id="p-111">The <dfn class="terminology">existential quantifier</dfn>, denoted by \(\exists\text{,}\) represents “there exists”, “there is a”, or “there is at least one”.</p></article><p id="p-112">Then,</p>
 <div class="displaymath">
 \begin{equation*}
 \exists x, P(x)
 \end{equation*}
 </div>
-<p id="p-111">represents the statement, “there exists \(x\) such that \(P(x)\) is false”.</p>
-<article class="definition definition-like" id="definition-21"><h4 class="heading">
+<p id="p-113">represents the statement, “there exists \(x\) such that \(P(x)\) is false”.</p>
+<article class="definition definition-like" id="definition-22"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span>
 </h4>
-<p id="p-112">The <dfn class="terminology">universal quantifier</dfn>, \(\forall\text{,}\) represents “for all”, “for every”, or “for each”.</p></article><p id="p-113">Then,</p>
+<p id="p-114">The <dfn class="terminology">universal quantifier</dfn>, \(\forall\text{,}\) represents “for all”, “for every”, or “for each”.</p></article><p id="p-115">Then,</p>
 <div class="displaymath">
 \begin{equation*}
 \forall x, P(x)
 \end{equation*}
 </div>
-<p id="p-114">represents the statement, “for all \(x\text{,}\) \(P(x)\) is true”. This means that \(P(x)\) is true for all values of \(x\) in the domain of \(P\text{.}\)</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<p id="p-116">represents the statement, “for all \(x\text{,}\) \(P(x)\) is true”. This means that \(P(x)\) is true for all values of \(x\) in the domain of \(P\text{.}\)</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.6.2</span> <span class="title">Using Quantifiers</span>
 </h3>
-<p id="p-115">To show that a existential statement is true, it is sufficient to provide a single example \(x\) that satisfies \(P(x)\text{.}\) To prove it is false requires proving that \(P(x)\) is false for all values of \(x\text{.}\)</p>
-<p id="p-116">To show that an universal statement is true, this requires proving that \(P(x)\) is true for all values of \(x\text{.}\) To prove it is false, it is sufficient to provide one example where it is false (called a <dfn class="terminology">counterexample</dfn>).</p>
-<p id="p-117">If the domain of \(P(x)\) is finite, say \(\set{x_1, \dots, x_n}\text{,}\) then,</p>
+<article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-117">“You miss 100% of the shots you don't take.” This means that for all shots that you don't take, you will miss.</p></article></div>
+<p id="p-118">To show that a existential statement is true, it is sufficient to provide a single example \(x\) that satisfies \(P(x)\text{.}\) To prove it is false requires proving that \(P(x)\) is false for all values of \(x\text{.}\)</p>
+<p id="p-119">To show that an universal statement is true, this requires proving that \(P(x)\) is true for all values of \(x\text{.}\) To prove it is false, it is sufficient to provide one example where it is false (called a <dfn class="terminology">counterexample</dfn>).</p>
+<p id="p-120">If the domain of \(P(x)\) is finite, say \(\set{x_1, \dots, x_n}\text{,}\) then,</p>
 <div class="displaymath">
 \begin{equation*}
 \forall x, P(x) \equiv P(x_1) \land \dots \land P(x_n) \qquad \text{and} \qquad \exists x, P(x) \equiv P(x_1) \lor \dots \lor P(x_n)
 \end{equation*}
 </div>
-<p id="p-118">In this case, proving the universal statement can be reduced to showing that each of the statements \(P(x_1), \dots, P(x_n)\) is true. However, this method can't be used if the set is infinite.</p>
-<p id="p-119">This makes it clear that \(\forall x, P(x)\) is a stronger statement than \(\exists x, P(x)\text{.}\) In other words,</p>
+<p id="p-121">In this case, proving the universal statement can be reduced to showing that each of the statements \(P(x_1), \dots, P(x_n)\) is true. However, this method can't be used if the set is infinite.</p>
+<p id="p-122">This makes it clear that \(\forall x, P(x)\) is a stronger statement than \(\exists x, P(x)\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 \brac{\forall x, P(x)} \rightarrow \brac{\exists x, P(x)}
 \end{equation*}
 </div>
-<p id="p-120">The statement, \(\forall x \in S, P(x)\) means that for all elements \(x\) in the set \(S\text{,}\) the statement \(P(x)\) is true. This is equivalent to saying that the conditional, “If \(x \in S\text{,}\) then \(P(x)\) is true”. In symbols, this can be summarized as,</p>
+<p id="p-123">The statement, \(\forall x \in S, P(x)\) means that for all elements \(x\) in the set \(S\text{,}\) the statement \(P(x)\) is true. This is equivalent to saying that the conditional, “If \(x \in S\text{,}\) then \(P(x)\) is true”. In symbols, this can be summarized as,</p>
 <div class="displaymath">
 \begin{equation*}
 \forall x \in S, P(x) \equiv x \in S \rightarrow P(x)
@@ -186,10 +189,10 @@
 </div></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.6.3</span> <span class="title">Uniquness Quantifier</span>
 </h3>
-<article class="definition definition-like" id="definition-22"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.6.3</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-23"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.6.4</span><span class="period">.</span>
 </h4>
-<p id="p-121">The <dfn class="terminology">uniqueness quantifier</dfn>, denoted by \(\exists !\text{,}\) represents “there exists a unique”, “there exists exactly one”.</p></article></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<p id="p-124">The <dfn class="terminology">uniqueness quantifier</dfn>, denoted by \(\exists !\text{,}\) represents “there exists a unique”, “there exists exactly one”.</p></article></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.6.4</span> <span class="title">Negating Quantifiers (De Morgan's Laws)</span>
 </h3>
 <div class="displaymath">
@@ -202,19 +205,19 @@
 \neg \brac{\exists x, P(x)} \equiv \forall x, \neg P(x)
 \end{equation*}
 </div>
-<p id="p-122">In other words, the negation of a universal statement is an existential statement, and the negation of an existential statement is a universal statement.</p></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<p id="p-125">In other words, the negation of a universal statement is an existential statement, and the negation of an existential statement is a universal statement.</p></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.6.5</span> <span class="title">Nested Quantifiers</span>
 </h3>
-<p id="p-123">With multiple quantifiers, we proceed from left to right.</p>
+<p id="p-126">With multiple quantifiers, we proceed from left to right.</p>
 <ul class="disc">
-<li id="li-51"><p id="p-derived-li-51">\(\exists x, \exists y, P(x,y)\) means that there exists \(x\) and \(y\) such that \(P(x,y)\) is true.</p></li>
-<li id="li-52"><p id="p-derived-li-52">\(\forall x, \forall y, P(x,y)\) means that for all \(x\) and \(y\text{,}\) \(P(x,y)\) is true.</p></li>
+<li id="li-52"><p id="p-derived-li-52">\(\exists x, \exists y, P(x,y)\) means that there exists \(x\) and \(y\) such that \(P(x,y)\) is true.</p></li>
+<li id="li-53"><p id="p-derived-li-53">\(\forall x, \forall y, P(x,y)\) means that for all \(x\) and \(y\text{,}\) \(P(x,y)\) is true.</p></li>
 </ul>
 <ul class="disc">
-<li id="li-53"><p id="p-derived-li-53">\(\forall x, \exists y, P(x,y)\) means that for all \(x\text{,}\) there exists a \(y\) such that \(P(x,y)\) is true.</p></li>
-<li id="li-54"><p id="p-derived-li-54">\(\exists x, \forall y, P(x,y)\) means that there exists \(x\text{,}\) such that for all \(y\text{,}\) \(P(x,y)\) is true.</p></li>
+<li id="li-54"><p id="p-derived-li-54">\(\forall x, \exists y, P(x,y)\) means that for all \(x\text{,}\) there exists a \(y\) such that \(P(x,y)\) is true.</p></li>
+<li id="li-55"><p id="p-derived-li-55">\(\exists x, \forall y, P(x,y)\) means that there exists \(x\text{,}\) such that for all \(y\text{,}\) \(P(x,y)\) is true.</p></li>
 </ul>
-<p id="p-124">The first statement means that given a particular value of \(x\text{,}\) there exists a \(y\) (which can depend on \(x\)) such that \(P(x,y)\) is true. In contrast, the second statement says that there exists a value of \(x\) (which is chosen first), such that \(P(x,y)\) is true for all values of \(y\text{.}\) The difference is the order in which the variables are chosen. The second kind of mixed quantifiers is often a stronger statement.</p>
+<p id="p-127">The first statement means that given a particular value of \(x\text{,}\) there exists a \(y\) (which can depend on \(x\)) such that \(P(x,y)\) is true. In contrast, the second statement says that there exists a value of \(x\) (which is chosen first), such that \(P(x,y)\) is true for all values of \(y\text{.}\) The difference is the order in which the variables are chosen. The second kind of mixed quantifiers is often a stronger statement.</p>
 <div class="displaymath">
 \begin{equation*}
 \neg \brac{\forall x, \exists y, P(x,y)} = \exists x, \forall y, \neg P(x,y)
