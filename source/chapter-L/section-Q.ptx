@@ -191,16 +191,16 @@
     <subsection>
         <title>Negation of a Universal Conditional</title>
         <p>
-            Recall that the negation of a universal statement <m>\forall x, P(x) \righarrow Q(x)</m>, is given by,
+            Recall that the negation of a universal statement <m>\forall x, P(x) \rightarrow Q(x)</m>, is given by,
         </p>
         <me>
-            \neg \brac{\forall x, P(x) \righarrow Q(x)} \equiv \exists x \text{ such that } \neg (P(x) \righarrow Q(x))
+            \neg \brac{\forall x, P(x) \rightarrow Q(x)} \equiv \exists x \text{ such that } \neg (P(x) \rightarrow Q(x))
         </me>
         <p>
             Then, recall that the negation of a conditional is given by
         </p>
         <me>
-            \neg (P(x) \righarrow Q(x)) \equiv P(x) \land \neg Q(x)
+            \neg (P(x) \rightarrow Q(x)) \equiv P(x) \land \neg Q(x)
         </me>
         <p>
             Then, putting things together,
@@ -210,7 +210,7 @@
                 The negation of a universal conditional is,
             </p>
             <me>
-                \boxed{\neg \brac{\forall x, P(x) \righarrow Q(x)} \equiv \exists x \text{ such that } P(x) \land \neg Q(x)}
+                \boxed{\neg \brac{\forall x, P(x) \rightarrow Q(x)} \equiv \exists x \text{ such that } P(x) \land \neg Q(x)}
             </me>
         </fact>
     </subsection>
