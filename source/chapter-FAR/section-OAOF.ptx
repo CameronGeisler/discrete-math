@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-OAO">
+    <title>One-to-one and Onto Functions</title>
+
+    <introduction>
+        <p>
+            There are a few properties that certain functions have which are important enough to be given names.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Oneo-to-one and Onto Functions</title>
+        <p>
+            Let <m>f: X \rightarrow Y</m> be a function.
+        </p>
+
+        <definition>
+            <p>
+                 A function <m>f</m> is <term>injective</term> (or is <term>one-to-one</term>, or <m>f</m> is an <term>injection</term>) if for all <m>x_1, x_2 \in A</m>, if <m>f(x_1) = f(x_2)</m>, then <m>x_1 = x_2</m>.
+            </p>
+        </definition>
+
+        <p>
+            Equivalently, for all <m>x_1, x_2 \in X</m>, if <m>x_1 \neq x_2</m>, then <m>f(x_1) \neq f(x_2)</m>. In other words, if the inputs are different, then the outputs will be different.
+        </p>
+
+        <definition>
+            <p>
+                Let <m>f: X \rightarrow Y</m> be a function. <m>f</m> is <term>surjective</term> (or <term>onto</term>, or <m>f</m> is a <term>surjection</term>) if for all <m>y \in Y</m>, there exists <m>x \in X</m> such that <m>f(x) = y</m>.
+            </p>
+        </definition>
+
+        <p>
+            In other words, <m>R(f) = Y</m>. Or, <m>f</m> is not surjective if there exists <m>y \in Y</m> such that for all <m>x \in X</m>, <m>f(x) \neq y</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>One-to-one Correspondence</title>
+        <definition>
+            <p>
+                Let <m>f: X \rightarrow Y</m> be a function. <m>f</m> is a <term>one-to-one correspondence</term> if <m>f</m> is injective and surjective.
+            </p>
+        </definition>
+
+        <p>
+            Each element in <m>y</m> is mapped from exactly 1 element in <m>X</m>, and each element in <m>X</m> maps to exactly one element in <m>y</m>. In other words,
+        </p>
+        <md>
+            <mrow>\forall x \in X, \exists y \in Y \text{ such that } f(x) = y</mrow>
+            <mrow>\forall y \in Y, \exists x \in X \text{ such that } f(x) = y</mrow>
+        </md>
+        <p>
+            In this way, for a one-to-one correspondence function <m>f</m>, given an element of <m>X</m>, we can completely determine its corresponding element <m>y</m>, and vise versa.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Proving a Function is Onto</title>
+        <p>
+            To prove a function <m>f: X \rightarrow Y</m> is surjective, consider an arbitrary element of the codomain <m>y \in Y</m>. Then, the goal is to find an element <m>x \in X</m> such that <m>f(x) = y</m>. Here, <m>y</m> is <q>given</q> and we need to solve for <m>x</m>. Often, this involves solving the equation <m>f(x) = y</m> for <m>x</m> in terms of <m>y</m>.
+        </p>
+
+        <example>
+            <p>
+                Let <m>f: \mathbb{R} \rightarrow \mathbb{R}</m>, <m>f(x) = 7x - 3</m>. Then, <m>f</m> is injective and surjective.
+            </p>
+            <ul>
+                <li>
+                    Let <m>x_1, x_2 \in \mathbb{R}</m> with <m>f(x_1) = f(x_2)</m>. Then, <m>7x_1 - 3 = 7x_2 - 3</m>, and so <m>x_1 = x_2</m>. Thus, <m>f</m> is injective.
+                </li>
+                <li>
+                    Let <m>y \in \mathbb{R}</m>, so that <m>x = \frac{y+3}{7} \in \mathbb{R}</m>. Then, <m>f(x) = 7(x+3)/7 - 3 = y</m>. Thus, <m>f</m> is surjective.
+                </li>
+            </ul>
+        </example>
+
+        <example>
+            <p>
+                Let <m>f: \mathbb{R} \rightarrow \mathbb{R}</m>, <m>f(x) = x^2</m>. Then, <m>f</m> is not injective and not surjective.
+            </p>
+            <ul>
+                <li>
+                    Let <m>x_1 = 1, x_2 = -1</m>. Then, <m>f(x_1) = f(1) = 1^2 = (-1)^2 = f(-1) = f(x_2)</m>. Thus, <m>f</m> is injective.
+                </li>
+                <li>
+                    Let <m>y = -1, x \in \mathbb{R}</m>. Then, <m>f(x) = x^2 \geq 0</m>, so <m>f(x) \neq -1</m>.
+                </li>
+            </ul>
+        </example>
+
+        <example>
+            <p>
+                Let <m>f: \mathbb{R} \setminus \set{2} \rightarrow \mathbb{R} \setminus \set{5}</m>, <m>f(x) = \frac{5x+1}{x-2}</m>. Then, <m>f</m> is bijective.
+            </p>
+            <p>
+                We will prove that <m>f</m> is injective and surjective.
+            </p>
+            <ul>
+                <li>
+                    Let <m>x_1, x_2 \in \mathbb{R} \setminus \set{2}</m> with <m>f(x_1) = f(x_2)</m>. Then,
+                    <md>
+                        <mrow>\frac{5x_1 + 1}{x_1 - 2} \amp = \frac{5x_2 + 1}{x_2 - 2}</mrow>
+                        <mrow>(5x_1 + 1)(x_2 - 2) \amp = (x_1 - 2)(5x_2 + 1)</mrow>
+                        <mrow>5x_1x_2 - 10x_1 + x_2 - 2 \amp = 5x_1x_2 + x_1 - 10x_2 - 2 </mrow>
+                        <mrow>11x_1 \amp = 11x_2</mrow>
+                        <mrow>x_1 \amp = x_2</mrow>
+                    </md>
+                    Thus, <m>f</m> is injective.
+                </li>
+                <li>
+                    Let <m>y \in \mathbb{R} \setminus \set{5}</m>, <m>x = \frac{2y + 1}{y - 5} = 2 + \frac{11}{y-5}</m>. Then, <m>x \neq 2</m>. Also, <m>y \neq 5</m>. Thus, <m>x \in \mathbb{R} \setminus \set{2}</m>. Thus,
+                    <me>
+                        f(x) = \frac{5\brac{\frac{2y + 1}{y - 5}} + 1}{\frac{2y + 1}{y - 5} - 2} = \frac{5(2y+1) + y - 5}{2y + 1 - 2(y - 5)} = \frac{11y}{11} = y
+                    </me>
+                    Thus, <m>f</m> is surjective.
+                </li>
+            </ul>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Cardinality and Function Properties</title>
+        <theorem>
+            <p>
+                Let <m>X, Y</m> be finite sets, <m>f: X \rightarrow Y</m>. Then,
+            </p>
+            <ul>
+                <li><m>f</m> is injective if and only if <m>\abs{X} \leq \abs{Y}</m>.</li>
+                <li><m>f</m> is surjective if and only if <m>\abs{X} \geq \abs{Y}</m>.</li>
+                <li><m>f</m> is bijective if and only if <m>\abs{X} = \abs{Y}</m>.</li>
+            </ul>
+        </theorem>
+
+        <theorem>
+            <title>Schroder-Bernstein theorem</title>
+            <p>
+                If there exists an injective function <m>f: X \rightarrow Y</m> and another injective function <m>g: Y \rightarrow X</m>, then there exists a bijective function <m>h: X \rightarrow Y</m> and so <m>\abs{X} = \abs{Y}</m>.
+            </p>
+        </theorem>
+
+        <theorem>
+            <p>
+                Let <m>X, Y</m> be finite sets with <m>\abs{X} = \abs{Y} = n</m>. Then, there exist <m>n!</m> possible bijections from <m>X</m> to <m>Y</m>.
+            </p>
+        </theorem>
+
+        <proof>
+            <p>
+                For <m>f: X \rightarrow Y</m> to be a bijection, we need to map each of the <m>n</m> elements in <m>X</m> to each of the <m>n</m> elements in <m>Y</m>, such that no two elements of <m>X</m> are mapped to the same element in <m>y</m>. In other words, we need to create <m>n</m> pairs of elements <m>(x,y)</m> where <m>x \in X</m> and <m>y \in Y</m>, using no elements more than once. For the first element of <m>X</m>, there are <m>n</m> elements in <m>y</m> that it can be paired with. For the second elements of <m>X</m>, there are now <m>n - 1</m> elements in <m>y</m> it can be paired with, because we cannot re-use the element already chosen. Continuing in this way, for the 2nd last element of <m>X</m>, there are 2 elements in <m>Y</m> it can be paired with. For the last element of <m>X</m>, there is only 1 element in <m>Y</m> it can be paired with. In this way, to describe <m>f: X \rightarrow Y</m>, the number of ways to do it is,
+            </p>
+            <me>
+                n \cdot (n - 1) \cdots 2 \cdot 1 = n!
+            </me>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Remarks</title>
+        <p>
+            In more advanced math, one-to-one functions are called <term>injective</term>, onto functions are called <term>surjective</term>, and a one-to-one correspondence is called <term>bijective</term>. Then, the noun equivalent for these terms are <term>injection</term>, <term>surjection</term>, and <term>bijection</term>, respectively.
+        </p>
+    </subsection>
+
+    <!-- <subsection>
+        <title>Linear Functions are One-to-One and Onto</title>
+    </subsection>
+    
+    \section*{}
+    Linear functions are injective and surjective.
+    \begin{theorem}
+    Let $f: \mathbb{R} \rightarrow \mathbb{R}, f(x) = mx + b$ for some $m, b \in \mathbb{R}$, $m \neq 0$. Then, <m>f</m> is bijective.
+    \end{theorem}
+    \begin{proof}
+    To prove injectivity, let $f(x_1) = f(x_2)$ for some $x_1, x_2 \in \mathbb{R}$. Then,
+    \begin{align*}
+        f(x_1) \amp = f(x_2) \\
+        mx_1 + b \amp = mx_2 + b \\
+        mx_1 \amp = mx_2 \\
+        x_1 \amp = x_2
+    \end{align*}
+    Thus, <m>f</m> is injective.
+    \\ \\ To prove surjectivity, let $y \in \mathbb{R}$. Then, for $x = (y - b)/m \in \mathbb{R}$, we have
+    \begin{align*}
+        f(x) \amp = m \brac{\frac{y - b}{m}} + b = (y - b) + b = y
+    \end{align*}
+    \end{proof} -->
+
+</section>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-F">
+    <title>Functions</title>
+
+    <subsection>
+        <title>Functions</title>
+        <definition>
+            <p>
+                Let <m>X, Y</m> be non-empty sets. A <term>function</term> (or <term>map</term>, or <term>mapping</term>), <m>f</m>, from the <term>domain</term> <m>X</m> (or <m>D(f)</m>) to the <term>codomain</term> <m>Y</m>, <m>f: X \rightarrow Y</m>, is a relation between <m>X</m> and <m>Y</m> such that,
+            </p>
+            <ol>
+                <li><term>All elements in the domain map to some element in the codomain</term>. For all <m>x \in X</m>, there exists <m>y \in Y</m> such that <m>(x,y) \in f</m>.</li>
+                <li><term>The function is well-defined</term>. If <m>(x,y_1) \in f</m> and <m>(x,y_2) \in f</m>, then <m>y_1 = y_2</m>.</li>
+            </ol>
+            <p>
+                If <m>(x,y) \in f</m>, we denote this by <m>y = f(x)</m>. Then, these requirements are,
+            </p>
+            <ol>
+                <li>For all <m>x \in X</m>, there exists <m>y \in Y</m> such that <m>f(x) = y</m>.</li>
+                <li>If <m>f(x) = y_1</m> and <m>f(x) = y_2</m>, then <m>y_1 = y_2</m>. Equivalently, if <m>x_1 = x_2</m>, then <m>f(x_1) = f(x_2)</m>.</li>
+            </ol>
+        </definition>
+
+        <ul>
+            <li>If $f(x) = y$, then we say "$y$ is the image of $x$", or "$x$ maps to $y$".</li>
+            <li>
+                The <term>range</term> of <m>f</m>, sometimes denoted by <m>R(f)</m>, is the set of all outputs of <m>f</m>. In other words,
+                <me>
+                    R(f) = \set{f(x): x \in X} = \set{y \in Y: \exists x \in X \text{ such that } f(x) = y}
+                </me>
+                In general, <m>R(f) \neq Y</m>.
+            </li>
+        </ul>
+
+        <definition>
+            <p>
+                Functions <m>f</m> and <m>g</m> are <term>equal</term> if and only if for all <m>x_1 \in X</m>, <m>f(x_1) = f(x_2)</m>.
+            </p>
+        </definition>
+
+        <example>
+            <p>
+                Let <m>f = \set{(x,y) \in \mathbb{Z}^2: 3x + y = 0}</m>. Let <m>x \in \mathbb{Z}</m> such that <m>y = -3x</m>. Then, <m>3x + (-3x) = 0</m> satisfies the condition. Also, if <m>(x,y) \in f</m> and <m>(x,z) \in f</m>, then <m>3x + y = 0</m> and <m>3x + z = 0</m>. Thus, <m>y = z</m>.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Let <m>X</m> be a non-empty set. The <term>identity function on <m>X</m></term> is <m>Id_{X}: X \rightarrow X</m>, <m>Id_{X}(x) = x</m>.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Operations like addition, subtraction, multiplication, and division can be thought of as functions. For example, addition can be thought of as the function,
+            </p>
+            <md>
+                <mrow>+ : \mathbb{R} \times \mathbb{R} \amp \longrightarrow \mathbb{R}</mrow>
+                <mrow>(a,b) \amp \longmapsto a + b</mrow>
+            </md>
+            <p>
+                In function notation, this is written as <m>+((a,b)) = a + b</m>. For example, <m>+((2,3)) = 5</m>.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Examples of Non-Functions</title>
+        <example>
+            <p>
+                The <m>f(\frac{a}{b}) = a + b</m> is not a function on the rational numbers. This is because for example, <m>f(\frac{1}{2}) = 1 + 2 = 3</m> but also <m>f(\frac{1}{2}) = f(\frac{2}{4}) = 2 + 4 = 6 \neq 3</m>.
+            </p>
+        </example>
+
+        <p>
+            The output of the function must not depend on the representation of the input element, and only depend on the input element itself.
+        </p>
+
+        <example>
+            <p>
+                Let <m>f = \set{(x,y) \in \mathbb{Z}^2: 3x + 2y = 0}</m>. Then, <m>f</m> is not a function, as for <m>1 \in \mathbb{Z}</m>, <m>3 + 2y = 0</m>, but <m>y = -3/2 \notin \mathbb{Z}</m>. Thus, <m>(1,y) \notin f</m>.
+            </p>
+        </example>
+    </subsection>
+
+</section>

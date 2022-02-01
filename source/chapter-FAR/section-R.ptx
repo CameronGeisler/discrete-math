@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-R">
+    <title>Relations</title>
+
+    <introduction>
+        <p>
+            Many expressions in math describe a relationship between two objects. We call these <em>relations</em>, or more precisely <em>binary relations</em>, because they are relations between two objects.
+        </p>
+        <p>
+            Again, these relations can be defined in terms of set theory.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Relations</title>
+        <definition>
+            <p>
+                Let <m>A</m> be a set. A <term>binary relation</term> (or simply <term>relation</term>) on <m>A</m>, is a subset <m>R</m> of the Cartesian product <m>A \times A</m>. If <m>(x,y) \in R</m>, we say that <m>x</m> is related to <m>y</m>, and we write <m>x R y</m>. Otherwise, <m>x</m> is not related to <m>y</m>, or <m>x \cancel{R} y</m>.
+            </p>
+        </definition>
+
+        <p>
+            The notation to represent a general relation (<m>R</m> here) can vary. Sometimes, a tilde <m>\sim</m> is used, i.e. <m>x \sim y</m>.
+        </p>
+
+        <example>
+            <p>
+                Consider the set <m>S</m> of people in your class. Let <m>R</m> be a relation on <m>S</m> such that for <m>x, y \in S</m>, <m>x R y</m> if people <m>x</m> and <m>y</m> share the same first letter of their first name.
+            </p>
+            <p>
+                Let <m>R</m> be the relation such that <m>x R y</m> if person <m>x</m> is a sibling of person <m>y</m>.
+            </p>
+        </example>
+
+        <example>
+            <title>Equality and inequality</title>
+            <p>
+                <term>Equality</term> <m>=</m>, or <term>inequality</term> (greater than, less than, greater than or equal to, less than or equal to) <m>> \, \lt \, \geq \, \leq</m> are all relations on <m>\mathbb{R}</m> (or <m>\mathbb{Q}, \mathbb{Z}, \mathbb{N}</m>). More generally, given a set <m>S</m>, we can consider the equality of objects, given by the subset,
+            </p>
+            <me>
+                \set{(x,x): x \in S} \subseteq S \times S
+            </me>
+            <p>
+                Then, for any <m>x \in S</m>, <m>x = x</m>, and if <m>x</m> and <m>y</m> are different elements of <m>S</m>, then <m>x \neq y</m>.
+            </p>
+        </example>
+
+        <example>
+            <title>Divisibility</title>
+            <p>
+                <term>Divides</term> <m>\mid</m> is a relation on a set of integers, where <m>a \mid b</m> if <m>B</m> is a multiple of <m>A</m>, i.e. there exists <m>k \in \mathbb{Z}</m> such that <m>b = ka</m>.
+            </p>
+            <p>
+                If <m>S = \set{1,2,3,4} \subseteq \mathbb{Z}</m>, then <m>\mid</m> is the set,
+            </p>
+            <me>
+                \mid \,= \set{(1,1),(1,2),(1,3),(1,4),(2,2),(2,4),(3,3),(4,4)}
+            </me>
+        </example>
+
+        <p>
+            Slightly more generally, we can consider a relation between two different sets.
+        </p>
+
+        <definition>
+            <title>Relation between two different sets</title>
+            <p>
+                Let <m>A, B</m> be sets. A <term>relation</term> between <m>A</m> and <m>B</m>, <m>R</m>, is a subset of <m>A \times B</m>. If <m>R = A \times B</m> between <m>A</m> and <m>B</m>, then <m>x R y</m> for all <m>x \in A</m> and <m>y \in B</m>.
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Visualizing Relations</title>
+        <p>
+            Let <m>R</m> be a relation on a set <m>A</m>. Draw each element in <m>A</m> as a point, and for any two elements <m>x</m> and <m>y</m>, if <m>x R y</m>, draw an arrow from <m>x</m> to <m>y</m>.
+        </p>
+    </subsection>
+       
+</section>
