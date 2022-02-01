@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T12:15:52-08:00       *-->
+<!--*       on 2022-02-01T14:21:27-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,14 @@
 </head>
 <body>
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Math induction makes intuitive sense. Suppose that \(P(1)\) is true, and for all \(k\text{,}\) if \(P(k)\) is true implies \(P(k+1)\) is true. Then, applying this for \(k = 1\) means that \(P(2)\) is true. Then, since \(P(2)\) is true, this implies that \(P(3)\) is true. Since \(P(3)\) is true, \(P(4)\) is true, and so on. Then, for any \(n \in \mathbb{N}\text{,}\) we can apply the implication enough times to show that \(P(n)\) is true.</p>
-<span class="incontext"><a href="section-PBMI.html#p-417">in-context</a></span>
+<p>By contradiction, suppose that \(a \mid b\) and \(a \mid (b + 1)\text{.}\) Then, there exists \(m, n \in \mathbb{Z}\) such that \(b = ma\) and \(b + 1 = na\text{.}\) Then, consider the difference of these two equations,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+na - ma \amp = (b + 1) - b\\
+a(n - m) \amp = 1
+\end{align*}
+</div>
+<p class="continuation">Then, since \(a, n-m \in \mathbb{Z}\text{,}\) the product \(a(n - m)\) is the product of two integers. If the product of two integers is equal to 1, then each integer must be either 1 or \(-1\text{.}\) Thus, \(a = \pm 1\text{,}\) contradicting the assumption that \(a \geq 2\text{.}\)</p>
+<span class="incontext"><a href="section-PBC.html#p-417">in-context</a></span>
 </body>
 </html>

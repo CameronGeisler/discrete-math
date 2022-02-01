@@ -5,7 +5,7 @@
 
     <introduction>
         <p>
-            Propositional functions can be converted to statements using quantifiers.
+            Previously, propositional function could be converted to statements by substituting a particular value of all of their variables. A more useful way is to use <em>quantifiers</em>.
         </p>
     </introduction>
 
@@ -14,35 +14,51 @@
 
         <definition>
             <p>
-                The <term>existential quantifier</term>, denoted by <m>\exists</m>, represents <q>there exists</q>, <q>there is a</q>, or <q>there is at least one</q>.
+                The <term>existential quantifier</term>, denoted by <m>\exists</m>, is read as <q>there exists</q>, <q>there is a</q>, <q>there is at least one</q>, or <q>for some</q>.
             </p>
         </definition>
         <p>
             Then,
         </p>
-        <me>
-            \exists x, P(x)
-        </me>
-        <p>
-            represents the statement, <q>there exists <m>x</m> such that <m>P(x)</m> is false</q>.
-        </p>
-
 
         <definition>
             <p>
-                The <term>universal quantifier</term>, <m>\forall</m>, represents <q>for all</q>, <q>for every</q>, or <q>for each</q>.
+                An <term>existential statement</term> is a statement of the form,
+            </p>
+            <me>
+                \exists x \in D, P(x)
+            </me>
+            <p>
+                which represents the statement, <q>there exists <m>x</m> in the domain of <m>P(x)</m> such that <m>P(x)</m> is true</q>. This statement is true if (and only if) there is at least one <m>x \in D</m> such that <m>P(x)</m> is true.
+            </p>
+        </definition>
+
+        <definition>
+            <p>
+                The <term>universal quantifier</term>, <m>\forall</m>, is read as <q>for all</q>, <q>for every</q>, <q>for any</q>, or <q>for each</q>.
             </p>
         </definition>
 
         <p>
             Then,
         </p>
-        <me>
-            \forall x, P(x)
-        </me>
+
+        <definition>
+            <p>
+                A <term>universal statement</term> is a statement of the form,
+            </p>
+            <me>
+                \forall x \in D, P(x)
+            </me>
+            <p>
+                which represents the statement, <q>for all <m>x \in D</m>, <m>P(x)</m> is true</q>. This statement is true if (and only if) <m>P(x)</m> is true for all values of <m>x</m> in the domain of <m>P</m>.
+            </p>
+        </definition>
+
         <p>
-            represents the statement, <q>for all <m>x</m>, <m>P(x)</m> is true</q>. This means that <m>P(x)</m> is true for all values of <m>x</m> in the domain of <m>P</m>.
+            Sometimes, if the domain <m>D</m> is implicit, we simply write, <m>\forall x, P(x)</m> and <m>\exists x, P(x)</m>.
         </p>
+
     </subsection>
 
     <subsection>
@@ -63,22 +79,16 @@
             If the domain of <m>P(x)</m> is finite, say <m>\set{x_1, \dots, x_n}</m>, then,
         </p>
         <me>
-            \forall x, P(x) \equiv P(x_1) \land \dots \land P(x_n) \qquad \text{and} \qquad \exists x, P(x) \equiv P(x_1) \lor \dots \lor P(x_n)
+            \forall x \in D, P(x) \equiv P(x_1) \land \dots \land P(x_n) \qquad \text{and} \qquad \exists x \in D, P(x) \equiv P(x_1) \lor \dots \lor P(x_n)
         </me>
         <p>
-            In this case, proving the universal statement can be reduced to showing that each of the statements <m>P(x_1), \dots, P(x_n)</m> is true. However, this method can't be used if the set is infinite.
+            In this case, proving the universal statement can be reduced to showing that each of the statements <m>P(x_1), \dots, P(x_n)</m> is true (called the <term>method of exhaustion</term>). This brute force technique is particularly more applicable with the rise of computing power, allowing for a large numebr of calculations to be done in a shorter period of time. However, this method can't be used if the set is infinite.
         </p>
         <p>
-            This makes it clear that <m>\forall x, P(x)</m> is a stronger statement than <m>\exists x, P(x)</m>. In other words,
+            This also makes it clear that <m>\forall x, P(x)</m> is a stronger statement than <m>\exists x, P(x)</m>. In other words,
         </p>
         <me>
             \brac{\forall x, P(x)} \rightarrow \brac{\exists x, P(x)}
-        </me>
-        <p>
-            The statement, <m>\forall x \in S, P(x)</m> means that for all elements <m>x</m> in the set <m>S</m>, the statement <m>P(x)</m> is true. This is equivalent to saying that the conditional, <q>If <m>x \in S</m>, then <m>P(x)</m> is true</q>. In symbols, this can be summarized as,
-        </p>
-        <me>
-            \forall x \in S, P(x) \equiv x \in S \rightarrow P(x)
         </me>
     </subsection>
 
@@ -92,16 +102,126 @@
     </subsection>
 
     <subsection>
-        <title>Negating Quantifiers (De Morgan's Laws)</title>
+        <title>Quantifiers and Conditionals</title>
+        <p>
+            The statement, <m>\forall x \in S, P(x)</m> means that for all elements <m>x</m> in the set <m>S</m>, the statement <m>P(x)</m> is true. This is equivalent to saying that the conditional, <q>If <m>x</m> is <em>any</em> element of <m>S</m>, then <m>P(x)</m> is true</q>. In symbols, this can be summarized as,
+        </p>
         <me>
-            \neg \brac{\forall x, P(x)} \equiv \exists x, \neg P(x)
-        </me>
-        <me>
-            \neg \brac{\exists x, P(x)} \equiv \forall x, \neg P(x)
+            \forall x \in S, P(x) \equiv x \in S \rightarrow P(x)
         </me>
         <p>
-            In other words, the negation of a universal statement is an existential statement, and the negation of an existential statement is a universal statement.
+            A statement of the form <m>x \in S \rightarrow P(x)</m> is said to be <term>implicit quantification</term>.
         </p>
+    </subsection>
+
+    <subsection>
+        <title>Negating Quantifiers (De Morgan's Laws)</title>
+        <p>
+            Previously, we saw that the universal statement <m>\forall x, P(x)</m> is false if and only if there is at least one <m>x</m> such that <m>P(x)</m> is false. Analogously, the existential statement <m>\exists x, P(x)</m> is false if and only if <m>P(x)</m> is false for every value of <m>x</m>.
+        </p>
+        <p>
+            Roughly, this shows that the negation of a universal statement is an existential statement, and the negation of an existential statement is a universal statement. In particular,
+        </p>
+        <fact>
+            <title>Negation of quantified statements</title>
+            <md>
+                <mrow>\neg \brac{\forall x, P(x)} \amp \equiv \exists x, \neg P(x)</mrow>
+                <mrow>\text{and} \qquad \neg \brac{\exists x, P(x)} \equiv \forall x, \neg P(x)</mrow>
+            </md>
+        </fact>
+        <p>
+            Roughly, this meaans that to negate a quantified statement, <q>negate</q> both parts, i.e. flip <m>\forall</m> to <m>\exists</m> and vise versa, and negate the statement <m>P(x)</m>.
+        </p>
+        <p>
+            This duality between universal and existental statements, are analogous to de Morgan's laws, which show a duality between <q>or</q> and <q>and</q> statements. This similarity can be seen more precisely if the domain of <m>P(x)</m> is finite, say <m>\set{x_1, \dots, x_n}</m>. Then, recall that,
+        </p>
+        <me>
+            \forall x \in D, P(x) \equiv P(x_1) \land \dots \land P(x_n) \qquad \text{and} \qquad \exists x \in D, P(x) \equiv P(x_1) \lor \dots \lor P(x_n)
+        </me>
+        <p>
+            Then, by De Morgan's laws,
+        </p>
+        <md>
+            <mrow>\neg \brac{\forall x \in D, P(x)} \amp \equiv \neg \brac{P(x_1) \land \dots \land P(x_n)}</mrow>
+            <mrow>\amp \equiv \neg P(x_1) \lor \dots \lor \neg P(x_n) \amp\amp \text{by De Morgan's laws}</mrow>
+        </md>
+        <p>
+            and similarly,
+        </p>
+        <md>
+            <mrow>\neg \brac{\exists x \in D, P(x)} \amp \equiv \neg \brac{P(x_1) \lor \dots \lor P(x_n)}</mrow>
+            <mrow>\amp \equiv \neg P(x_1) \land \dots \land \neg P(x_n) \amp\amp \text{by De Morgan's laws}</mrow>
+        </md>
+        <p>
+            This reasoning only applies to finite sets, but the rules for negation of quantified statements applies to any domain set. In this sense, universal statements are a generalization of <q>and</q> statements, and existential statements are a generalization of <q>or</q> statements.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Universal Conditional Statements</title>
+        <p>
+            Sometimes, universal statements are false, but they are true if the domain <m>D</m> is restricted by some hypotheses <m>P(x)</m>. That is, if <m>P(x)</m> is satisfied, then the universal statement is true. This leads to the universal conditional.
+        </p>
+
+        <definition>
+            <p>
+                A <term>universal conditional statement</term> is a statement of the form,
+            </p>
+            <me>
+                \forall x \in D, \text{ if } P(x) \text{ then } Q(x) \qquad \text{or,} \qquad \forall x \in D, P(x) \rightarrow Q(x)
+            </me>
+        </definition>
+
+        <p>
+            If <m>S</m> is defined to be the subset of <m>D</m> such that <m>P(x)</m> is true, then an equivalent statement is,
+        </p>
+        <me>
+            \forall x \in S, Q(x)
+        </me>
+        <p>
+            In other words,
+        </p>
+        <me>
+            \forall x \in D, P(x) \rightarrow Q(x) \equiv \forall x \in S, Q(x)
+        </me>
+
+
+    </subsection>
+
+    <subsection>
+        <title>Negation of a Universal Conditional</title>
+        <p>
+            Recall that the negation of a universal statement <m>\forall x, P(x) \righarrow Q(x)</m>, is given by,
+        </p>
+        <me>
+            \neg \brac{\forall x, P(x) \righarrow Q(x)} \equiv \exists x \text{ such that } \neg (P(x) \righarrow Q(x))
+        </me>
+        <p>
+            Then, recall that the negation of a conditional is given by
+        </p>
+        <me>
+            \neg (P(x) \righarrow Q(x)) \equiv P(x) \land \neg Q(x)
+        </me>
+        <p>
+            Then, putting things together,
+        </p>
+        <fact>
+            <p>
+                The negation of a universal conditional is,
+            </p>
+            <me>
+                \boxed{\neg \brac{\forall x, P(x) \righarrow Q(x)} \equiv \exists x \text{ such that } P(x) \land \neg Q(x)}
+            </me>
+        </fact>
+    </subsection>
+
+    <subsection>
+        <title>Vacuous Truth of Universal Statements</title>
+        <definition>
+            <p>
+                A universal conditional <m>\for all x \in D, P(x) \rightarrow Q(x)</m>, is said to be <term>vacuously true</term> (or <term>true by default</term>) if <m>P(x)</m> is false for every <m>x \in D</m>.
+            </p>
+        </definition>
     </subsection>
 
     <subsection>

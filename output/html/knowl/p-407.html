@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T12:15:52-08:00       *-->
+<!--*       on 2022-02-01T14:21:27-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body>
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>This result is clearly false, as there is no largest positive integer. However, if we assume that a largest positive integer does exist, then we can “prove” the result.</p>
-<span class="incontext"><a href="section-EP.html#p-407">in-context</a></span>
+<p>By contradiction, suppose \(\sqrt{p}\) is rational, so there exists \(a, b \in \mathbb{Z}, b \neq 0\) such that \(\sqrt{p} = \frac{a}{b}\text{,}\) where \(a\) and \(b\) share no common factors. Then, \(p b^2 = a^2\text{,}\) so by Euclid's lemma, \(p \mid a\text{,}\) so \(a = kp\) for some \(k \in \mathbb{Z}\text{.}\) Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+pb^2 \amp = (kp)^2\\
+pb^2 \amp = k^2 p^2\\
+b^2 \amp = k^2 p
+\end{align*}
+</div>
+<p class="continuation">Then, \(p \mid b^2\text{,}\) so by Euclid's lemma, \(p \mid b\text{.}\) Thus, \(a\) and \(b\) share a common factor of \(p\text{,}\) contradicting the assumption that they share no common factors.</p>
+<span class="incontext"><a href="section-PBC.html#p-407">in-context</a></span>
 </body>
 </html>

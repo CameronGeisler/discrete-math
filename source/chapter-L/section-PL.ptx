@@ -31,6 +31,15 @@
             Proportional functions can be combined with logical operators, such as negation, conjunction, disjunction, etc.
         </p>
 
+        <definition>
+            <p>
+                Let <m>P(x)</m> be a predicate, where <m>x</m> has domain <m>D</m>. The <term>truth set</term> of <m>P(x)</m> is the set of all elements of <m>D</m> that make <m>P(x)</m> true when they are substituted for <m>x</m>. In other words, the set,
+            </p>
+            <me>
+                \set{x \in D : P(x)}
+            </me>
+        </definition>
+
     </subsection>
 
 </section>

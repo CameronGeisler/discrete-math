@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T12:15:48-08:00       *-->
+<!--*       on 2022-02-01T14:21:22-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -127,7 +127,14 @@
 </ul>
 </li>
 <li class="link">
-<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">7</span> <span class="title">More Advanced Counting</span></a><ul>
+<a href="chapter-FAR.html" data-scroll="chapter-FAR"><span class="codenumber">7</span> <span class="title">Functions and Relations</span></a><ul>
+<li><a href="section-R.html" data-scroll="section-R">Relations</a></li>
+<li><a href="section-F.html" data-scroll="section-F">Functions</a></li>
+<li><a href="section-OAO.html" data-scroll="section-OAO">One-to-one and Onto Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">8</span> <span class="title">More Advanced Counting</span></a><ul>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
@@ -138,41 +145,41 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-C"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Combinations</span>
 </h2>
-<section class="introduction" id="introduction-12"><article class="definition definition-like" id="definition-25"><h3 class="heading">
+<section class="introduction" id="introduction-12"><article class="definition definition-like" id="definition-30"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
 </h3>
-<p id="p-192">Broadly, a <dfn class="terminology">combination</dfn> is a selection of objects where order doesn't matter.</p></article><article class="example example-like" id="example-23"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-23"><h3 class="heading">
+<p id="p-212">Broadly, a <dfn class="terminology">combination</dfn> is a selection of objects where order doesn't matter.</p></article><article class="example example-like" id="example-23"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-23"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-23"><article class="example example-like"><p id="p-193">Consider a group of 5 distinct balls. How many ways can one choose a collection of 3 balls from these 5 balls? This can be framed as a permutation. List the balls from 1-5, and write I if the ball is included in the collection and E if it is excluded. For example, the particular collection of balls 2, 4, and 5 would be represented by \(EIEII\text{.}\) For another example, choosing balls 1, 2, and 3 is represented by \(IIIEE\text{.}\) In general, there is a one-to-one correspondence between the combinations of 5 balls taken 3 at a time, and permutations of this 5-character sequences of E's and I's. From permutations, we know that there are \(\frac{5!}{2! 3!} = 10\) permutations of \(EIEII\text{,}\) and so there are also 10 combinations.</p></article></div></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-23"><article class="example example-like"><p id="p-213">Consider a group of 5 distinct balls. How many ways can one choose a collection of 3 balls from these 5 balls? This can be framed as a permutation. List the balls from 1-5, and write I if the ball is included in the collection and E if it is excluded. For example, the particular collection of balls 2, 4, and 5 would be represented by \(EIEII\text{.}\) For another example, choosing balls 1, 2, and 3 is represented by \(IIIEE\text{.}\) In general, there is a one-to-one correspondence between the combinations of 5 balls taken 3 at a time, and permutations of this 5-character sequences of E's and I's. From permutations, we know that there are \(\frac{5!}{2! 3!} = 10\) permutations of \(EIEII\text{,}\) and so there are also 10 combinations.</p></article></div></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">Combinations</span>
 </h3>
-<p id="p-194">More generally, if there are \(n\) distinct objects, being chosen \(n\) at a time, then the number of combinations is equal to the number of permutations of an \(n\)-character sequence, where there are \(n\) identical objects of one kind (in the example, the I's), and \(n-r\) identical objects of another kind (the E's). Then,</p>
+<p id="p-214">More generally, if there are \(n\) distinct objects, being chosen \(n\) at a time, then the number of combinations is equal to the number of permutations of an \(n\)-character sequence, where there are \(n\) identical objects of one kind (in the example, the I's), and \(n-r\) identical objects of another kind (the E's). Then,</p>
 <article class="theorem theorem-like" id="theorem-12"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Combinations.</span>
 </h4>
-<p id="p-195">The number of combinations of \(n\) distinct objects taken \(n\) at a time, \(\nCr{n}{k}\) (read as “\(n\) choose \(n\)”), is given by,</p>
+<p id="p-215">The number of combinations of \(n\) distinct objects taken \(n\) at a time, \(\nCr{n}{k}\) (read as “\(n\) choose \(n\)”), is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 \nCr{n}{k} = \frac{n!}{(n - k)!k!}
 \end{equation*}
-</div></article><p id="p-196">Sometimes, the alternate notation \(\binom{n}{k}\) is used to represent \(\nCr{n}{k}\text{,}\) especially in more advanced mathematics.</p></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+</div></article><p id="p-216">Sometimes, the alternate notation \(\binom{n}{k}\) is used to represent \(\nCr{n}{k}\text{,}\) especially in more advanced mathematics.</p></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">Number of Subsets of a Given Size</span>
 </h3>
-<p id="p-197">Let \(A\) be a set of \(n\) elements, \(A = \set{a_1, \dots, a_n}\text{.}\) Then, the number of \(k\) element subsets of \(A\) is,</p>
+<p id="p-217">Let \(A\) be a set of \(n\) elements, \(A = \set{a_1, \dots, a_n}\text{.}\) Then, the number of \(k\) element subsets of \(A\) is,</p>
 <div class="displaymath">
 \begin{equation*}
 \nCr{n}{k} = \frac{n!}{k!(n - k)!}
 \end{equation*}
 </div>
-<p id="p-198">Note that the numbers of 1 element subsets is \(n\) (as there are \(n\) possible sets). For 2 element subsets, there are \(n\) ways to choose the first element, and \(n-1\) ways to choose the second element, for \(n(n - 1)\) ways to choose both. However, this assumes that order is relevant, that \(\set{s_3, s_4}\) is different than \(\set{s_4, s_3}\text{.}\) There are 2 ways to order each selection of 2 elements, so the total number of 2 element subsets is \(\frac{n(n - 1)}{2}\text{.}\)</p>
-<p id="p-199">For 3 element subsets, in a similar way, there are \(n(n - 1)(n - 2)\) ways to select 3 elements from \(n\) elements where order matters, and \(3 \cdot 2 \cdot 1 = 3! = 6\) ways to order a selection of 3 elements. Thus, the number of 3 element subsets is \(\frac{n(n - 1)(n - 2)}{6}\text{.}\)</p>
-<p id="p-200">In general, the number of \(k\) element subsets of an \(n\) element set is given by,</p>
+<p id="p-218">Note that the numbers of 1 element subsets is \(n\) (as there are \(n\) possible sets). For 2 element subsets, there are \(n\) ways to choose the first element, and \(n-1\) ways to choose the second element, for \(n(n - 1)\) ways to choose both. However, this assumes that order is relevant, that \(\set{s_3, s_4}\) is different than \(\set{s_4, s_3}\text{.}\) There are 2 ways to order each selection of 2 elements, so the total number of 2 element subsets is \(\frac{n(n - 1)}{2}\text{.}\)</p>
+<p id="p-219">For 3 element subsets, in a similar way, there are \(n(n - 1)(n - 2)\) ways to select 3 elements from \(n\) elements where order matters, and \(3 \cdot 2 \cdot 1 = 3! = 6\) ways to order a selection of 3 elements. Thus, the number of 3 element subsets is \(\frac{n(n - 1)(n - 2)}{6}\text{.}\)</p>
+<p id="p-220">In general, the number of \(k\) element subsets of an \(n\) element set is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!}
 \end{equation*}
 </div>
-<p id="p-201">This can be rewritten as,</p>
+<p id="p-221">This can be rewritten as,</p>
 <div class="displaymath">
 \begin{align*}
 \frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!} \amp = \frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!} \cdot \frac{(n - k)!}{(n - k)!}\\

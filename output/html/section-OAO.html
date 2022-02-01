@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-02-01T14:21:24-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>One-to-one and Onto Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-F.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-FAR.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chapter-MAC.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-F.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-FAR.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chapter-MAC.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-B.html" data-scroll="chapter-B"><span class="codenumber">1</span> <span class="title">Basics</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCIAC.html" data-scroll="section-CCIAC">Conditionals, Converse, Inverse, and Contrapositive</a></li>
+<li><a href="section-BLE.html" data-scroll="section-BLE">Biconditionals, Logical Equivalence</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+<li><a href="section-PL.html" data-scroll="section-PL">Predicate Logic</a></li>
+<li><a href="section-Q.html" data-scroll="section-Q">Quantifiers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-BC.html" data-scroll="chapter-BC"><span class="codenumber">3</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Summary of Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sequences</span></a><ul>
+<li><a href="section-ITSE.html" data-scroll="section-ITSE">Introduction to Sequences</a></li>
+<li><a href="section-SSN.html" data-scroll="section-SSN">Sums, Summation Notation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">5</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MI.html" data-scroll="chapter-MI"><span class="codenumber">6</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="section-PBMI.html" data-scroll="section-PBMI">Proof by Mathematical Induction</a></li>
+<li><a href="section-IE.html" data-scroll="section-IE">Induction Examples</a></li>
+<li><a href="section-SI.html" data-scroll="section-SI">Strong Induction</a></li>
+<li><a href="section-FOTPOMI.html" data-scroll="section-FOTPOMI">Foundations of the Principle of Math Induction</a></li>
+<li><a href="section-FPBI.html" data-scroll="section-FPBI">False Proofs by Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-FAR.html" data-scroll="chapter-FAR"><span class="codenumber">7</span> <span class="title">Functions and Relations</span></a><ul>
+<li><a href="section-R.html" data-scroll="section-R">Relations</a></li>
+<li><a href="section-F.html" data-scroll="section-F">Functions</a></li>
+<li><a href="section-OAO.html" data-scroll="section-OAO" class="active">One-to-one and Onto Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">8</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
+<li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
+<li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-OAO"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">One-to-one and Onto Functions</span>
+</h2>
+<section class="introduction" id="introduction-23"><p id="p-546">There are a few properties that certain functions have which are important enough to be given names.</p></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.1</span> <span class="title">Oneo-to-one and Onto Functions</span>
+</h3>
+<p id="p-547">Let \(f: X \rightarrow Y\) be a function.</p>
+<article class="definition definition-like" id="definition-47"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
+</h4>
+<p id="p-548">A function \(f\) is <dfn class="terminology">injective</dfn> (or is <dfn class="terminology">one-to-one</dfn>, or \(f\) is an <dfn class="terminology">injection</dfn>) if for all \(x_1, x_2 \in A\text{,}\) if \(f(x_1) = f(x_2)\text{,}\) then \(x_1 = x_2\text{.}\)</p></article><p id="p-549">Equivalently, for all \(x_1, x_2 \in X\text{,}\) if \(x_1 \neq x_2\text{,}\) then \(f(x_1) \neq f(x_2)\text{.}\) In other words, if the inputs are different, then the outputs will be different.</p>
+<article class="definition definition-like" id="definition-48"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
+</h4>
+<p id="p-550">Let \(f: X \rightarrow Y\) be a function. \(f\) is <dfn class="terminology">surjective</dfn> (or <dfn class="terminology">onto</dfn>, or \(f\) is a <dfn class="terminology">surjection</dfn>) if for all \(y \in Y\text{,}\) there exists \(x \in X\) such that \(f(x) = y\text{.}\)</p></article><p id="p-551">In other words, \(R(f) = Y\text{.}\) Or, \(f\) is not surjective if there exists \(y \in Y\) such that for all \(x \in X\text{,}\) \(f(x) \neq y\text{.}\)</p></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.2</span> <span class="title">One-to-one Correspondence</span>
+</h3>
+<article class="definition definition-like" id="definition-49"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+</h4>
+<p id="p-552">Let \(f: X \rightarrow Y\) be a function. \(f\) is a <dfn class="terminology">one-to-one correspondence</dfn> if \(f\) is injective and surjective.</p></article><p id="p-553">Each element in \(y\) is mapped from exactly 1 element in \(X\text{,}\) and each element in \(X\) maps to exactly one element in \(y\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{gather*}
+\forall x \in X, \exists y \in Y \text{ such that } f(x) = y\\
+\forall y \in Y, \exists x \in X \text{ such that } f(x) = y
+\end{gather*}
+</div>
+<p id="p-554">In this way, for a one-to-one correspondence function \(f\text{,}\) given an element of \(X\text{,}\) we can completely determine its corresponding element \(y\text{,}\) and vise versa.</p></section><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.3</span> <span class="title">Proving a Function is Onto</span>
+</h3>
+<p id="p-555">To prove a function \(f: X \rightarrow Y\) is surjective, consider an arbitrary element of the codomain \(y \in Y\text{.}\) Then, the goal is to find an element \(x \in X\) such that \(f(x) = y\text{.}\) Here, \(y\) is “given” and we need to solve for \(x\text{.}\) Often, this involves solving the equation \(f(x) = y\) for \(x\) in terms of \(y\text{.}\)</p>
+<article class="example example-like" id="example-41"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-41"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-41"><article class="example example-like"><p id="p-556">Let \(f: \mathbb{R} \rightarrow \mathbb{R}\text{,}\) \(f(x) = 7x - 3\text{.}\) Then, \(f\) is injective and surjective.</p>
+<ul class="disc">
+<li id="li-118"><p id="p-derived-li-118">Let \(x_1, x_2 \in \mathbb{R}\) with \(f(x_1) = f(x_2)\text{.}\) Then, \(7x_1 - 3 = 7x_2 - 3\text{,}\) and so \(x_1 = x_2\text{.}\) Thus, \(f\) is injective.</p></li>
+<li id="li-119"><p id="p-derived-li-119">Let \(y \in \mathbb{R}\text{,}\) so that \(x = \frac{y+3}{7} \in \mathbb{R}\text{.}\) Then, \(f(x) = 7(x+3)/7 - 3 = y\text{.}\) Thus, \(f\) is surjective.</p></li>
+</ul></article></div>
+<article class="example example-like" id="example-42"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-42"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like"><p id="p-557">Let \(f: \mathbb{R} \rightarrow \mathbb{R}\text{,}\) \(f(x) = x^2\text{.}\) Then, \(f\) is not injective and not surjective.</p>
+<ul class="disc">
+<li id="li-120"><p id="p-derived-li-120">Let \(x_1 = 1, x_2 = -1\text{.}\) Then, \(f(x_1) = f(1) = 1^2 = (-1)^2 = f(-1) = f(x_2)\text{.}\) Thus, \(f\) is injective.</p></li>
+<li id="li-121"><p id="p-derived-li-121">Let \(y = -1, x \in \mathbb{R}\text{.}\) Then, \(f(x) = x^2 \geq 0\text{,}\) so \(f(x) \neq -1\text{.}\)</p></li>
+</ul></article></div>
+<article class="example example-like" id="example-43"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-43"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like"><p id="p-558">Let \(f: \mathbb{R} \setminus \set{2} \rightarrow \mathbb{R} \setminus \set{5}\text{,}\) \(f(x) = \frac{5x+1}{x-2}\text{.}\) Then, \(f\) is bijective.</p>
+<p id="p-559">We will prove that \(f\) is injective and surjective.</p>
+<ul class="disc">
+<li id="li-122"><p id="p-derived-li-122">Let \(x_1, x_2 \in \mathbb{R} \setminus \set{2}\) with \(f(x_1) = f(x_2)\text{.}\) Then,<div class="displaymath">
+\begin{align*}
+\frac{5x_1 + 1}{x_1 - 2} \amp = \frac{5x_2 + 1}{x_2 - 2}\\
+(5x_1 + 1)(x_2 - 2) \amp = (x_1 - 2)(5x_2 + 1)\\
+5x_1x_2 - 10x_1 + x_2 - 2 \amp = 5x_1x_2 + x_1 - 10x_2 - 2 \\
+11x_1 \amp = 11x_2\\
+x_1 \amp = x_2
+\end{align*}
+</div>Thus, \(f\) is injective.</p></li>
+<li id="li-123"><p id="p-derived-li-123">Let \(y \in \mathbb{R} \setminus \set{5}\text{,}\) \(x = \frac{2y + 1}{y - 5} = 2 + \frac{11}{y-5}\text{.}\) Then, \(x \neq 2\text{.}\) Also, \(y \neq 5\text{.}\) Thus, \(x \in \mathbb{R} \setminus \set{2}\text{.}\) Thus,<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{5\brac{\frac{2y + 1}{y - 5}} + 1}{\frac{2y + 1}{y - 5} - 2} = \frac{5(2y+1) + y - 5}{2y + 1 - 2(y - 5)} = \frac{11y}{11} = y
+\end{equation*}
+</div>Thus, \(f\) is surjective.</p></li>
+</ul></article></div></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.4</span> <span class="title">Cardinality and Function Properties</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-35"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
+</h4>
+<p id="p-560">Let \(X, Y\) be finite sets, \(f: X \rightarrow Y\text{.}\) Then,</p>
+<ul class="disc">
+<li id="li-124"><p id="p-derived-li-124">\(f\) is injective if and only if \(\abs{X} \leq \abs{Y}\text{.}\)</p></li>
+<li id="li-125"><p id="p-derived-li-125">\(f\) is surjective if and only if \(\abs{X} \geq \abs{Y}\text{.}\)</p></li>
+<li id="li-126"><p id="p-derived-li-126">\(f\) is bijective if and only if \(\abs{X} = \abs{Y}\text{.}\)</p></li>
+</ul></article><article class="theorem theorem-like" id="theorem-36"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Schroder-Bernstein theorem.</span>
+</h4>
+<p id="p-561">If there exists an injective function \(f: X \rightarrow Y\) and another injective function \(g: Y \rightarrow X\text{,}\) then there exists a bijective function \(h: X \rightarrow Y\) and so \(\abs{X} = \abs{Y}\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-37"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.9</span><span class="period">.</span>
+</h4>
+<p id="p-562">Let \(X, Y\) be finite sets with \(\abs{X} = \abs{Y} = n\text{.}\) Then, there exist \(n!\) possible bijections from \(X\) to \(Y\text{.}\)</p></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><p id="p-563">For \(f: X \rightarrow Y\) to be a bijection, we need to map each of the \(n\) elements in \(X\) to each of the \(n\) elements in \(Y\text{,}\) such that no two elements of \(X\) are mapped to the same element in \(y\text{.}\) In other words, we need to create \(n\) pairs of elements \((x,y)\) where \(x \in X\) and \(y \in Y\text{,}\) using no elements more than once. For the first element of \(X\text{,}\) there are \(n\) elements in \(y\) that it can be paired with. For the second elements of \(X\text{,}\) there are now \(n - 1\) elements in \(y\) it can be paired with, because we cannot re-use the element already chosen. Continuing in this way, for the 2nd last element of \(X\text{,}\) there are 2 elements in \(Y\) it can be paired with. For the last element of \(X\text{,}\) there is only 1 element in \(Y\) it can be paired with. In this way, to describe \(f: X \rightarrow Y\text{,}\) the number of ways to do it is,</p>
+<div class="displaymath">
+\begin{equation*}
+n \cdot (n - 1) \cdots 2 \cdot 1 = n!
+\end{equation*}
+</div></article></div></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.5</span> <span class="title">Remarks</span>
+</h3>
+<p id="p-564">In more advanced math, one-to-one functions are called <dfn class="terminology">injective</dfn>, onto functions are called <dfn class="terminology">surjective</dfn>, and a one-to-one correspondence is called <dfn class="terminology">bijective</dfn>. Then, the noun equivalent for these terms are <dfn class="terminology">injection</dfn>, <dfn class="terminology">surjection</dfn>, and <dfn class="terminology">bijection</dfn>, respectively.</p></section></section></div></main>
+</div>
+</body>
+</html>
