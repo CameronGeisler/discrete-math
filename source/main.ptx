@@ -45,6 +45,7 @@
         <xi:include href="./chapter-MI.ptx"/>
         <xi:include href="./chapter-FAR.ptx"/>
         <xi:include href="./chapter-MAC.ptx"/>
+        <xi:include href="./chapter-MISC.ptx"/>
         <!-- Of course you will want to add more chapters as you proceed-->
     </book>
 </pretext>

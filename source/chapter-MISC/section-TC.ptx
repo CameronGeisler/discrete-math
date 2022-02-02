@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="section-BN">
+<section xml:id="section-TC">
     <title>Two's Complement</title>
     <introduction>
         <p>
@@ -28,7 +28,7 @@
                 The <term>two's complement</term> of an integer <m>a</m> between <m>-128</m> and <m>127</m> (inclusive) is the integer,
             </p>
             <me>
-                \begin{cases} a \amp a \geq 0 \\ 2^8 - \abs{a} \amp a \lt 0
+                \begin{cases} a \amp a \geq 0 \\ 2^8 - \abs{a} \amp a \lt 0 \end{cases}
             </me>
             <p>
                 represented in binary.

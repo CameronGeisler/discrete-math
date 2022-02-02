@@ -11,5 +11,6 @@
     <xi:include href="./chapter-FAR/section-R.ptx"/>
     <xi:include href="./chapter-FAR/section-F.ptx"/>
     <xi:include href="./chapter-FAR/section-OAOF.ptx"/>
+    <xi:include href="./chapter-FAR/section-ER.ptx"/>
 
 </chapter>

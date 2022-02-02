@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-ER">
+    <title>Equivalence Relations</title>
+
+    <introduction>
+        <p>
+            In mathematics, sometimes objects which are technically different are considered equal. This notion of a generalized form of equality is made precise with the concept of an <em>equivalence relation</em>.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Equivalence Relations</title>
+        <p>
+            Let <m>R</m> be a relation on a set <m>A</m>.
+        </p>
+        <definition>
+            <ul>
+                <li><m>R</m> is <term>reflexive</term> if for all <m>a \in A</m>, <m>a R a</m>.</li>
+                <li><m>R</m> is <term>symmetric</term> if for all <m>a, b \in A</m>, if <m>a R b</m>, then <m>b R a</m>.</li>
+                <li><m>R</m> is <term>transitive</term> if for all <m>a, b, c \in A</m>, if <m>a R b</m> and <m>b R c</m>, then <m>a R c</m>.</li>
+            </ul>
+        </definition>
+
+        <definition>
+            <p>
+                A relation <m>R</m> is an <term>equivalence relation</term> if it is reflexive, symmetric, and transitive.
+            </p>
+        </definition>
+
+        <p>
+            Intuitively, equivalence relations are a generalization of <q>equality</q> in that related elements <m>a, b</m> share some property common.
+        </p>
+
+        <example>
+            <p>
+                The canonical example of an equivalence relation is equality <m>=</m> on <m>\mathbb{R}</m> (or on any subset of <m>\mathbb{R}</m>, or on <m>\mathbb{C}</m>, etc.).
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Congruence Modulo <m>n</m> as an Equivalence Relation</title>
+        <p>
+            The relation of congruence modulo <m>n</m> is an equivalence relation.
+        </p>
+        <theorem>
+            <p>
+                Let <m>\equiv \pmod{n}</m> be the relation such that for <m>a, b \in \mathbb{Z}</m>, <m>a \equiv b</m> if <m>a - b = kn</m> for some <m>k \in \mathbb{Z}</m>. Then, <m>\equiv \pmod{n}</m> is an equivalence relation.
+            </p>
+        </theorem>
+        <proof>
+            <ul>
+                <li>Let <m>a \in \mathbb{Z}</m>. Then, <m>a - a = 0</m>, and <m>n \mid 0</m>, so <m>n \mid (a - a)</m>.</li>
+                <li>Let <m>a, b \in \mathbb{Z}</m>, with <m>a \equiv b \pmod{n}</m>. Then, <m>n \mid (a - b)</m>, so <m>a - b = kn</m> for some <m>k \in \mathbb{Z}</m>. Then, <m>b - a = (-k)n</m>, and since <m>-k \in \mathbb{Z}</m>, <m>n \mid (b - a)</m>. Thus, <m>b \equiv a \pmod{n}</m>.</li>
+                <li>
+                    Let <m>a, b, c \in \mathbb{Z}</m>, with <m>a \equiv b \pmod{n}</m> and <m>b \equiv c \pmod{n}</m>. Then, <m>n \mid (a - b)</m> and <m>n \mid (b - c)</m>. Then, <m>a - b = kn</m> and <m>b - c = ln</m> for some <m>k, l \in \mathbb{Z}</m>. Then,
+                    <me>
+                        a - c = (b + kn) - (b - ln) = kn + ln = (k + l)n
+                    </me>
+                    Then, <m>k + l \in \mathbb{Z}</m>, so <m>n \mid (a - c)</m>, and so <m>a \equiv c \pmod{n}</m>.
+                </li>
+            </ul>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Other Examples</title>
+        <example>
+            <p>
+                Greater than <m>></m> and less than <m>\lt</m> on <m>\mathbb{R}</m> is not reflexive, not symmetric, but is transitive.
+            </p>
+            <blockquote>
+                <q>Q: What will a logician choose: a half of an egg or eternal bliss in the afterlife? A: A half of an egg! Because nothing is better than eternal bliss in the afterlife, and a half of an egg is better than nothing.</q>
+            </blockquote>
+        </example>
+
+        <example>
+            <p>
+                Let <m>R</m> be <m>\leq</m> or <m>\geq</m> on <m>\mathbb{R}</m>. Then <m>R</m> is reflexive, not symmetric, and is transitive.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Let <m>R</m> be <m>=</m> on <m>\mathbb{R}</m>. Then <m>R</m> is reflexive, symmetric, and transitive.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Let <m>R</m> be <q>divides</q> on <m>\mathbb{Z}</m>, i.e. <m>\mid</m> is the relation such that for <m>a, b \in \mathbb{Z}</m>, <m>a \mid b</m> if there exists an integer <m>k</m> such that <m>b = ka</m>.
+            </p>
+            <p>
+                Then, <m>R</m> is reflexive, not symmetric, and is transitive.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Let <m>R</m> be the relation on <m>\mathbb{R}</m> such that <m>x R y</m> if <m>x^2 = y^2</m>.
+            </p>
+        </example>
+
+        <example>
+            <title>Triangle congruence</title>
+            <p>
+                Let <m>S</m> be the set of all triangles in the plane. Then, define a relation on <m>S</m> such that <m>a \sim b</m> if triangles <m>a</m> and <m>b</m> are congruent (have the same side lengths and same angles). Then, this is an equivalence relation. Triangles which are at different positions, but have the same size and shape, are considered equal.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Let <m>\mathcal{R}</m> be <q>have equal parity</q> on <m>\mathbb{Z}</m>, i.e. <m>a</m> has equal parity with <m>b</m> if <m>a</m> and <m>b</m> are either both even or both odd. Then, <m>R</m> is reflexive, symmetric, and transitive.
+            </p>
+            <proof>
+                <p>
+                    First, note that <m>a</m> and <m>b</m> have equal parity if and only if <m>2 \mid (a - b)</m>.
+                </p>
+                <ul>
+                    <li>
+                        Let <m>a \in \mathbb{Z}</m>. Then, <m>a - a = 0</m>, and <m>2 \mid 0</m>, so <m>2 \mid (a - a)</m>. Thus, <m>a R a</m>.
+                    </li>
+                    <li>
+                        Let <m>a, b \in \mathbb{Z}</m> with <m>a R b</m>. Then, <m>2 \mid (a - b)</m>, so there exists <m>k \in \mathbb{Z}</m> such that <m>a - b = 2k</m>. Then, <m>b - a = 2(-k)</m> with <m>-k \in \mathbb{Z}</m>, so <m>2 \mid (b - a)</m>. Thus, <m>b R a</m>.
+                    </li>
+                    <li>
+                        Let <m>a, b, c \in \mathbb{Z}</m> with <m>a R b</m> and <m>b R c</m>. Then, <m>2 \mid (a - b)</m> and <m>2 \mid (b - c)</m>. Thus, there exists <m>m, n \in \mathbb{Z}</m> such that <m>a - b = 2m</m> and <m>b - c = 2n</m>. Thus, since <m>m - n \in \mathbb{Z}</m>, we have,
+                        <me>
+                            a - c = (2m + b) - (b - 2n) = 2m - 2n = 2(m - n)
+                        </me>
+                        Thus, <m>2 \mid (a - c)</m>, and so <m>a R c</m>.
+                    </li>
+                </ul>
+            </proof>
+        </example>
+
+        <example>
+            <title>Subset relation</title>
+            <p>
+                Let <m>R</m> be <m>\subseteq</m> on <m>A = \mathcal{P}(\mathbb{Z})</m>. Then,
+            </p>
+            <ul>
+                <li><m>R</m> is reflexive, as for all <m>X \in \mathcal{P}(\mathbb{Z}), X \subseteq X</m>.</li>
+                <li><m>R</m> is not symmetric, as <m>\set{1} \subseteq \set{1,2}</m>, but <m>\set{1,2} \nsubseteq \set{1}</m>.</li>
+                <li><m>R</m> is transitive, as if <m>X \subseteq Y</m> and <m>Y \subseteq Z</m>, then <m>X \subseteq Z</m>.</li>
+            </ul>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Equivalence Classes</title>
+        <definition>
+            <p>
+                Let <m>R</m> be an equivalence relation on a set <m>A</m>, <m>x \in A</m>. The <term>equivalence class</term> of <m>x</m>, denoted by <m>[x]_R</m> (or simply <m>[x]</m>), is the set of all elements in <m>A</m> that are related to <m>x</m>. In other words,
+            </p>
+            <me>
+                [x]_{R} = \set{y \in A: y R x}
+            </me>
+        </definition>
+
+        <p>
+            Note that for any <m>x \in A</m>, <m>x \in [x]_R</m>, because <m>R</m> is reflexive. Thus, an equivalence class is made up of exactly all the elements that are related to each other.
+        </p>
+        <p>
+            We say that all the elements in an equivalence class are <term>equivalent</term> in the sense of the equivalence relation. Any element of an equivalence class is called a <term>representative</term> of that class. 
+        </p>
+
+        <theorem>
+            <p>
+                Let <m>R</m> be an equivalence relation on a set <m>A</m>. Then, for all <m>x, y \in A</m>, <m>x R y</m> if and only if <m>[x] = [y]</m>.
+            </p>
+        </theorem>
+
+        <proof>
+            <p>
+                Let <m>[x] = [y]</m>. Since <m>x \in [x]</m> and <m>[x] = [y]</m>, we have <m>x \in [y]</m>. By definition of equivalence class, <m>x R y</m>.
+            </p>
+            <p>
+                Conversely, let <m>x, y \in A</m> with <m>x R y</m>. Then,
+            </p>
+            <md>
+                <mrow>[x] \amp = \set{z \in A: z R x}</mrow>
+                <mrow>\amp = \set{z \in A: z R y} \amp\amp \text{$z R x$ and $x R y$, so $z R y$}</mrow>
+                <mrow>\amp = [y]</mrow>
+            </md>
+        </proof>
+
+        <corollary>
+            <p>
+                Let <m>R</m> be an equivalence relation on <m>A</m>. Then, for all <m>x, y \in A</m>, <m>[x]</m> and <m>[y]</m> are disjoint if and only if <m>[x] \neq [y]</m>.
+            </p>
+        </corollary>
+        <proof>
+            <p>
+                If <m>[x] \cap [y] = \emptyset</m>, then we are done. Otherwise, if <m>[x] \cap [y] \neq \emptyset</m>, then there exists <m>z \in B</m>. Thus, <m>z \in [x]</m> and <m>z \in [y]</m>, so <m>z R x</m>, <m>z R y</m>, and since <m>R</m> is reflexive, <m>x R z</m>. Then, since <m>R</m> is transitive, <m>x R y</m>. Therefore, <m>[x] = [y]</m>.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Indefinite Integrals as Equivalence Classes (Calculus)</title>
+        <p>
+            You may recall that in integral calculus, the indefinite integral (or antiderivative) of a function <m>f</m> is denoted by,
+        </p>
+        <me>
+            \int f(x) \,dx
+        </me>
+        <p>
+            If <m>F</m> is an antiderivative of <m>f</m>, then it is often written as,
+        </p>
+        <me>
+            \int f(x) \,dx = F(x) + C
+        </me>
+        <p>
+            For example,
+        </p>
+        <me>
+            \int 2x \,dx = x^2 + C
+        </me>
+        <p>
+            The idea is that the indefinite integral of <m>f</m> is any function of the form <m>F(x) + C</m>, where <m>C \in \mathbb{R}</m> is any real number. In other words, <m>\int f(x) \,dx</m> is a family (or set) of functions, given by,
+        </p>
+        <me>
+            \int f(x) \,dx = \set{F(x): F'(x) = f(x)}
+        </me>
+        <p>
+            Then, we know that if <m>F</m> is any particular function from this set, then this is equivalently,
+        </p>
+        <me>
+            \int f(x) \,dx = \set{F(x) + C: C \in \mathbb{R}}
+        </me>
+        <p>
+            In fact, this set can be thought of formally as an equivalence class. Define the relation <m>\sim</m> on the set of functions, such that <m>f \sim g</m> if and only if <m>f' = g'</m>, equivalently, if and only if <m>f</m> and <m>g</m> differ by a constant, i.e. <m>f = g + C</m> for some <m>C \in \mathbb{R}</m>. Then, this is an equivalence relation.
+        </p>
+        <proof>
+            <p>
+                First, <m>f = f + 0</m>, so <m>f \sim f</m>. Also, if <m>f = g + C</m>, then <m>g = f + (-C)</m>. Finally, if <m>f = g + C</m> and <m>g = h + D</m>, then <m>f = h + (C + D)</m>.
+            </p>
+        </proof>
+
+        <p>
+            Then, the equivalence class of <m>f</m>, <m>[f]</m>, is given by,
+        </p>
+        <me>
+            [f] = \set{g: g = f + C, C \in \mathbb{R}} = \set{f + C: C \in \mathbb{R}}
+        </me>
+        <p>
+            Thus, the indefinite integral of <m>f</m> is the equivalence class of functions that only differ by a constant,
+        </p>
+        <me>
+            \int f(x) \,dx = [F(x)]
+        </me>
+        <p>
+            This equivalence relation provides a generalized notion of equality. From the perspective of indefinite integrals, <m>x^2</m> and <m>x^2 + 1</m> are equal up to a constant. And, for the purposes of indefinite integration, we disregard constant differences between functions.
+        </p>
+    </subsection>    
+</section>
