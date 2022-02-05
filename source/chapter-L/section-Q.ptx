@@ -130,7 +130,7 @@
             </md>
         </fact>
         <p>
-            Roughly, this meaans that to negate a quantified statement, <q>negate</q> both parts, i.e. flip <m>\forall</m> to <m>\exists</m> and vise versa, and negate the statement <m>P(x)</m>.
+            Intuitively, this means that to negate a quantified statement, <q>negate</q> both parts, i.e. flip <m>\forall</m> to <m>\exists</m> and vise versa, and negate the statement <m>P(x)</m>.
         </p>
         <p>
             This duality between universal and existental statements, are analogous to de Morgan's laws, which show a duality between <q>or</q> and <q>and</q> statements. This similarity can be seen more precisely if the domain of <m>P(x)</m> is finite, say <m>\set{x_1, \dots, x_n}</m>. Then, recall that,
@@ -184,8 +184,6 @@
         <me>
             \forall x \in D, P(x) \rightarrow Q(x) \equiv \forall x \in S, Q(x)
         </me>
-
-
     </subsection>
 
     <subsection>

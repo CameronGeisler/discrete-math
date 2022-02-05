@@ -8,10 +8,10 @@
         </p>
     </introduction>
 
-    <xi:include href="./chapter-ITC/section-TFCP.ptx"/>
-    <xi:include href="./chapter-ITC/section-P.ptx"/>
-    <xi:include href="./chapter-ITC/section-PWIE.ptx"/>
-    <xi:include href="./chapter-ITC/section-C.ptx"/>
-    <xi:include href="./chapter-ITC/section-SOPAC.ptx"/>
+    <xi:include href="./chapter-BC/section-TFCP.ptx"/>
+    <xi:include href="./chapter-BC/section-P.ptx"/>
+    <xi:include href="./chapter-BC/section-PWIE.ptx"/>
+    <xi:include href="./chapter-BC/section-C.ptx"/>
+    <xi:include href="./chapter-BC/section-SOPAC.ptx"/>
 
 </chapter>

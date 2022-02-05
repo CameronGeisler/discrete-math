@@ -4,6 +4,11 @@
     <title>Circular Permutations</title>
 
     <introduction>
+        In some situations, order matters, but also the choices are circular in some sense, rather than linear.
+    </introduction>
+
+    <subsection>
+        <title></title>
         <p>
             Consider a necklace with <m>n</m> distinct beads. How many ways can the beads be arranged? Here, we consider two necklaces to be the same if one can be transformed to the other by a rotation. There are <m>n!</m> ways to order <m>n</m> distinct objects. However, for each of these permutations, there are <m>n</m> possible equivalent rotations. Thus, the number of necklace arrangements is,
         </p>
@@ -21,7 +26,7 @@
                 </me>
             </p>
         </theorem>
-    </introduction>
+    </subsection>
 
     <!-- \begin{example}
     Determine the number of ways 13 couples can be seated at a round table if no couple can sit opposite to one another at the table.

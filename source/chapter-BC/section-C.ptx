@@ -64,6 +64,48 @@
             <mrow>\amp = \frac{n!}{k!(n - k)!}</mrow>
         </md>
     </subsection>
+
+    <subsection>
+        <title>Other Examples</title>
+        <example>
+            <title>Diagonals of a regular polygon</title>
+            <p>
+                Consider a regular polygon, and its number of diagonals. Recall that a diagonal is a line segment that connects two vertices which are non-adjacent. We want to consider the number of diagonals of a regular polygon with <m>n</m> sides. The result should be a function of <m>n</m>.
+            </p>
+            <p>
+                First, consider <m>n = 3, 4, 5, 6, \dots</m>. It turns out that,
+            </p>
+            <me>
+                \begin{array}{ccc}
+                \text{number of sides } n \amp \text{number of diagonals } d_n \\
+                3 \amp 0 \\
+                4 \amp 2 \\
+                5 \amp 5 \\
+                6 \amp 9 \\
+                7 \amp 14
+                \end{array}
+            </me>
+            <p>
+                The first observation you may make is that the number of diagonals is not a linear function of <m>n</m>.
+            </p>
+            <p>
+                To form a diagonal, we need to choose 2 vertices. The first vertex we choose can be any of the <m>n</m> vertices. Then, to select the other vertex, we can choose from any of the vertices except for the vertex we already chose, and the two vertices adjacent to the vertex we chose, which gives <m>n-3</m> choices. This gives <m>n(n-3)</m> choices in total. However, the order of the vertex choice doesn't matter, because choosing vertex P and then Q produces the same diagonal as choosing Q and then P. So, we divide by 2 to get the result,
+            </p>
+            <me>
+                \boxed{d_n = \frac{n(n-3)}{2}}
+            </me>
+            <p>
+                Using combinations, a diagonal is made up of a pair of vertices. There are <m>\nCr{n}{2} = \frac{n(n-1)}{2}</m> ways to choose two vertices from <m>n</m>. Then, there are <m>n</m> choices which produce non-diagonals, each corresponding to the <m>n</m> sides of the polygon. Thus, in total, the number of diagonals is,
+            </p>
+            <md>
+                d_n = \frac{n(n-1)}{2} - n \amp = \frac{n^2 - n}{2} - \frac{2n}{2} \\
+                \amp = \frac{n^2 - 3n}{2}
+            </md>
+            <p>
+                which is equivalent to the previous result.
+            </p>
+        </example>
+    </subsection>
     
     <!-- \section*{Combinations Identity}
     \begin{theorem}
