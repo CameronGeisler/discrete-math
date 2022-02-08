@@ -217,7 +217,7 @@
         <title>Vacuous Truth of Universal Statements</title>
         <definition>
             <p>
-                A universal conditional <m>\for all x \in D, P(x) \rightarrow Q(x)</m>, is said to be <term>vacuously true</term> (or <term>true by default</term>) if <m>P(x)</m> is false for every <m>x \in D</m>.
+                A universal conditional <m>\forall x \in D, P(x) \rightarrow Q(x)</m>, is said to be <term>vacuously true</term> (or <term>true by default</term>) if <m>P(x)</m> is false for every <m>x \in D</m>.
             </p>
         </definition>
     </subsection>

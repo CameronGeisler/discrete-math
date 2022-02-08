@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-03T10:23:14-08:00       *-->
+<!--*       on 2022-02-08T11:37:16-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -158,7 +158,7 @@
 </h3>
 <p id="p-212">Broadly, a <dfn class="terminology">combination</dfn> is a selection of objects where order doesn't matter.</p></article><article class="example example-like" id="example-23"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-23"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-23"><article class="example example-like"><p id="p-213">Consider a group of 5 distinct balls. How many ways can one choose a collection of 3 balls from these 5 balls? This can be framed as a permutation. List the balls from 1-5, and write I if the ball is included in the collection and E if it is excluded. For example, the particular collection of balls 2, 4, and 5 would be represented by \(EIEII\text{.}\) For another example, choosing balls 1, 2, and 3 is represented by \(IIIEE\text{.}\) In general, there is a one-to-one correspondence between the combinations of 5 balls taken 3 at a time, and permutations of this 5-character sequences of E's and I's. From permutations, we know that there are \(\frac{5!}{2! 3!} = 10\) permutations of \(EIEII\text{,}\) and so there are also 10 combinations.</p></article></div></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-23"><article class="example example-like"><p id="p-213">Consider a group of 5 distinct balls. How many ways can one choose a collection of 3 balls from these 5 balls? This can be framed as a permutation. List the balls from 1-5, and write I if the ball is included in the collection and E if it is excluded. For example, the particular collection of balls 2, 4, and 5 would be represented by \(EIEII\text{.}\) For another example, choosing balls 1, 2, and 3 is represented by \(IIIEE\text{.}\) In general, there is a one-to-one correspondence between the combinations of 5 balls taken 3 at a time, and permutations of this 5-character sequences of E's and I's. From permutations, we know that there are \(\frac{5!}{2! 3!} = 10\) permutations of \(EIEII\text{,}\) and so there are also 10 combinations.</p></article></div></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">Combinations</span>
 </h3>
 <p id="p-214">More generally, if there are \(n\) distinct objects, being chosen \(n\) at a time, then the number of combinations is equal to the number of permutations of an \(n\)-character sequence, where there are \(n\) identical objects of one kind (in the example, the I's), and \(n-r\) identical objects of another kind (the E's). Then,</p>
@@ -170,7 +170,7 @@
 \begin{equation*}
 \nCr{n}{k} = \frac{n!}{(n - k)!k!}
 \end{equation*}
-</div></article><p id="p-216">Sometimes, the alternate notation \(\binom{n}{k}\) is used to represent \(\nCr{n}{k}\text{,}\) especially in more advanced mathematics.</p></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
+</div></article><p id="p-216">Sometimes, the alternate notation \(\binom{n}{k}\) is used to represent \(\nCr{n}{k}\text{,}\) especially in more advanced mathematics.</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">Number of Subsets of a Given Size</span>
 </h3>
 <p id="p-217">Let \(A\) be a set of \(n\) elements, \(A = \set{a_1, \dots, a_n}\text{.}\) Then, the number of \(k\) element subsets of \(A\) is,</p>
@@ -193,7 +193,38 @@
 \frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!} \amp = \frac{n(n - 1)(n - 2) \cdots (n - (k - 1))}{k!} \cdot \frac{(n - k)!}{(n - k)!}\\
 \amp = \frac{n!}{k!(n - k)!}
 \end{align*}
-</div></section></section></div></main>
+</div></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">Other Examples</span>
+</h3>
+<article class="example example-like" id="example-24"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-24"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Diagonals of a regular polygon.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-24"><article class="example example-like"><p id="p-222">Consider a regular polygon, and its number of diagonals. Recall that a diagonal is a line segment that connects two vertices which are non-adjacent. We want to consider the number of diagonals of a regular polygon with \(n\) sides. The result should be a function of \(n\text{.}\)</p>
+<p id="p-223">First, consider \(n = 3, 4, 5, 6, \dots\text{.}\) It turns out that,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{ccc}
+\text{number of sides } n \amp \text{number of diagonals } d_n \\
+3 \amp 0 \\
+4 \amp 2 \\
+5 \amp 5 \\
+6 \amp 9 \\
+7 \amp 14
+\end{array}
+\end{equation*}
+</div>
+<p id="p-224">The first observation you may make is that the number of diagonals is not a linear function of \(n\text{.}\)</p>
+<p id="p-225">To form a diagonal, we need to choose 2 vertices. The first vertex we choose can be any of the \(n\) vertices. Then, to select the other vertex, we can choose from any of the vertices except for the vertex we already chose, and the two vertices adjacent to the vertex we chose, which gives \(n-3\) choices. This gives \(n(n-3)\) choices in total. However, the order of the vertex choice doesn't matter, because choosing vertex P and then Q produces the same diagonal as choosing Q and then P. So, we divide by 2 to get the result,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{d_n = \frac{n(n-3)}{2}}
+\end{equation*}
+</div>
+<p id="p-226">Using combinations, a diagonal is made up of a pair of vertices. There are \(\nCr{n}{2} = \frac{n(n-1)}{2}\) ways to choose two vertices from \(n\text{.}\) Then, there are \(n\) choices which produce non-diagonals, each corresponding to the \(n\) sides of the polygon. Thus, in total, the number of diagonals is,</p>
+<div class="displaymath">
+\begin{align*}
+\end{align*}
+</div>
+<p id="p-227">which is equivalent to the previous result.</p></article></div></section></section></div></main>
 </div>
 </body>
 </html>

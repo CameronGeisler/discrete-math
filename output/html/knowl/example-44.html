@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-03T10:23:20-08:00       *-->
+<!--*       on 2022-02-08T11:37:25-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,25 @@
 </head>
 <body>
 <article class="example example-like"><h4 class="heading">
-<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">7.4.3</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">7.3.6</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
 </h4>
-<p>The canonical example of an equivalence relation is equality \(=\) on \(\mathbb{R}\) (or on any subset of \(\mathbb{R}\text{,}\) or on \(\mathbb{C}\text{,}\) etc.).</p></article><span class="incontext"><a href="section-ER.html#example-44">in-context</a></span>
+<p>Let \(f: \mathbb{R} \setminus \set{2} \rightarrow \mathbb{R} \setminus \set{5}\text{,}\) \(f(x) = \frac{5x+1}{x-2}\text{.}\) Then, \(f\) is bijective.</p>
+<p>We will prove that \(f\) is injective and surjective.</p>
+<ul class="disc">
+<li><p>Let \(x_1, x_2 \in \mathbb{R} \setminus \set{2}\) with \(f(x_1) = f(x_2)\text{.}\) Then,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{5x_1 + 1}{x_1 - 2} \amp = \frac{5x_2 + 1}{x_2 - 2}\\
+(5x_1 + 1)(x_2 - 2) \amp = (x_1 - 2)(5x_2 + 1)\\
+5x_1x_2 - 10x_1 + x_2 - 2 \amp = 5x_1x_2 + x_1 - 10x_2 - 2 \\
+11x_1 \amp = 11x_2\\
+x_1 \amp = x_2
+\end{align*}
+</div>Thus, \(f\) is injective.</p></li>
+<li><p>Let \(y \in \mathbb{R} \setminus \set{5}\text{,}\) \(x = \frac{2y + 1}{y - 5} = 2 + \frac{11}{y-5}\text{.}\) Then, \(x \neq 2\text{.}\) Also, \(y \neq 5\text{.}\) Thus, \(x \in \mathbb{R} \setminus \set{2}\text{.}\) Thus,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(x) = \frac{5\brac{\frac{2y + 1}{y - 5}} + 1}{\frac{2y + 1}{y - 5} - 2} = \frac{5(2y+1) + y - 5}{2y + 1 - 2(y - 5)} = \frac{11y}{11} = y
+\end{equation*}
+</div>Thus, \(f\) is surjective.</p></li>
+</ul></article><span class="incontext"><a href="section-OAO.html#example-44">in-context</a></span>
 </body>
 </html>
