@@ -220,6 +220,10 @@
                 A universal conditional <m>\forall x \in D, P(x) \rightarrow Q(x)</m>, is said to be <term>vacuously true</term> (or <term>true by default</term>) if <m>P(x)</m> is false for every <m>x \in D</m>.
             </p>
         </definition>
+
+        <p>
+            <url href = "https://www.csectioncomics.com/comics/vacuous-truth">Here is a comic which illustrates vacuous truth</url>.
+        </p>
     </subsection>
 
     <subsection>
