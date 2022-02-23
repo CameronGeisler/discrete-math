@@ -70,6 +70,12 @@
 
     <subsection>
         <title>Karnaugh Maps (K-maps)</title>
+        <p>
+            A method for simplifying Boolean expressions.
+        </p>
+
+        <!-- https://en.wikipedia.org/wiki/Karnaugh_map -->
+        <!-- https://www.youtube.com/watch?v=RO5alU6PpSU -->
     </subsection>
 
     <subsection>
