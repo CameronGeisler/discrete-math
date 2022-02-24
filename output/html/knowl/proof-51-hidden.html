@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-18T12:15:07-08:00       *-->
+<!--*       on 2022-02-24T12:23:08-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>By induction, for the base case, postage of two and three cents can be formed by one two-cent stamp and one three-cent stamp, respectively. Then, by strong induction, assume the result is true for all postage of \(k\) cents for \(3 \leq k \leq n\text{.}\) Then, a postage of \((n+1)\) cents can be formed by taking stamps of \((n-1)\) cents and adding a two-cent stamp.</p></article></body>
+<body><article class="hiddenproof"><p>By induction, for \(n = 2\text{,}\) we have \(3 \mid (2^3 - 2)\text{,}\) or \(3 \mid 6\text{,}\) which is true.</p>
+<p>Then, assume the result is true for some \(n = k \in \mathbb{N}\text{,}\) that is, \(3 \mid (k^3 - k)\text{.}\) We want to show that,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+3 \mid ((k + 1)^3 - (k + 1))
+\end{equation*}
+</div>
+<p>Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(k + 1)^3 - (k + 1) \amp = (k^3 + 3k^2 + 3k + 1) - k - 1\\
+\amp = k^3 + 3k^2 + 2k\\
+\amp = k(k^2 + 3k + 2)\\
+\amp = k(k + 1)(k + 2)
+\end{align*}
+</div>
+<p>Then, \(k(k+1)(k+2)\) is the product of 3 consecutive integers. Then, one of \(k, k+1, k+2\) must be divisible by 3, so \(k(k+1)(k+2)\) is divisible by 3, and so \(3 \mid ((k + 1)^3 - (k + 1))\text{.}\) Thus, the result is true for all \(n \in \mathbb{N}, n \geq 2\text{.}\)</p></article></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-18T12:15:08-08:00       *-->
+<!--*       on 2022-02-24T12:23:08-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,14 +13,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>First, note that \(a\) and \(b\) have equal parity if and only if \(2 \mid (a - b)\text{.}\)</p>
-<ul class="disc">
-<li><p>Let \(a \in \mathbb{Z}\text{.}\) Then, \(a - a = 0\text{,}\) and \(2 \mid 0\text{,}\) so \(2 \mid (a - a)\text{.}\) Thus, \(a R a\text{.}\)</p></li>
-<li><p>Let \(a, b \in \mathbb{Z}\) with \(a R b\text{.}\) Then, \(2 \mid (a - b)\text{,}\) so there exists \(k \in \mathbb{Z}\) such that \(a - b = 2k\text{.}\) Then, \(b - a = 2(-k)\) with \(-k \in \mathbb{Z}\text{,}\) so \(2 \mid (b - a)\text{.}\) Thus, \(b R a\text{.}\)</p></li>
-<li><p>Let \(a, b, c \in \mathbb{Z}\) with \(a R b\) and \(b R c\text{.}\) Then, \(2 \mid (a - b)\) and \(2 \mid (b - c)\text{.}\) Thus, there exists \(m, n \in \mathbb{Z}\) such that \(a - b = 2m\) and \(b - c = 2n\text{.}\) Thus, since \(m - n \in \mathbb{Z}\text{,}\) we have,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-a - c = (2m + b) - (b - 2n) = 2m - 2n = 2(m - n)
-\end{equation*}
-</div>Thus, \(2 \mid (a - c)\text{,}\) and so \(a R c\text{.}\)</p></li>
-</ul></article></body>
+<body><article class="hiddenproof"><p>By induction, for the base case, postage of two and three cents can be formed by one two-cent stamp and one three-cent stamp, respectively. Then, by strong induction, assume the result is true for all postage of \(k\) cents for \(3 \leq k \leq n\text{.}\) Then, a postage of \((n+1)\) cents can be formed by taking stamps of \((n-1)\) cents and adding a two-cent stamp.</p></article></body>
 </html>

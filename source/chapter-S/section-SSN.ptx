@@ -232,7 +232,7 @@
     </subsection>
 
     <subsection>
-        <title>Sum of the First n Natural Numbers (Gauss's Problem)</title>
+        <title>Sum of the First <m>n</m> Natural Numbers (Gauss's Problem)</title>
         <p>
             One of the most famous stories in mathematics is the story of the mathematician Gauss. However, it is not known whether or not this actually took place. It goes as follows: In elementary school, the teacher asked Gauss's class to add up the first 100 positive integers (i.e. <m>1 + 2 + 3 + \dots + 99 + 100</m>). The idea was that it would be a time-killer, however Gauss (being gifted in math) recognized a pattern and figured out a method to calculate the sum quickly.
         </p>
@@ -344,6 +344,7 @@
     <subsection>
         <title>Telescoping Sums</title>
         <example>
+            <title>Motivational example</title>
             <p>
                 Consider the sum,
             </p>
@@ -513,11 +514,11 @@
             <p>
                 For all <m>n \in \mathbb{N}</m>,
                 <me>
-                    1^3 + 2^3 + 3^3 + \dots + (n - 1)^3 + n^3 = \sum_{i=1}^n i^3 = \brac{\frac{n(n + 1)}{2}}^2
+                    1^3 + 2^3 + 3^3 + \dots + (n - 1)^3 + n^3 = \sum_{i=1}^n i^3 = \frac{n^2(n + 1)^2}{4}
                 </me>
                 Notice that in particular,
                 <me>
-                    \sum_{i=1}^n i^3 = \brac{\sum_{i=1}^n i}^2
+                    \sum_{i=1}^n i^3 = \brac{\frac{n(n+1)}{2}}^2 = \brac{\sum_{i=1}^n i}^2
                 </me>
             </p>
         </theorem>

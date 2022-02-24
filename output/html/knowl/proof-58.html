@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-18T12:15:08-08:00       *-->
+<!--*       on 2022-02-24T12:23:08-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<p>If \([x] \cap [y] = \emptyset\text{,}\) then we are done. Otherwise, if \([x] \cap [y] \neq \emptyset\text{,}\) then there exists \(z \in B\text{.}\) Thus, \(z \in [x]\) and \(z \in [y]\text{,}\) so \(z R x\text{,}\) \(z R y\text{,}\) and since \(R\) is reflexive, \(x R z\text{.}\) Then, since \(R\) is transitive, \(x R y\text{.}\) Therefore, \([x] = [y]\text{.}\)</p></article><span class="incontext"><a href="section-ER.html#proof-58">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="title">False proof.</span></h4>
+<p>Let \(S = \set{c_1, c_2, \dots, c_n}\) represent a set of \(n\) cows, each labelled \(c_k\text{.}\) For \(n = 1\text{,}\) this is a set of 1 cow, of which all cows have the same colour, vacuously.</p>
+<p>Then, assume the result is true for a set of \(k\) cows for some \(k \in \mathbb{N}\text{.}\) Then, we want to show that a set of \(k+1\) cows all have the same colour.</p>
+<p>Consider a group of \(k+1\) cows. Remove any one cow, and then a group of \(k\) remains, which by the induction hypothesis all have the same colour. Then, return the cow and remove any one different cow, again leaving a group of \(k\) cows, which all have the same colour. Then, the first removed cow has the same colour as the rest of the group, and the second removed cow has the same colour as the rest of the group. Thus, the first and second removed cow have the same colour, and so all \(k+1\) cows have the same colour. Thus, by induction, all cows are the same colour.</p></article><span class="incontext"><a href="section-FPBI.html#proof-58">in-context</a></span>
 </body>
 </html>

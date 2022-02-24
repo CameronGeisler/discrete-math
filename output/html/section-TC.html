@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-18T12:15:04-08:00       *-->
+<!--*       on 2022-02-24T12:23:04-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -153,34 +153,34 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-TC"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Two's Complement</span>
 </h2>
-<section class="introduction" id="introduction-31"><p id="p-663">Consider the problem of representing an integer on a computer, especially integers which can be either positive or negative (i.e. <em class="emphasis">signed</em> integers). Ideally, we want a fixed number of bits is used.</p>
-<p id="p-664">One simple method is to use the left-most bit to represent the sign of the integer, and the other bits to represent the absolute value of the integer. However, this method makes addition and subtraction more complicated, and it makes it such that the representation of the number 0 is not unique.</p>
-<p id="p-665">Instead, a common method that is used is called <em class="emphasis">two's complement</em>.</p></section><section class="subsection" id="subsection-141"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-31"><p id="p-712">Consider the problem of representing an integer on a computer, especially integers which can be either positive or negative (i.e. <em class="emphasis">signed</em> integers). Ideally, we want a fixed number of bits is used.</p>
+<p id="p-713">One simple method is to use the left-most bit to represent the sign of the integer, and the other bits to represent the absolute value of the integer. However, this method makes addition and subtraction more complicated, and it makes it such that the representation of the number 0 is not unique.</p>
+<p id="p-714">Instead, a common method that is used is called <em class="emphasis">two's complement</em>.</p></section><section class="subsection" id="subsection-143"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Two's Complement</span>
 </h3>
-<p id="p-666">Overall, two's complement uses a sequence of bits (binary digits) whose length is a power of 2, say 32. Since each digit can either be 0 or 1, this allows for representation of \(2^{32}\) decimal integers. This is used to represent all integers between \(- 2^{31}\) and \(2^{31} - 1\text{,}\) inclusive, which (again) is a total of \(2^{32}\) integers. This particular configuration allows for integers up to about 4 billion. Or, the next higher would be \(2^{64}\text{.}\) This is called <dfn class="terminology">32-bit</dfn>, and <dfn class="terminology">64-bit</dfn>, respectively.</p>
-<p id="p-667">For simplicity, we will explore the method and concepts using <dfn class="terminology">8-bit</dfn> representations (i.e. with 8 bits). However, the method easily generalizes to 32-bit or 64-bit.</p>
+<p id="p-715">Overall, two's complement uses a sequence of bits (binary digits) whose length is a power of 2, say 32. Since each digit can either be 0 or 1, this allows for representation of \(2^{32}\) decimal integers. This is used to represent all integers between \(- 2^{31}\) and \(2^{31} - 1\text{,}\) inclusive, which (again) is a total of \(2^{32}\) integers. This particular configuration allows for integers up to about 4 billion. Or, the next higher would be \(2^{64}\text{.}\) This is called <dfn class="terminology">32-bit</dfn>, and <dfn class="terminology">64-bit</dfn>, respectively.</p>
+<p id="p-716">For simplicity, we will explore the method and concepts using <dfn class="terminology">8-bit</dfn> representations (i.e. with 8 bits). However, the method easily generalizes to 32-bit or 64-bit.</p>
 <article class="definition definition-like" id="definition-55"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
 </h4>
-<p id="p-668">The <dfn class="terminology">two's complement</dfn> of an integer \(a\) between \(-128\) and \(127\) (inclusive) is the integer,</p>
+<p id="p-717">The <dfn class="terminology">two's complement</dfn> of an integer \(a\) between \(-128\) and \(127\) (inclusive) is the integer,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} a \amp a \geq 0 \\ 2^8 - \abs{a} \amp a \lt 0 \end{cases}
 \end{equation*}
 </div>
-<p id="p-669">represented in binary.</p></article><p id="p-670">To determine the two's complement of a negative integer \(a\text{,}\) first convert \(\abs{a}\) to binary. Then, flip each bit, i.e. change each 0 to 1 and 1 to 0. Finally, add 1.</p>
-<p id="p-671">The flipping of each bit corresponds to subtracting \(\abs{a}_2\) from \((2^8 - 1)_2 = 11111111_2\text{.}\) Then, the adding of 1 gives the desired result,</p>
+<p id="p-718">represented in binary.</p></article><p id="p-719">To determine the two's complement of a negative integer \(a\text{,}\) first convert \(\abs{a}\) to binary. Then, flip each bit, i.e. change each 0 to 1 and 1 to 0. Finally, add 1.</p>
+<p id="p-720">The flipping of each bit corresponds to subtracting \(\abs{a}_2\) from \((2^8 - 1)_2 = 11111111_2\text{.}\) Then, the adding of 1 gives the desired result,</p>
 <div class="displaymath">
 \begin{equation*}
 (2^8 - 1)_2 - \abs{a}_2 + 1_2 = (2^8 - \abs{a})_2
 \end{equation*}
-</div></section><section class="subsection" id="subsection-142"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-144"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.2</span> <span class="title">Addition and Subtraction with Two's Complement</span>
 </h3>
-<p id="p-672">Consider \(a + b\) or \(a - b\text{,}\) using two's complements. First, notice that examining addition is sufficient, because subtraction is just addition of the negative, \(a - b = a + (-b)\text{.}\)</p>
-<p id="p-673">First, convert \(a\) and \(b\) to their two's complement representation. Then, add the integers using binary addition, but discard any carr bit that occurs in the \(2^8\)th digit position. Finally, convert the integer back to decimal form.</p>
-<p id="p-674">If the result of the sum is outside the range, this results in an <dfn class="terminology">overflow error</dfn>. This occurs precisely when both integers are positive but the result is negative, or when both integers are negative but the result is positive.</p></section></section></div></main>
+<p id="p-721">Consider \(a + b\) or \(a - b\text{,}\) using two's complements. First, notice that examining addition is sufficient, because subtraction is just addition of the negative, \(a - b = a + (-b)\text{.}\)</p>
+<p id="p-722">First, convert \(a\) and \(b\) to their two's complement representation. Then, add the integers using binary addition, but discard any carr bit that occurs in the \(2^8\)th digit position. Finally, convert the integer back to decimal form.</p>
+<p id="p-723">If the result of the sum is outside the range, this results in an <dfn class="terminology">overflow error</dfn>. This occurs precisely when both integers are positive but the result is negative, or when both integers are negative but the result is positive.</p></section></section></div></main>
 </div>
 </body>
 </html>

@@ -5,8 +5,99 @@
 
     <introduction>
         <p>
-            Mathematical induction is a method for proving statements about the set of natural numbers. Since there are infinitely many natural numbers, a general statement about the natural numbers cannot be proven by showing it for certain cases. Math induction allows us to prove a statement for all natural numbers, in a relatively concise way.
+            Mathematical induction is a method for proving statements about the set of natural numbers. Since there are infinitely many natural numbers, a general statement about the natural numbers cannot be proven by showing it for particular cases. Math induction allows us to prove a statement for all natural numbers, in a relatively concise way.
         </p>
+        <example>
+            <title>Motivational example</title>
+            <p>
+                The method of mathematical induction was first used by <term>Francesco Maurolico
+                </term> (1494-1575), Italian mathematician and astronomer, in his work <em>Arithmeticorum libri duo</em>, published in 1575. He used it to prove the closed form formula for the sum of the first <m>n</m> odd positive integers.
+            </p>
+            <p>
+                Consider the sum of the first odd positive integers,
+            </p>
+            <md>
+                <mrow>1 \amp = 1</mrow>
+                <mrow>1 + 3 \amp = 4</mrow>
+                <mrow>1 + 3 + 5 \amp = 9</mrow>
+                <mrow>1 + 3 + 5 + 7 \amp = 16</mrow>
+                <mrow>1 + 3 + 5 + 7 + 9 \amp = 25</mrow>
+                <mrow>\vdots \amp = \vdots</mrow>
+            </md>
+            <p>
+                Notice that the resulting numbers are the squares of natural numbers,
+            </p>
+            <md>
+                <mrow>1 \amp = 1 = 1^2</mrow>
+                <mrow>1 + 3 \amp = 4 = 2^2</mrow>
+                <mrow>1 + 3 + 5 \amp = 9 = 3^2</mrow>
+                <mrow>1 + 3 + 5 + 7 \amp = 16 = 4^2</mrow>
+                <mrow>1 + 3 + 5 + 7 + 9 \amp = 25 = 5^2</mrow>
+                <mrow>\vdots \amp = \vdots</mrow>
+            </md>
+            <p>
+                This pattern seems to continue, which leads to a conjecture. That is, the sum of the first <m>n</m> natural numbers is equal to <m>n^2</m>. The <m>i</m>th odd positive number can be written as <m>2i-1</m> for <m>i = 1, 2, 3, \dots</m>. So, this means,
+            </p>
+            <me>
+                1 + 3 + 5 + \dots + (2n - 1) = n^2
+            </me>
+            <p>
+                Or, in summation notation,
+            </p>
+            <me>
+                \sum_{i=1}^n (2i - 1) = n^2
+            </me>
+            <p>
+                We want to prove this formula for every <m>n</m>. At first, it seems like as <m>n</m> get larger, the arithmetic will become more tedious, and more difficult. However, notice that each case depends on the previous case. For example, for the <m>n = 5</m> case,
+            </p>
+            <md>
+                <mrow>1 + 3 + 5 + 7 + 9 \amp = (1 + 3 + 5 + 7) + 9</mrow>
+                <mrow>\amp = 4^2 + 9 \amp\amp \text{by the previous case $n = 4$}</mrow>
+                <mrow>\amp = 25</mrow>
+            </md>
+            <p>
+                That is, if we know the conjecture holds for the previous case, we only need to add one additional number to verify it is true for the next case.
+            </p>
+            <p>
+                The idea with induction is that we will prove this for a general case, where <m>n</m> is some arbirary positive integer <m>k</m>. If we can show that in general, if the statement is true for some <m>n = k</m>, then it is also true for <m>n = k+1</m>, then the statement will proven for all <m>n</m>.
+            </p>
+            <p>
+                This is because, since we've shown its true for <m>n = 1</m>, it's also true for <m>n = 2</m>. Because it's true for <m>n = 2</m>, it's also true for <m>n = 3</m>. Similarly, because it's true for <m>n = 4</m>, it's also true for <m>n = 5</m>. And so on. For any integer <m>n</m>, we can continue this reasoning until up to that <m>n</m>.
+            </p>
+            <p>
+                In summary, we want to show that if <m>P(k)</m> is true, then <m>P(k+1)</m> is true. To do this, first suppose that <m>P(k)</m> is true. That is, for this arbitrary but particular positive integer <m>k</m>,
+            </p>
+            <me>
+                1 + 3 + 5 + \dots + (2k-1) = k^2 \qquad \text{or,} \qquad \sum_{i=1}^k (2i-1) = k^2
+            </me>
+            <p>
+                Then, we want to show that,
+            </p>
+            <me>
+                1 + 3 + 5 + \dots + (2k-1) + (2k+1) = (k+1)^2 \qquad \text{or,} \qquad \sum_{i=1}^{k+1} (2i-1) = (k+1)^2
+            </me>
+            <p>
+                Here, note that the next odd number in the summation is <m>2(k + 1) - 1 = 2k + 1</m>. As before, the key insight is that this next sum <em>can be written in terms of the previous sum</em>, as,
+            </p>
+            <md>
+                <mrow>\underbrace{1 + 3 + 5 + \dots + (2k-1)}_{\sum_{i=1}^k (2i-1)} + (2k+1)</mrow>
+            </md>
+            <p>
+                Then, since we have assumed that <m>\sum_{i=1}^k (2i-1) = k^2</m>, we have that,
+            </p>
+            <me>
+                1 + 3 + 5 + \dots + (2k-1) + (2k+1) = k^2 + (2k + 1)
+            </me>
+            <p>
+                Finally, notice that <m>k^2 + 2k + 1 = (k + 1)^2</m> can be factored as a perfect square trinomial. This is exactly what we wanted to show,
+            </p>
+            <me>
+                1 + 3 + 5 + \dots + (2k-1) + (2k+1) = (k+1)^2
+            </me>
+            <p>
+                This proves the statement for any natural number <m>n</m>.
+            </p>
+        </example>
     </introduction>
 
     <subsection>
@@ -24,6 +115,10 @@
                 </ul>
             </p>
         </theorem>
+
+        <p>
+            In 1654, Blaise Pascal more precisely specified the method, and in 1883, Augustus De Morgan gave it the modern name <q>mathematical induction</q>.
+        </p>
     </subsection>
 
     <subsection>
@@ -47,49 +142,40 @@
     </subsection>
 
     <subsection>
-        <title>First Example</title>
-        <p>
-            The method of mathematical induction was first used by <term>Francesco Maurolico
-            </term> (1494-1575), Italian mathematician and astronomer, in his work <em>Arithmeticorum libri duo</em>, published in 1575. He used it to prove the closed form formula for the sum of the first <m>n</m> odd positive integers. In 1654, Blaise Pascal more precisely specified the method, and in 1883, Augustus De Morgan gave it the modern name <q>mathematical induction</q>.
-        </p>
-        <theorem>
-            <p>
-                The sum of the first <m>n</m> odd natural numbers is <m>n^2</m>. In other words,
-                <me>
-                    1 + 3 + 5 + \dots + (2n - 3) + (2n - 1) = \sum_{k=1}^n (2k - 1) = n^2
-                </me>
-            </p>
-        </theorem>
-
-        <p>
-            Induction is one method to prove this formula, among others.
-        </p>
-
-        <proof>
-            <p>
-                By induction, for <m>n = 1</m>, we have,
-                <me>
-                    \sum_{i=1}^1 (2i - 1) = 1 = 1^2
-                </me>
-                Then, assume the result is true for some <m>n = k \in \mathbb{N}</m>, and we want to show that,
-                <me>
-                    1 + 3 + \dots + (2k - 1) + (2(k + 1) + 1) = \sum_{i=1}^{k+1} (2i - 1) = (k + 1)^2
-                </me>
-                Here, note that the next odd number in the summation is <m>2(k + 1) - 1 = 2k + 1</m>. Then,
-                <md>
-                    <mrow>1 + 3 + \dots + (2k - 1) + (2k + 1) \amp = \sum_{i=1}^{k+1} (2i - 1)</mrow>
-                    <mrow>\amp = \sum_{i=1}^k (2i - 1) + (2k + 1) \amp\amp \text{separating off the final term}</mrow>
-                    <mrow>\amp = k^2 + (2k + 1) \amp\amp \text{by the induction hypothesis}</mrow>
-                    <mrow>\amp = (k + 1)^2 \amp\amp \text{by factoring}</mrow>
-                </md>
-                Thus, by induction, the result is true for all <m>n \in \mathbb{N}</m>.
-            </p>
-        </proof>
-
-    </subsection>
-
-    <subsection>
         <title>More Basic Examples</title>
+
+        <example>
+            <title>Motivational example revisited</title>
+            <fact>
+                <p>
+                    The sum of the first <m>n</m> odd natural numbers is <m>n^2</m>. In other words,
+                    <me>
+                        1 + 3 + 5 + \dots + (2n - 3) + (2n - 1) = \sum_{k=1}^n (2k - 1) = n^2
+                    </me>
+                </p>
+            </fact>
+    
+            <proof>
+                <p>
+                    By induction, for <m>n = 1</m>, we have,
+                    <me>
+                        \sum_{i=1}^1 (2i - 1) = 1 = 1^2
+                    </me>
+                    Then, assume the result is true for some <m>n = k \in \mathbb{N}</m>, and we want to show that,
+                    <me>
+                        1 + 3 + \dots + (2k - 1) + (2(k + 1) + 1) = \sum_{i=1}^{k+1} (2i - 1) = (k + 1)^2
+                    </me>
+                     Then,
+                    <md>
+                        <mrow>1 + 3 + \dots + (2k - 1) + (2k + 1) \amp = \sum_{i=1}^{k+1} (2i - 1)</mrow>
+                        <mrow>\amp = \sum_{i=1}^k (2i - 1) + (2k + 1) \amp\amp \text{separating off the final term}</mrow>
+                        <mrow>\amp = k^2 + (2k + 1) \amp\amp \text{by the induction hypothesis}</mrow>
+                        <mrow>\amp = (k + 1)^2 \amp\amp \text{by factoring}</mrow>
+                    </md>
+                    Thus, by induction, the result is true for all <m>n \in \mathbb{N}</m>.
+                </p>
+            </proof>
+        </example>
 
         <fact>
             <title>Product of consecutive integers is even</title>
@@ -98,45 +184,24 @@
             </p>
         </fact>
         <p>
-            This is true for all <m>n \in \mathbb{Z}</m> however we will only prove it for positive integers. This can be proved without induction, since at least one of <m>n</m> and <m>(n + 1)</m> is even (if <m>n</m> is even, then <m>(n + 1)</m> is odd, and if <m>n</m> is odd, then <m>(n + 1)</m> is even). Thus, <m>n(n + 1)</m> is the product of an even and odd integer, which is even.
+            This is true for all <m>n \in \mathbb{Z}</m> however we will only prove it for positive integers. This can be proved without induction. This is because at least one of <m>n</m> and <m>(n + 1)</m> is even, using proof by cases. If <m>n</m> is even, then <m>(n + 1)</m> is odd, and if <m>n</m> is odd, then <m>(n + 1)</m> is even. Thus, <m>n(n + 1)</m> is the product of an even and odd integer, which is even.
         </p>
         <proof>
             <p>
-                By induction, for <m>n = 1</m>, we have <m>1 \cdot (1 + 1) = 2</m> which is even. Then, assume the result is true for some <m>n \in \mathbb{Z}, n \geq 1</m>, that <m>n(n + 1)</m> is even. Then, we want to show that <m>(n + 1)((n + 1) + 1) = (n + 1)(n + 2)</m> is even. Then,
-                <md>
-                    <mrow>(n + 1)(n + 2) \amp = n^2 + 3n + 2</mrow>
-                    <mrow>\amp = (n^2 + n) + (2n + 2) \amp\amp \text{splitting up the terms to use the induction hypothesis}</mrow>
-                    <mrow>\amp = n(n + 1) + 2(n + 1)</mrow>
-                </md>
+                By induction, for <m>n = 1</m>, we have <m>1 \cdot (1 + 1) = 2</m> which is even. Then, assume the result is true for some <m>n = k \in \mathbb{N}</m>, that is, <m>k(k + 1)</m> is even. Then, we want to show that <m>(k + 1)((k + 1) + 1) = (k + 1)(k + 2)</m> is even. Then,
+            </p>
+            <md>
+                <mrow>(k + 1)(k + 2) \amp = k^2 + 3k + 2 \amp\amp \text{expanding}</mrow>
+            </md>
+            <p>
+                Then, to use the induction hypothesis, split up <m>k(k + 1) = k^2 + k</m>, and the leftover terms,
+            </p>
+            <md>
+                <mrow>\amp = (k^2 + k) + (2k + 2) \amp\amp \text{splitting up the terms}</mrow>
+                <mrow>\amp = k(k + 1) + 2(k + 1)</mrow>
+            </md>
+            <p>
                 By the induction hypothesis, <m>n(n + 1)</m> is even, and also <m>2(n + 1)</m> is even, so their sum <m>(n + 1)(n + 2)</m> is even.
-            </p>
-        </proof>
-
-        <fact>
-            <title>Binomial approximation</title>
-            <p>
-                For all <m>n \in \mathbb{N}, x \in \mathbb{R}</m>, if <m>x > -1</m>, then <m>(1 + x)^n \geq 1 + nx</m>.
-            </p>
-        </fact>
-        <proof>
-            <p>
-                By induction, for <m>n = 1</m>, we have,
-                <me>
-                    (1 + x)^1 = 1 + x \geq 1 + 1 \cdot x
-                </me>
-                Then, assume that our result is true for <m>n = k \in \mathbb{N}</m>, and we want to show that,
-                <me>
-                    (1 + x)^{k+1} \geq 1 + (k + 1)x
-                </me>
-                Then,
-                <md>
-                    <mrow>(1 + x)^{k+1} \amp = (1 + x)^k(1 + x)</mrow>
-                    <mrow>\amp \geq (1 + kx)(1 + x) \amp\amp \text{as $(1 + x)^k \geq 1 + kx$ and $1 + x > 0$}</mrow>
-                    <mrow>\amp = 1 + x + kx + x^2</mrow>
-                    <mrow>\amp = 1 + (k + 1)x + kx^2</mrow>
-                    <mrow>\amp \geq 1 + (k + 1)x \amp\amp \text{as $kx^2 \geq 0$}</mrow>
-                </md>
-                By induction, the result is true for all <m>n \in \mathbb{N}</m>.
             </p>
         </proof>
     </subsection>
@@ -145,9 +210,9 @@
         <title>Using Proof by Induction</title>
         <ol>
             <li>State that you are using a proof by induction, by saying <q>By induction, ...</q> or similar. If there are multiple variables that are natural numbers, then specify explicitly which is being used as the index by saying for example, <q>By induction on <m>n</m>, ...</q>.</li>
-            <li>Prove the base case is true.</li>
-            <li>Assume that <m>P(k)</m> is true for some <m>k \in \mathbb{N}</m>, and use that assumption with some mathematical reasoning to prove that <m>P(k+1)</m> is true.</li>
-            <li>Finally, recall again the conclusion of the proof.</li>
+            <li>Show the base case is true.</li>
+            <li>Assume that <m>P(k)</m> is true for some <m>k \in \mathbb{N}</m>. Then, use that assumption with some mathematical reasoning to prove that <m>P(k+1)</m> is true.</li>
+            <li>Finally, recall again the conclusion of the proof, that by induction, the statement is true for all natural numbers.</li>
         </ol>
         <p>
             The most difficult and important part of induction is the inductive step. Often, the inductive step involves showing that the <m>(k+1)</m>th case can be written <em>in terms of</em> the <m>k</m>th case, in some way. This will allow you to use the inductive assumption.
@@ -190,13 +255,13 @@
     <subsection>
         <title>Remarks</title>
         <p>
-            Math induction can be used to quite easily verify formulas, however, it doesn't provide any insight into how to derive those formulas.
+            Math induction can be used to quite easily prove that formulas are correct. However, it doesn't provide any insight into how to actually derive those formulas.
         </p>
         <p>
-            To develop a formula, it is often helpful to consider particular cases, especially with small numbers. Then, try to determine the pattern, and conjecture a formula.
+            To develop a formula, it is often helpful to consider particular cases, especially with small numbers. Then, try to determine the pattern, and conjecture a formula. Then, with math induction, you can prove it is true.
         </p>
         <p>
-            With math induction, if the result is true (the formula is correct), then math induction is guarenteed to work.
+            It turns out that with math induction, if the result is true (the formula is correct), then math induction is guarenteed to work.
         </p>
     </subsection>
 

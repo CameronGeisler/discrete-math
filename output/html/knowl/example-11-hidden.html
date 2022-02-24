@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-18T12:15:04-08:00       *-->
+<!--*       on 2022-02-24T12:23:05-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,12 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>Determine the number of ways to place \(n\) identical rooks on an \(n \times n\) chessboard such that no two rooks attack each other.</p>
-<p>No two rooks can share a rook or column. There are \(n\) rooks, and \(n\) rows and columns, so each row and column must contain exactly one rook. For the first column, there are \(n\) choices as to which row to place a rook. Once that row is taken, for the second column, there will be \(n-1\) choices for the row, and so on. Thus, the number of ways is given by,</p>
+<body><article class="example example-like"><p>Determine the number of 5 digit integers such that no consecutive digits are the same.</p>
+<p>There are 9 choices for the first digit, as it can be any integer except 0. The second digit can be anything except identical to the first digit, so there are also 9 choices. Similarly, the third digit can be any integer except the second, so there are 9 choices. And so on. Thus, the number of ways is,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-n(n - 1) \cdots 3 \cdot 2 \cdot 1 = n!
+9 \cdot 9 \cdot 9 \cdot 9 \cdot 9 = 9^5 = 59049
 \end{equation*}
-</div>
-<p>For a standard \(8 \times 8\) chessboard, this means there will be \(8!\) ways.</p></article></body>
+</div></article></body>
 </html>

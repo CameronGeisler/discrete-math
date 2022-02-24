@@ -83,4 +83,46 @@
         <title>Order of Operations for Logical Operators</title>
     </subsection>
 
+    <subsection>
+        <title>Alternate Intuition for Implication</title>
+        <example>
+            <p>
+                Here is another intuitive reason why <m>P \rightarrow Q</m> is true when <m>P</m> is false. First, it makes sense that <m>P \rightarrow Q</m> is true when <m>P</m> and <m>Q</m> are both true, and is false when <m>P</m> is true but <m>Q</m> is false. Then, we have the following partial truth table,
+            </p>
+            <me>
+                \begin{array}{c|c|c}
+                    P \amp Q \amp P \rightarrow Q \\ \hline
+                    T \amp T \amp T \\ \hline
+                    T \amp F \amp F \\ \hline
+                    F \amp T \amp \\ \hline
+                    F \amp F \amp
+                \end{array}
+            </me>
+            <p>
+                Then, there are 4 possible ways we can fill in the remainder of the table: <m>TT, TF, FT, FF</m>. This gives us,
+            </p>
+            <me>
+                \begin{array}{c|c||c}
+                    P \amp Q \amp \\ \hline
+                    T \amp T \amp T \amp T \amp T \amp T \\ \hline
+                    T \amp F \amp F \amp F \amp F \amp F \\ \hline
+                    F \amp T \amp F \amp F \amp T \amp T \\ \hline
+                    F \amp F \amp F \amp T \amp F \amp T
+                \end{array}
+            </me>
+            <p>
+                Then, the first 3 columns can be recognized as <m>P \land Q</m>, <m>P \leftrightarrow Q</m>, and <m>Q</m>, respectively. This leaves the last case as the most intuitive to define as <m>P \rightarrow Q</m>,
+            </p>
+            <me>
+                \begin{array}{c|c||c}
+                    P \amp Q \amp P \land Q \amp P \leftrightarrow Q \amp Q \amp P \rightarrow Q \\ \hline
+                    T \amp T \amp T \amp T \amp T \amp T \\ \hline
+                    T \amp F \amp F \amp F \amp F \amp F \\ \hline
+                    F \amp T \amp F \amp F \amp T \amp T \\ \hline
+                    F \amp F \amp F \amp T \amp F \amp T
+                \end{array}
+            </me>
+        </example>
+    </subsection>
+
 </section>
