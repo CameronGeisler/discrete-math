@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-24T12:23:04-08:00       *-->
+<!--*       on 2022-03-03T09:53:24-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -66,7 +66,7 @@
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
@@ -127,7 +127,15 @@
 </ul>
 </li>
 <li class="link">
-<a href="chapter-FAR.html" data-scroll="chapter-FAR"><span class="codenumber">7</span> <span class="title">Functions and Relations</span></a><ul>
+<a href="chapter-ST.html" data-scroll="chapter-ST"><span class="codenumber">7</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
+<li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
+<li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
+<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-FAR.html" data-scroll="chapter-FAR"><span class="codenumber">8</span> <span class="title">Functions and Relations</span></a><ul>
 <li><a href="section-R.html" data-scroll="section-R">Relations</a></li>
 <li><a href="section-F.html" data-scroll="section-F" class="active">Functions</a></li>
 <li><a href="section-OAO.html" data-scroll="section-OAO">One-to-one and Onto Functions</a></li>
@@ -135,14 +143,14 @@
 </ul>
 </li>
 <li class="link">
-<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">8</span> <span class="title">More Advanced Counting</span></a><ul>
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="chapter-MISC.html" data-scroll="chapter-MISC"><span class="codenumber">9</span> <span class="title">MISC</span></a><ul>
+<a href="chapter-MISC.html" data-scroll="chapter-MISC"><span class="codenumber">10</span> <span class="title">MISC</span></a><ul>
 <li><a href="section-BN.html" data-scroll="section-BN">Binary Numbers</a></li>
 <li><a href="section-DLC.html" data-scroll="section-DLC">Digital Logic Circuits</a></li>
 <li><a href="section-TC.html" data-scroll="section-TC">Two's Complement</a></li>
@@ -151,59 +159,59 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-F"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Functions</span>
+<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Functions</span>
 </h2>
-<section class="subsection" id="subsection-116"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.2.1</span> <span class="title">Functions</span>
+<section class="subsection" id="subsection-142"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.2.1</span> <span class="title">Functions</span>
 </h3>
-<article class="definition definition-like" id="definition-45"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-60"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
 </h4>
-<p id="p-590">Let \(X, Y\) be non-empty sets. A <dfn class="terminology">function</dfn> (or <dfn class="terminology">map</dfn>, or <dfn class="terminology">mapping</dfn>), \(f\text{,}\) from the <dfn class="terminology">domain</dfn> \(X\) (or \(D(f)\)) to the <dfn class="terminology">codomain</dfn> \(Y\text{,}\) \(f: X \rightarrow Y\text{,}\) is a relation between \(X\) and \(Y\) such that,</p>
+<p id="p-711">Let \(X, Y\) be non-empty sets. A <dfn class="terminology">function</dfn> (or <dfn class="terminology">map</dfn>, or <dfn class="terminology">mapping</dfn>), \(f\text{,}\) from the <dfn class="terminology">domain</dfn> \(X\) (or \(D(f)\)) to the <dfn class="terminology">codomain</dfn> \(Y\text{,}\) \(f: X \rightarrow Y\text{,}\) is a relation between \(X\) and \(Y\) such that,</p>
 <ol class="decimal">
-<li id="li-112"><p id="p-derived-li-112"><dfn class="terminology">All elements in the domain map to some element in the codomain</dfn>. For all \(x \in X\text{,}\) there exists \(y \in Y\) such that \((x,y) \in f\text{.}\)</p></li>
-<li id="li-113"><p id="p-derived-li-113"><dfn class="terminology">The function is well-defined</dfn>. If \((x,y_1) \in f\) and \((x,y_2) \in f\text{,}\) then \(y_1 = y_2\text{.}\)</p></li>
+<li id="li-136"><p id="p-derived-li-136"><dfn class="terminology">All elements in the domain map to some element in the codomain</dfn>. For all \(x \in X\text{,}\) there exists \(y \in Y\) such that \((x,y) \in f\text{.}\)</p></li>
+<li id="li-137"><p id="p-derived-li-137"><dfn class="terminology">The function is well-defined</dfn>. If \((x,y_1) \in f\) and \((x,y_2) \in f\text{,}\) then \(y_1 = y_2\text{.}\)</p></li>
 </ol>
-<p id="p-591">If \((x,y) \in f\text{,}\) we denote this by \(y = f(x)\text{.}\) Then, these requirements are,</p>
+<p id="p-712">If \((x,y) \in f\text{,}\) we denote this by \(y = f(x)\text{.}\) Then, these requirements are,</p>
 <ol class="decimal">
-<li id="li-114"><p id="p-derived-li-114">For all \(x \in X\text{,}\) there exists \(y \in Y\) such that \(f(x) = y\text{.}\)</p></li>
-<li id="li-115"><p id="p-derived-li-115">If \(f(x) = y_1\) and \(f(x) = y_2\text{,}\) then \(y_1 = y_2\text{.}\) Equivalently, if \(x_1 = x_2\text{,}\) then \(f(x_1) = f(x_2)\text{.}\)</p></li>
+<li id="li-138"><p id="p-derived-li-138">For all \(x \in X\text{,}\) there exists \(y \in Y\) such that \(f(x) = y\text{.}\)</p></li>
+<li id="li-139"><p id="p-derived-li-139">If \(f(x) = y_1\) and \(f(x) = y_2\text{,}\) then \(y_1 = y_2\text{.}\) Equivalently, if \(x_1 = x_2\text{,}\) then \(f(x_1) = f(x_2)\text{.}\)</p></li>
 </ol></article><ul class="disc">
-<li id="li-116"><p id="p-derived-li-116">If $f(x) = y$, then we say "$y$ is the image of $x$", or "$x$ maps to $y$".</p></li>
-<li id="li-117"><p id="p-derived-li-117">The <dfn class="terminology">range</dfn> of \(f\text{,}\) sometimes denoted by \(R(f)\text{,}\) is the set of all outputs of \(f\text{.}\) In other words,<div class="displaymath">
+<li id="li-140"><p id="p-derived-li-140">If $f(x) = y$, then we say "$y$ is the image of $x$", or "$x$ maps to $y$".</p></li>
+<li id="li-141"><p id="p-derived-li-141">The <dfn class="terminology">range</dfn> of \(f\text{,}\) sometimes denoted by \(R(f)\text{,}\) is the set of all outputs of \(f\text{.}\) In other words,<div class="displaymath">
 \begin{equation*}
 R(f) = \set{f(x): x \in X} = \set{y \in Y: \exists x \in X \text{ such that } f(x) = y}
 \end{equation*}
 </div>In general, \(R(f) \neq Y\text{.}\)</p></li>
 </ul>
-<article class="definition definition-like" id="definition-46"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-61"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
 </h4>
-<p id="p-592">Functions \(f\) and \(g\) are <dfn class="terminology">equal</dfn> if and only if for all \(x_1 \in X\text{,}\) \(f(x_1) = f(x_2)\text{.}\)</p></article><article class="example example-like" id="example-56"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-56"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-56"><article class="example example-like"><p id="p-593">Let \(f = \set{(x,y) \in \mathbb{Z}^2: 3x + y = 0}\text{.}\) Let \(x \in \mathbb{Z}\) such that \(y = -3x\text{.}\) Then, \(3x + (-3x) = 0\) satisfies the condition. Also, if \((x,y) \in f\) and \((x,z) \in f\text{,}\) then \(3x + y = 0\) and \(3x + z = 0\text{.}\) Thus, \(y = z\text{.}\)</p></article></div>
-<article class="example example-like" id="example-57"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-57"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-57"><article class="example example-like"><p id="p-594">Let \(X\) be a non-empty set. The <dfn class="terminology">identity function on \(X\)</dfn> is \(Id_{X}: X \rightarrow X\text{,}\) \(Id_{X}(x) = x\text{.}\)</p></article></div>
-<article class="example example-like" id="example-58"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-58"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-58"><article class="example example-like"><p id="p-595">Operations like addition, subtraction, multiplication, and division can be thought of as functions. For example, addition can be thought of as the function,</p>
+<p id="p-713">Functions \(f\) and \(g\) are <dfn class="terminology">equal</dfn> if and only if for all \(x_1 \in X\text{,}\) \(f(x_1) = f(x_2)\text{.}\)</p></article><article class="example example-like" id="example-74"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-74"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-74"><article class="example example-like"><p id="p-714">Let \(f = \set{(x,y) \in \mathbb{Z}^2: 3x + y = 0}\text{.}\) Let \(x \in \mathbb{Z}\) such that \(y = -3x\text{.}\) Then, \(3x + (-3x) = 0\) satisfies the condition. Also, if \((x,y) \in f\) and \((x,z) \in f\text{,}\) then \(3x + y = 0\) and \(3x + z = 0\text{.}\) Thus, \(y = z\text{.}\)</p></article></div>
+<article class="example example-like" id="example-75"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-75"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-75"><article class="example example-like"><p id="p-715">Let \(X\) be a non-empty set. The <dfn class="terminology">identity function on \(X\)</dfn> is \(Id_{X}: X \rightarrow X\text{,}\) \(Id_{X}(x) = x\text{.}\)</p></article></div>
+<article class="example example-like" id="example-76"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-76"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-76"><article class="example example-like"><p id="p-716">Operations like addition, subtraction, multiplication, and division can be thought of as functions. For example, addition can be thought of as the function,</p>
 <div class="displaymath">
 \begin{align*}
 + : \mathbb{R} \times \mathbb{R} \amp \longrightarrow \mathbb{R}\\
 (a,b) \amp \longmapsto a + b
 \end{align*}
 </div>
-<p id="p-596">In function notation, this is written as \(+((a,b)) = a + b\text{.}\) For example, \(+((2,3)) = 5\text{.}\)</p></article></div></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.2.2</span> <span class="title">Examples of Non-Functions</span>
+<p id="p-717">In function notation, this is written as \(+((a,b)) = a + b\text{.}\) For example, \(+((2,3)) = 5\text{.}\)</p></article></div></section><section class="subsection" id="subsection-143"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.2.2</span> <span class="title">Examples of Non-Functions</span>
 </h3>
-<article class="example example-like" id="example-59"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-59"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-59"><article class="example example-like"><p id="p-597">The \(f(\frac{a}{b}) = a + b\) is not a function on the rational numbers. This is because for example, \(f(\frac{1}{2}) = 1 + 2 = 3\) but also \(f(\frac{1}{2}) = f(\frac{2}{4}) = 2 + 4 = 6 \neq 3\text{.}\)</p></article></div>
-<p id="p-598">The output of the function must not depend on the representation of the input element, and only depend on the input element itself.</p>
-<article class="example example-like" id="example-60"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-60"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-60"><article class="example example-like"><p id="p-599">Let \(f = \set{(x,y) \in \mathbb{Z}^2: 3x + 2y = 0}\text{.}\) Then, \(f\) is not a function, as for \(1 \in \mathbb{Z}\text{,}\) \(3 + 2y = 0\text{,}\) but \(y = -3/2 \notin \mathbb{Z}\text{.}\) Thus, \((1,y) \notin f\text{.}\)</p></article></div></section></section></div></main>
+<article class="example example-like" id="example-77"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-77"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-77"><article class="example example-like"><p id="p-718">The \(f(\frac{a}{b}) = a + b\) is not a function on the rational numbers. This is because for example, \(f(\frac{1}{2}) = 1 + 2 = 3\) but also \(f(\frac{1}{2}) = f(\frac{2}{4}) = 2 + 4 = 6 \neq 3\text{.}\)</p></article></div>
+<p id="p-719">The output of the function must not depend on the representation of the input element, and only depend on the input element itself.</p>
+<article class="example example-like" id="example-78"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-78"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-78"><article class="example example-like"><p id="p-720">Let \(f = \set{(x,y) \in \mathbb{Z}^2: 3x + 2y = 0}\text{.}\) Then, \(f\) is not a function, as for \(1 \in \mathbb{Z}\text{,}\) \(3 + 2y = 0\text{,}\) but \(y = -3/2 \notin \mathbb{Z}\text{.}\) Thus, \((1,y) \notin f\text{.}\)</p></article></div></section></section></div></main>
 </div>
 </body>
 </html>

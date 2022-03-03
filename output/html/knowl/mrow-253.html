@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-24T12:10:59-08:00       *-->
+<!--*       on 2022-03-03T09:53:30-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,11 +16,13 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\amp \binom{n}{n_1} \binom{n-n_1}{n_2} \cdots \binom{n-n_1-\cdots-n_{k-1}}{n_k}\\
-\amp = \frac{n!}{n_1! (n - n_1)!} \cdot \frac{(n - n_1)!}{n_2! (n - n_1 - n_2)!} \cdots \frac{(n - n_1 - \dots - n_{k-1})!}{n_k! (n - n_1 - \dots - n_{k-1} - n_k)!}\\
-\amp = \frac{n!}{n_1! n_2! \cdots n_k!}
+x \in A \cup (B \cap C) \amp \equiv x \in A \lor x \in B \cap C\\
+\amp \equiv x \in A \lor (x \in B \land x \in C)\\
+\amp \equiv \brac{x \in A \lor x \in B} \land \brac{x \in A \lor x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}\\
+\amp \equiv \brac{x \in A \cup B} \land \brac{x \in A \cup C}\\
+\amp \equiv x \in (A \cup B) \cap (A \cup C)
 \end{align*}
 </div>
-<span class="incontext"><a href="section-DP.html#mjx-eqn:mrow-253">in-context</a></span>
+<span class="incontext"><a href="section-ST.html#mjx-eqn:mrow-253">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-03T09:53:24-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Cartesian Product</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\newcommand{\nCr}[2]{_{#1}C_{#2}}
+\newcommand{\nPr}[2]{_{#1}P_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-SOUIC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-ST.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-ST.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-SOUIC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-ST.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-ST.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-B.html" data-scroll="chapter-B"><span class="codenumber">1</span> <span class="title">Basics</span></a><ul><li><a href="section-ITS.html" data-scroll="section-ITS">Introduction to Sets</a></li></ul>
+</li>
+<li class="link">
+<a href="chapter-L.html" data-scroll="chapter-L"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="section-ITL.html" data-scroll="section-ITL">Introduction to Logic</a></li>
+<li><a href="section-CCIAC.html" data-scroll="section-CCIAC">Conditionals, Converse, Inverse, and Contrapositive</a></li>
+<li><a href="section-BLE.html" data-scroll="section-BLE">Biconditionals, Logical Equivalence</a></li>
+<li><a href="section-POL.html" data-scroll="section-POL">Properties of Logic</a></li>
+<li><a href="section-PL.html" data-scroll="section-PL">Predicate Logic</a></li>
+<li><a href="section-Q.html" data-scroll="section-Q">Quantifiers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-BC.html" data-scroll="chapter-BC"><span class="codenumber">3</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="section-TFCP.html" data-scroll="section-TFCP">The Fundamental Counting Principle</a></li>
+<li><a href="section-P.html" data-scroll="section-P">Permutations</a></li>
+<li><a href="section-PWIE.html" data-scroll="section-PWIE">Permutations with Identical Elements</a></li>
+<li><a href="section-C.html" data-scroll="section-C">Combinations</a></li>
+<li><a href="section-SOPAC.html" data-scroll="section-SOPAC">Summary of Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-S.html" data-scroll="chapter-S"><span class="codenumber">4</span> <span class="title">Sequences</span></a><ul>
+<li><a href="section-ITSE.html" data-scroll="section-ITSE">Introduction to Sequences</a></li>
+<li><a href="section-SSN.html" data-scroll="section-SSN">Sums, Summation Notation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-PBAR.html" data-scroll="chapter-PBAR"><span class="codenumber">5</span> <span class="title">Proof Basics and Reference</span></a><ul>
+<li><a href="section-PBPW.html" data-scroll="section-PBPW">Proof Basics, Proof Writing</a></li>
+<li><a href="section-DPPBC.html" data-scroll="section-DPPBC">Direct Proof, Proof by Contrapositive</a></li>
+<li><a href="section-PBC.html" data-scroll="section-PBC">Proof by Contradiction</a></li>
+<li><a href="section-EP.html" data-scroll="section-EP">Existence Proofs</a></li>
+<li><a href="section-UP.html" data-scroll="section-UP">Uniqueness Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MI.html" data-scroll="chapter-MI"><span class="codenumber">6</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="section-PBMI.html" data-scroll="section-PBMI">Proof by Mathematical Induction</a></li>
+<li><a href="section-IE.html" data-scroll="section-IE">Induction Examples</a></li>
+<li><a href="section-SI.html" data-scroll="section-SI">Strong Induction</a></li>
+<li><a href="section-FOTPOMI.html" data-scroll="section-FOTPOMI">Foundations of the Principle of Math Induction</a></li>
+<li><a href="section-FPBI.html" data-scroll="section-FPBI">False Proofs by Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-ST.html" data-scroll="chapter-ST"><span class="codenumber">7</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
+<li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
+<li><a href="section-TCP.html" data-scroll="section-TCP" class="active">The Cartesian Product</a></li>
+<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-FAR.html" data-scroll="chapter-FAR"><span class="codenumber">8</span> <span class="title">Functions and Relations</span></a><ul>
+<li><a href="section-R.html" data-scroll="section-R">Relations</a></li>
+<li><a href="section-F.html" data-scroll="section-F">Functions</a></li>
+<li><a href="section-OAO.html" data-scroll="section-OAO">One-to-one and Onto Functions</a></li>
+<li><a href="section-ER.html" data-scroll="section-ER">Equivalence Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
+<li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
+<li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-MISC.html" data-scroll="chapter-MISC"><span class="codenumber">10</span> <span class="title">MISC</span></a><ul>
+<li><a href="section-BN.html" data-scroll="section-BN">Binary Numbers</a></li>
+<li><a href="section-DLC.html" data-scroll="section-DLC">Digital Logic Circuits</a></li>
+<li><a href="section-TC.html" data-scroll="section-TC">Two's Complement</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-TCP"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">The Cartesian Product</span>
+</h2>
+<section class="introduction" id="introduction-23"><p id="p-667">You may recall ordered pairs \((a,b)\text{,}\) which are used to represents points in the Cartesian plane. Roughly, ordered pairs are an ordered arrangement of two numbers, i.e. where \((a,b)\) and \((b,a)\) are not considered the same. More generally, we can considered ordered triples \((a,b,c) \text{,}\) or ordered <em class="emphasis">tuples</em> of \(n\) elements, \((x_1, x_2, \dots, x_n)\text{,}\)</p>
+<p id="p-668">Ordered pairs of numbers can be defined in terms of another set operation, called the <em class="emphasis">Cartesian product</em>.</p></section><section class="subsection" id="subsection-135"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.1</span> <span class="title">Ordered Pairs, Triples, and n-Tuples</span>
+</h3>
+<article class="definition definition-like" id="definition-53"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
+</h4>
+<p id="p-669">An <dfn class="terminology">ordered pair</dfn> \((a,b)\text{,}\) is an ordered list of two elements \(a\) and \(b\text{.}\) Two ordered pairs are equal if and only if their corresponding components are equal. In other words, \((a,b) = (c,d)\) are equal if and only if \(a = c\) and \(b = d\text{.}\)</p></article><article class="definition definition-like" id="definition-54"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
+</h4>
+<p id="p-670">An <dfn class="terminology">ordered triple</dfn> \((a,b,c)\) is an ordered list of three elements \(a, b\text{,}\) and \(c\text{.}\) Two ordered triples are equal if and only if their corresponding components are equal.</p></article><p id="p-671">More generally, we can consider ordered lists with any finite number of elements.</p>
+<article class="definition definition-like" id="definition-55"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+</h4>
+<p id="p-672">Let \(n\) be a positive integer. An <dfn class="terminology">ordered \(n\)-tuple</dfn> \((x_1, x_2, \dots, x_n)\) is an ordered list of \(n\) elements. Two \(n\)-tuples are equal if and only if their corresponding components are equal. In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+(x_1, x_2, \dots, x_n) = (y_1, y_2, \dots, y_n) \quad \iff \quad x_1 = y_1, x_2 = y_2, \dots, x_n = y_n
+\end{equation*}
+</div></article><p id="p-673">Then, an ordered pair is a 2-tuple, and an ordered triple is a 3-tuple.</p></section><section class="subsection" id="subsection-136"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.2</span> <span class="title">Cartesian Product</span>
+</h3>
+<article class="definition definition-like" id="definition-56"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
+</h4>
+<p id="p-674">Let \(A\) and \(B\) be sets. The <dfn class="terminology">Cartesian product</dfn> of \(A\) and \(B\text{,}\) denoted by \(A \times B\text{,}\) is the set of all ordered pairs with elements in \(A\) as the first element and elements in \(B\) as the second element.</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{A \times B = \set{(a,b): a \in A \text{ and } b \in B}}
+\end{equation*}
+</div></article><p id="p-675">Using mathematical logic,</p>
+<div class="displaymath">
+\begin{equation*}
+(x,y) \in A \times B \quad \iff \quad (x \in A) \land (x \in B)
+\end{equation*}
+</div>
+<p id="p-676">In general, the Cartesian product is not commutative. In other words, in general \(A \times B \neq B \times A\) (unless \(A = B\)).</p>
+<article class="example example-like" id="example-69"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-69"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-677">Let \(A = \set{a,b,c}\) and \(B = \set{1,2}\text{.}\) Then,</p>
+<div class="displaymath">
+\begin{equation*}
+A \times B = \set{(a,1),(a,2),(b,1),(b,2),(c,1),(c,2)}
+\end{equation*}
+</div></article></div>
+<p id="p-678">The definition of the Cartesian product of two sets can be generalized to \(n\) sets.</p>
+<article class="definition definition-like" id="definition-57"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
+</h4>
+<p id="p-679">Let \(A_1, A_2, \dots, A_n\) be sets. Then, the Cartesian product \(A_1 \times A_2 \times \dots \times A_n\) is the set of all \(n\)-tuples \((a_1, a_2, \dots, a_n)\) where \(a_1 \in A_1, a_2 \in A_2, \dots, a_n \in A_n\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+A_1 \times \dots \times A_n = \set{(a_1, \dots, a_n): a_1 \in A_1, \dots, a_n \in A_n}
+\end{equation*}
+</div></article><article class="example example-like" id="example-70"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-70"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-70"><article class="example example-like"><p id="p-680">\(\mathbb{R} \times \mathbb{R} = \mathbb{R}^2\) is the familiar Cartesian plane, and \(\mathbb{R} \times \mathbb{R} \times \mathbb{R} = \mathbb{R}^3\) is three-dimensional Euclidean space. In general, \(\mathbb{R}^n\) is the set of all \(n\)-tuples of real numbers.</p></article></div></section><section class="subsection" id="subsection-137"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.3</span> <span class="title">Formalization of the Cartesian Product</span>
+</h3>
+<p id="p-681">In the development of set theory as the foundation of mathematics, mathematicians wanted to formally define ordered tuples in terms of sets. however, sets are not ordered, in that \(\set{a,b}\) and \(\set{b,a}\) both represent the same set.</p>
+<p id="p-682">In 1914, <dfn class="terminology">Norbert Wiener</dfn> (1894-1964), American mathematician, proposed a formal definition of an ordered pair as,</p>
+<div class="displaymath">
+\begin{equation*}
+(a,b) = \set{\set{\set{a}, \emptyset}, \set{\set{b}}}
+\end{equation*}
+</div>
+<p id="p-683">Here, the \(\emptyset\) is associated with the first element, which indicates the ordering of the elements. The nesting of the set \(\set{\set{b}}\) was for more technical reasons.</p>
+<p id="p-684">In around the same time in 1914, <dfn class="terminology">Felix Hausdorff</dfn> (1868-1942), German mathematician, proposed a similar, slightly more intuitive definition,</p>
+<div class="displaymath">
+\begin{equation*}
+(a,b) = \set{\set{a,1}, \set{b,2}}
+\end{equation*}
+</div>
+<p id="p-685">where the 1 and 2 indicate which of \(a\) and \(b\) are the first and second element.</p>
+<p id="p-686">Then, in 1921, <dfn class="terminology">Kazimierz Kuratowski</dfn> (1896-1980) proposed another definition,</p>
+<div class="displaymath">
+\begin{equation*}
+(a,b) = \set{\set{a}, \set{a,b}}
+\end{equation*}
+</div>
+<p id="p-687">This is the currently accepted definition. Here, the first element is in the set with 1 element, and the second is identified by being in the set with 2 elements that is not the first element. If \(a = b\text{,}\) then,</p>
+<div class="displaymath">
+\begin{equation*}
+(a,b) = \set{\set{a}, \set{a,a}} = \set{\set{a}, \set{a}} = \set{a}
+\end{equation*}
+</div></section></section></div></main>
+</div>
+</body>
+</html>

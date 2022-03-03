@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-24T12:23:04-08:00       *-->
+<!--*       on 2022-03-03T09:53:24-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -66,7 +66,7 @@
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book.html"><span class="title">Discrete Math:</span> <span class="subtitle"></span></a></h1>
+<h1 class="heading"><a href="book.html"><span class="title">Discrete Math</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
@@ -127,7 +127,15 @@
 </ul>
 </li>
 <li class="link">
-<a href="chapter-FAR.html" data-scroll="chapter-FAR"><span class="codenumber">7</span> <span class="title">Functions and Relations</span></a><ul>
+<a href="chapter-ST.html" data-scroll="chapter-ST"><span class="codenumber">7</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
+<li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
+<li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
+<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-FAR.html" data-scroll="chapter-FAR"><span class="codenumber">8</span> <span class="title">Functions and Relations</span></a><ul>
 <li><a href="section-R.html" data-scroll="section-R">Relations</a></li>
 <li><a href="section-F.html" data-scroll="section-F">Functions</a></li>
 <li><a href="section-OAO.html" data-scroll="section-OAO" class="active">One-to-one and Onto Functions</a></li>
@@ -135,14 +143,14 @@
 </ul>
 </li>
 <li class="link">
-<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">8</span> <span class="title">More Advanced Counting</span></a><ul>
+<a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="chapter-MISC.html" data-scroll="chapter-MISC"><span class="codenumber">9</span> <span class="title">MISC</span></a><ul>
+<a href="chapter-MISC.html" data-scroll="chapter-MISC"><span class="codenumber">10</span> <span class="title">MISC</span></a><ul>
 <li><a href="section-BN.html" data-scroll="section-BN">Binary Numbers</a></li>
 <li><a href="section-DLC.html" data-scroll="section-DLC">Digital Logic Circuits</a></li>
 <li><a href="section-TC.html" data-scroll="section-TC">Two's Complement</a></li>
@@ -151,56 +159,56 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-OAO"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">One-to-one and Onto Functions</span>
+<span class="type">Section</span> <span class="codenumber">8.3</span> <span class="title">One-to-one and Onto Functions</span>
 </h2>
-<section class="introduction" id="introduction-23"><p id="p-600">There are a few properties that certain functions have which are important enough to be given names.</p></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.3.1</span> <span class="title">Oneo-to-one and Onto Functions</span>
+<section class="introduction" id="introduction-26"><p id="p-721">There are a few properties that certain functions have which are important enough to be given names.</p></section><section class="subsection" id="subsection-144"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.3.1</span> <span class="title">Oneo-to-one and Onto Functions</span>
 </h3>
-<p id="p-601">Let \(f: X \rightarrow Y\) be a function.</p>
-<article class="definition definition-like" id="definition-47"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
+<p id="p-722">Let \(f: X \rightarrow Y\) be a function.</p>
+<article class="definition definition-like" id="definition-62"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span>
 </h4>
-<p id="p-602">A function \(f\) is <dfn class="terminology">injective</dfn> (or is <dfn class="terminology">one-to-one</dfn>, or \(f\) is an <dfn class="terminology">injection</dfn>) if for all \(x_1, x_2 \in A\text{,}\) if \(f(x_1) = f(x_2)\text{,}\) then \(x_1 = x_2\text{.}\)</p></article><p id="p-603">Equivalently, for all \(x_1, x_2 \in X\text{,}\) if \(x_1 \neq x_2\text{,}\) then \(f(x_1) \neq f(x_2)\text{.}\) In other words, if the inputs are different, then the outputs will be different.</p>
-<article class="definition definition-like" id="definition-48"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
+<p id="p-723">A function \(f\) is <dfn class="terminology">injective</dfn> (or is <dfn class="terminology">one-to-one</dfn>, or \(f\) is an <dfn class="terminology">injection</dfn>) if for all \(x_1, x_2 \in A\text{,}\) if \(f(x_1) = f(x_2)\text{,}\) then \(x_1 = x_2\text{.}\)</p></article><p id="p-724">Equivalently, for all \(x_1, x_2 \in X\text{,}\) if \(x_1 \neq x_2\text{,}\) then \(f(x_1) \neq f(x_2)\text{.}\) In other words, if the inputs are different, then the outputs will be different.</p>
+<article class="definition definition-like" id="definition-63"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span>
 </h4>
-<p id="p-604">Let \(f: X \rightarrow Y\) be a function. \(f\) is <dfn class="terminology">surjective</dfn> (or <dfn class="terminology">onto</dfn>, or \(f\) is a <dfn class="terminology">surjection</dfn>) if for all \(y \in Y\text{,}\) there exists \(x \in X\) such that \(f(x) = y\text{.}\)</p></article><p id="p-605">In other words, \(R(f) = Y\text{.}\) Or, \(f\) is not surjective if there exists \(y \in Y\) such that for all \(x \in X\text{,}\) \(f(x) \neq y\text{.}\)</p></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.3.2</span> <span class="title">One-to-one Correspondence</span>
+<p id="p-725">Let \(f: X \rightarrow Y\) be a function. \(f\) is <dfn class="terminology">surjective</dfn> (or <dfn class="terminology">onto</dfn>, or \(f\) is a <dfn class="terminology">surjection</dfn>) if for all \(y \in Y\text{,}\) there exists \(x \in X\) such that \(f(x) = y\text{.}\)</p></article><p id="p-726">In other words, \(R(f) = Y\text{.}\) Or, \(f\) is not surjective if there exists \(y \in Y\) such that for all \(x \in X\text{,}\) \(f(x) \neq y\text{.}\)</p></section><section class="subsection" id="subsection-145"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.3.2</span> <span class="title">One-to-one Correspondence</span>
 </h3>
-<article class="definition definition-like" id="definition-49"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-64"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.3</span><span class="period">.</span>
 </h4>
-<p id="p-606">Let \(f: X \rightarrow Y\) be a function. \(f\) is a <dfn class="terminology">one-to-one correspondence</dfn> if \(f\) is injective and surjective.</p></article><p id="p-607">Each element in \(y\) is mapped from exactly 1 element in \(X\text{,}\) and each element in \(X\) maps to exactly one element in \(y\text{.}\) In other words,</p>
+<p id="p-727">Let \(f: X \rightarrow Y\) be a function. \(f\) is a <dfn class="terminology">one-to-one correspondence</dfn> if \(f\) is injective and surjective.</p></article><p id="p-728">Each element in \(y\) is mapped from exactly 1 element in \(X\text{,}\) and each element in \(X\) maps to exactly one element in \(y\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{gather*}
 \forall x \in X, \exists y \in Y \text{ such that } f(x) = y\\
 \forall y \in Y, \exists x \in X \text{ such that } f(x) = y
 \end{gather*}
 </div>
-<p id="p-608">In this way, for a one-to-one correspondence function \(f\text{,}\) given an element of \(X\text{,}\) we can completely determine its corresponding element \(y\text{,}\) and vise versa.</p></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.3.3</span> <span class="title">Proving a Function is Onto</span>
+<p id="p-729">In this way, for a one-to-one correspondence function \(f\text{,}\) given an element of \(X\text{,}\) we can completely determine its corresponding element \(y\text{,}\) and vise versa.</p></section><section class="subsection" id="subsection-146"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.3.3</span> <span class="title">Proving a Function is Onto</span>
 </h3>
-<p id="p-609">To prove a function \(f: X \rightarrow Y\) is surjective, consider an arbitrary element of the codomain \(y \in Y\text{.}\) Then, the goal is to find an element \(x \in X\) such that \(f(x) = y\text{.}\) Here, \(y\) is “given” and we need to solve for \(x\text{.}\) Often, this involves solving the equation \(f(x) = y\) for \(x\) in terms of \(y\text{.}\)</p>
-<article class="example example-like" id="example-61"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-61"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-61"><article class="example example-like"><p id="p-610">Let \(f: \mathbb{R} \rightarrow \mathbb{R}\text{,}\) \(f(x) = 7x - 3\text{.}\) Then, \(f\) is injective and surjective.</p>
+<p id="p-730">To prove a function \(f: X \rightarrow Y\) is surjective, consider an arbitrary element of the codomain \(y \in Y\text{.}\) Then, the goal is to find an element \(x \in X\) such that \(f(x) = y\text{.}\) Here, \(y\) is “given” and we need to solve for \(x\text{.}\) Often, this involves solving the equation \(f(x) = y\) for \(x\) in terms of \(y\text{.}\)</p>
+<article class="example example-like" id="example-79"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-79"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-79"><article class="example example-like"><p id="p-731">Let \(f: \mathbb{R} \rightarrow \mathbb{R}\text{,}\) \(f(x) = 7x - 3\text{.}\) Then, \(f\) is injective and surjective.</p>
 <ul class="disc">
-<li id="li-118"><p id="p-derived-li-118">Let \(x_1, x_2 \in \mathbb{R}\) with \(f(x_1) = f(x_2)\text{.}\) Then, \(7x_1 - 3 = 7x_2 - 3\text{,}\) and so \(x_1 = x_2\text{.}\) Thus, \(f\) is injective.</p></li>
-<li id="li-119"><p id="p-derived-li-119">Let \(y \in \mathbb{R}\text{,}\) so that \(x = \frac{y+3}{7} \in \mathbb{R}\text{.}\) Then, \(f(x) = 7(x+3)/7 - 3 = y\text{.}\) Thus, \(f\) is surjective.</p></li>
+<li id="li-142"><p id="p-derived-li-142">Let \(x_1, x_2 \in \mathbb{R}\) with \(f(x_1) = f(x_2)\text{.}\) Then, \(7x_1 - 3 = 7x_2 - 3\text{,}\) and so \(x_1 = x_2\text{.}\) Thus, \(f\) is injective.</p></li>
+<li id="li-143"><p id="p-derived-li-143">Let \(y \in \mathbb{R}\text{,}\) so that \(x = \frac{y+3}{7} \in \mathbb{R}\text{.}\) Then, \(f(x) = 7(x+3)/7 - 3 = y\text{.}\) Thus, \(f\) is surjective.</p></li>
 </ul></article></div>
-<article class="example example-like" id="example-62"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-62"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-62"><article class="example example-like"><p id="p-611">Let \(f: \mathbb{R} \rightarrow \mathbb{R}\text{,}\) \(f(x) = x^2\text{.}\) Then, \(f\) is not injective and not surjective.</p>
+<article class="example example-like" id="example-80"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-80"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-80"><article class="example example-like"><p id="p-732">Let \(f: \mathbb{R} \rightarrow \mathbb{R}\text{,}\) \(f(x) = x^2\text{.}\) Then, \(f\) is not injective and not surjective.</p>
 <ul class="disc">
-<li id="li-120"><p id="p-derived-li-120">Let \(x_1 = 1, x_2 = -1\text{.}\) Then, \(f(x_1) = f(1) = 1^2 = (-1)^2 = f(-1) = f(x_2)\text{.}\) Thus, \(f\) is injective.</p></li>
-<li id="li-121"><p id="p-derived-li-121">Let \(y = -1, x \in \mathbb{R}\text{.}\) Then, \(f(x) = x^2 \geq 0\text{,}\) so \(f(x) \neq -1\text{.}\)</p></li>
+<li id="li-144"><p id="p-derived-li-144">Let \(x_1 = 1, x_2 = -1\text{.}\) Then, \(f(x_1) = f(1) = 1^2 = (-1)^2 = f(-1) = f(x_2)\text{.}\) Thus, \(f\) is injective.</p></li>
+<li id="li-145"><p id="p-derived-li-145">Let \(y = -1, x \in \mathbb{R}\text{.}\) Then, \(f(x) = x^2 \geq 0\text{,}\) so \(f(x) \neq -1\text{.}\)</p></li>
 </ul></article></div>
-<article class="example example-like" id="example-63"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-63"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-63"><article class="example example-like"><p id="p-612">Let \(f: \mathbb{R} \setminus \set{2} \rightarrow \mathbb{R} \setminus \set{5}\text{,}\) \(f(x) = \frac{5x+1}{x-2}\text{.}\) Then, \(f\) is bijective.</p>
-<p id="p-613">We will prove that \(f\) is injective and surjective.</p>
+<article class="example example-like" id="example-81"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-81"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-81"><article class="example example-like"><p id="p-733">Let \(f: \mathbb{R} \setminus \set{2} \rightarrow \mathbb{R} \setminus \set{5}\text{,}\) \(f(x) = \frac{5x+1}{x-2}\text{.}\) Then, \(f\) is bijective.</p>
+<p id="p-734">We will prove that \(f\) is injective and surjective.</p>
 <ul class="disc">
-<li id="li-122"><p id="p-derived-li-122">Let \(x_1, x_2 \in \mathbb{R} \setminus \set{2}\) with \(f(x_1) = f(x_2)\text{.}\) Then,<div class="displaymath">
+<li id="li-146"><p id="p-derived-li-146">Let \(x_1, x_2 \in \mathbb{R} \setminus \set{2}\) with \(f(x_1) = f(x_2)\text{.}\) Then,<div class="displaymath">
 \begin{align*}
 \frac{5x_1 + 1}{x_1 - 2} \amp = \frac{5x_2 + 1}{x_2 - 2}\\
 (5x_1 + 1)(x_2 - 2) \amp = (x_1 - 2)(5x_2 + 1)\\
@@ -209,37 +217,37 @@
 x_1 \amp = x_2
 \end{align*}
 </div>Thus, \(f\) is injective.</p></li>
-<li id="li-123"><p id="p-derived-li-123">Let \(y \in \mathbb{R} \setminus \set{5}\text{,}\) \(x = \frac{2y + 1}{y - 5} = 2 + \frac{11}{y-5}\text{.}\) Then, \(x \neq 2\text{.}\) Also, \(y \neq 5\text{.}\) Thus, \(x \in \mathbb{R} \setminus \set{2}\text{.}\) Thus,<div class="displaymath">
+<li id="li-147"><p id="p-derived-li-147">Let \(y \in \mathbb{R} \setminus \set{5}\text{,}\) \(x = \frac{2y + 1}{y - 5} = 2 + \frac{11}{y-5}\text{.}\) Then, \(x \neq 2\text{.}\) Also, \(y \neq 5\text{.}\) Thus, \(x \in \mathbb{R} \setminus \set{2}\text{.}\) Thus,<div class="displaymath">
 \begin{equation*}
 f(x) = \frac{5\brac{\frac{2y + 1}{y - 5}} + 1}{\frac{2y + 1}{y - 5} - 2} = \frac{5(2y+1) + y - 5}{2y + 1 - 2(y - 5)} = \frac{11y}{11} = y
 \end{equation*}
 </div>Thus, \(f\) is surjective.</p></li>
-</ul></article></div></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.3.4</span> <span class="title">Cardinality and Function Properties</span>
+</ul></article></div></section><section class="subsection" id="subsection-147"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.3.4</span> <span class="title">Cardinality and Function Properties</span>
 </h3>
-<article class="theorem theorem-like" id="theorem-35"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
+<article class="theorem theorem-like" id="theorem-47"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.3.7</span><span class="period">.</span>
 </h4>
-<p id="p-614">Let \(X, Y\) be finite sets, \(f: X \rightarrow Y\text{.}\) Then,</p>
+<p id="p-735">Let \(X, Y\) be finite sets, \(f: X \rightarrow Y\text{.}\) Then,</p>
 <ul class="disc">
-<li id="li-124"><p id="p-derived-li-124">\(f\) is injective if and only if \(\abs{X} \leq \abs{Y}\text{.}\)</p></li>
-<li id="li-125"><p id="p-derived-li-125">\(f\) is surjective if and only if \(\abs{X} \geq \abs{Y}\text{.}\)</p></li>
-<li id="li-126"><p id="p-derived-li-126">\(f\) is bijective if and only if \(\abs{X} = \abs{Y}\text{.}\)</p></li>
-</ul></article><article class="theorem theorem-like" id="theorem-36"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Schroder-Bernstein theorem.</span>
+<li id="li-148"><p id="p-derived-li-148">\(f\) is injective if and only if \(\abs{X} \leq \abs{Y}\text{.}\)</p></li>
+<li id="li-149"><p id="p-derived-li-149">\(f\) is surjective if and only if \(\abs{X} \geq \abs{Y}\text{.}\)</p></li>
+<li id="li-150"><p id="p-derived-li-150">\(f\) is bijective if and only if \(\abs{X} = \abs{Y}\text{.}\)</p></li>
+</ul></article><article class="theorem theorem-like" id="theorem-48"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Schroder-Bernstein theorem.</span>
 </h4>
-<p id="p-615">If there exists an injective function \(f: X \rightarrow Y\) and another injective function \(g: Y \rightarrow X\text{,}\) then there exists a bijective function \(h: X \rightarrow Y\) and so \(\abs{X} = \abs{Y}\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-37"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.9</span><span class="period">.</span>
+<p id="p-736">If there exists an injective function \(f: X \rightarrow Y\) and another injective function \(g: Y \rightarrow X\text{,}\) then there exists a bijective function \(h: X \rightarrow Y\) and so \(\abs{X} = \abs{Y}\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-49"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.3.9</span><span class="period">.</span>
 </h4>
-<p id="p-616">Let \(X, Y\) be finite sets with \(\abs{X} = \abs{Y} = n\text{.}\) Then, there exist \(n!\) possible bijections from \(X\) to \(Y\text{.}\)</p></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><p id="p-617">For \(f: X \rightarrow Y\) to be a bijection, we need to map each of the \(n\) elements in \(X\) to each of the \(n\) elements in \(Y\text{,}\) such that no two elements of \(X\) are mapped to the same element in \(y\text{.}\) In other words, we need to create \(n\) pairs of elements \((x,y)\) where \(x \in X\) and \(y \in Y\text{,}\) using no elements more than once. For the first element of \(X\text{,}\) there are \(n\) elements in \(y\) that it can be paired with. For the second elements of \(X\text{,}\) there are now \(n - 1\) elements in \(y\) it can be paired with, because we cannot re-use the element already chosen. Continuing in this way, for the 2nd last element of \(X\text{,}\) there are 2 elements in \(Y\) it can be paired with. For the last element of \(X\text{,}\) there is only 1 element in \(Y\) it can be paired with. In this way, to describe \(f: X \rightarrow Y\text{,}\) the number of ways to do it is,</p>
+<p id="p-737">Let \(X, Y\) be finite sets with \(\abs{X} = \abs{Y} = n\text{.}\) Then, there exist \(n!\) possible bijections from \(X\) to \(Y\text{.}\)</p></article><article class="hiddenproof" id="proof-65"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-65"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-65"><article class="hiddenproof"><p id="p-738">For \(f: X \rightarrow Y\) to be a bijection, we need to map each of the \(n\) elements in \(X\) to each of the \(n\) elements in \(Y\text{,}\) such that no two elements of \(X\) are mapped to the same element in \(y\text{.}\) In other words, we need to create \(n\) pairs of elements \((x,y)\) where \(x \in X\) and \(y \in Y\text{,}\) using no elements more than once. For the first element of \(X\text{,}\) there are \(n\) elements in \(y\) that it can be paired with. For the second elements of \(X\text{,}\) there are now \(n - 1\) elements in \(y\) it can be paired with, because we cannot re-use the element already chosen. Continuing in this way, for the 2nd last element of \(X\text{,}\) there are 2 elements in \(Y\) it can be paired with. For the last element of \(X\text{,}\) there is only 1 element in \(Y\) it can be paired with. In this way, to describe \(f: X \rightarrow Y\text{,}\) the number of ways to do it is,</p>
 <div class="displaymath">
 \begin{equation*}
 n \cdot (n - 1) \cdots 2 \cdot 1 = n!
 \end{equation*}
-</div></article></div></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.3.5</span> <span class="title">Remarks</span>
+</div></article></div></section><section class="subsection" id="subsection-148"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.3.5</span> <span class="title">Remarks</span>
 </h3>
-<p id="p-618">In more advanced math, one-to-one functions are called <dfn class="terminology">injective</dfn>, onto functions are called <dfn class="terminology">surjective</dfn>, and a one-to-one correspondence is called <dfn class="terminology">bijective</dfn>. Then, the noun equivalent for these terms are <dfn class="terminology">injection</dfn>, <dfn class="terminology">surjection</dfn>, and <dfn class="terminology">bijection</dfn>, respectively.</p></section></section></div></main>
+<p id="p-739">In more advanced math, one-to-one functions are called <dfn class="terminology">injective</dfn>, onto functions are called <dfn class="terminology">surjective</dfn>, and a one-to-one correspondence is called <dfn class="terminology">bijective</dfn>. Then, the noun equivalent for these terms are <dfn class="terminology">injection</dfn>, <dfn class="terminology">surjection</dfn>, and <dfn class="terminology">bijection</dfn>, respectively.</p></section></section></div></main>
 </div>
 </body>
 </html>

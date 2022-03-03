@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-24T12:23:09-08:00       *-->
+<!--*       on 2022-03-03T09:53:30-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,11 +16,14 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-[x] \amp = \set{z \in A: z R x}\\
-\amp = \set{z \in A: z R y} \amp\amp \text{$z R x$ and $x R y$, so $z R y$}\\
-\amp = [y]
+x \in \overline{A \cup B} \equiv x \notin A \cup B \amp \equiv \neg (x \in A \cup B)\\
+\amp \equiv \neg (x \in A \lor x \in B)\\
+\amp \equiv \brac{\neg (x \in A) \land \neg (x \in B)} \amp\amp \text{by De Morgan's laws}\\
+\amp \equiv \brac{x \notin A \land x \notin B}\\
+\amp \equiv \brac{x \in \overline{A} \land x \in \overline{B}}\\
+\amp \equiv \brac{x \in \overline{A} \cap \overline{B}}
 \end{align*}
 </div>
-<span class="incontext"><a href="section-ER.html#mjx-eqn:mrow-245">in-context</a></span>
+<span class="incontext"><a href="section-ST.html#mjx-eqn:mrow-245">in-context</a></span>
 </body>
 </html>

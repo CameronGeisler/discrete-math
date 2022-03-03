@@ -64,7 +64,7 @@
     </subsection>
 
     <subsection>
-        <title></title>
+        <title>False Existence Proof</title>
         <fact>
             <title>False proof 1 is the largest positive Integer (Perron's paradox)</title>
             <p>1 is the largest positive integer.</p>
@@ -74,7 +74,7 @@
         </p>
         <proof>
             <p>
-                Let <m>n</m> be the largest positive integer. Then, <m>n</m> is a positive integer, so <m>n \geq 1</m>. Then, multiplying both sides by <m>n</m> (which is positive), we have <m>n^2 \geq n</m>. Also, <m>n</m> is a positive integer so <m>n^2</m> is also a positive integer, so it must be at most <m>n</m>, or <m>n^2 \leq n</m>. Thus, <m>n^2 = n</m>, so <m>n^2 - n = 0</m>, so <m>n(n - 1) = 0</m>. The solutions to this equation are <m>n = 0, 1</m>. Since 0 is not a positive integer, this implies that <m>n = 1</m>.
+                Let <m>n</m> be the largest positive integer. Then, <m>n</m> is a positive integer, so <m>n \geq 1</m>. Then, multiplying both sides by <m>n</m> (which is positive), we have <m>n^2 \geq n</m>. Also, <m>n</m> is a positive integer so <m>n^2</m> is also a positive integer. Since <m>n</m> is the largest positive integer, we have <m>n^2 \leq n</m>. Thus, <m>n^2 = n</m>, so <m>n^2 - n = 0</m>, so <m>n(n - 1) = 0</m>. The solutions to this equation are <m>n = 0, 1</m>. Since 0 is not a positive integer, this implies that <m>n = 1</m>.
             </p>
         </proof>
 
@@ -85,21 +85,4 @@
             The more general principle is that if you assume a false statment, then you can prove anything, because the condition <m>\text{false} \implies Q</m> is true always. This false proof is called <term>Perron's paradox</term>, named after German mathematician <term>Oskar Perron</term>.
         </p>
     </subsection>
-
-    
-    \section*{Uniqueness Proofs}
-    
-    To prove that an object $A$ is unique, the typical method is to assume there exists two objects $A$ and $B$ which both satisfy the desired properties. Then, show that these two objects are equal, $A = B$.
-    \\ \\ In some sense, this is a proof by contradiction. That is,
-    \begin{itemize}
-        \item By contradiction, assume that there exists $A, B$ which satisfy the properties, and that $A \neq B$.
-        \item Show that $A = B$, contradicting the initial assumption.
-    \end{itemize}
-    
-    \section*{Examples of Uniqueness Proofs}
-    \begin{itemize}
-        \item Division algorithm.
-        \item Uniqueness of an inverse of a square matrix.
-        \item Uniqueness of the limit of a function (or sequence).
-    \end{itemize}
 </section>
