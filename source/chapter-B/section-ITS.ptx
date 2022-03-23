@@ -54,7 +54,7 @@
             \set{1, 2} = \set{1, 2, 1} = \set{1, 2, 1, 1, 1, 1, 1}
         </me>
         <p>
-            All of these sets are equal, but of course by convention, for simplicity, sets are written without duplicate elements.
+            All of these sets are equal, again because every element in each set is also in the other set. Of course, by convention, for simplicity, sets are written without duplicate elements.
         </p>
     </subsection>
 
@@ -122,11 +122,31 @@
             </p>
         </definition>
 
+        <p>
+            Intuitively, the notation <m>\abs{A}</m> uses the absolute value bars, which intuitively means the <q>size</q> of the set.
+        </p>
+
         <example>
+            <p>
+                For <m>A = \set{1,2,4}</m>, <m>\abs{A} = 3</m>.
+            </p>
             <p>
                 The empty set has cardinality zero, <m>\abs{\emptyset} = 0</m>, and it is the unique set with this property.
             </p>
         </example>
+    </subsection>
+    
+    <subsection>
+        <title>Subsets</title>
+        <definition>
+            <p>
+                A set <m>A</m> is a <term>subset</term> of a set <m>B</m>, denoted by <m>A \subseteq B</m>, if every element of <m>A</m> is also an element of <m>B</m>.
+            </p>
+        </definition>
+
+        <p>
+            Intuitively, if <m>A \subseteq B</m>, then the set <m>A</m> is <q>contained within</q> <m>B</m>.
+        </p>
     </subsection>
 
     <subsection>
@@ -233,5 +253,8 @@
                 </md>
             </li>
         </ul>
+        <p>
+            In this notation, the symbol <m>\infty</m> or <m>-\infty</m> doesn't represent a number. Rather, it simply indicates that the interval is unbounded. Note that the notation for an open interval <m>(a,b)</m> is the same as the notation for an ordered pair <m>(a,b)</m> (this is an abuse of notation). However, the context is almost always clear as to which is being referred to.
+        </p>
     </subsection>
 </section>

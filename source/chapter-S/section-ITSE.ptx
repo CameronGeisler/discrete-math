@@ -5,7 +5,7 @@
 
     <introduction>
         <p>
-            A sequence is an ordered list of objects.
+            A sequence is an ordered list of objects. Sequences are patterns of numbers.
         </p>
     </introduction>
 
@@ -160,47 +160,5 @@
         <p>
             An infinite sequence can be thought of as a function whose domain is all natural numbers, or the set of all positive integers greater than or equal to some integer.
         </p>
-    </subsection>
-    
-    <!-- \begin{example}
-    For example, the sequence given by $a_n = \frac{1}{n-1}$ might be started at $n = 2$, as the expression $\frac{1}{n-1}$ is undefined for $n = 1$.
-    \end{example}
-   
-    \section*{Writing Terms of a Sequence Given a Formula for the General Term}
-    
-    \section*{Terms of a Sequence Using a Graphing Calculator}
-    Graphing calculators can compute terms of a sequence. Enter $\boxed{LIST} \rightarrow \boxed{OPS} \rightarrow 5: \text{seq(}$
-    \begin{equation*}
-        \operatorname{seq}\brac{f(x), x, a_i, a_j}
-    \end{equation*}
-    to output the terms of the sequence $a_n = f(n)$ from the $i$th term to the $j$th term.
-    
-    \section*{Recursive Sequences (Recursion Formulas)}
-    Previously, sequences have been defined \textbf{explicitly}, where the general term $a_n$ is given as an explicit function of $n$. In other words, given $n$, we can determine $a_n$ by substituting it into the formula.
-    \\ \\ Alternatively, a sequence can be defined \textbf{recursively} (or \textbf{inductively}), where each term $a_n$ is defined as a function of some previous terms $a_{n-1}, a_{n-2}$, etc.
-    
-    \begin{example}
-    $a_1 = 1$ and $a_n = \sqrt{6 + a_{n-1}}$ for all $n \geq 2$.
-    \end{example}
-    
-    \section*{Increasing and Decreasing Sequences}
-    \begin{definition}
-    A sequence $\set{a_n}$ is
-    \begin{itemize}
-        \item \textbf{increasing} if $a_{n+1} \geq a_n$ for all $n$.
-        \item \textbf{decreasing} if $a_{n+1} \leq a_n$ for all $n$.
-    \end{itemize}
-    \end{definition}
-    
-    \section*{Convergent Sequences}
-    \begin{definition}
-    Broadly, a sequence is \textbf{convergent} if its terms approach a specific value. Otherwise, it is \textbf{divergent}.
-    \end{definition}
-    
-    \section*{Sequences Defined Randomly}
-    A sequence can also be defined as the result of a random experiment. For example, when flipping a coin,
-    \begin{equation*}
-        a_n = \begin{cases} 1 & \text{if heads} \\ 0 & \text{if tails} \end{cases}
-    \end{equation*} -->
-    
+    </subsection>    
 </section>

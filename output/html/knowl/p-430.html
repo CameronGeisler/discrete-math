@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-03T09:53:28-08:00       *-->
+<!--*       on 2022-03-23T11:20:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,14 @@
 </head>
 <body>
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>There are two classes of proofs of existence theorems: <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">constructive proofs</dfn> and <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">non-constructive proofs</dfn>. Literally, constructive proofs involve explicitly constructing the object that satisfies the properties of the theorem, and proving that it does satisfy these properties. On the other hand, non-constructive proof show the existence of the object without constructing it.</p>
-<span class="incontext"><a href="section-EP.html#p-430">in-context</a></span>
+<p>By contradiction, suppose that \(a \mid b\) and \(a \mid (b + 1)\text{.}\) Then, there exists \(m, n \in \mathbb{Z}\) such that \(b = ma\) and \(b + 1 = na\text{.}\) Then, consider the difference of these two equations,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+na - ma \amp = (b + 1) - b\\
+a(n - m) \amp = 1
+\end{align*}
+</div>
+<p class="continuation">Then, since \(a, n-m \in \mathbb{Z}\text{,}\) the product \(a(n - m)\) is the product of two integers. If the product of two integers is equal to 1, then each integer must be either 1 or \(-1\text{.}\) Thus, \(a = \pm 1\text{,}\) contradicting the assumption that \(a \geq 2\text{.}\)</p>
+<span class="incontext"><a href="section-PBC.html#p-430">in-context</a></span>
 </body>
 </html>

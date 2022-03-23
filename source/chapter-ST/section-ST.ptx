@@ -1,12 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="section-ST">
-    <title>Set Theorems</title>
+    <title>Set Identities and Properties</title>
+
+    <introduction>
+        <p>
+            There are various relationships between sets and their various operations which are true regardless of the particular sets involved. You may recall that an equation which is universally true for any values of the variables is called an <em>identity</em>. Then, these are <term>set identities</term>.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Basic Properties of Union and Intersection</title>
+        <theorem>
+            <p>
+                Let <m>A</m> be a set, in a universal set <m>U</m>.
+            </p>
+            <ul>
+                <li>Identity laws, <m>A \cup \emptyset = A</m> and <m>A \cap U = A</m>.</li>
+                <li>Domination laws, <m>A \cup U = U</m> and <m>A \cap \emptyset = \emptyset</m>.</li>
+                <li>Idempotent laws, <m>A \cup A = A</m> and <m>A \cap A = A</m>.</li>
+                <li>Double complement law, <m>\overline{\overline{A}} = A</m>.</li>
+            </ul>
+        </theorem>
+    </subsection>
+    
+    <subsection>
+        <title>Properties of Union and Intersection</title>
+        <theorem>
+            <p>
+                Let <m>A, B, C</m> be sets. Then,
+            </p>
+            <ul>
+                <li>
+                    <term>Commutative property of union and intersection</term>.
+                    <me>
+                        A \cup B = B \cup A \qquad \text{and} \qquad A \cap B = B \cap A
+                    </me>
+                </li>
+                <li>
+                    <term>Associative property of union and intersection</term>.
+                    <me>
+                        A \cup (B \cup C) = (A \cup B) \cup C \qquad \text{and} \qquad A \cap (B \cap C) = (A \cap B) \cap C
+                    </me>
+                </li>
+
+            </ul>
+        </theorem>
+        <p>
+            Intuitively, the commutative laws are true because they rely on the commutative law of disjunction and conjunction. 
+        </p>
+        <p>
+            The associative law means that when writing a union of more than 2 sets, or an intersection of more than 2 sets (but not a mix of unions and intersections), omitting parentheses is justified.
+        </p>        
+    </subsection>
+
+    <subsection>
+        <title>Distributive Property of Union and Intersection</title>
+        <theorem>
+            <p>
+                Let <m>A, B, C</m> be sets. Then,
+                <ul>
+                    <li>
+                        <term>Distributive property of union over intersection</term>.
+                        <me>
+                            A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+                        </me>
+                    </li>
+                    <li>
+                        <term>Distributive property of intersection over union</term>.
+                        <me>
+                            A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+                        </me>
+                    </li>
+                </ul>
+            </p>
+        </theorem>
+
+        <p>
+            Intuitively, the distributive laws are true because of the distributive law of disjunction over conjunction and conjunction over disjunction.
+        </p>
+
+        <proof>
+            <p>
+                First,
+            </p>
+            <md>
+                <mrow>x \in A \cup (B \cap C) \amp \equiv x \in A \lor x \in B \cap C</mrow>
+                <mrow>\amp \equiv x \in A \lor (x \in B \land x \in C)</mrow>
+                <mrow>\amp \equiv \brac{x \in A \lor x \in B} \land \brac{x \in A \lor x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}</mrow>
+                <mrow>\amp \equiv \brac{x \in A \cup B} \land \brac{x \in A \cup C}</mrow>
+                <mrow>\amp \equiv x \in (A \cup B) \cap (A \cup C)</mrow>
+            </md>
+            <p>
+                Then, similarly,
+            </p>
+            <md>
+                <mrow>x \in A \cap (B \cap C) \amp \equiv x \in A \land x \in B \cup C</mrow>
+                <mrow>\amp \equiv x \in A \land (x \in B \lor x \in C)</mrow>
+                <mrow>\amp \equiv \brac{x \in A \land x \in B} \lor \brac{x \in A \land x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}</mrow>
+                <mrow>\amp \equiv \brac{x \in A \cap B} \lor \brac{x \in A \cap C}</mrow>
+                <mrow>\amp \equiv x \in (A \cap B) \cup (A \cap C)</mrow>
+            </md>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Union and Intersection Analogy to Addition and Multiplication</title>
+        <p>
+            Unions and intersections have many similar properties to addition and multiplication, respectively. The similarities between union and addition are somewhat intuitive, since the union of two sets is somewhat like <q>adding</q> the elements of each set together. The intuition relating intersection and multiplication is less intuitive.
+        </p>
+        <p>
+            Recall that addition and multiplication are both <em>associative</em> and <em>commutative</em>, in that for any real numbers <m>a, b, c</m>, we have the identities <m>a + b = b + a</m>, <m>ab = ba</m>, <m>a + (b + c) = (a + b) + c</m>, and <m>a(bc) = (ab)c</m>.
+        </p>
+        <p>
+            Union and intersection both have these properties. For sets <m>A, B, C</m>, we have,
+        </p>
+        <md>
+            <mrow>A \cup B = B \cup A \qquad \text{and} \qquad A \cap B = B \cap A</mrow>
+            <mrow>A \cup (B \cup C) = (A \cup B) \cup C \qquad \text{and} \qquad A \cap (B \cap C) = (A \cap B) \cap C</mrow>
+        </md>
+        <p>
+            Also, for distribution of multiplication over addition, we have <m>a(b + c) = ab + ac</m>. Similarly, for the <q>distribution</q> of intersection over union,
+        </p>
+        <me>
+            A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+        </me>
+        <p>
+            However, one warning is that for distribution union over intersection, we have,
+        </p>
+        <me>
+            A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+        </me>
+        <p>
+            The analogue would be <m>a + bc = (a + b)(a + c)</m>, which is not true in general.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Other Basic Properties of Union and Intersection</title>
+        <p>
+            There are other basic properties which relate union and intersection to subsets, and complements. Most of these are intuitive, and they follow almost directly from the definitions.
+        </p>
+
+
+        <theorem>
+            <p>
+                <ul>
+                    <li><m>A \subseteq A \cup B</m>. If <m>x \in A</m>, then <m>x \in A \cup B</m>.</li>
+                    <li><m>(A \cap B) \subseteq A</m>. If <m>x \in A \cap B</m>, then <m>x \in A</m>.</li>
+                    <li>If </li>
+                </ul>
+            </p>
+        </theorem>
+
+        <theorem>
+            <ul>
+                <li>If <m>A \subseteq B</m>, then <m>A \cup B = B</m>, and conversely.</li>
+                <li>If <m>A \subseteq B</m>, then <m>A \cap B = A</m>, and conversely.</li>
+                <li>Absorption laws, <m>A \cup (A \cap B) = A</m> and <m>A \cap (A \cup B) = A</m>.</li>
+                <li>Complement laws, <m>A \cup \overline{A} = U</m> and <m>A \cap \overline{A} = \emptyset</m>.</li>
+            </ul>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Generalized Distributive Property</title>
+        <theorem>
+            <p>
+                Let <m>A, B_1, B_2, \dots, B_n</m> be sets. Then,
+                <ul>
+                    <li>
+                        <term>Generalized distributive property of union over intersection</term>.
+                        <me>
+                            A \cup (B_1 \cap B_2 \cap \cdots \cap B_n) = (A \cup B_1) \cap (A \cup B_2) \cap \cdots \cap (A \cup B_n)
+                        </me>
+                    </li>
+                    <li>
+                        <term>Generalized distributive property of intersection over union</term>.
+                        <me>
+                            A \cap (B_1 \cup B_2 \cup \cdots \cup B_n) = (A \cap B_1) \cup (A \cap B_2) \cup \cdots \cup (A \cap B_n)
+                        </me>
+
+                    </li>
+                </ul>
+            </p>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Venn Diagrams</title>
+        <p>
+            Venn diagrams can be used to intuitively understand set identities, however, they can't be used to rigorously prove them.
+        </p>
+    </subsection>
     
 
     <subsection>
         <title>De Morgan's Laws</title>
-
         <p>
             The definitions of union and intersection rely on the logical <q>or</q> and <q>and</q>. This means to define the set complement of a union or intersection requires negating these <q>or</q> or <q>and</q> statements. First, by definition,
         </p>
@@ -63,42 +253,5 @@
                 <mrow>\amp \equiv \brac{x \in \overline{A} \cup \overline{B}}</mrow>
             </md>
         </proof>
-    </subsection>
-
-    <subsection>
-        <title>Distributive Property of Union and Intersection</title>
-        <theorem>
-            <p>
-                Let <m>A, B, C</m> be sets. Then,
-                <me>
-                    A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \qquad A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
-                </me>
-            </p>
-        </theorem>
-
-        <proof>
-            <p>
-                First,
-            </p>
-            <md>
-                <mrow>x \in A \cup (B \cap C) \amp \equiv x \in A \lor x \in B \cap C</mrow>
-                <mrow>\amp \equiv x \in A \lor (x \in B \land x \in C)</mrow>
-                <mrow>\amp \equiv \brac{x \in A \lor x \in B} \land \brac{x \in A \lor x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}</mrow>
-                <mrow>\amp \equiv \brac{x \in A \cup B} \land \brac{x \in A \cup C}</mrow>
-                <mrow>\amp \equiv x \in (A \cup B) \cap (A \cup C)</mrow>
-            </md>
-            <p>
-                Then, similarly,
-            </p>
-            <md>
-                <mrow>x \in A \cap (B \cap C) \amp \equiv x \in A \land x \in B \cup C</mrow>
-                <mrow>\amp \equiv x \in A \land (x \in B \lor x \in C)</mrow>
-                <mrow>\amp \equiv \brac{x \in A \land x \in B} \lor \brac{x \in A \land x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}</mrow>
-                <mrow>\amp \equiv \brac{x \in A \cap B} \lor \brac{x \in A \cap C}</mrow>
-                <mrow>\amp \equiv x \in (A \cap B) \cup (A \cap C)</mrow>
-            </md>
-        </proof>
-
-
     </subsection>
 </section>

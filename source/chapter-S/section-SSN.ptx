@@ -271,7 +271,7 @@
                 </md>
                 Each vertical pair (<m>1 + n</m>, <m>2 + (n - 1)</m>, <m>3 + (n - 2)</m>, etc.) adds up to <m>n + 1</m>, and there are <m>n</m> terms. Thus, adding the two rows,
                 <me>
-                    2S \amp = n(n + 1)
+                    2S = n(n + 1)
                 </me>
                 Finally, solving for <m>S</m>, by dividing both sides by 2,
                 <me>

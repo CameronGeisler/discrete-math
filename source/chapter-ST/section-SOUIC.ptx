@@ -35,8 +35,6 @@
         <p>
             For finite sets, the union of two sets <m>A \cup B</m> can be formed by listing all elements of <m>A</m>, then including every element of <m>B</m> that is not already listed (or vise versa).
         </p>
-
-
     </subsection>
 
     <subsection>
@@ -85,6 +83,21 @@
                 Sets <m>A</m> and <m>B</m> are <term>disjoint</term> if they share no elements in common. In other words, if <m>A \cap B = \emptyset</m>. Otherwise, <m>A</m> and <m>B</m> are said to <term>intersect</term>.
             </p>
         </definition>
+
+        <p>
+            This is one of the reasons that is it helpful to define a set with no elements, so that the intersection of two disjoint sets can be defined to also be a set.
+        </p>
+
+        <figure>
+            <image source = "union-vs-intersection.jpg" width = "60%">
+            </image>
+            <caption>The difference between union and intersection ft. the Rock</caption>
+        </figure>
+
+        <p>
+            The symbols for <m>\union</m> (a <q>cup</q>) and <m>\intersection</m> (a <q>cap</q>), as well as <m>\in</m>, we first introduced in 1889 by Giuseppe Peano, Italian mathematician.
+        </p>
+
     </subsection>
 
     <subsection>
@@ -103,6 +116,14 @@
                 If <m>A = \set{\text{hockey}, \text{lacrosse}, \text{baseball}}, B = \set{\text{soccer}, \text{tennis}}</m>, then the universal set <m>U</m> might be the set of all sports.
             </p>
         </example>
+
+        <p>
+            The operations of union and intersection can be more precisely defined using reference to a universal set, as,
+        </p>
+        <md>
+            <mrow>A \cup B = \set{x \in U: x \in A \text{ or } x \in B}</mrow>
+            <mrow>A \cap B = \set{x \in U: x \in A \text{ and } x \in B}</mrow>
+        </md>
     </subsection>
 
     <subsection>
@@ -122,10 +143,6 @@
         <me>
             (x \in A) \iff (x \notin \overline{A})
         </me>
-
-        <p>
-            In other words, <m>\overline{A} = U \setminus A</m>.
-        </p>
 
         <example>
             <p>
@@ -160,9 +177,12 @@
             </me>
         </example>
 
-        <ul>
-            <li>If <m>U</m> is the universal set, then <m>\overline{U} = \emptyset</m> and <m>\overline{\emptyset} = U</m>.</li>
-        </ul>
+        <example>
+            <title>Complements of universal set and empty set</title>
+            <p>
+                If <m>U</m> is the universal set, then <m>\overline{U} = \emptyset</m> and <m>\overline{\emptyset} = U</m>.
+            </p>
+        </example>
 
         <!-- \begin{example}
         \textbf{Two books containing all knowledge}.
@@ -211,121 +231,26 @@
         <p>
             If <m>A \cap B = \emptyset</m>, then <m>A \setminus B = A</m>.
         </p>
+        <p>
+            Set complement can be written in terms of set difference, as <m>\overline{A} = U \setminus A</m>.
+        </p>
+        <p>
+            Set difference can be written in terms of intersection and set complement, as <m>A \setminus B = A \cap \overline{B}</m>.
+        </p>
 
     </subsection>
 
     <subsection>
-        <title>Properties of Union and Intersection</title>
-        <p>
-            Unions and intersections actually have many similar properties to addition and multiplication, respectively. The similarities between union and addition are intuitive, since the union of two sets is somewhat like <q>adding</q> the elements of each set together. The intuition behind intersection and multiplication are less intuitive.
-        </p>
-        <p>
-            Recall that addition and multiplication are both <em>associative</em> and <em>commutative</em>, in that for real numbers <m>a, b, c</m>, we have that <m>a + b = b + a</m>, <m>ab = ba</m>, <m>a + (b + c) = (a + b) + c</m>, and <m>a(bc) = (ab)c</m>.
-        </p>
-        <p>
-            Union and intersection both have these properties. For sets <m>A, B, C</m>, we have,
-        </p>
-        <md>
-            <mrow>A \cup B = B \cup A \qquad \text{and} \qquad A \cap B = B \cap A</mrow>
-            <mrow>A \cup (B \cup C) = (A \cup B) \cup C \qquad \text{and} \qquad A \cap (B \cap C) = (A \cap B) \cap C</mrow>
-        </md>
-        <p>
-            In other words, when writing a union of more than 2 sets, or an intersection of more than 2 sets (but not a mix of unions and intersections), omitting parentheses is justified.
-        </p>
-        <p>
-            Also, for distribution of multiplication over addition, we have <m>a(b + c) = ab + ac</m>. Similarly, for the <q>distribution</q> of intersection over union,
-        </p>
-        <me>
-            A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
-        </me>
-        <p>
-            However, one warning is that for distribution union over intersection, we have,
-        </p>
-        <me>
-            A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
-        </me>
-        <p>
-            The analogue would be <m>a + bc = (a + b)(a + c)</m>, which is not true in general. In summary,
-        </p>
+        <title>Generalized Union and Intersection</title>
 
-        <theorem>
+        <definition>
             <p>
-                Let <m>A, B, C</m> be sets. Then,
-                <ol>
-                    <li>
-                        <term>Associative property of union and intersection</term>.
-                        <me>
-                            A \cup B = B \cup A \qquad \text{and} \qquad A \cap B = B \cap A
-                        </me>
-                    </li>
-                    <li>
-                        <term>Commutative property of union and intersection</term>.
-                        <me>
-                            A \cup (B \cup C) = (A \cup B) \cup C \qquad \text{and} \qquad A \cap (B \cap C) = (A \cap B) \cap C
-                        </me>
-                    </li>
-                    <li>
-                        <term>Distributive property of union over intersection</term>.
-                        <me>
-                            A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
-                        </me>
-                    </li>
-                    <li>
-                        <term>Distributive property of intersection over union</term>.
-                        <me>
-                            A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
-                        </me>
-                    </li>
-                </ol>
+                Let <m>A_1, A_2, \dots, A_n</m> be subsets of a universal set <m>U</m>. Then,
             </p>
-        </theorem>
-    </subsection>
-
-    <subsection>
-        <title>Other Basic Properties of Union and Intersection</title>
-        <p>
-            There are other basic properties which relate union and intersection to subsets, and complements. Most of these are intuitive, and they follow almost directly from the definitions.
-        </p>
-        <theorem>
-            <p>
-                <ul>
-                    <li><m>A \subseteq A \cup B</m>. If <m>x \in A</m>, then <m>x \in A \cup B</m>.</li>
-                    <li><m>(A \cap B) \subseteq A</m>. If <m>x \in A \cap B</m>, then <m>x \in A</m>.</li>
-                    <li>If </li>
-                </ul>
-            </p>
-        </theorem>
-
-        <theorem>
-            <ul>
-                <li>If <m>A \subseteq B</m>, then <m>A \cup B = B</m>, and conversely.</li>
-                <li>If <m>A \subseteq B</m>, then <m>A \cap B = A</m>, and conversely.</li>
-            </ul>
-        </theorem>
-    </subsection>
-
-    <subsection>
-        <title>Generalized Distributive Property</title>
-        <theorem>
-            <p>
-                Let <m>A, B_1, B_2, \dots, B_n</m> be sets. Then,
-                <ul>
-                    <li>
-                        <term>Generalized distributive property of union over intersection</term>.
-                        <me>
-                            A \cup (B_1 \cap B_2 \cap \cdots \cap B_n) = (A \cup B_1) \cap (A \cup B_2) \cap \cdots \cap (A \cup B_n)
-                        </me>
-                    </li>
-                    <li>
-                        <term>Generalized distributive property of intersection over union</term>.
-                        <me>
-                            A \cap (B_1 \cup B_2 \cup \cdots \cup B_n) = (A \cap B_1) \cup (A \cap B_2) \cup \cdots \cup (A \cap B_n)
-                        </me>
-
-                    </li>
-                </ul>
-            </p>
-        </theorem>
-    </subsection>
-   
+            <md>
+                <mrow>\bigcup_{i=1}^n A_i \amp = A_1 \cup A_2 \cup \dots \cup A_n = \set{x \in U: x \in A_i \text{ for some } i = 1, 2, \dots, n}</mrow>
+                <mrow>\bigcap_{i=1}^n A_i \amp = A_1 \cap A_2 \cap \dots \cap A_n = \set{x \in U: x \in A_i \text{ for every } i = 1, 2, \dots, n}</mrow>
+            </md>
+        </definition>
+    </subsection>   
 </section>
