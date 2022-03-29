@@ -96,6 +96,18 @@
     </subsection>
 
     <subsection>
+        <title>Cardinality of Cartesian Product</title>
+        <p>
+            The cardinality of a Cartesian product follows almost directly from the multiplication principle.
+        </p>
+        <theorem>
+            <p>
+                Let <m>A, B</m> be sets. Then, <m>\abs{A \times B} = \abs{A} \cdot \abs{B}</m>. More generally, let <m>A_1, \dots, A_n</m> be sets. Then, <m>\abs{A_1 \times \cdots \times A_n} = \abs{A_1} \cdot \cdots \cdot \abs{A_n}</m>.
+            </p>
+        </theorem>
+    </subsection>
+
+    <subsection>
         <title>Formalization of the Cartesian Product</title>
         <p>
             In the development of set theory as the foundation of mathematics, mathematicians wanted to formally define ordered tuples in terms of sets. however, sets are not ordered, in that <m>\set{a,b}</m> and <m>\set{b,a}</m> both represent the same set.

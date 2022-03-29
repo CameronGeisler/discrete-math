@@ -100,19 +100,6 @@
             </p>
         </example>
 
-        <example>
-            <title>Empty set is a subset of every set</title>
-            <p>
-                The empty set is a subset of all other sets. In other words, for all <m>A</m>, <m>\emptyset \subseteq A</m>.
-            </p>
-            <p>
-                The empty set is a strict subset of every set, except for the empty set.
-            </p>
-            <p>
-                This is because <m>\emptyset \subseteq A</m> means that for all <m>a \in \emptyset</m>, <m>a \in A</m>. This statement is vacuously true, because <q>all</q> of the zero elements in <m>\emptyset</m> are indeed in <m>A</m>.
-            </p>
-        </example>
-
         <p>
             The important number sets have the following inclusion relationship,
         </p>
@@ -370,13 +357,5 @@
         <p>
             Relationships between sets can be represented graphically using a Venn diagram, or a Euler diagram. First intorduced in 1881, by John Venn, British mathematician. The idea is that sets <m>A</m> and <m>B</m> are represented as regions in the plane, and elements are thought of as points in the plane.
         </p>
-    </subsection>
-    
-    <!-- \section*{Applications of Venn Diagrams}
-    \begin{theorem}[Addition Rule for Counting, Inclusion-Exclusion principle]
-    \begin{equation*}
-        n(A \cup B) = n(A) + n(B) - n(A \cap B)
-    \end{equation*}
-    \end{theorem} -->
-   
+    </subsection>   
 </section>

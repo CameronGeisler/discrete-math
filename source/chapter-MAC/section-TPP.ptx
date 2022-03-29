@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TPP">
+    <title>The Pigeonhole Principle</title>
+
+    <introduction>
+        <p>
+            The pigeonhole principle is the basic observation that is you have <m>n</m>, and you have <m>m</m> pigeonholes, and you have more pigeons than pigeonholes (that is, <m>n > m</m>), then at least one hole must contain two or more pigeons.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Pigeonhole Principle</title>
+
+        <theorem>
+            <p>
+                Consider <m>n</m> objects placed into <m>k</m> boxes.
+            </p>
+            <ol>
+                <li>If <m>n > k</m>, then at least one box contains more than one object.</li>
+                <li>If <m>n \lt k</m>, then at least one box is empty.</li>
+            </ol>
+        </theorem>
+
+        <p>
+            Despite sounding very intuitively obvious and trivial, the pigeonhole principle can be used for important applications, as well as prove some results that are very subtle. The pigeonhole principle is an existence theorem, in that it only provides information that such a box (with multiple objects or no objects) exists, without providing any information about how to find this box. The pigeonhole principle was first stated formally by <em>Peter Gustav Lejeune Dirichlet</em> (1805-1859), German mathematician.
+        </p>
+        <proof>
+            <p>
+                By contradiction, suppose <m>n > k</m> objects are placed into <m>k</m> boxes, and each box contains at most one object. Then, the total number of objects, <m>n</m>, is equal to the sum of the objects in each of the <m>k</m> boxes. Then, the sum of the objects in the <m>k</m> boxes is at most <m>k \cdot 1 = k</m>, because there is at most one object in each box. This implies that <m>n \leq k</m>, which contradicts the assumption that <m>n > k</m>.
+            </p>
+            <p>
+                By contradiction, suppose <m>n \lt k</m> objects are placed into <m>k</m> boxes, and no box is empty, that is, every box has at least one object. Then, the number of objects <m>n</m> is equal to the sum of the objects in each of the <m>k</m> boxes, which is at least <m>k \cdot 1 = k</m>, because each box contains at least one object. Thus, <m>n \geq k</m>, contradicting the assumption that <m>n \lt k</m>.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Basic Examples</title>
+
+        <example>
+            <p>
+                In any group of 13 people, there are at least two people who were born in the same month.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Suppose that every person has no more than 500,000 strands of hair. Then, in a city of more than 500,000 people, there are at least two people that have the exact same number of strands of hair.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Consider a 70cm by 70cm square that is shot with 50 bullets. Show there are a pair of bulletholes that are closer than 15cm. Then, improve the upper bound. Divide up the square into 49 smaller 7cm by 7cm squares.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Given 38 even integers (or simply integers) less than 1000, prove that there are 2 of them whose difference is at most 26.
+            </p>
+        </example>
+
+        <example>
+            <p>
+                Prove that for any 5 points in an equilateral triangle of side length 2, there exists a pair of points whose distance is at most 1.
+            </p>
+            <p>
+                Divide the triangle into 4 equilateral triangles of side length 1.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Formal Version</title>
+        <p>
+            More formally, the pigeonhole principle can be stated in terms of sets and functions.
+        </p>
+        <theorem>
+            <p>
+                Let <m>A, B</m> be finite sets, <m>f: A \rightarrow B</m> be a function. If <m>\abs{A} > \abs{B}</m>, then <m>f</m> is not one-to-one, i.e. there exists an element in the co-domain <m>B</m> which has two elements in the domain <m>A</m> mapping to it.
+            </p>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Generalized Pigeonhole Principle</title>
+        <theorem>
+            <p>
+                Consider <m>n</m> objects being placed into <m>k</m> boxes. Then,
+            </p>
+            <ol>
+                <li>At least one box contains <m>\ceil{\frac{n}{k}}</m> or more objects.</li>
+                <li>At least one box contains <m>\floor{\frac{n}{k}}</m> or fewer objects.</li>
+            </ol>
+        </theorem>
+    </subsection>
+</section>

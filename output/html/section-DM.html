@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:17-07:00       *-->
+<!--*       on 2022-03-29T13:25:54-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+<li><a href="section-SIAP.html" data-scroll="section-SIAP">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -144,6 +144,8 @@
 </li>
 <li class="link">
 <a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CFS.html" data-scroll="section-CFS">Counting for Sets</a></li>
+<li><a href="section-TPP.html" data-scroll="section-TPP">The Pigeonhole Principle</a></li>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM" class="active">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
@@ -159,77 +161,77 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DM"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title">Distributing Money</span>
+<span class="type">Section</span> <span class="codenumber">9.4</span> <span class="title">Distributing Money</span>
 </h2>
-<section class="introduction" id="introduction-30">This is an application of combinations.</section><section class="subsection" id="subsection-159"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">9.2.1</span> <span class="title">Distributing Money</span>
+<section class="introduction" id="introduction-32">This is an application of combinations.</section><section class="subsection" id="subsection-172"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.4.1</span> <span class="title">Distributing Money</span>
 </h3>
-<p id="p-792">Consider \(n\) identical dollars to be distributed to \(k\) people, such that each person gets at least 1 dollar.</p>
-<p id="p-793">Line up all the dollars (the order doesn't matter). Let the first person choose dollars from left to right, until we stop them. Then, let the second person continue collecting dollars from left to right, until they are stopped, and so on. In this way, the number of ways to distribute the dollars is equivalent to the number of ways to split up the \(n\) dollars with “cuts” to specify where one person stops and the next starts.</p>
-<p id="p-794">Note that there are \(n-1\) possible positions to place a cut, since you can only a cut before any of the \(n\) dollars, except the first one. Also, there are $k-1$ cuts to make, since we need to put a marker to specify where each person starts collecting, except the first person which will always start at the beginning. Thus, there are \(\binom{n-1}{k-1}\) ways to do this.</p>
-<article class="theorem theorem-like" id="theorem-53"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span>
+<p id="p-849">Consider \(n\) identical dollars to be distributed to \(k\) people, such that each person gets at least 1 dollar.</p>
+<p id="p-850">Line up all the dollars (the order doesn't matter). Let the first person choose dollars from left to right, until we stop them. Then, let the second person continue collecting dollars from left to right, until they are stopped, and so on. In this way, the number of ways to distribute the dollars is equivalent to the number of ways to split up the \(n\) dollars with “cuts” to specify where one person stops and the next starts.</p>
+<p id="p-851">Note that there are \(n-1\) possible positions to place a cut, since you can only a cut before any of the \(n\) dollars, except the first one. Also, there are $k-1$ cuts to make, since we need to put a marker to specify where each person starts collecting, except the first person which will always start at the beginning. Thus, there are \(\binom{n-1}{k-1}\) ways to do this.</p>
+<article class="theorem theorem-like" id="theorem-70"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.4.1</span><span class="period">.</span>
 </h4>
-<p id="p-795">The number of ways to distribute \(n\) identical objects to \(k\) people, such that each person gets at least one of the objects, is,</p>
+<p id="p-852">The number of ways to distribute \(n\) identical objects to \(k\) people, such that each person gets at least one of the objects, is,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\binom{n-1}{k-1}}
 \end{equation*}
-</div></article><p id="p-796">This result can be used to consider a more general case, where \(n\) identical dollars are distributed to \(k\) people (with no requirement that everyone gets at least one).</p>
-<p id="p-797">Instead, borrow 1 dollar from each person, and distribute the resulting \(n+k\) dollars such that every person gets at least 1 dollar. In this way, every person will at least have their 1 dollar returned, and they may or may not get more than that. From the previous problem, the number of ways to distribute \(n+k\) dollars among \(k\) people, such that every person gets at least 1, is,</p>
+</div></article><p id="p-853">This result can be used to consider a more general case, where \(n\) identical dollars are distributed to \(k\) people (with no requirement that everyone gets at least one).</p>
+<p id="p-854">Instead, borrow 1 dollar from each person, and distribute the resulting \(n+k\) dollars such that every person gets at least 1 dollar. In this way, every person will at least have their 1 dollar returned, and they may or may not get more than that. From the previous problem, the number of ways to distribute \(n+k\) dollars among \(k\) people, such that every person gets at least 1, is,</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n+k-1}{k-1}
 \end{equation*}
 </div>
-<article class="theorem theorem-like" id="theorem-54"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="period">.</span>
+<article class="theorem theorem-like" id="theorem-71"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.4.2</span><span class="period">.</span>
 </h4>
-<p id="p-798">The number of ways to distribute \(n\) identical objects to \(k\) people is,</p>
+<p id="p-855">The number of ways to distribute \(n\) identical objects to \(k\) people is,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\binom{n+k-1}{k-1}}
 \end{equation*}
-</div></article><p id="p-799">Note that this number is clearly larger than the previous case.</p>
-<article class="example example-like" id="example-91"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-91"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-91"><article class="example example-like"><p id="p-800">Determine the number of ways to distribute \(n\) identical dollars to \(k\) people, such that each person gets at least 2 dollars.</p>
-<p id="p-801">First, give 1 dollar to each person, so that there are \(n-k\) dollars left. Then, distribute those \(-k\) dollars such that every person gets at least 1 dollar. In this way, each person will get at least 2 dollars. From the previous problem, there are,</p>
+</div></article><p id="p-856">Note that this number is clearly larger than the previous case.</p>
+<article class="example example-like" id="example-96"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-96"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-96"><article class="example example-like"><p id="p-857">Determine the number of ways to distribute \(n\) identical dollars to \(k\) people, such that each person gets at least 2 dollars.</p>
+<p id="p-858">First, give 1 dollar to each person, so that there are \(n-k\) dollars left. Then, distribute those \(-k\) dollars such that every person gets at least 1 dollar. In this way, each person will get at least 2 dollars. From the previous problem, there are,</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n-k-1}{k-1}
 \end{equation*}
 </div>
-<p id="p-802">ways to distribute $n-k$ dollars to \(k\) people, such that each person gets at least 1 dollar.</p></article></div>
-<article class="example example-like" id="example-92"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-92"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-92"><article class="example example-like"><p id="p-803">Determine the number of ways that \(k\) people can be seated in \(n\) consecutive seats, such that no two people sit next to one another.</p>
-<p id="p-804">First, “Remove” \(k-1\) seats to leave \(n - (k-1) = n - k + 1\) seats remaining. The number of ways that \(k\) people can be arranged in \(n - k + 1\) seats (where they can sit next to each other) is,</p>
+<p id="p-859">ways to distribute $n-k$ dollars to \(k\) people, such that each person gets at least 1 dollar.</p></article></div>
+<article class="example example-like" id="example-97"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-97"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-97"><article class="example example-like"><p id="p-860">Determine the number of ways that \(k\) people can be seated in \(n\) consecutive seats, such that no two people sit next to one another.</p>
+<p id="p-861">First, “Remove” \(k-1\) seats to leave \(n - (k-1) = n - k + 1\) seats remaining. The number of ways that \(k\) people can be arranged in \(n - k + 1\) seats (where they can sit next to each other) is,</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n-k+1}{k}
 \end{equation*}
 </div>
-<p id="p-805">Then, insert the remaining \(k-1\) seats to the right of every person, except the last person. In this way, person \(i\) will not sit next to person \(i+1\text{,}\) as there will be at least one seat between them.</p></article></div>
-<article class="example example-like" id="example-93"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-93"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-93"><article class="example example-like"><p id="p-806">Determine the number of ways that \(n\) identical dollars can be distributed to \(k\) boys and \(l\) girls, such that every girl gets at least one dollar (but the same restriction does not hold for boys).</p>
-<p id="p-807">First, borrow 1 dollar from each boy, and distribute the resulting $n+k$ dollars such that everyone gets at least 1 dollar. Then, the girls will all get at least 1 dollar, and the boys will have at least 0 dollars. Then, the number of ways to do this is,</p>
+<p id="p-862">Then, insert the remaining \(k-1\) seats to the right of every person, except the last person. In this way, person \(i\) will not sit next to person \(i+1\text{,}\) as there will be at least one seat between them.</p></article></div>
+<article class="example example-like" id="example-98"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-98"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-98"><article class="example example-like"><p id="p-863">Determine the number of ways that \(n\) identical dollars can be distributed to \(k\) boys and \(l\) girls, such that every girl gets at least one dollar (but the same restriction does not hold for boys).</p>
+<p id="p-864">First, borrow 1 dollar from each boy, and distribute the resulting $n+k$ dollars such that everyone gets at least 1 dollar. Then, the girls will all get at least 1 dollar, and the boys will have at least 0 dollars. Then, the number of ways to do this is,</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n+k-1}{k+l-1}
 \end{equation*}
 </div></article></div>
-<article class="example example-like" id="example-94"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-94"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-94"><article class="example example-like"><p id="p-808">A group of \(k\) earls are playing cards. Originally, they each have \(p\) pennies. At the end of the game, they count how much money they have. They do not borrow from each other, so that each cannot lose more than his \(p\) pennies. How many possible results are there?</p>
-<p id="p-809">This is equivalent to determining the number of ways to distribute the \(kp\) total pennies (\(p\) pennies per earl and \(k\) earls) among \(k\) earls. Thus, there are,</p>
+<article class="example example-like" id="example-99"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-99"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-99"><article class="example example-like"><p id="p-865">A group of \(k\) earls are playing cards. Originally, they each have \(p\) pennies. At the end of the game, they count how much money they have. They do not borrow from each other, so that each cannot lose more than his \(p\) pennies. How many possible results are there?</p>
+<p id="p-866">This is equivalent to determining the number of ways to distribute the \(kp\) total pennies (\(p\) pennies per earl and \(k\) earls) among \(k\) earls. Thus, there are,</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{kp + k - 1}{k-1}
 \end{equation*}
 </div>
-<p id="p-810">ways.</p></article></div></section></section></div></main>
+<p id="p-867">ways.</p></article></div></section></section></div></main>
 </div>
 </body>
 </html>

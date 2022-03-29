@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:16-07:00       *-->
+<!--*       on 2022-03-29T13:25:53-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS" class="active">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+<li><a href="section-SIAP.html" data-scroll="section-SIAP">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -144,6 +144,8 @@
 </li>
 <li class="link">
 <a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CFS.html" data-scroll="section-CFS">Counting for Sets</a></li>
+<li><a href="section-TPP.html" data-scroll="section-TPP">The Pigeonhole Principle</a></li>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
@@ -161,124 +163,127 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-MAS"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Basics of Set Theory</span>
 </h2>
-<section class="subsection" id="subsection-115"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-116"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.1</span> <span class="title">Set Basics</span>
 </h3>
-<p id="p-580">The term <em class="emphasis">set</em> was first introduced by Georg Cantor (1845-1918).</p>
-<p id="p-581">Recall the set-builder notation \(A = \set{x \in S: P(x)}\text{.}\) This means that the set \(A\) is the set of all elements \(x \in S\) such that \(P(x)\) is true. Using mathematical logic,</p>
+<p id="p-587">The term <em class="emphasis">set</em> was first introduced by Georg Cantor (1845-1918).</p>
+<p id="p-588">Recall the set-builder notation \(A = \set{x \in S: P(x)}\text{.}\) This means that the set \(A\) is the set of all elements \(x \in S\) such that \(P(x)\) is true. Using mathematical logic,</p>
 <div class="displaymath">
 \begin{equation*}
 \brac{x \in A} \equiv \brac{x \in S \land P(x)}
 \end{equation*}
 </div>
-<p id="p-582">Using mathematical logic, the definition of set equality can be written as,</p>
+<p id="p-589">Using mathematical logic, the definition of set equality can be written as,</p>
 <div class="displaymath">
 \begin{equation*}
 A = B \equiv \brac{x \in A \leftrightarrow x \in B}
 \end{equation*}
-</div></section><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.2</span> <span class="title">Cardinality, Finite and Infinite Sets</span>
 </h3>
 <article class="definition definition-like" id="definition-44"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
 </h4>
-<p id="p-583">Let \(A\) be a set. The <dfn class="terminology">cardinality</dfn> (or <dfn class="terminology">size</dfn> or <dfn class="terminology">cardinal number</dfn>) of a set \(A\text{,}\) denoted by \(n(A)\) or \(\abs{A}\text{,}\) is the number of elements in \(A\text{.}\)</p>
-<ul class="disc"><li id="li-113"><p id="p-derived-li-113">The empty set has cardinality zero, \(\abs{\emptyset} = 0\text{,}\) and it is the unique set with this property.</p></li></ul></article><p id="p-584">Some sets have infinitely many elements. In roster notation, which can be indicated by an ellipsis “\(\dots\)”.</p>
+<p id="p-590">Let \(A\) be a set. The <dfn class="terminology">cardinality</dfn> (or <dfn class="terminology">size</dfn> or <dfn class="terminology">cardinal number</dfn>) of a set \(A\text{,}\) denoted by \(n(A)\) or \(\abs{A}\text{,}\) is the number of elements in \(A\text{.}\)</p>
+<ul class="disc"><li id="li-113"><p id="p-derived-li-113">The empty set has cardinality zero, \(\abs{\emptyset} = 0\text{,}\) and it is the unique set with this property.</p></li></ul></article><p id="p-591">Some sets have infinitely many elements. In roster notation, which can be indicated by an ellipsis “\(\dots\)”.</p>
 <article class="definition definition-like" id="definition-45"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
 </h4>
-<p id="p-585">Intuitively, a <dfn class="terminology">finite</dfn> set has a finite number of elements, i.e. the number of elements in the set is a whole number. An <dfn class="terminology">infinite</dfn> set has infinitely many elements, i.e. the number of elements in the set is not a whole number.</p></article></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+<p id="p-592">Intuitively, a <dfn class="terminology">finite</dfn> set has a finite number of elements, i.e. the number of elements in the set is a whole number. An <dfn class="terminology">infinite</dfn> set has infinitely many elements, i.e. the number of elements in the set is not a whole number.</p></article></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.3</span> <span class="title">Sets Inside Sets</span>
 </h3>
-<p id="p-586">A set is a collection of objects, and sets are themselves objects. Then, a set can include other sets among its elements.</p>
+<p id="p-593">A set is a collection of objects, and sets are themselves objects. Then, a set can include other sets among its elements.</p>
 <article class="example example-like" id="example-53"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-53"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-53"><article class="example example-like"><p id="p-587">Note that \(1 \in \set{1,3}\) (the object 1 is in the set containing 1 and 3), but \(\set{1} \not\in \set{1,3}\) (the set containing 1 is not an element of the set containing 1 and 3). However, \(\set{1} \in \set{\set{1},3}\) (the set containing 1 is an element of the set containing 3 and the set containing 1). In general, an object is not the same as a set containing that object.</p></article></div></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-53"><article class="example example-like"><p id="p-594">Note that \(1 \in \set{1,3}\) (the object 1 is in the set containing 1 and 3), but \(\set{1} \not\in \set{1,3}\) (the set containing 1 is not an element of the set containing 1 and 3). However, \(\set{1} \in \set{\set{1},3}\) (the set containing 1 is an element of the set containing 3 and the set containing 1). In general, an object is not the same as a set containing that object.</p></article></div></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.4</span> <span class="title">Subsets</span>
 </h3>
 <article class="definition definition-like" id="definition-46"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.4</span><span class="period">.</span>
 </h4>
-<p id="p-588">A set \(A\) is a <dfn class="terminology">subset</dfn> of a set \(B\text{,}\) denoted by \(A \subseteq B\text{,}\) if every element of \(A\) is also an element of \(B\text{.}\)</p>
-<p id="p-589">Using mathematical logic, this can be written as a universal conditional statement,</p>
+<p id="p-595">A set \(A\) is a <dfn class="terminology">subset</dfn> of a set \(B\text{,}\) denoted by \(A \subseteq B\text{,}\) if every element of \(A\) is also an element of \(B\text{.}\)</p>
+<p id="p-596">Using mathematical logic, this can be written as a universal conditional statement,</p>
 <div class="displaymath">
 \begin{equation*}
 (A \subseteq B) \equiv (\forall x \in A, x \in B) \equiv (x \in A \implies x \in B)
 \end{equation*}
 </div>
-<p id="p-590">Also, \(A\) is a <dfn class="terminology">proper subset</dfn> of \(B\text{,}\) denoted by \(A \subset B\text{,}\) if \(A\) is a subset of \(B\) and \(A \neq B\text{.}\) In other words, \(B\) contains at least one element that is not in \(A\text{.}\)</p>
-<p id="p-591">Also, \(A\) is not a subset of \(B\text{,}\) denoted by \(A \not\subseteq B\text{,}\) if there exists some \(x \in A\) such that \(x \notin B\text{.}\)</p>
+<p id="p-597">Also, \(A\) is not a subset of \(B\text{,}\) denoted by \(A \not\subseteq B\text{,}\) if there exists some \(x \in A\) such that \(x \notin B\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 (A \not\subseteq B) \equiv (\exists x \in A \text{ s.t. } x \notin B)
 \end{equation*}
 </div></article><article class="example example-like" id="example-54"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-54"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-54"><article class="example example-like"><p id="p-592">The set of holidays is a (proper) subset of the set of all days in the calendar year.</p></article></div>
-<p id="p-593">Intuitively, the notation \(\subseteq\) is analogous to the less than or equal to sign \(\leq\text{.}\)</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-54"><article class="example example-like"><p id="p-598">The set of holidays is a (proper) subset of the set of all days in the calendar year.</p></article></div>
+<p id="p-599">Intuitively, the notation \(\subseteq\) is analogous to the less than or equal to sign \(\leq\text{.}\)</p>
 <article class="example example-like" id="example-55"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-55"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Every set is a subset of itself.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-55"><article class="example example-like"><p id="p-594">All sets are subsets of themselves. In other words, for all \(A\text{,}\) \(A \subseteq A\text{.}\) Note that a set is not a strict subset of itself.</p>
-<p id="p-595">This is because, for every element in \(A\text{,}\) that element is in \(A\text{.}\)</p></article></div>
-<article class="example example-like" id="example-56"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-56"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Empty set is a subset of every set.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-56"><article class="example example-like"><p id="p-596">The empty set is a subset of all other sets. In other words, for all \(A\text{,}\) \(\emptyset \subseteq A\text{.}\)</p>
-<p id="p-597">The empty set is a strict subset of every set, except for the empty set.</p>
-<p id="p-598">This is because \(\emptyset \subseteq A\) means that for all \(a \in \emptyset\text{,}\) \(a \in A\text{.}\) This statement is vacuously true, because “all” of the zero elements in \(\emptyset\) are indeed in \(A\text{.}\)</p></article></div>
-<p id="p-599">The important number sets have the following inclusion relationship,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-55"><article class="example example-like"><p id="p-600">All sets are subsets of themselves. In other words, for all \(A\text{,}\) \(A \subseteq A\text{.}\) Note that a set is not a strict subset of itself.</p>
+<p id="p-601">This is because, for every element in \(A\text{,}\) that element is in \(A\text{.}\)</p></article></div>
+<p id="p-602">The important number sets have the following inclusion relationship,</p>
 <div class="displaymath">
 \begin{equation*}
 \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}
 \end{equation*}
 </div>
-<article class="theorem theorem-like" id="theorem-35"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Subsets and cardinality.</span>
+<article class="theorem theorem-like" id="theorem-36"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Subsets and cardinality.</span>
 </h4>
-<p id="p-600">If \(A, B\) are finite sets with \(A \subseteq B\text{,}\) then \(\abs{A} \leq \abs{B}\text{.}\) If \(A \subset B\text{,}\) then \(\abs{A} \lt \abs{B}\text{.}\)</p></article><p id="p-601">Note that only sets can be subsets of other sets. In particular, elements are not subsets of other sets. For example, \(1 \subseteq \set{1, 2, 3}\) is false, whereas \(\set{1} \subseteq \set{1, 2, 3}\text{.}\) Instead, we have \(1 \in \set{1,2,3}\text{.}\)</p>
-<p id="p-602">Sometimes, we want to refer to a set containing another set, rather than being contained within another set.</p>
+<p id="p-603">If \(A, B\) are finite sets with \(A \subseteq B\text{,}\) then \(\abs{A} \leq \abs{B}\text{.}\) If \(A \subset B\text{,}\) then \(\abs{A} \lt \abs{B}\text{.}\)</p></article><p id="p-604">Note that only sets can be subsets of other sets. In particular, elements are not subsets of other sets. For example, \(1 \subseteq \set{1, 2, 3}\) is false, whereas \(\set{1} \subseteq \set{1, 2, 3}\text{.}\) Instead, we have \(1 \in \set{1,2,3}\text{.}\)</p>
 <article class="definition definition-like" id="definition-47"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.8</span><span class="period">.</span>
+</h4>
+<p id="p-605">A set \(A\) is a <dfn class="terminology">proper subset</dfn> of \(B\text{,}\) denoted by \(A \subset B\text{,}\) if \(A\) is a subset of \(B\) and \(A \neq B\text{.}\) In other words, \(B\) contains at least one element that is not in \(A\text{.}\) In mathematical logic,</p>
+<div class="displaymath">
+\begin{equation*}
+(A \subset B) \equiv (\forall x \in A, x \in B) \land (\exists x \in B \text{ s.t. } x \notin A)
+\end{equation*}
+</div></article><p id="p-606">Sometimes, we want to refer to a set containing another set, rather than being contained within another set.</p>
+<article class="definition definition-like" id="definition-48"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.9</span><span class="period">.</span>
 </h4>
-<p id="p-603">\(B\) is a <dfn class="terminology">superset</dfn> of \(A\text{,}\) \(B \supseteq A\text{,}\) if \(A\) is a subset of \(B\text{.}\)</p>
-<p id="p-604">\(B\) is a <dfn class="terminology">proper superset</dfn> of \(A\text{,}\) \(B \supset A\text{,}\) if \(A\) is a proper subset of \(B\text{.}\)</p></article><p id="p-605">Intuitively, the prefix “super-” means bigger, and “sub-” means lesser, somewhat similar to \(&gt;\) and \(\lt\) for comparing numbers.</p></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
+<p id="p-607">\(B\) is a <dfn class="terminology">superset</dfn> of \(A\text{,}\) \(B \supseteq A\text{,}\) if \(A\) is a subset of \(B\text{.}\)</p>
+<p id="p-608">\(B\) is a <dfn class="terminology">proper superset</dfn> of \(A\text{,}\) \(B \supset A\text{,}\) if \(A\) is a proper subset of \(B\text{.}\)</p></article><p id="p-609">Intuitively, the prefix “super-” means bigger, and “sub-” means lesser, somewhat similar to \(&gt;\) and \(\lt\) for comparing numbers.</p></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.5</span> <span class="title">Remark on Subset Notation</span>
 </h3>
-<p id="p-606">Mathematicians are somewhat divided on how to write subsets and strict subsets. Here, \(A \subseteq B\) represents \(A\) being a subset of \(B\text{,}\) and \(A \subset B\) (without the horizontal line) being a <em class="emphasis">strict</em> subset of \(B\text{.}\) However, in some textbooks, \(A \subset B\) is used to mean \(A\) being any subset of \(B\text{,}\) not just strict subsets. Unfortunately, this convention contradicts the previous notation, however is it also widely used. In light of this, somtimes \(A \subsetneq B\) is used instead of \(A \subset B\) to denote a strict subset, since the latter can be used to mean a general subset.</p></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+<p id="p-610">Mathematicians are somewhat divided on how to write subsets and strict subsets. Here, \(A \subseteq B\) represents \(A\) being a subset of \(B\text{,}\) and \(A \subset B\) (without the horizontal line) being a <em class="emphasis">strict</em> subset of \(B\text{.}\) However, in some textbooks, \(A \subset B\) is used to mean \(A\) being any subset of \(B\text{,}\) not just strict subsets. Unfortunately, this convention contradicts the previous notation, however is it also widely used. In light of this, somtimes \(A \subsetneq B\) is used instead of \(A \subset B\) to denote a strict subset, since the latter can be used to mean a general subset.</p></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.6</span> <span class="title">Proving One Set is a Subset of Another</span>
 </h3>
-<p id="p-607">To prove that \(A \subseteq B\text{,}\)</p>
+<p id="p-611">To prove that \(A \subseteq B\text{,}\)</p>
 <ol class="decimal">
 <li id="li-114"><p id="p-derived-li-114">Suppose that \(x\) is a particular but arbitrarily chosen element of \(A\text{.}\)</p></li>
 <li id="li-115"><p id="p-derived-li-115">Show that \(x\) is an element of \(B\text{.}\)</p></li>
 </ol>
-<p id="p-608">This is called an <dfn class="terminology">element arguement</dfn>, and is a fundamental proof technique of set theory.</p></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
+<p id="p-612">This is called an <dfn class="terminology">element argument</dfn>, because it involves proving that every element in one set is also an element of another. This is a fundamental proof technique of set theory.</p>
+<p id="p-613">To prove that \(A \subseteq B\text{,}\) find a counterexample to the definition of subset, an element \(x \in A\) where \(x \notin B\text{.}\)</p></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.7</span> <span class="title">Equality of Sets Using Subsets</span>
 </h3>
-<article class="theorem theorem-like" id="theorem-36"><h4 class="heading">
+<article class="theorem theorem-like" id="theorem-37"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.10</span><span class="period">.</span>
 </h4>
-<p id="p-609">Sets \(A\) and \(B\) are equal if and only if \(A\) is a subset of \(B\) and \(B\) is a subset of \(A\text{.}\) In mathematical logic,</p>
+<p id="p-614">Sets \(A\) and \(B\) are equal if and only if \(A\) is a subset of \(B\) and \(B\) is a subset of \(A\text{.}\) In mathematical logic,</p>
 <div class="displaymath">
 \begin{equation*}
 (A = B) \equiv (A \subseteq B) \land (B \subseteq A)
 \end{equation*}
-</div></article><p id="p-610">Then, to prove that two sets are equal, \(A = B\text{,}\) we can prove that \(A \subseteq B\) and \(B \subseteq A\text{,}\) and prove each of these two statements using an element argument. In other words, a “set equality” proof basically consists of two subset proofs.</p></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
+</div></article><p id="p-615">Then, to prove that two sets are equal, \(A = B\text{,}\) we can prove that \(A \subseteq B\) and \(B \subseteq A\text{,}\) and prove each of these two statements using an element argument. In other words, a “set equality” proof basically consists of two subset proofs.</p></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.8</span> <span class="title">Transitivity of Subsets</span>
 </h3>
-<article class="theorem theorem-like" id="theorem-37"><h4 class="heading">
+<article class="theorem theorem-like" id="theorem-38"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.11</span><span class="period">.</span>
 </h4>
-<p id="p-611">Let \(A, B, C\) be sets. If \(A \subseteq B\) and \(B \subseteq C\text{,}\) then \(A \subseteq C\text{.}\)</p></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><p id="p-612">We want to show that for all \(a \in A\text{,}\) we have \(a \in C\text{.}\) Let \(a \in A\text{.}\) Since \(A \subseteq B\text{,}\) this implies that \(a \in B\text{.}\) Then, since \(B \subseteq C\text{,}\) this implies that \(a \in C\text{,}\) as desired.</p></article></div></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
+<p id="p-616">Let \(A, B, C\) be sets. If \(A \subseteq B\) and \(B \subseteq C\text{,}\) then \(A \subseteq C\text{.}\)</p></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><p id="p-617">We want to show that for all \(a \in A\text{,}\) we have \(a \in C\text{.}\) Let \(a \in A\text{.}\) Since \(A \subseteq B\text{,}\) this implies that \(a \in B\text{.}\) Then, since \(B \subseteq C\text{,}\) this implies that \(a \in C\text{,}\) as desired.</p></article></div></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.9</span> <span class="title">Number of Subsets</span>
 </h3>
-<p id="p-613">Consider a finite set \(A\) with \(n\) elements. How many possible subsets does \(A\) have? Consider this for \(n = 0, 1, 2, 3\) etc.</p>
+<p id="p-618">Consider a finite set \(A\) with \(n\) elements. How many possible subsets does \(A\) have? Consider this for \(n = 0, 1, 2, 3\) etc.</p>
 <ul class="disc">
 <li id="li-116"><p id="p-derived-li-116">For \(n = 0\text{,}\) \(A = \emptyset\text{,}\) which has 1 subset, \(A\) itself.</p></li>
 <li id="li-117"><p id="p-derived-li-117">For \(n = 1\text{,}\) say, \(A = \set{a}\text{,}\) there are 2 subsets, \(A\) itself and the empty set.</p></li>
 <li id="li-118"><p id="p-derived-li-118">For \(n = 2\text{,}\) \(A = \set{a, b}\text{,}\) there are 4 subsets: \(\set{a, b}, \set{a}, \set{b}\text{,}\) and \(\emptyset\text{.}\)</p></li>
 <li id="li-119"><p id="p-derived-li-119">For \(n = 3\text{,}\) \(A = \set{a, b, c}\text{,}\) there are 8 subsets: \(\set{a, b, c}, \set{a,b}, \set{a,c}, \set{b,c}, \set{a}, \set{b}, \set{c}\text{,}\) and \(\emptyset\text{.}\)</p></li>
 </ul>
-<p id="p-614">In summary,</p>
+<p id="p-619">In summary,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c}
@@ -287,68 +292,68 @@ A = B \equiv \brac{x \in A \leftrightarrow x \in B}
 \end{array}
 \end{equation*}
 </div>
-<p id="p-615">From these examples, we might conjecture that the number of subsets of a set with \(n\) elements is \(2^n\text{.}\)</p>
-<article class="theorem theorem-like" id="theorem-38"><h4 class="heading">
+<p id="p-620">From these examples, we might conjecture that the number of subsets of a set with \(n\) elements is \(2^n\text{.}\)</p>
+<article class="theorem theorem-like" id="theorem-39"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.12</span><span class="period">.</span>
 </h4>
-<p id="p-616">Let \(A\) be a set with \(n\) elements. Then \(A\) has $2^n$ subsets. In other words, if \(\abs{A} = n\text{,}\) then \(\abs{P(A)} = 2^n\text{.}\)</p></article><article class="hiddenproof" id="proof-60"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-60"><h4 class="heading"><span class="title">Proof using fundamental counting principle.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><p id="p-617">A subset of \(A\) is a set with some selection of the elements of \(A\text{.}\) The number of possible subsets is the number of selections of the elements of \(A\text{.}\) Using the fundamental counting principle, there are two choices for each element (each element can either be in the subset or not in the subset), and there are \(n\) choices to be made (one for each element). Thus, the number of ways to make this selection, is,</p>
+<p id="p-621">Let \(A\) be a set with \(n\) elements. Then, \(A\) has \(2^n\) subsets.</p></article><article class="hiddenproof" id="proof-60"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-60"><h4 class="heading"><span class="title">Proof using fundamental counting principle.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><p id="p-622">A subset of \(A\) is a set with some selection of the elements of \(A\text{.}\) The number of possible subsets is the number of selections of the elements of \(A\text{.}\) Using the fundamental counting principle, there are two choices for each element (each element can either be in the subset or not in the subset), and there are \(n\) choices to be made (one for each element). Thus, the number of ways to make this selection, is,</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{2 \cdot 2 \cdot 2 \cdots 2}_{\text{$n$ factors of 2}} = 2^n
 \end{equation*}
 </div>
-<p id="p-618">Thus, there are \(2^n\) possible subsets.</p></article></div>
-<article class="hiddenproof" id="proof-61"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-61"><h4 class="heading"><span class="title">Proof using induction.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-61"><article class="hiddenproof"><p id="p-619">By induction, for \(n = 0\text{,}\) \(A = \emptyset\) has \(1 = 2^0\) subsets.</p>
-<p id="p-620">Then, assume the result is true for \(n = k \in \mathbb{N}\text{,}\) that every set with \(n\) elements has \(2^n\) subsets. Then, let \(B = \set{a_1, a_2, \dots, a_n, a_{n+1}\) be a set with \(n+1\) elements, and we want to show that \(B\) has \(2^{n+1}\) subsets.</p>
-<p id="p-621">Then, let \(B = A \cup \set{a_{n+1}}\) where \(A = \set{a_1, \dots, a_n}\) has \(n\) elements. Each subset \(X\) of \(A\) corresponds to 2 subsets of \(B\text{.}\) One is simply \(X\) itself, since every subset of \(A\) is also a subset of \(B\text{.}\) The other is the set \(X \cup \set{a_{n+1}}\text{.}\) Since there are \(2^n\) subsets of \(A\) and each corresponds to 2 subsets of \(B\text{,}\) this means there are at least \(2 \cdot 2^n = 2^{n+1}\) subsets of \(B\text{.}\)</p>
-<p id="p-622">Also, any subset of \(B\) must either include \(a_{n+1}\) or not include \(a_{n+1}\text{.}\) If it includes \(a_{n+1}\text{,}\) then it must be of the form \(X \cup \set{a_{n+1}}\) for some subset \(X\) of \(A\text{.}\) If it doesn't include \(a_{n+1}\text{,}\) then it is a subset of \(A\text{.}\) In this way, we have accounted for every possible subset of \(B\text{.}\)</p></article></div></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
+<p id="p-623">Thus, there are \(2^n\) possible subsets.</p></article></div>
+<article class="hiddenproof" id="proof-61"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-61"><h4 class="heading"><span class="title">Proof using induction.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-61"><article class="hiddenproof"><p id="p-624">By induction, for \(n = 0\text{,}\) \(A = \emptyset\) has \(1 = 2^0\) subsets.</p>
+<p id="p-625">Then, assume the result is true for \(n = k \in \mathbb{N}\text{,}\) that every set with \(n\) elements has \(2^n\) subsets. Then, let \(B = \set{a_1, a_2, \dots, a_n, a_{n+1}\) be a set with \(n+1\) elements, and we want to show that \(B\) has \(2^{n+1}\) subsets.</p>
+<p id="p-626">Then, let \(B = A \cup \set{a_{n+1}}\) where \(A = \set{a_1, \dots, a_n}\) has \(n\) elements. Each subset \(X\) of \(A\) corresponds to 2 subsets of \(B\text{.}\) One is simply \(X\) itself, since every subset of \(A\) is also a subset of \(B\text{.}\) The other is the set \(X \cup \set{a_{n+1}}\text{.}\) Since there are \(2^n\) subsets of \(A\) and each corresponds to 2 subsets of \(B\text{,}\) this means there are at least \(2 \cdot 2^n = 2^{n+1}\) subsets of \(B\text{.}\)</p>
+<p id="p-627">Also, any subset of \(B\) must either include \(a_{n+1}\) or not include \(a_{n+1}\text{.}\) If it includes \(a_{n+1}\text{,}\) then it must be of the form \(X \cup \set{a_{n+1}}\) for some subset \(X\) of \(A\text{.}\) If it doesn't include \(a_{n+1}\text{,}\) then it is a subset of \(A\text{.}\) In this way, we have accounted for every possible subset of \(B\text{.}\)</p></article></div></section><section class="subsection" id="subsection-125"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.10</span> <span class="title">Power Sets</span>
 </h3>
-<article class="theorem theorem-like" id="theorem-39"><h4 class="heading">
+<article class="theorem theorem-like" id="theorem-40"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.13</span><span class="period">.</span>
 </h4>
-<p id="p-623">Let \(A\) be a set. The <dfn class="terminology">power set</dfn> of \(A\text{,}\) \(P(A)\text{,}\) is the set that contains all subsets of \(A\text{.}\) In other words,</p>
+<p id="p-628">Let \(A\) be a set. The <dfn class="terminology">power set</dfn> of \(A\text{,}\) \(P(A)\text{,}\) is the set that contains all subsets of \(A\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 P(A) = \set{X: X \subseteq A}
 \end{equation*}
-</div></article><p id="p-624">Don't confuse \(P(A)\) to mean the probability of the event \(A\text{.}\) In this context, this means the power set of \(A\text{.}\)</p>
-<article class="example example-like" id="example-57"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-57"><h4 class="heading">
+</div></article><p id="p-629">Don't confuse \(P(A)\) to mean the probability of the event \(A\text{.}\) In this context, this means the power set of \(A\text{.}\)</p>
+<article class="example example-like" id="example-56"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-56"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.14</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-57"><article class="example example-like"><ul class="disc">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-56"><article class="example example-like"><ul class="disc">
 <li id="li-120"><p id="p-derived-li-120">\(\displaystyle P(\set{1, 2}) = \set{\emptyset, \set{1}, \set{2}, \set{1, 2}}\)</p></li>
 <li id="li-121"><p id="p-derived-li-121">\(\displaystyle P(\set{1, 2, 3} = \set{\emptyset, \set{1}, \set{2}, \set{3}, \set{1, 2}, \set{1, 3}, \set{2, 3}, \set{1, 2, 3}}\)</p></li>
 <li id="li-122"><p id="p-derived-li-122">\(\displaystyle P(\set{5}) = \set{\emptyset, \set{5}}\)</p></li>
 <li id="li-123"><p id="p-derived-li-123">\(\displaystyle P(\emptyset) = \set{\emptyset}\)</p></li>
 <li id="li-124"><p id="p-derived-li-124">\(\displaystyle P(P(\emptyset)) = P(\set{\emptyset}) = \set{\emptyset, \set{\emptyset}}\)</p></li>
 </ul></article></div>
-<p id="p-625">Recall that a set \(A\) with \(n\) elements has \(2^n\) subsets. Using this notation, \(\abs{P(A)} = 2^n\text{.}\)</p>
-<article class="theorem theorem-like" id="theorem-40"><h4 class="heading">
+<p id="p-630">Recall that a set \(A\) with \(n\) elements has \(2^n\) subsets. Using power set notation,</p>
+<article class="theorem theorem-like" id="theorem-41"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.15</span><span class="period">.</span>
 </h4>
-<p id="p-626">Let \(A, B\) be sets. Then, \(P(A) \cup P(B) \subseteq P(A \cup B)\text{.}\)</p></article><article class="hiddenproof" id="proof-62"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-62"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-62"><article class="hiddenproof"><p id="p-627">Let \(X \in P(A) \cup P(B)\text{.}\) Then, by definition of union, \(X \in P(A)\) or \(X \in P(B)\text{.}\) By definition of a power set, \(X \subseteq A\) or \(X \subseteq B\text{.}\) Without loss of generality, let \(X \subseteq A\text{.}\) Then, let \(x \in X\text{.}\) Since \(X \subseteq A\text{,}\) \(x \in A\text{.}\) Then, since \(A \subseteq A \cup B\text{,}\) we have \(x \in A \cup B\text{.}\) Therefore, \(X \subseteq A \cup B\text{,}\) and so \(X \in P(A \cup B)\text{.}\)</p></article></div></section><section class="subsection" id="subsection-125"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.1.11</span> <span class="title"></span>
+<p id="p-631">If \(\abs{A} = n\text{,}\) then \(\abs{P(A)} = 2^n\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-42"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.16</span><span class="period">.</span>
+</h4>
+<p id="p-632">Let \(A, B\) be sets. Then, \(P(A) \cup P(B) \subseteq P(A \cup B)\text{.}\)</p></article><article class="hiddenproof" id="proof-62"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-62"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-62"><article class="hiddenproof"><p id="p-633">Let \(X \in P(A) \cup P(B)\text{.}\) Then, by definition of union, \(X \in P(A)\) or \(X \in P(B)\text{.}\) By definition of a power set, \(X \subseteq A\) or \(X \subseteq B\text{.}\) Without loss of generality, let \(X \subseteq A\text{.}\) Then, let \(x \in X\text{.}\) Since \(X \subseteq A\text{,}\) \(x \in A\text{.}\) Then, since \(A \subseteq A \cup B\text{,}\) we have \(x \in A \cup B\text{.}\) Therefore, \(X \subseteq A \cup B\text{,}\) and so \(X \in P(A \cup B)\text{.}\)</p></article></div></section><section class="subsection" id="subsection-126"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.11</span> <span class="title">Well-Defined Sets</span>
 </h3>
-<p id="p-628">In fact, the unrestricted use of this notation \(\set{x: P(x)}\) leads to real contradictions in set theory (naive set theory).</p></section><section class="subsection" id="subsection-126"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.1.12</span> <span class="title">Well-Defined Sets</span>
-</h3>
-<p id="p-629">Sets must be <dfn class="terminology">well-defined</dfn>, in that it must be clear and unambiguous which elements are in the set and which are not. In other words, given any object, it must be clear whether that object is in the set or not.</p>
-<article class="example example-like" id="example-58"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-58"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.16</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-58"><article class="example example-like"><p id="p-630">The set of all young adults is not well-defined, because it depends on the definition of “young adult”. The set of all people aged 20 or older is well-defined.</p></article></div>
-<article class="example example-like" id="example-59"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-59"><h4 class="heading">
+<p id="p-634">Sets must be <dfn class="terminology">well-defined</dfn>, in that it must be clear and unambiguous which elements are in the set and which are not. In other words, given any object, it must be clear whether that object is in the set or not.</p>
+<article class="example example-like" id="example-57"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-57"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.17</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-59"><article class="example example-like"><p id="p-631">The set of the top 5 airports in the country is not well-defined, because the quality of an airport is subjective and up to interpretation.</p></article></div></section><section class="subsection" id="subsection-127"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.1.13</span> <span class="title">Aside on Definitions</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-57"><article class="example example-like"><p id="p-635">The set of all young adults is not well-defined, because it depends on the definition of “young adult”. The set of all people aged 20 or older is well-defined.</p></article></div>
+<article class="example example-like" id="example-58"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-58"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.18</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-58"><article class="example example-like"><p id="p-636">The set of the top 5 airports in the country is not well-defined, because the quality of an airport is subjective and up to interpretation.</p></article></div></section><section class="subsection" id="subsection-127"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.12</span> <span class="title">Aside on Definitions</span>
 </h3>
-<p id="p-632">Definitions are very important in mathematics to facilitate clear communication of ideas. However, it is an unfortunate fact that it is impossible to define every concept. Recall that a set is defined as a “collection of distinct objects”. This naturally leads to the question of how a collection is defined. After all, “set” and “collection” seem to be almost synonyms, so defining one in terms of the other seems unhelpful. Theoretically, we could define “collection”, say as an group or aggregate of things. This isn't much more helpful, since now we would have to define a group or aggregate. This could continue indefinitely, until we run out of suitable words.</p>
-<p id="p-633">In this way, a concept like a set is simply defined intuitively. For most purposes, this will be sufficient.</p></section><section class="subsection" id="subsection-128"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.1.14</span> <span class="title">Aside on Sets and Math Definitions</span>
+<p id="p-637">Definitions are very important in mathematics to facilitate clear communication of ideas. However, it is an unfortunate fact that it is impossible to define every concept. Recall that a set is defined as a “collection of distinct objects”. This naturally leads to the question of how a collection is defined. After all, “set” and “collection” seem to be almost synonyms, so defining one in terms of the other seems unhelpful. Theoretically, we could define “collection”, say as an group or aggregate of things. This isn't much more helpful, since now we would have to define a group or aggregate. This could continue indefinitely, until we run out of suitable words.</p>
+<p id="p-638">In this way, a concept like a set is simply defined intuitively. For most purposes, this will be sufficient.</p></section><section class="subsection" id="subsection-128"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.13</span> <span class="title">Aside on Sets and Math Definitions</span>
 </h3>
-<p id="p-634">Today, most mathematical objects are “formally” defined in terms of sets. For example, functions are defined as a particular kind of set. In fact, numbers, such as natural numbers \(1, 2, \dots\text{,}\) can be defined using sets.</p></section><section class="subsection" id="subsection-129"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.1.15</span> <span class="title">Venn Diagrams, Euler Diagrams</span>
+<p id="p-639">Today, most mathematical objects are “formally” defined in terms of sets. For example, functions are defined as a particular kind of set. In fact, numbers, such as natural numbers \(1, 2, \dots\text{,}\) can be defined using sets.</p></section><section class="subsection" id="subsection-129"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.14</span> <span class="title">Venn Diagrams, Euler Diagrams</span>
 </h3>
-<p id="p-635">Relationships between sets can be represented graphically using a Venn diagram, or a Euler diagram. First intorduced in 1881, by John Venn, British mathematician. The idea is that sets \(A\) and \(B\) are represented as regions in the plane, and elements are thought of as points in the plane.</p></section></section></div></main>
+<p id="p-640">Relationships between sets can be represented graphically using a Venn diagram, or a Euler diagram. First intorduced in 1881, by John Venn, British mathematician. The idea is that sets \(A\) and \(B\) are represented as regions in the plane, and elements are thought of as points in the plane.</p></section></section></div></main>
 </div>
 </body>
 </html>

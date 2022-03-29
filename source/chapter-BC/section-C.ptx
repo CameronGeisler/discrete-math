@@ -9,7 +9,9 @@
                 Broadly, a <term>combination</term> is a selection of objects where order doesn't matter.
             </p>
         </definition>
-
+        <p>
+            In other words, an unordered selection, where two selections are the same if they consist of the same elements, regardless of the order in which the elements are chosen.
+        </p>
         <example>
             <p>
                 Consider a group of 5 distinct balls. How many ways can one choose a collection of 3 balls from these 5 balls? This can be framed as a permutation. List the balls from 1-5, and write I if the ball is included in the collection and E if it is excluded. For example, the particular collection of balls 2, 4, and 5 would be represented by <m>EIEII</m>. For another example, choosing balls 1, 2, and 3 is represented by <m>IIIEE</m>. In general, there is a one-to-one correspondence between the combinations of 5 balls taken 3 at a time, and permutations of this 5-character sequences of E's and I's. From permutations, we know that there are <m>\frac{5!}{2! 3!} = 10</m> permutations of <m>EIEII</m>, and so there are also 10 combinations.
@@ -39,11 +41,16 @@
     <subsection>
         <title>Number of Subsets of a Given Size</title>
         <p>
-            Let <m>A</m> be a set of <m>n</m> elements, <m>A = \set{a_1, \dots, a_n}</m>. Then, the number of <m>k</m> element subsets of <m>A</m> is,
+            Another important, more formal interpretation of combinations is as the number of subsets of a set, of a certain size.
         </p>
-        <me>
-            \nCr{n}{k} = \frac{n!}{k!(n - k)!}
-        </me>
+        <theorem>
+            <p>
+                Let <m>A</m> be a set of <m>n</m> elements, <m>A = \set{a_1, \dots, a_n}</m>. Then, the number of <m>k</m> element subsets of <m>A</m> is,
+            </p>
+            <me>
+                \nCr{n}{k} = \frac{n!}{k!(n - k)!}
+            </me>
+        </theorem>
         <p>
             Note that the numbers of 1 element subsets is <m>n</m> (as there are <m>n</m> possible sets). For 2 element subsets, there are <m>n</m> ways to choose the first element, and <m>n-1</m> ways to choose the second element, for <m>n(n - 1)</m> ways to choose both. However, this assumes that order is relevant, that <m>\set{s_3, s_4}</m> is different than <m>\set{s_4, s_3}</m>. There are 2 ways to order each selection of 2 elements, so the total number of 2 element subsets is <m>\frac{n(n - 1)}{2}</m>.
         </p>

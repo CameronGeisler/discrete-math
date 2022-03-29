@@ -9,7 +9,7 @@
         </p>
     </introduction>
 
-    <definition>
+    <subsection>
         <title>Sequences</title>
         <definition>
             <p>
@@ -49,7 +49,7 @@
         <p>
             where <m>n \geq m</m>.
         </p>
-    </definition>
+    </subsection>
 
     <subsection>
         <title>Specifying a Sequence</title>

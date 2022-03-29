@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-CFS">
+    <title>Counting for Sets</title>
+
+    <subsection>
+        <title>The Addition Rule</title>
+        <p>
+
+        </p>
+        <theorem>
+            <p>
+                If there are <m>n_1</m> ways to make choice 1, and <m>n_2</m> ways to make choice 2, then the number of ways to make one of the two choices, but not both of them, is <m>n_1 + n_2</m>.
+            </p>
+        </theorem>
+
+        <p>
+            In the language of set theory,
+        </p>
+        <theorem>
+            <p>
+                Let <m>A, B</m> be finite sets, which are disjoint. Then,
+            </p>
+            <me>
+                \boxed{n(A \cup B) = n(A) + n(B)}
+            </me>
+        </theorem>
+
+        <p>
+            More generally,
+        </p>
+        <theorem>
+            <p>
+                Let there be <m>k</m> choices, with <m>n_1</m> ways to make choice 1, <m>n_1</m> ways to make choice 2, etc. up to <m>n_k</m> ways to make choice <m>k</m> (in general for choice <m>i</m>, there are <m>n_i</m> ways). Then, the number of ways to make exactly one of the <m>k</m> choices is,
+            </p>
+            <me>
+                n_1 + n_2 + \dots + n_k
+            </me>
+        </theorem>
+
+        <p>
+            In the language of set theory,
+        </p>
+        <theorem>
+            <title>Addition rule</title>
+            <p>
+                Let <m>A_1, \dots, A_n</m> be finite sets, which are pairwise disjoint. Then,
+            </p>
+            <me>
+                \boxed{n(A_1 \cup \cdots \cup A_n) = n(A_1) + n(A_2) + \dots + n(A_n)}
+            </me>
+        </theorem>
+
+        <p>
+            Similar to the FCP, the addition rule can be thought of as axiom.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>The Difference Rule</title>
+        <theorem>
+            <p>
+                Let <m>A, B</m> be finite sets, <m>B \subseteq A</m>. Then,
+            </p>
+            <me>
+                \boxed{n(A \setminus B) = n(A) - n(B)}
+            </me>
+        </theorem>
+
+        <proof>
+            <p>
+                If <m>B \subseteq A</m>, then <m>B</m> and <m>A \setminus B</m> are disjoint sets, and <m>B \cup (A \setminus B) = A</m>. Thus, <m>B</m> and <m>A \setminus B</m> partition <m>A</m>, so,
+            </p>
+            <me>
+                n(B) + n(A \setminus B) = n(A)
+            </me>
+            <p>
+                Then, subtracting <m>n(B)</m> from both sides gives the result.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>The Inclusion-Exclusion Principle</title>
+        <p>
+            Recall that for disjoint sets, the addition rule specifies the number of elements in the union of the sets. Next, consider if the sets are overlapping. Consider a Venn diagram with two sets, <m>A</m> and <m>B</m>.
+        </p>
+        <p>
+            When <m>n(A)</m> and <m>n(B)</m> are added, their intersection is counted twice. Then, for the correct number of elements, we need to subtract <m>n(A \cap B)</m>. Thus,
+        </p>
+        <theorem>
+            <title>Inclusion-exclusion principle for two sets</title>
+            <p>
+                Let <m>A, B</m> be finite sets. Then,
+            </p>
+            <me>
+                \boxed{n(A \cup B) = n(A) + n(B) - n(A \cap B)}
+            </me>
+        </theorem>
+
+        <p>
+            For three sets <m>A, B, C</m>, adding <m>n(A)</m>, <m>n(B)</m>, and <m>n(C)</m> counts the intersections <m>n(A \cap B)</m>, <m>n(A \cap C)</m>, and <m>n(B \cap C)</m> each twice. Then, to compensate for this, we subtract off each of these three intersections. However, then this again overcompensates by not counting the intersection <m>n(A \cap B \cap C)</m> at all. Then, finally, we add back <m>n(A \cap B \cap C)</m>. In summary,
+        </p>
+        <theorem>
+            <p>
+                Let <m>A, B, C</m> be finite sets. Then,
+            </p>
+            <me>
+                \boxed{n(A \cup B \cup C) = n(A) + n(B) + n(C) - n(A \cap B) - n(A \cap C) - n(B \cap C) + n(A \cap B \cap C)}
+            </me>
+        </theorem>
+
+        <p>
+            In fact, there is a more general and mathematically advanced formula for the cardinality of the union of <m>n</m> sets, which relies on generalizing this reasoning.
+        </p>
+    </subsection>
+</section>

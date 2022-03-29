@@ -8,6 +8,8 @@
         </p>
     </introduction>
 
+    <xi:include href="./chapter-MAC/section-CFS.ptx"/>
+    <xi:include href="./chapter-MAC/section-TPP.ptx"/>
     <xi:include href="./chapter-MAC/section-CP.ptx"/>
     <xi:include href="./chapter-MAC/section-DM.ptx"/>
     <xi:include href="./chapter-MAC/section-DP.ptx"/>

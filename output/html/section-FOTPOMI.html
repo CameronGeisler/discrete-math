@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:16-07:00       *-->
+<!--*       on 2022-03-29T13:25:52-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+<li><a href="section-SIAP.html" data-scroll="section-SIAP">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -144,6 +144,8 @@
 </li>
 <li class="link">
 <a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CFS.html" data-scroll="section-CFS">Counting for Sets</a></li>
+<li><a href="section-TPP.html" data-scroll="section-TPP">The Pigeonhole Principle</a></li>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
@@ -161,22 +163,22 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-FOTPOMI"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.4</span> <span class="title">Foundations of the Principle of Math Induction</span>
 </h2>
-<section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-113"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.4.1</span> <span class="title">Proof of Math Induction</span>
 </h3>
-<p id="p-566">Mathematical induction can be taken as an axiom, a fundamental fact which is assumed to be true. However, it is a result of a more fundamental property of the natural numbers, which is the well-ordering principle. The well-ordering principle makes math induction concrete.</p>
-<p id="p-567">First, we have to consider math induction in a more precise way. Let \(S\) be the set of all natural numbers such that \(P(n)\) is true. Then, the principle of math induction can be stated as follows.</p>
-<article class="theorem theorem-like" id="theorem-33"><h4 class="heading">
+<p id="p-573">Mathematical induction can be taken as an axiom, a fundamental fact which is assumed to be true. However, it is a result of a more fundamental property of the natural numbers, which is the well-ordering principle. The well-ordering principle makes math induction concrete.</p>
+<p id="p-574">First, we have to consider math induction in a more precise way. Let \(S\) be the set of all natural numbers such that \(P(n)\) is true. Then, the principle of math induction can be stated as follows.</p>
+<article class="theorem theorem-like" id="theorem-34"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of math induction.</span>
 </h4>
-<p id="p-568">Let \(S \subseteq \mathbb{N}\) be a subset of the natural numbers. If \(S\) contains 1, and if \(S\) has the property that if \(S\) contains some integer \(k\text{,}\) then \(S\) also contains \(k+1\text{,}\) then \(S = \mathbb{N}\) contains all natural numbers.</p></article><article class="hiddenproof" id="proof-57"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-57"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-57"><article class="hiddenproof"><p id="p-569">Let \(S\) be a set of natural numbers, such that \(S\) contains 1, and \(S\) has the property that if \(k \in S\text{,}\) then \((k+1) \in S\text{.}\) By contradiction, assume that \(S\) is not the set of natural numbers. Then, there exists a natural number not in \(S\text{.}\) Let \(A = \mathbb{N} \setminus S\text{,}\) the set of natural numbers not in \(S\text{.}\) This set \(A\) is non-empty, so by the well-ordering property, it contains a smallest element \(S\text{,}\) i.e. a smallest natural number that is not in \(S\text{.}\)</p>
-<p id="p-570">Since \(1 \in S\text{,}\) \(k \neq 1\text{,}\) and so \(k &gt; 1\text{.}\) Then, since \(k - 1 \lt k\text{,}\) and \(S\) is the smallest natural number not in \(S\text{,}\) then \((k - 1) \in S\text{.}\) However, this implies that \((k - 1) + 1 = k \in S\text{,}\) contradicting the fact that \(k \notin S\text{.}\)</p></article></div></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<p id="p-575">Let \(S \subseteq \mathbb{N}\) be a subset of the natural numbers. If \(S\) contains 1, and if \(S\) has the property that if \(S\) contains some integer \(k\text{,}\) then \(S\) also contains \(k+1\text{,}\) then \(S = \mathbb{N}\) contains all natural numbers.</p></article><article class="hiddenproof" id="proof-57"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-57"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-57"><article class="hiddenproof"><p id="p-576">Let \(S\) be a set of natural numbers, such that \(S\) contains 1, and \(S\) has the property that if \(k \in S\text{,}\) then \((k+1) \in S\text{.}\) By contradiction, assume that \(S\) is not the set of natural numbers. Then, there exists a natural number not in \(S\text{.}\) Let \(A = \mathbb{N} \setminus S\text{,}\) the set of natural numbers not in \(S\text{.}\) This set \(A\) is non-empty, so by the well-ordering property, it contains a smallest element \(S\text{,}\) i.e. a smallest natural number that is not in \(S\text{.}\)</p>
+<p id="p-577">Since \(1 \in S\text{,}\) \(k \neq 1\text{,}\) and so \(k &gt; 1\text{.}\) Then, since \(k - 1 \lt k\text{,}\) and \(S\) is the smallest natural number not in \(S\text{,}\) then \((k - 1) \in S\text{.}\) However, this implies that \((k - 1) + 1 = k \in S\text{,}\) contradicting the fact that \(k \notin S\text{.}\)</p></article></div></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.4.2</span> <span class="title">General Principle of Math Induction</span>
 </h3>
-<article class="theorem theorem-like" id="theorem-34"><h4 class="heading">
+<article class="theorem theorem-like" id="theorem-35"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of math induction.</span>
 </h4>
-<p id="p-571">Let \(S \subseteq \mathbb{N}\) be a subset of the natural numbers. If \(S\) contains \(a\text{,}\) and if \(S\) has the property that if \(S\) contains some integer \(k \geq a\text{,}\) then \(S\) also contains \(k+1\text{,}\) then \(S = \mathbb{N}\) contains all natural numbers.</p></article></section></section></div></main>
+<p id="p-578">Let \(S \subseteq \mathbb{N}\) be a subset of the natural numbers. If \(S\) contains \(a\text{,}\) and if \(S\) has the property that if \(S\) contains some integer \(k \geq a\text{,}\) then \(S\) also contains \(k+1\text{,}\) then \(S = \mathbb{N}\) contains all natural numbers.</p></article></section></section></div></main>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:16-07:00       *-->
+<!--*       on 2022-03-29T11:30:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Set Theorems</title>
+<title>Set Identities and Properties</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST" class="active">Set Theorems</a></li>
+<li><a href="section-ST.html" data-scroll="section-ST" class="active">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -159,38 +159,171 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-ST"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">7.4</span> <span class="title">Set Theorems</span>
+<span class="type">Section</span> <span class="codenumber">7.4</span> <span class="title">Set Identities and Properties</span>
 </h2>
-<section class="subsection" id="subsection-142"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.4.1</span> <span class="title">De Morgan's Laws</span>
+<section class="introduction" id="introduction-24"><p id="p-695">There are various relationships between sets and their various operations which are true regardless of the particular sets involved. You may recall that an equation which is universally true for any values of the variables is called an <em class="emphasis">identity</em>. Then, these are <dfn class="terminology">set identities</dfn>.</p></section><section class="subsection" id="subsection-139"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.1</span> <span class="title">Basic Properties of Union and Intersection</span>
 </h3>
-<p id="p-701">The definitions of union and intersection rely on the logical “or” and “and”. This means to define the set complement of a union or intersection requires negating these “or” or “and” statements. First, by definition,</p>
+<article class="theorem theorem-like" id="theorem-42"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.1</span><span class="period">.</span>
+</h4>
+<p id="p-696">Let \(A\) be a set, in a universal set \(U\text{.}\)</p>
+<ul class="disc">
+<li id="li-125"><p id="p-derived-li-125">Identity laws, \(A \cup \emptyset = A\) and \(A \cap U = A\text{.}\)</p></li>
+<li id="li-126"><p id="p-derived-li-126">Domination laws, \(A \cup U = U\) and \(A \cap \emptyset = \emptyset\text{.}\)</p></li>
+<li id="li-127"><p id="p-derived-li-127">Idempotent laws, \(A \cup A = A\) and \(A \cap A = A\text{.}\)</p></li>
+<li id="li-128"><p id="p-derived-li-128">Double complement law, \(\overline{\overline{A}} = A\text{.}\)</p></li>
+</ul></article></section><section class="subsection" id="subsection-140"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.2</span> <span class="title">Properties of Union and Intersection</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-43"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.2</span><span class="period">.</span>
+</h4>
+<p id="p-697">Let \(A, B, C\) be sets. Then,</p>
+<ul class="disc">
+<li id="li-129"><p id="p-derived-li-129"><dfn class="terminology">Commutative property of union and intersection</dfn>.<div class="displaymath">
+\begin{equation*}
+A \cup B = B \cup A \qquad \text{and} \qquad A \cap B = B \cap A
+\end{equation*}
+</div></p></li>
+<li id="li-130"><p id="p-derived-li-130"><dfn class="terminology">Associative property of union and intersection</dfn>.<div class="displaymath">
+\begin{equation*}
+A \cup (B \cup C) = (A \cup B) \cup C \qquad \text{and} \qquad A \cap (B \cap C) = (A \cap B) \cap C
+\end{equation*}
+</div></p></li>
+</ul></article><p id="p-698">Intuitively, the commutative laws are true because they rely on the commutative law of disjunction and conjunction.</p>
+<p id="p-699">The associative law means that when writing a union of more than 2 sets, or an intersection of more than 2 sets (but not a mix of unions and intersections), omitting parentheses is justified.</p></section><section class="subsection" id="subsection-141"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.3</span> <span class="title">Distributive Property of Union and Intersection</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-44"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.3</span><span class="period">.</span>
+</h4>
+<p id="p-700">Let \(A, B, C\) be sets. Then,</p>
+<ul class="disc">
+<li id="li-131"><p id="p-derived-li-131"><dfn class="terminology">Distributive property of union over intersection</dfn>.<div class="displaymath">
+\begin{equation*}
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+\end{equation*}
+</div></p></li>
+<li id="li-132"><p id="p-derived-li-132"><dfn class="terminology">Distributive property of intersection over union</dfn>.<div class="displaymath">
+\begin{equation*}
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+\end{equation*}
+</div></p></li>
+</ul></article><p id="p-701">Intuitively, the distributive laws are true because of the distributive law of disjunction over conjunction and conjunction over disjunction.</p>
+<article class="hiddenproof" id="proof-63"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-63"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-63"><article class="hiddenproof"><p id="p-702">First,</p>
+<div class="displaymath">
+\begin{align*}
+x \in A \cup (B \cap C) \amp \equiv x \in A \lor x \in B \cap C\\
+\amp \equiv x \in A \lor (x \in B \land x \in C)\\
+\amp \equiv \brac{x \in A \lor x \in B} \land \brac{x \in A \lor x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}\\
+\amp \equiv \brac{x \in A \cup B} \land \brac{x \in A \cup C}\\
+\amp \equiv x \in (A \cup B) \cap (A \cup C)
+\end{align*}
+</div>
+<p id="p-703">Then, similarly,</p>
+<div class="displaymath">
+\begin{align*}
+x \in A \cap (B \cap C) \amp \equiv x \in A \land x \in B \cup C\\
+\amp \equiv x \in A \land (x \in B \lor x \in C)\\
+\amp \equiv \brac{x \in A \land x \in B} \lor \brac{x \in A \land x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}\\
+\amp \equiv \brac{x \in A \cap B} \lor \brac{x \in A \cap C}\\
+\amp \equiv x \in (A \cap B) \cup (A \cap C)
+\end{align*}
+</div></article></div></section><section class="subsection" id="subsection-142"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.4</span> <span class="title">Union and Intersection Analogy to Addition and Multiplication</span>
+</h3>
+<p id="p-704">Unions and intersections have many similar properties to addition and multiplication, respectively. The similarities between union and addition are somewhat intuitive, since the union of two sets is somewhat like “adding” the elements of each set together. The intuition relating intersection and multiplication is less intuitive.</p>
+<p id="p-705">Recall that addition and multiplication are both <em class="emphasis">associative</em> and <em class="emphasis">commutative</em>, in that for any real numbers \(a, b, c\text{,}\) we have the identities \(a + b = b + a\text{,}\) \(ab = ba\text{,}\) \(a + (b + c) = (a + b) + c\text{,}\) and \(a(bc) = (ab)c\text{.}\)</p>
+<p id="p-706">Union and intersection both have these properties. For sets \(A, B, C\text{,}\) we have,</p>
+<div class="displaymath">
+\begin{gather*}
+A \cup B = B \cup A \qquad \text{and} \qquad A \cap B = B \cap A\\
+A \cup (B \cup C) = (A \cup B) \cup C \qquad \text{and} \qquad A \cap (B \cap C) = (A \cap B) \cap C
+\end{gather*}
+</div>
+<p id="p-707">Also, for distribution of multiplication over addition, we have \(a(b + c) = ab + ac\text{.}\) Similarly, for the “distribution” of intersection over union,</p>
+<div class="displaymath">
+\begin{equation*}
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+\end{equation*}
+</div>
+<p id="p-708">However, one warning is that for distribution union over intersection, we have,</p>
+<div class="displaymath">
+\begin{equation*}
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+\end{equation*}
+</div>
+<p id="p-709">The analogue would be \(a + bc = (a + b)(a + c)\text{,}\) which is not true in general.</p></section><section class="subsection" id="subsection-143"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.5</span> <span class="title">Other Basic Properties of Union and Intersection</span>
+</h3>
+<p id="p-710">There are other basic properties which relate union and intersection to subsets, and complements. Most of these are intuitive, and they follow almost directly from the definitions.</p>
+<article class="theorem theorem-like" id="theorem-45"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.4</span><span class="period">.</span>
+</h4>
+<ul id="p-711" class="disc">
+<li id="li-133"><p id="p-derived-li-133">\(A \subseteq A \cup B\text{.}\) If \(x \in A\text{,}\) then \(x \in A \cup B\text{.}\)</p></li>
+<li id="li-134"><p id="p-derived-li-134">\((A \cap B) \subseteq A\text{.}\) If \(x \in A \cap B\text{,}\) then \(x \in A\text{.}\)</p></li>
+<li id="li-135"><p id="p-derived-li-135">If</p></li>
+</ul></article><article class="theorem theorem-like" id="theorem-46"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.5</span><span class="period">.</span>
+</h4>
+<ul class="disc">
+<li id="li-136"><p id="p-derived-li-136">If \(A \subseteq B\text{,}\) then \(A \cup B = B\text{,}\) and conversely.</p></li>
+<li id="li-137"><p id="p-derived-li-137">If \(A \subseteq B\text{,}\) then \(A \cap B = A\text{,}\) and conversely.</p></li>
+<li id="li-138"><p id="p-derived-li-138">Absorption laws, \(A \cup (A \cap B) = A\) and \(A \cap (A \cup B) = A\text{.}\)</p></li>
+<li id="li-139"><p id="p-derived-li-139">Complement laws, \(A \cup \overline{A} = U\) and \(A \cap \overline{A} = \emptyset\text{.}\)</p></li>
+</ul></article></section><section class="subsection" id="subsection-144"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.6</span> <span class="title">Generalized Distributive Property</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-47"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.6</span><span class="period">.</span>
+</h4>
+<p id="p-712">Let \(A, B_1, B_2, \dots, B_n\) be sets. Then,</p>
+<ul class="disc">
+<li id="li-140"><p id="p-derived-li-140"><dfn class="terminology">Generalized distributive property of union over intersection</dfn>.<div class="displaymath">
+\begin{equation*}
+A \cup (B_1 \cap B_2 \cap \cdots \cap B_n) = (A \cup B_1) \cap (A \cup B_2) \cap \cdots \cap (A \cup B_n)
+\end{equation*}
+</div></p></li>
+<li id="li-141"><p id="p-derived-li-141"><dfn class="terminology">Generalized distributive property of intersection over union</dfn>.<div class="displaymath">
+\begin{equation*}
+A \cap (B_1 \cup B_2 \cup \cdots \cup B_n) = (A \cap B_1) \cup (A \cap B_2) \cup \cdots \cup (A \cap B_n)
+\end{equation*}
+</div></p></li>
+</ul></article></section><section class="subsection" id="subsection-145"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.7</span> <span class="title">Venn Diagrams</span>
+</h3>
+<p id="p-713">Venn diagrams can be used to intuitively understand set identities, however, they can't be used to rigorously prove them.</p></section><section class="subsection" id="subsection-146"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.4.8</span> <span class="title">De Morgan's Laws</span>
+</h3>
+<p id="p-714">The definitions of union and intersection rely on the logical “or” and “and”. This means to define the set complement of a union or intersection requires negating these “or” or “and” statements. First, by definition,</p>
 <div class="displaymath">
 \begin{align*}
 \overline{A \cup B} \amp = \set{x: x \notin A \cup B}\\
 \overline{A \cap B} \amp = \set{x: x \notin A \cap B}
 \end{align*}
 </div>
-<article class="theorem theorem-like" id="theorem-45"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's laws.</span>
+<article class="theorem theorem-like" id="theorem-48"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's laws.</span>
 </h4>
-<p id="p-702">Let \(A, B \) be sets. Then,</p>
+<p id="p-715">Let \(A, B \) be sets. Then,</p>
 <div class="displaymath">
 \begin{equation*}
 \overline{A \cap B} = \overline{A} \cup \overline{B} \qquad \text{and} \qquad \overline{A \cup B} = \overline{A} \cap \overline{B}
 \end{equation*}
 </div>
-<p id="p-703">In other words,</p>
+<p id="p-716">In other words,</p>
 <ul class="disc">
-<li id="li-137"><p id="p-derived-li-137">\(x \notin A \cup B\) if and only if \(x \notin A\) and \(x \notin B\text{.}\)</p></li>
-<li id="li-138"><p id="p-derived-li-138">\(x \notin A \cap B\) if and only if \(x \notin A\) or \(x \notin B\)</p></li>
-</ul></article><p id="p-704">Again, recall De Morgan's laws,</p>
+<li id="li-142"><p id="p-derived-li-142">\(x \notin A \cup B\) if and only if \(x \notin A\) and \(x \notin B\text{.}\)</p></li>
+<li id="li-143"><p id="p-derived-li-143">\(x \notin A \cap B\) if and only if \(x \notin A\) or \(x \notin B\)</p></li>
+</ul></article><p id="p-717">Again, recall De Morgan's laws,</p>
 <div class="displaymath">
 \begin{equation*}
 \neg (P \land Q) \equiv (\neg P) \lor (\neg Q) \amp\amp \text{and} \amp\amp \neg (P \lor Q) \equiv (\neg P) \land (\neg Q)
 \end{equation*}
 </div>
-<article class="hiddenproof" id="proof-63"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-63"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-63"><article class="hiddenproof"><p id="p-705">First, consider \(\overline{A \cup B}\text{.}\)</p>
+<article class="hiddenproof" id="proof-64"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-64"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-64"><article class="hiddenproof"><p id="p-718">First, consider \(\overline{A \cup B}\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
 x \in \overline{A \cup B} \equiv x \notin A \cup B \amp \equiv \neg (x \in A \cup B)\\
@@ -201,7 +334,7 @@ x \in \overline{A \cup B} \equiv x \notin A \cup B \amp \equiv \neg (x \in A \cu
 \amp \equiv \brac{x \in \overline{A} \cap \overline{B}}
 \end{align*}
 </div>
-<p id="p-706">Similarly, for \(\overline{A \cap B}\text{,}\) the steps are similar, except replacing “and” with “or”,</p>
+<p id="p-719">Similarly, for \(\overline{A \cap B}\text{,}\) the steps are similar, except replacing “and” with “or”,</p>
 <div class="displaymath">
 \begin{align*}
 x \in \overline{A \cap B} \equiv x \notin A \cap B \amp \equiv \neg (x \in A \cap B)\\
@@ -210,36 +343,6 @@ x \in \overline{A \cap B} \equiv x \notin A \cap B \amp \equiv \neg (x \in A \ca
 \amp \equiv \brac{x \notin A \lor x \notin B}\\
 \amp \equiv \brac{x \in \overline{A} \lor x \in \overline{B}}\\
 \amp \equiv \brac{x \in \overline{A} \cup \overline{B}}
-\end{align*}
-</div></article></div></section><section class="subsection" id="subsection-143"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">7.4.2</span> <span class="title">Distributive Property of Union and Intersection</span>
-</h3>
-<article class="theorem theorem-like" id="theorem-46"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4.2</span><span class="period">.</span>
-</h4>
-<p id="p-707">Let \(A, B, C\) be sets. Then,</p>
-<div class="displaymath">
-\begin{equation*}
-A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \qquad A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-64"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-64"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-64"><article class="hiddenproof"><p id="p-708">First,</p>
-<div class="displaymath">
-\begin{align*}
-x \in A \cup (B \cap C) \amp \equiv x \in A \lor x \in B \cap C\\
-\amp \equiv x \in A \lor (x \in B \land x \in C)\\
-\amp \equiv \brac{x \in A \lor x \in B} \land \brac{x \in A \lor x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}\\
-\amp \equiv \brac{x \in A \cup B} \land \brac{x \in A \cup C}\\
-\amp \equiv x \in (A \cup B) \cap (A \cup C)
-\end{align*}
-</div>
-<p id="p-709">Then, similarly,</p>
-<div class="displaymath">
-\begin{align*}
-x \in A \cap (B \cap C) \amp \equiv x \in A \land x \in B \cup C\\
-\amp \equiv x \in A \land (x \in B \lor x \in C)\\
-\amp \equiv \brac{x \in A \land x \in B} \lor \brac{x \in A \land x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}\\
-\amp \equiv \brac{x \in A \cap B} \lor \brac{x \in A \cap C}\\
-\amp \equiv x \in (A \cap B) \cup (A \cap C)
 \end{align*}
 </div></article></div></section></section></div></main>
 </div>

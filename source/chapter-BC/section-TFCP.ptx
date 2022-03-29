@@ -4,23 +4,30 @@
     <title>The Fundamental Counting Principle</title>
 
     <introduction>
-        <p>
-            Use a tree diagram.
-        </p>
 
     </introduction>
 
     <subsection>
-        <title>Fundamental Counting Principle</title>
+        <title>Possibility Trees</title>
+        <p>
+            Suppose we want to count the number of possible outcomes that can occur. A systematic way of doing this is to use a tree diagram. Each <q>path</q> from <q>root</q> to <q>leaf</q> represents one possible outcome.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Multiplication Principle (Fundamental Counting Principle)</title>
         <theorem>
-            <title>Fundamental counting principle</title>
+            <title>Fundamental counting principle (FCP)</title>
             <p>
                 If there are <m>n_1</m> ways to make choice 1, and <m>n_2</m> ways to make choice 2, then there are <m>n_1 \cdot n_2</m> ways to make both choices together.
             </p>
         </theorem>
-    
+
         <p>
-            More precisely, if there are <m>n_1</m> distinct objects in one set and <m>n_1</m> distinct objects in another set, then there are <m>n_1 n_2</m> ways to choose one object from each set.
+            The fundamental counting principle is also called the <term>multiplication principle</term>, or the <term>rule of product</term>.
+        </p>    
+        <p>
+            In the language of set theory, if there are <m>n_1</m> distinct objects in one set and <m>n_1</m> distinct objects in another set, then there are <m>n_1 n_2</m> ways to choose one object from each set.
         </p>
         <p>
             This can be generalized to <m>k</m> choices.
@@ -29,59 +36,33 @@
         <theorem>
             <title>Fundamental counting principle</title>
             <p>
-                Let there be <m>k</m> choices, with <m>n_1</m> ways to make choice 1, <m>n_1</m> ways to make choice <m>2, \dots, n_k</m> ways to make choice <m>k</m> (in general for choice <m>i</m>, there are <m>n_i</m> ways). Then, there are,
+                Let there be <m>k</m> choices, with <m>n_1</m> ways to make choice 1, <m>n_1</m> ways to make choice <m>2, \dots, n_k</m> ways to make choice <m>k</m> (in general for choice <m>i</m>, there are <m>n_i</m> ways). Then, the number of ways to make the entire sequence of choices is,
                 <me>
                     n_1 n_2 \cdots n_k
                 </me>
-                ways to make the entire sequence of choices. More precisely, if there are <m>n_1</m> distinct objects in set 1, <m>n_1</m> in set <m>2, \dots, n_k</m> in set <m>k</m>, then there are <m>n_1 n_2 \cdots n_k</m> ways to choose one object from each set.
+                In the language of set theory, if there are <m>n_1</m> distinct objects in set 1, <m>n_1</m> in set <m>2, \dots, n_k</m> in set <m>k</m>, then there are <m>n_1 n_2 \cdots n_k</m> ways to choose one object from each set.
             </p>
         </theorem>
     
         <corollary>
             <p>
-                Let there be $k$ choices with $n$ ways to make each choice. Then, there are,
+                Let there be <m>k</m> choices with <m>n</m> ways to make each choice. Then, the number of ways to make the sequence of choices is,
                 <me>
                     \underbrace{n \cdot n \cdots n}_{\text{$k$ factors of $n$}} = n^k
                 </me>
-                ways to make the sequence of choices.
             </p>
         </corollary>
-    </subsection>
 
-    <subsection>
-        <title>Morse Code</title>
         <p>
-            Morse code is a method of representing letters and words using a sequence of dots and dashes. It uses up to 4 of these symbols to represent a single letter.
+            For the FCP to apply, the number of ways to perform each step must be constant, regardless of the choices on the previous steps.
         </p>
         <p>
-            If using a sequence of only 1 symbol, there are 2 sequences (a dot or a dash). If using 2 symbols, there are 2 ways to choose each symbol, so there are <m>2 \cdot 2 = 2^2 = 4</m> total sequences. Continuing, we have,
-        </p>
-        <me>
-            \begin{array}{c|c}
-                \text{\# of symbols} \amp \text{\# of sequences} \\ \hline
-                1 \amp 2 \\
-                2 \amp 2 \cdot 2 = 4 \\
-                3 \amp 2 \cdot 2 \cdot 2 = 8 \\
-                4 \amp 2 \cdot 2 \cdot 2 \cdot 2 = 16
-            \end{array}
-        </me>
-        <p>
-            If we were limited to a maximum of 3 symbols, we would only have <m>2 + 4 + 8 = 14</m> total sequences, when we need 26 to represent every letter of the alphabet. Using 4 symbols, we have 16 more sequences for a total of <m>32 > 26</m> sequences.
+            The FCP can be thought of as an axiom, because it is so intuitively true. Any proof of the FCP would simply be an formal proof.
         </p>
     </subsection>
 
     <subsection>
-        <title>Teams and Committees</title>
-        <p>
-            If a club consists of 10 members, how many different choices of president, vice-president, and secretary are possible?
-        </p>
-        <p>
-            There are <m>10 \cdot 9 \cdot 8 = 720</m> total arrangements.
-        </p>
-    </subsection>
-
-    <subsection>
-        <title>Numbers and Letters</title>
+        <title>Numbers and Letters (PIN codes)</title>
 
         <example>
             <p>
@@ -125,6 +106,38 @@
                 26 \cdot 10 \cdot 26 \cdot 10 \cdot 26 \cdot 10 = 26^3 10^3 = 17576000
             </me>
         </example>
+    </subsection>
+
+    <subsection>
+        <title>Morse Code</title>
+        <p>
+            Morse code is a method of representing letters and words using a sequence of dots and dashes. It uses up to 4 of these symbols to represent a single letter.
+        </p>
+        <p>
+            If using a sequence of only 1 symbol, there are 2 sequences (a dot or a dash). If using 2 symbols, there are 2 ways to choose each symbol, so there are <m>2 \cdot 2 = 2^2 = 4</m> total sequences. Continuing, we have,
+        </p>
+        <me>
+            \begin{array}{c|c}
+                \text{\# of symbols} \amp \text{\# of sequences} \\ \hline
+                1 \amp 2 \\
+                2 \amp 2 \cdot 2 = 4 \\
+                3 \amp 2 \cdot 2 \cdot 2 = 8 \\
+                4 \amp 2 \cdot 2 \cdot 2 \cdot 2 = 16
+            \end{array}
+        </me>
+        <p>
+            If we were limited to a maximum of 3 symbols, we would only have <m>2 + 4 + 8 = 14</m> total sequences, when we need 26 to represent every letter of the alphabet. Using 4 symbols, we have 16 more sequences for a total of <m>32 > 26</m> sequences.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Teams and Committees</title>
+        <p>
+            If a club consists of 10 members, how many different choices of president, vice-president, and secretary are possible?
+        </p>
+        <p>
+            There are <m>10 \cdot 9 \cdot 8 = 720</m> total arrangements.
+        </p>
     </subsection>
 
     <subsection>

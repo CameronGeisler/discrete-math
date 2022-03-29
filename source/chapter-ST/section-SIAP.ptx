@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="section-ST">
+<section xml:id="section-SIAP">
     <title>Set Identities and Properties</title>
 
     <introduction>
@@ -180,7 +180,6 @@
                         <me>
                             A \cap (B_1 \cup B_2 \cup \cdots \cup B_n) = (A \cap B_1) \cup (A \cap B_2) \cup \cdots \cup (A \cap B_n)
                         </me>
-
                     </li>
                 </ul>
             </p>
@@ -193,7 +192,58 @@
             Venn diagrams can be used to intuitively understand set identities, however, they can't be used to rigorously prove them.
         </p>
     </subsection>
-    
+
+    <subsection>
+        <title>The Empty Set</title>
+        <p>
+            Recall that the empty set is a set with no elements. In fact, there is only one such set, so it is called <em>the</em> empty set, and this is why it is denoted by a symbol, <m>\emptyset</m>.
+        </p>
+        <p>
+            First, the empty set is a subset of every set. That is,
+        </p>
+        <theorem>
+            <p>
+                If <m>E</m> is a set with no elements, and <m>A</m> is any set, then <m>E \subseteq A</m>.
+            </p>
+        </theorem>
+        <p>
+            Intuitively, this is because for the conclusion <m>E \subseteq A</m> to be true, this means that for all <m>x</m>, if <m>x \in E</m>, then <m>x \in A</m> (a universal conditional). However, <m>E</m> contains no elements, so this statement is vacuously true. The only way this statement could be false is if there existed an element in <m>E</m> which was not in <m>A</m>. Since <m>E</m> contains no element, no such element of this kind exists. More precisely, this can be proven by contradiction.
+        </p>
+        <proof>
+            <p>
+                By contradiction, suppose that <m>E</m> is a set with no elements, <m>A</m> is any set, and <m>E \not\subseteq A</m>. Then, there exists <m>x \in E</m> such that <m>x \notin A</m>. However, this contradicts the assumption that <m>E</m> has no elements. Thus, <m>E \subseteq A</m>.
+            </p>
+        </proof>
+
+
+        <p>
+            Then, we can prove that the empty set is unique.
+        </p>
+        <theorem>
+            <p>
+                The empty set is unique. In other words, if <m>E_1, E_2</m> are two sets with no elements, then <m>E_1 = E_2</m>.
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                Let <m>E_1, E_2</m> be sets with no elements. Then, since <m>E_1</m> has no elements, <m>E_1 \subseteq E_2</m>. Also, since <m>E_2</m> has no elements, <m>E_2 \subseteq E_1</m>. Combining these together, <m>E_1 = E_2</m>.
+            </p>
+        </proof>
+
+        <p>
+            In summary,
+        </p>
+
+        <theorem>
+            <p>
+                The empty set is a subset of all other sets. In other words, for all sets <m>A</m>, <m>\emptyset \subseteq A</m>. Also, the empty set is a strict subset of every set, except for the empty set.
+            </p>
+        </theorem>
+
+        <p>
+            Then, to prove that a set is equal to the empty set, it is sufficient to prove that it has no elements. Typically, the easiest way to do this is by contradiction: suppose the set does have an element, and derive a contradiction.
+        </p>
+    </subsection>
 
     <subsection>
         <title>De Morgan's Laws</title>
@@ -226,7 +276,7 @@
             Again, recall De Morgan's laws,
         </p>
         <me>
-            \neg (P \land Q) \equiv (\neg P) \lor (\neg Q) \amp\amp \text{and} \amp\amp \neg (P \lor Q) \equiv (\neg P) \land (\neg Q)
+            \neg (P \land Q) \equiv (\neg P) \lor (\neg Q) \qquad \text{and} \qquad \neg (P \lor Q) \equiv (\neg P) \land (\neg Q)
         </me>
 
         <proof>

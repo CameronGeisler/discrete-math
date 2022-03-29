@@ -20,7 +20,7 @@
     <subsection>
         <title>Permutations of Objects</title>
         <p>
-            More generally, consider the permutations of <m>n</m> objects. This can be viewed as a series of choices, filling in <m>n</m> positions using the <m>n</m> objects. For the first spot, we can choose any of the <m>n</m> objects, and so there are <m>n</m> choices. For the second spot, one of the objects has been taken, so there are $n-1$ choices for the object in the 2nd position. Similarly, there $n-2$ for the 3rd position, and so on. For the second-last object, there will be 2 positions left and so there are 2 choices, and the last object will only have one available slot left, and so there will be only 1 choice. In summary,
+            More generally, consider the permutations of <m>n</m> objects. This can be viewed as a series of choices, filling in <m>n</m> positions using the <m>n</m> objects. For the first spot, we can choose any of the <m>n</m> objects, and so there are <m>n</m> choices. For the second spot, one of the objects has been taken, so there are <m>n-1</m> choices for the object in the 2nd position. Similarly, there <m>n-2</m> for the 3rd position, and so on. For the second-last object, there will be 2 positions left and so there are 2 choices, and the last object will only have one available slot left, and so there will be only 1 choice. In summary,
         </p>
         <theorem>
             <title>Permutations of <m>n</m> objects</title>
@@ -51,7 +51,12 @@
         </p>
         <md>
             <mrow>\nPr{n}{r} \amp = n(n - 1)(n - 2) \cdots (n - r + 1)</mrow>
-            <mrow>\amp = n(n - 1)(n - 2) \cdots (n - r + 1) \cdot \frac{(n - r)!}{(n - r)!} \amp\amp \text{multiplying and dividing by $(n - r)!$}</mrow>
+        </md>
+        <p>
+            This can be rewritten more simply in terms of factorials, to produce a formula without <m>\dots</m>.
+        </p>
+        <md>
+            <mrow>\nPr{n}{r} \amp = n(n - 1)(n - 2) \cdots (n - r + 1) \cdot \frac{(n - r)!}{(n - r)!} \amp\amp \text{multiplying and dividing by $(n - r)!$}</mrow>
             <mrow>\amp = \frac{n(n - 1)(n - 2) \cdots (n - r + 1)(n - r)!}{(n - r)!}</mrow>
             <mrow>\amp = \frac{n!}{(n - r)!}</mrow>
         </md>
@@ -74,13 +79,13 @@
             \nPr{n}{n} = \frac{n!}{(n - n)!} = \frac{n!}{0!} = \frac{n!}{1} = n!
         </me>
         <p>
-            which is consistent with the FCP. Also, notice that these two methods mean that the equality,
+            which is consistent with the FCP. Also, notice that these two methods mean that the following equality must hold,
         </p>
         <me>
             \underbrace{\frac{n!}{0!}}_{\text{from permutation formula}} = \underbrace{n!}_{\text{from FCP}}
         </me>
         <p>
-            must hold. Thus, <m>0!</m> must be equal to 1. This is one reason why zero factorial is defined as it is.
+            Thus, <m>0!</m> must be equal to 1. This is one reason why zero factorial is defined to be one.
         </p>
         <p>
             Recall that a permutation of <m>r</m> elements from an <m>n</m> element set consists of choosing <m>r</m> elements from the set in a particular order. We can view this as choosing an <q>ordered subset</q> of <m>r</m> elements from an <m>n</m> element set.

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:17-07:00       *-->
+<!--*       on 2022-03-29T13:25:54-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -72,10 +72,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-MAC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-MAC.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-DM.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-TPP.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-MAC.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-DM.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-MAC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-MAC.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-DM.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-TPP.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-MAC.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-DM.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+<li><a href="section-SIAP.html" data-scroll="section-SIAP">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -144,6 +144,8 @@
 </li>
 <li class="link">
 <a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CFS.html" data-scroll="section-CFS">Counting for Sets</a></li>
+<li><a href="section-TPP.html" data-scroll="section-TPP">The Pigeonhole Principle</a></li>
 <li><a href="section-CP.html" data-scroll="section-CP" class="active">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
@@ -159,22 +161,22 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-CP"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">9.1</span> <span class="title">Circular Permutations</span>
+<span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Circular Permutations</span>
 </h2>
-<section class="introduction" id="introduction-29">In some situations, order matters, but also the choices are circular in some sense, rather than linear.</section><section class="subsection" id="subsection-158"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">9.1.1</span> <span class="title"></span>
+<section class="introduction" id="introduction-31">In some situations, order matters, but also the choices are circular in some sense, rather than linear.</section><section class="subsection" id="subsection-171"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title"></span>
 </h3>
-<p id="p-789">Consider a necklace with \(n\) distinct beads. How many ways can the beads be arranged? Here, we consider two necklaces to be the same if one can be transformed to the other by a rotation. There are \(n!\) ways to order \(n\) distinct objects. However, for each of these permutations, there are \(n\) possible equivalent rotations. Thus, the number of necklace arrangements is,</p>
+<p id="p-846">Consider a necklace with \(n\) distinct beads. How many ways can the beads be arranged? Here, we consider two necklaces to be the same if one can be transformed to the other by a rotation. There are \(n!\) ways to order \(n\) distinct objects. However, for each of these permutations, there are \(n\) possible equivalent rotations. Thus, the number of necklace arrangements is,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{n!}{n} = (n-1)!
 \end{equation*}
 </div>
-<p id="p-790">Suppose further that two necklaces are considered the same if they can be reflected to another (which they can, in real life). For each of these \((n-1)!\) arrangements, there are 2 equivalent reflections. Thus,</p>
-<article class="theorem theorem-like" id="theorem-52"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.1.1</span><span class="period">.</span>
+<p id="p-847">Suppose further that two necklaces are considered the same if they can be reflected to another (which they can, in real life). For each of these \((n-1)!\) arrangements, there are 2 equivalent reflections. Thus,</p>
+<article class="theorem theorem-like" id="theorem-69"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
 </h4>
-<p id="p-791">The number of distinct necklaces arrangements that can be formed with \(n\) distinct beads is,</p>
+<p id="p-848">The number of distinct necklaces arrangements that can be formed with \(n\) distinct beads is,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{(n-1)!}{2}

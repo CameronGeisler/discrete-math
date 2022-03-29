@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:17-07:00       *-->
+<!--*       on 2022-03-29T13:25:54-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+<li><a href="section-SIAP.html" data-scroll="section-SIAP">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -144,6 +144,8 @@
 </li>
 <li class="link">
 <a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CFS.html" data-scroll="section-CFS">Counting for Sets</a></li>
+<li><a href="section-TPP.html" data-scroll="section-TPP">The Pigeonhole Principle</a></li>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
@@ -161,41 +163,41 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DLC"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title">Digital Logic Circuits</span>
 </h2>
-<section class="introduction" id="introduction-33"><p id="p-829">In the late 1930s, <dfn class="terminology">Claude Shannon</dfn> (1916-2001), American mathematician, discovered a connection between logical connectives and physical circuits. Then, <dfn class="terminology">John Tukey</dfn> (1915-2000), American mathematician and statistician, coined the term <em class="emphasis">bits</em>, short for <em class="emphasis">binary digits</em>, which are digits that can either be 0 or 1, and can represent T and F in logic.</p></section><section class="subsection" id="subsection-167"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-35"><p id="p-886">In the late 1930s, <dfn class="terminology">Claude Shannon</dfn> (1916-2001), American mathematician, discovered a connection between logical connectives and physical circuits. Then, <dfn class="terminology">John Tukey</dfn> (1915-2000), American mathematician and statistician, coined the term <em class="emphasis">bits</em>, short for <em class="emphasis">binary digits</em>, which are digits that can either be 0 or 1, and can represent T and F in logic.</p></section><section class="subsection" id="subsection-180"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.1</span> <span class="title">Digital Logic Circuits</span>
 </h3>
-<p id="p-830">One or more inputs are combined according to some rule, to produce an output. This is similar to a function.</p>
-<p id="p-831">The 3 basic logic gates are:</p>
+<p id="p-887">One or more inputs are combined according to some rule, to produce an output. This is similar to a function.</p>
+<p id="p-888">The 3 basic logic gates are:</p>
 <ul class="disc">
-<li id="li-166"><p id="p-derived-li-166"><dfn class="terminology">NOT</dfn> gate, or <dfn class="terminology">inverter</dfn>, which takes in a single input and outputs the opposite, like the negation operator.</p></li>
-<li id="li-167"><p id="p-derived-li-167"><dfn class="terminology">AND</dfn> gate, which behaves like the conjunction operator.</p></li>
-<li id="li-168"><p id="p-derived-li-168"><dfn class="terminology">OR</dfn> gate, which behaves like the disjunction operator.</p></li>
+<li id="li-175"><p id="p-derived-li-175"><dfn class="terminology">NOT</dfn> gate, or <dfn class="terminology">inverter</dfn>, which takes in a single input and outputs the opposite, like the negation operator.</p></li>
+<li id="li-176"><p id="p-derived-li-176"><dfn class="terminology">AND</dfn> gate, which behaves like the conjunction operator.</p></li>
+<li id="li-177"><p id="p-derived-li-177"><dfn class="terminology">OR</dfn> gate, which behaves like the disjunction operator.</p></li>
 </ul>
-<p id="p-832">By combining these gates in various ways, the inputs can be combined to form circuits that produce certain outputs. The output of a circuit can be summaried in an <dfn class="terminology">input/output table</dfn>, which is analogous to a truth table for Boolean expressions.</p>
-<p id="p-833">There is a one-to-one correspondence between Boolean expressions and combinatorial circuits.</p>
-<p id="p-834">We can also consider a <dfn class="terminology">multiple-input AND-gate</dfn>, or <dfn class="terminology">multiple-input OR-gate</dfn>, which is an AND or OR gate which takes in multiple inputs.</p>
-<p id="p-835">With a combinatorial circuit, a single input can be split to be used as the input for two separate logic gates. Also, the output of a logic gate can be used as an input for another. Two input wires cannot be combined. Also, outputs can't loop back to be used as an input for the same logic gate.</p></section><section class="subsection" id="subsection-168"><h3 class="heading hide-type">
+<p id="p-889">By combining these gates in various ways, the inputs can be combined to form circuits that produce certain outputs. The output of a circuit can be summaried in an <dfn class="terminology">input/output table</dfn>, which is analogous to a truth table for Boolean expressions.</p>
+<p id="p-890">There is a one-to-one correspondence between Boolean expressions and combinatorial circuits.</p>
+<p id="p-891">We can also consider a <dfn class="terminology">multiple-input AND-gate</dfn>, or <dfn class="terminology">multiple-input OR-gate</dfn>, which is an AND or OR gate which takes in multiple inputs.</p>
+<p id="p-892">With a combinatorial circuit, a single input can be split to be used as the input for two separate logic gates. Also, the output of a logic gate can be used as an input for another. Two input wires cannot be combined. Also, outputs can't loop back to be used as an input for the same logic gate.</p></section><section class="subsection" id="subsection-181"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.2</span> <span class="title"></span>
 </h3>
-<article class="definition definition-like" id="definition-69"><h4 class="heading">
+<article class="definition definition-like" id="definition-71"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.1</span><span class="period">.</span>
 </h4>
-<p id="p-836">Two logic circuits are <dfn class="terminology">equivalent</dfn> if their input/ouput tables are identical.</p></article><article class="definition definition-like" id="definition-70"><h4 class="heading">
+<p id="p-893">Two logic circuits are <dfn class="terminology">equivalent</dfn> if their input/ouput tables are identical.</p></article><article class="definition definition-like" id="definition-72"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.2</span><span class="period">.</span>
 </h4>
-<p id="p-837">Consider two equiavalent logic gates. One is said to be <dfn class="terminology">simpler</dfn> than the other if it contains fewer logic gates.</p></article></section><section class="subsection" id="subsection-169"><h3 class="heading hide-type">
+<p id="p-894">Consider two equiavalent logic gates. One is said to be <dfn class="terminology">simpler</dfn> than the other if it contains fewer logic gates.</p></article></section><section class="subsection" id="subsection-182"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.3</span> <span class="title">Converting Input/Output Table to Boolean Expression/Circuit</span>
 </h3>
-<p id="p-838">Consider an input/output table. To determine an associated Boolean expression, first, we can simply examine the table to see if there is any obvious pattern.</p>
-<p id="p-839">Otherwise, there are multiple methods that can be considered. One method is to consider all rows which produce an output of 1 (the “true” rows), and construct a Boolean expression which is true in precisely each case, made up of conjunctions of the components. Then, combine each of these conjunctions with a disjunction. This expression will be a Boolean expression for the table.</p>
-<p id="p-840">On the other hand, it is possible that there is a simpler equivalent expression that describes the same table. The Boolean expression can be simplified to this by using the laws of logic.</p>
-<p id="p-841">Finally, to check your solution, your Boolean expression can be checked with the original input/output table, to see if it is correct.</p></section><section class="subsection" id="subsection-170"><h3 class="heading hide-type">
+<p id="p-895">Consider an input/output table. To determine an associated Boolean expression, first, we can simply examine the table to see if there is any obvious pattern.</p>
+<p id="p-896">Otherwise, there are multiple methods that can be considered. One method is to consider all rows which produce an output of 1 (the “true” rows), and construct a Boolean expression which is true in precisely each case, made up of conjunctions of the components. Then, combine each of these conjunctions with a disjunction. This expression will be a Boolean expression for the table.</p>
+<p id="p-897">On the other hand, it is possible that there is a simpler equivalent expression that describes the same table. The Boolean expression can be simplified to this by using the laws of logic.</p>
+<p id="p-898">Finally, to check your solution, your Boolean expression can be checked with the original input/output table, to see if it is correct.</p></section><section class="subsection" id="subsection-183"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.4</span> <span class="title">Karnaugh Maps (K-maps)</span>
 </h3>
-<p id="p-842">A method for simplifying Boolean expressions.</p></section><section class="subsection" id="subsection-171"><h3 class="heading hide-type">
+<p id="p-899">A method for simplifying Boolean expressions.</p></section><section class="subsection" id="subsection-184"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.5</span> <span class="title">More Complex Logic Gates</span>
 </h3>
-<p id="p-843">The <dfn class="terminology">NAND-gate</dfn> is the negation of an AND-gate, and is denoted by \(P \mid Q\text{,}\) where the symbol \(\mid\) is called the <dfn class="terminology">Scheffer stroke</dfn>.</p>
+<p id="p-900">The <dfn class="terminology">NAND-gate</dfn> is the negation of an AND-gate, and is denoted by \(P \mid Q\text{,}\) where the symbol \(\mid\) is called the <dfn class="terminology">Scheffer stroke</dfn>.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c}
@@ -207,7 +209,7 @@ P \amp Q \amp P \mid Q \\ \hline
 \end{array}
 \end{equation*}
 </div>
-<p id="p-844">The <dfn class="terminology">NOR-gate</dfn> is the negation of an OR-gate, and is denoted by \(P \downarrow Q\text{,}\) where \(\downarrow\) is called the <dfn class="terminology">Pierce arrow</dfn>.</p>
+<p id="p-901">The <dfn class="terminology">NOR-gate</dfn> is the negation of an OR-gate, and is denoted by \(P \downarrow Q\text{,}\) where \(\downarrow\) is called the <dfn class="terminology">Pierce arrow</dfn>.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c}
@@ -218,10 +220,10 @@ P \amp Q \amp P \downarrow Q \\ \hline
 0 \amp 0 \amp 1
 \end{array}
 \end{equation*}
-</div></section><section class="subsection" id="subsection-172"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-185"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.6</span> <span class="title">Other Possible Combinations</span>
 </h3>
-<p id="p-845">With 2 inputs \(P\) and \(Q\text{,}\) the number of possible output patterns of 4 digits is \(2^4 = 16\text{.}\)</p></section></section></div></main>
+<p id="p-902">With 2 inputs \(P\) and \(Q\text{,}\) the number of possible output patterns of 4 digits is \(2^4 = 16\text{.}\)</p></section></section></div></main>
 </div>
 </body>
 </html>

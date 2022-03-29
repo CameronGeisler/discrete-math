@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:24-07:00       *-->
+<!--*       on 2022-03-29T13:26:00-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,27 +15,25 @@
 </head>
 <body>
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<p>First, consider \(\overline{A \cup B}\text{.}\)</p>
+<p>First,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-x \in \overline{A \cup B} \equiv x \notin A \cup B \amp \equiv \neg (x \in A \cup B)\\
-\amp \equiv \neg (x \in A \lor x \in B)\\
-\amp \equiv \brac{\neg (x \in A) \land \neg (x \in B)} \amp\amp \text{by De Morgan's laws}\\
-\amp \equiv \brac{x \notin A \land x \notin B}\\
-\amp \equiv \brac{x \in \overline{A} \land x \in \overline{B}}\\
-\amp \equiv \brac{x \in \overline{A} \cap \overline{B}}
+x \in A \cup (B \cap C) \amp \equiv x \in A \lor x \in B \cap C\\
+\amp \equiv x \in A \lor (x \in B \land x \in C)\\
+\amp \equiv \brac{x \in A \lor x \in B} \land \brac{x \in A \lor x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}\\
+\amp \equiv \brac{x \in A \cup B} \land \brac{x \in A \cup C}\\
+\amp \equiv x \in (A \cup B) \cap (A \cup C)
 \end{align*}
 </div>
-<p>Similarly, for \(\overline{A \cap B}\text{,}\) the steps are similar, except replacing “and” with “or”,</p>
+<p>Then, similarly,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-x \in \overline{A \cap B} \equiv x \notin A \cap B \amp \equiv \neg (x \in A \cap B)\\
-\amp \equiv \neg (x \in A \land x \in B)\\
-\amp \equiv \brac{\neg (x \in A) \lor \neg (x \in B)} \amp\amp \text{by De Morgan's laws}\\
-\amp \equiv \brac{x \notin A \lor x \notin B}\\
-\amp \equiv \brac{x \in \overline{A} \lor x \in \overline{B}}\\
-\amp \equiv \brac{x \in \overline{A} \cup \overline{B}}
+x \in A \cap (B \cap C) \amp \equiv x \in A \land x \in B \cup C\\
+\amp \equiv x \in A \land (x \in B \lor x \in C)\\
+\amp \equiv \brac{x \in A \land x \in B} \lor \brac{x \in A \land x \in C} \amp\amp \text{by distributive property of disjunction over conjunction}\\
+\amp \equiv \brac{x \in A \cap B} \lor \brac{x \in A \cap C}\\
+\amp \equiv x \in (A \cap B) \cup (A \cap C)
 \end{align*}
-</div></article><span class="incontext"><a href="section-ST.html#proof-63">in-context</a></span>
+</div></article><span class="incontext"><a href="section-SIAP.html#proof-63">in-context</a></span>
 </body>
 </html>

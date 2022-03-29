@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:15-07:00       *-->
+<!--*       on 2022-03-29T13:25:52-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+<li><a href="section-SIAP.html" data-scroll="section-SIAP">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -144,6 +144,8 @@
 </li>
 <li class="link">
 <a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CFS.html" data-scroll="section-CFS">Counting for Sets</a></li>
+<li><a href="section-TPP.html" data-scroll="section-TPP">The Pigeonhole Principle</a></li>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP">Distributing Presents</a></li>
@@ -161,11 +163,11 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-PBMI"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Proof by Mathematical Induction</span>
 </h2>
-<section class="introduction" id="introduction-20"><p id="p-447">Mathematical induction is a method for proving statements about the set of natural numbers. Since there are infinitely many natural numbers, a general statement about the natural numbers cannot be proven by showing it for particular cases. Math induction allows us to prove a statement for all natural numbers, in a relatively concise way.</p>
+<section class="introduction" id="introduction-20"><p id="p-454">Mathematical induction is a method for proving statements about the set of natural numbers. Since there are infinitely many natural numbers, a general statement about the natural numbers cannot be proven by showing it for particular cases. Math induction allows us to prove a statement for all natural numbers, in a relatively concise way.</p>
 <article class="example example-like" id="example-34"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-34"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Motivational example.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-448">The method of mathematical induction was first used by <dfn class="terminology">Francesco Maurolico</dfn> (1494-1575), Italian mathematician and astronomer, in his work <em class="emphasis">Arithmeticorum libri duo</em>, published in 1575. He used it to prove the closed form formula for the sum of the first \(n\) odd positive integers.</p>
-<p id="p-449">Consider the sum of the first odd positive integers,</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-455">The method of mathematical induction was first used by <dfn class="terminology">Francesco Maurolico</dfn> (1494-1575), Italian mathematician and astronomer, in his work <em class="emphasis">Arithmeticorum libri duo</em>, published in 1575. He used it to prove the closed form formula for the sum of the first \(n\) odd positive integers.</p>
+<p id="p-456">Consider the sum of the first odd positive integers,</p>
 <div class="displaymath">
 \begin{align*}
 1 \amp = 1\\
@@ -176,7 +178,7 @@
 \vdots \amp = \vdots
 \end{align*}
 </div>
-<p id="p-450">Notice that the resulting numbers are the squares of natural numbers,</p>
+<p id="p-457">Notice that the resulting numbers are the squares of natural numbers,</p>
 <div class="displaymath">
 \begin{align*}
 1 \amp = 1 = 1^2\\
@@ -187,19 +189,19 @@
 \vdots \amp = \vdots
 \end{align*}
 </div>
-<p id="p-451">This pattern seems to continue, which leads to a conjecture. That is, the sum of the first \(n\) natural numbers is equal to \(n^2\text{.}\) The \(i\)th odd positive number can be written as \(2i-1\) for \(i = 1, 2, 3, \dots\text{.}\) So, this means,</p>
+<p id="p-458">This pattern seems to continue, which leads to a conjecture. That is, the sum of the first \(n\) natural numbers is equal to \(n^2\text{.}\) The \(i\)th odd positive number can be written as \(2i-1\) for \(i = 1, 2, 3, \dots\text{.}\) So, this means,</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 3 + 5 + \dots + (2n - 1) = n^2
 \end{equation*}
 </div>
-<p id="p-452">Or, in summation notation,</p>
+<p id="p-459">Or, in summation notation,</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{i=1}^n (2i - 1) = n^2
 \end{equation*}
 </div>
-<p id="p-453">We want to prove this formula for every \(n\text{.}\) At first, it seems like as \(n\) get larger, the arithmetic will become more tedious, and more difficult. However, notice that each case depends on the previous case. For example, for the \(n = 5\) case,</p>
+<p id="p-460">We want to prove this formula for every \(n\text{.}\) At first, it seems like as \(n\) get larger, the arithmetic will become more tedious, and more difficult. However, notice that each case depends on the previous case. For example, for the \(n = 5\) case,</p>
 <div class="displaymath">
 \begin{align*}
 1 + 3 + 5 + 7 + 9 \amp = (1 + 3 + 5 + 7) + 9\\
@@ -207,61 +209,61 @@
 \amp = 25
 \end{align*}
 </div>
-<p id="p-454">That is, if we know the conjecture holds for the previous case, we only need to add one additional number to verify it is true for the next case.</p>
-<p id="p-455">The idea with induction is that we will prove this for a general case, where \(n\) is some arbirary positive integer \(k\text{.}\) If we can show that in general, if the statement is true for some \(n = k\text{,}\) then it is also true for \(n = k+1\text{,}\) then the statement will proven for all \(n\text{.}\)</p>
-<p id="p-456">This is because, since we've shown its true for \(n = 1\text{,}\) it's also true for \(n = 2\text{.}\) Because it's true for \(n = 2\text{,}\) it's also true for \(n = 3\text{.}\) Similarly, because it's true for \(n = 4\text{,}\) it's also true for \(n = 5\text{.}\) And so on. For any integer \(n\text{,}\) we can continue this reasoning until up to that \(n\text{.}\)</p>
-<p id="p-457">In summary, we want to show that if \(P(k)\) is true, then \(P(k+1)\) is true. To do this, first suppose that \(P(k)\) is true. That is, for this arbitrary but particular positive integer \(k\text{,}\)</p>
+<p id="p-461">That is, if we know the conjecture holds for the previous case, we only need to add one additional number to verify it is true for the next case.</p>
+<p id="p-462">The idea with induction is that we will prove this for a general case, where \(n\) is some arbirary positive integer \(k\text{.}\) If we can show that in general, if the statement is true for some \(n = k\text{,}\) then it is also true for \(n = k+1\text{,}\) then the statement will proven for all \(n\text{.}\)</p>
+<p id="p-463">This is because, since we've shown its true for \(n = 1\text{,}\) it's also true for \(n = 2\text{.}\) Because it's true for \(n = 2\text{,}\) it's also true for \(n = 3\text{.}\) Similarly, because it's true for \(n = 4\text{,}\) it's also true for \(n = 5\text{.}\) And so on. For any integer \(n\text{,}\) we can continue this reasoning until up to that \(n\text{.}\)</p>
+<p id="p-464">In summary, we want to show that if \(P(k)\) is true, then \(P(k+1)\) is true. To do this, first suppose that \(P(k)\) is true. That is, for this arbitrary but particular positive integer \(k\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 3 + 5 + \dots + (2k-1) = k^2 \qquad \text{or,} \qquad \sum_{i=1}^k (2i-1) = k^2
 \end{equation*}
 </div>
-<p id="p-458">Then, we want to show that,</p>
+<p id="p-465">Then, we want to show that,</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 3 + 5 + \dots + (2k-1) + (2k+1) = (k+1)^2 \qquad \text{or,} \qquad \sum_{i=1}^{k+1} (2i-1) = (k+1)^2
 \end{equation*}
 </div>
-<p id="p-459">Here, note that the next odd number in the summation is \(2(k + 1) - 1 = 2k + 1\text{.}\) As before, the key insight is that this next sum <em class="emphasis">can be written in terms of the previous sum</em>, as,</p>
+<p id="p-466">Here, note that the next odd number in the summation is \(2(k + 1) - 1 = 2k + 1\text{.}\) As before, the key insight is that this next sum <em class="emphasis">can be written in terms of the previous sum</em>, as,</p>
 <div class="displaymath">
 \begin{gather*}
 \underbrace{1 + 3 + 5 + \dots + (2k-1)}_{\sum_{i=1}^k (2i-1)} + (2k+1)
 \end{gather*}
 </div>
-<p id="p-460">Then, since we have assumed that \(\sum_{i=1}^k (2i-1) = k^2\text{,}\) we have that,</p>
+<p id="p-467">Then, since we have assumed that \(\sum_{i=1}^k (2i-1) = k^2\text{,}\) we have that,</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 3 + 5 + \dots + (2k-1) + (2k+1) = k^2 + (2k + 1)
 \end{equation*}
 </div>
-<p id="p-461">Finally, notice that \(k^2 + 2k + 1 = (k + 1)^2\) can be factored as a perfect square trinomial. This is exactly what we wanted to show,</p>
+<p id="p-468">Finally, notice that \(k^2 + 2k + 1 = (k + 1)^2\) can be factored as a perfect square trinomial. This is exactly what we wanted to show,</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 3 + 5 + \dots + (2k-1) + (2k+1) = (k+1)^2
 \end{equation*}
 </div>
-<p id="p-462">This proves the statement for any natural number \(n\text{.}\)</p></article></div></section><section class="subsection" id="subsection-101"><h3 class="heading hide-type">
+<p id="p-469">This proves the statement for any natural number \(n\text{.}\)</p></article></div></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.1</span> <span class="title">Principle of Mathematical Induction</span>
 </h3>
-<p id="p-463">Let \(P(n)\) be a statement depending on \(n\text{,}\) where \(n \in \mathbb{N}\text{.}\) Then, for each \(n\text{,}\) \(P(n)\) is either true or false. Then,</p>
-<article class="theorem theorem-like" id="theorem-21"><h4 class="heading">
+<p id="p-470">Let \(P(n)\) be a statement depending on \(n\text{,}\) where \(n \in \mathbb{N}\text{.}\) Then, for each \(n\text{,}\) \(P(n)\) is either true or false. Then,</p>
+<article class="theorem theorem-like" id="theorem-22"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of mathematical induction.</span>
 </h4>
-<p id="p-464">A statement \(P(n)\) is true for all natural numbers \(n\) if,</p>
+<p id="p-471">A statement \(P(n)\) is true for all natural numbers \(n\) if,</p>
 <ul class="disc">
 <li id="li-101"><p id="p-derived-li-101">\(P(1)\) is true (called the <dfn class="terminology">base case</dfn>).</p></li>
 <li id="li-102"><p id="p-derived-li-102">For all \(k \in \mathbb{N}\text{,}\) if \(P(k)\) is true, then \(P(k+1)\) is true (called the <dfn class="terminology">induction step</dfn>). The assumption that \(P(k)\) is true is called the <dfn class="terminology">inductive hypothesis</dfn>.</p></li>
-</ul></article><p id="p-465">In 1654, Blaise Pascal more precisely specified the method, and in 1883, Augustus De Morgan gave it the modern name “mathematical induction”.</p></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
+</ul></article><p id="p-472">In 1654, Blaise Pascal more precisely specified the method, and in 1883, Augustus De Morgan gave it the modern name “mathematical induction”.</p></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.2</span> <span class="title">Intuition for Math Induction</span>
 </h3>
-<p id="p-466">Math induction makes intuitive sense. Suppose that \(P(1)\) is true, and for all \(k\text{,}\) if \(P(k)\) is true implies \(P(k+1)\) is true. Then, applying this for \(k = 1\) means that \(P(2)\) is true. Then, since \(P(2)\) is true, this implies that \(P(3)\) is true. Since \(P(3)\) is true, \(P(4)\) is true, and so on. Then, for any \(n \in \mathbb{N}\text{,}\) we can apply the implication enough times to show that \(P(n)\) is true.</p>
-<p id="p-467">Math induction is like an infinite sequence of dominoes. To ensure that “all” of the dominoes will be knocked, we must be certain that,</p>
+<p id="p-473">Math induction makes intuitive sense. Suppose that \(P(1)\) is true, and for all \(k\text{,}\) if \(P(k)\) is true implies \(P(k+1)\) is true. Then, applying this for \(k = 1\) means that \(P(2)\) is true. Then, since \(P(2)\) is true, this implies that \(P(3)\) is true. Since \(P(3)\) is true, \(P(4)\) is true, and so on. Then, for any \(n \in \mathbb{N}\text{,}\) we can apply the implication enough times to show that \(P(n)\) is true.</p>
+<p id="p-474">Math induction is like an infinite sequence of dominoes. To ensure that “all” of the dominoes will be knocked, we must be certain that,</p>
 <ul class="disc">
 <li id="li-103"><p id="p-derived-li-103">The first domino will be knocked over (the base case).</p></li>
 <li id="li-104"><p id="p-derived-li-104">The dominoes are set up such that if one domino falls, then the next domino will fall (the induction step).</p></li>
 </ul>
-<p id="p-468">In a similar way, the principle of math induction can be thought of as climbing a ladder. If you can climb onto the first rung, and also always climb one rung higher, then you can climb the “entire” ladder.</p>
-<p id="p-469">Also, note that mathematical induction is unrelated to inductive reasoning, which is in contrast to deductive reasoning. Inductive reasoning involves using many specific observations to make a conclusion about a general principle. Deductive reasoning involves using premises to logically infer a conclusion. Mathematical induction is a form of deductive reasoning.</p></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
+<p id="p-475">In a similar way, the principle of math induction can be thought of as climbing a ladder. If you can climb onto the first rung, and also always climb one rung higher, then you can climb the “entire” ladder.</p>
+<p id="p-476">Also, note that mathematical induction is unrelated to inductive reasoning, which is in contrast to deductive reasoning. Inductive reasoning involves using many specific observations to make a conclusion about a general principle. Deductive reasoning involves using premises to logically infer a conclusion. Mathematical induction is a form of deductive reasoning.</p></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.3</span> <span class="title">More Basic Examples</span>
 </h3>
 <article class="example example-like" id="example-35"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h4 class="heading">
@@ -269,12 +271,12 @@
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><article class="fact theorem-like" id="fact-23"><h5 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span>
 </h5>
-<p id="p-470">The sum of the first \(n\) odd natural numbers is \(n^2\text{.}\) In other words,</p>
+<p id="p-477">The sum of the first \(n\) odd natural numbers is \(n^2\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 3 + 5 + \dots + (2n - 3) + (2n - 1) = \sum_{k=1}^n (2k - 1) = n^2
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-37"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><p id="p-471">By induction, for \(n = 1\text{,}\) we have,</p>
+</div></article><article class="hiddenproof" id="proof-37"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><p id="p-478">By induction, for \(n = 1\text{,}\) we have,</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{i=1}^1 (2i - 1) = 1 = 1^2
@@ -299,21 +301,21 @@
 <article class="fact theorem-like" id="fact-24"><h4 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Product of consecutive integers is even.</span>
 </h4>
-<p id="p-472">For all \(n \in \mathbb{N}\text{,}\) \(n(n + 1)\) is even.</p></article><p id="p-473">This is true for all \(n \in \mathbb{Z}\) however we will only prove it for positive integers. This can be proved without induction. This is because at least one of \(n\) and \((n + 1)\) is even, using proof by cases. If \(n\) is even, then \((n + 1)\) is odd, and if \(n\) is odd, then \((n + 1)\) is even. Thus, \(n(n + 1)\) is the product of an even and odd integer, which is even.</p>
-<article class="hiddenproof" id="proof-38"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-38"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof"><p id="p-474">By induction, for \(n = 1\text{,}\) we have \(1 \cdot (1 + 1) = 2\) which is even. Then, assume the result is true for some \(n = k \in \mathbb{N}\text{,}\) that is, \(k(k + 1)\) is even. Then, we want to show that \((k + 1)((k + 1) + 1) = (k + 1)(k + 2)\) is even. Then,</p>
+<p id="p-479">For all \(n \in \mathbb{N}\text{,}\) \(n(n + 1)\) is even.</p></article><p id="p-480">This is true for all \(n \in \mathbb{Z}\) however we will only prove it for positive integers. This can be proved without induction. This is because at least one of \(n\) and \((n + 1)\) is even, using proof by cases. If \(n\) is even, then \((n + 1)\) is odd, and if \(n\) is odd, then \((n + 1)\) is even. Thus, \(n(n + 1)\) is the product of an even and odd integer, which is even.</p>
+<article class="hiddenproof" id="proof-38"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-38"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof"><p id="p-481">By induction, for \(n = 1\text{,}\) we have \(1 \cdot (1 + 1) = 2\) which is even. Then, assume the result is true for some \(n = k \in \mathbb{N}\text{,}\) that is, \(k(k + 1)\) is even. Then, we want to show that \((k + 1)((k + 1) + 1) = (k + 1)(k + 2)\) is even. Then,</p>
 <div class="displaymath">
 \begin{align*}
 (k + 1)(k + 2) \amp = k^2 + 3k + 2 \amp\amp \text{expanding}
 \end{align*}
 </div>
-<p id="p-475">Then, to use the induction hypothesis, split up \(k(k + 1) = k^2 + k\text{,}\) and the leftover terms,</p>
+<p id="p-482">Then, to use the induction hypothesis, split up \(k(k + 1) = k^2 + k\text{,}\) and the leftover terms,</p>
 <div class="displaymath">
 \begin{align*}
 \amp = (k^2 + k) + (2k + 2) \amp\amp \text{splitting up the terms}\\
 \amp = k(k + 1) + 2(k + 1)
 \end{align*}
 </div>
-<p id="p-476">By the induction hypothesis, \(n(n + 1)\) is even, and also \(2(n + 1)\) is even, so their sum \((n + 1)(n + 2)\) is even.</p></article></div></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
+<p id="p-483">By the induction hypothesis, \(n(n + 1)\) is even, and also \(2(n + 1)\) is even, so their sum \((n + 1)(n + 2)\) is even.</p></article></div></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.4</span> <span class="title">Using Proof by Induction</span>
 </h3>
 <ol class="decimal">
@@ -322,11 +324,11 @@
 <li id="li-107"><p id="p-derived-li-107">Assume that \(P(k)\) is true for some \(k \in \mathbb{N}\text{.}\) Then, use that assumption with some mathematical reasoning to prove that \(P(k+1)\) is true.</p></li>
 <li id="li-108"><p id="p-derived-li-108">Finally, recall again the conclusion of the proof, that by induction, the statement is true for all natural numbers.</p></li>
 </ol>
-<p id="p-477">The most difficult and important part of induction is the inductive step. Often, the inductive step involves showing that the \((k+1)\)th case can be written <em class="emphasis">in terms of</em> the \(k\)th case, in some way. This will allow you to use the inductive assumption.</p></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
+<p id="p-484">The most difficult and important part of induction is the inductive step. Often, the inductive step involves showing that the \((k+1)\)th case can be written <em class="emphasis">in terms of</em> the \(k\)th case, in some way. This will allow you to use the inductive assumption.</p></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.5</span> <span class="title">General Principle of Math Induction</span>
 </h3>
-<p id="p-478">Sometimes, we only want to prove a statement for all natural numbers, starting at some integer that is not 1. Perhaps that for smaller natural numbers, the statement is false or is undefined. The principle of math induction still holds.</p>
-<p id="p-479">For \(b \in \mathbb{Z}\text{,}\) a statement \(P(n)\) is true for all \(n \in \mathbb{Z}\text{,}\) \(n \geq b\) if,</p>
+<p id="p-485">Sometimes, we only want to prove a statement for all natural numbers, starting at some integer that is not 1. Perhaps that for smaller natural numbers, the statement is false or is undefined. The principle of math induction still holds.</p>
+<p id="p-486">For \(b \in \mathbb{Z}\text{,}\) a statement \(P(n)\) is true for all \(n \in \mathbb{Z}\text{,}\) \(n \geq b\) if,</p>
 <ul class="disc">
 <li id="li-109"><p id="p-derived-li-109">\(P(b)\) is true, and,</p></li>
 <li id="li-110"><p id="p-derived-li-110">For all \(k \in \mathbb{Z}\text{,}\) \(k \geq b\text{,}\) if \(P(k)\) is true, then \(P(k + 1)\) is true.</p></li>
@@ -334,19 +336,19 @@
 <article class="fact theorem-like" id="fact-25"><h4 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Factorials are even.</span>
 </h4>
-<p id="p-480">For all \(n \in \mathbb{N}, n \geq 2\text{,}\) \(n!\) is even.</p></article><p id="p-481">Of course, this is trivial since \(n!\) contains a factor of 2 for all \(n \geq 2\text{,}\) and so is even. However, we can also prove this by induction.</p>
-<article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><p id="p-482">By induction, for \(n = 2\text{,}\) \(2! = 2\) is even. Then, assume the result is true for some \(n \geq 2\text{,}\) that \(n!\) is even. Then,</p>
+<p id="p-487">For all \(n \in \mathbb{N}, n \geq 2\text{,}\) \(n!\) is even.</p></article><p id="p-488">Of course, this is trivial since \(n!\) contains a factor of 2 for all \(n \geq 2\text{,}\) and so is even. However, we can also prove this by induction.</p>
+<article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><p id="p-489">By induction, for \(n = 2\text{,}\) \(2! = 2\) is even. Then, assume the result is true for some \(n \geq 2\text{,}\) that \(n!\) is even. Then,</p>
 <div class="displaymath">
 \begin{equation*}
 (n + 1)! = (n + 1) \cdot n!
 \end{equation*}
 </div>
-<p class="continuation">Since \(n!\) is even, \((n + 1) \cdot n!\) is even, as any multiple of an even integer is even.</p></article></div></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
+<p class="continuation">Since \(n!\) is even, \((n + 1) \cdot n!\) is even, as any multiple of an even integer is even.</p></article></div></section><section class="subsection" id="subsection-107"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.6</span> <span class="title">Remarks</span>
 </h3>
-<p id="p-483">Math induction can be used to quite easily prove that formulas are correct. However, it doesn't provide any insight into how to actually derive those formulas.</p>
-<p id="p-484">To develop a formula, it is often helpful to consider particular cases, especially with small numbers. Then, try to determine the pattern, and conjecture a formula. Then, with math induction, you can prove it is true.</p>
-<p id="p-485">It turns out that with math induction, if the result is true (the formula is correct), then math induction is guarenteed to work.</p></section></section></div></main>
+<p id="p-490">Math induction can be used to quite easily prove that formulas are correct. However, it doesn't provide any insight into how to actually derive those formulas.</p>
+<p id="p-491">To develop a formula, it is often helpful to consider particular cases, especially with small numbers. Then, try to determine the pattern, and conjecture a formula. Then, with math induction, you can prove it is true.</p>
+<p id="p-492">It turns out that with math induction, if the result is true (the formula is correct), then math induction is guarenteed to work.</p></section></section></div></main>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:17-07:00       *-->
+<!--*       on 2022-03-29T13:25:54-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -131,7 +131,7 @@
 <li><a href="section-MAS.html" data-scroll="section-MAS">Basics of Set Theory</a></li>
 <li><a href="section-SOUIC.html" data-scroll="section-SOUIC">Set Operations, Unions, Intersection, Complement</a></li>
 <li><a href="section-TCP.html" data-scroll="section-TCP">The Cartesian Product</a></li>
-<li><a href="section-ST.html" data-scroll="section-ST">Set Theorems</a></li>
+<li><a href="section-SIAP.html" data-scroll="section-SIAP">Set Identities and Properties</a></li>
 </ul>
 </li>
 <li class="link">
@@ -144,6 +144,8 @@
 </li>
 <li class="link">
 <a href="chapter-MAC.html" data-scroll="chapter-MAC"><span class="codenumber">9</span> <span class="title">More Advanced Counting</span></a><ul>
+<li><a href="section-CFS.html" data-scroll="section-CFS">Counting for Sets</a></li>
+<li><a href="section-TPP.html" data-scroll="section-TPP">The Pigeonhole Principle</a></li>
 <li><a href="section-CP.html" data-scroll="section-CP">Circular Permutations</a></li>
 <li><a href="section-DM.html" data-scroll="section-DM">Distributing Money</a></li>
 <li><a href="section-DP.html" data-scroll="section-DP" class="active">Distributing Presents</a></li>
@@ -159,45 +161,45 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DP"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Distributing Presents</span>
+<span class="type">Section</span> <span class="codenumber">9.5</span> <span class="title">Distributing Presents</span>
 </h2>
-<section class="introduction" id="introduction-31"><p id="p-811">This is an application of permutations with repeated events.</p></section><section class="subsection" id="subsection-160"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Distributing Presents</span>
+<section class="introduction" id="introduction-33"><p id="p-868">This is an application of permutations with repeated events.</p></section><section class="subsection" id="subsection-173"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.5.1</span> <span class="title">Distributing Presents</span>
 </h3>
-<p id="p-812">Suppose we have \(n\) presents to distribute to \(k\) children, such that each of the \(n\) children get \(n_1, \dots, n_k\) presents, respectively. Also, we want to all presents are distributed (i.e. \(n_1 + \dots + n_k = n\)). Then, we want to determine the number of ways this distribution can be done.</p>
-<p id="p-813">We can determine this by arranging the \(n\) presents in a row, and having the child 1 take the first \(n_1\) presents starting from the left, then child 2 takes the next \(n_2\) presents, and so on, until child \(k\) takes the remaining $n_k$ presents.</p>
-<p id="p-814">There are \(n!\) ways to arrange the presents, however, multiple arrangements can lead to the same result (i.e. every kid getting the same presents). If child 1 gets 5 presents, then the order in which those 5 presents are given to them doesn't matter. In general, the \(i\)th child can arrange their presents in \(n_i!\) ways. Thus, the total number of ways to distribute the presents is,</p>
+<p id="p-869">Suppose we have \(n\) presents to distribute to \(k\) children, such that each of the \(n\) children get \(n_1, \dots, n_k\) presents, respectively. Also, we want to all presents are distributed (i.e. \(n_1 + \dots + n_k = n\)). Then, we want to determine the number of ways this distribution can be done.</p>
+<p id="p-870">We can determine this by arranging the \(n\) presents in a row, and having the child 1 take the first \(n_1\) presents starting from the left, then child 2 takes the next \(n_2\) presents, and so on, until child \(k\) takes the remaining $n_k$ presents.</p>
+<p id="p-871">There are \(n!\) ways to arrange the presents, however, multiple arrangements can lead to the same result (i.e. every kid getting the same presents). If child 1 gets 5 presents, then the order in which those 5 presents are given to them doesn't matter. In general, the \(i\)th child can arrange their presents in \(n_i!\) ways. Thus, the total number of ways to distribute the presents is,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{n!}{n_1! n_2! \cdots n_k!}
 \end{equation*}
-</div></section><section class="subsection" id="subsection-161"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">9.3.2</span> <span class="title">Alternate Intuition</span>
+</div></section><section class="subsection" id="subsection-174"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.5.2</span> <span class="title">Alternate Intuition</span>
 </h3>
-<p id="p-815">Alternatively, we can think of this problem as choosing \(n_1\) presents to give to the first child (which there are \(\binom{n}{n_1}\) ways), then choosing \(n_2\) presents among the remaining \((n - n_1)\) to give to the second child (\(\binom{n-n_1}{n_2}\) ways), and so on. In general, we choose \(n_i\) presents among the remaining \((n - n_1 - n_2 - \dots - n_{i-1})\text{,}\) for \(\binom{n-n_1-\dots-n_{i-1}}{n_i}\) ways.</p>
-<p id="p-816">Thus, the total number of ways to distribute the presents is,</p>
+<p id="p-872">Alternatively, we can think of this problem as choosing \(n_1\) presents to give to the first child (which there are \(\binom{n}{n_1}\) ways), then choosing \(n_2\) presents among the remaining \((n - n_1)\) to give to the second child (\(\binom{n-n_1}{n_2}\) ways), and so on. In general, we choose \(n_i\) presents among the remaining \((n - n_1 - n_2 - \dots - n_{i-1})\text{,}\) for \(\binom{n-n_1-\dots-n_{i-1}}{n_i}\) ways.</p>
+<p id="p-873">Thus, the total number of ways to distribute the presents is,</p>
 <div class="displaymath">
 \begin{align*}
 \amp \binom{n}{n_1} \binom{n-n_1}{n_2} \cdots \binom{n-n_1-\cdots-n_{k-1}}{n_k}\\
 \amp = \frac{n!}{n_1! (n - n_1)!} \cdot \frac{(n - n_1)!}{n_2! (n - n_1 - n_2)!} \cdots \frac{(n - n_1 - \dots - n_{k-1})!}{n_k! (n - n_1 - \dots - n_{k-1} - n_k)!}\\
 \amp = \frac{n!}{n_1! n_2! \cdots n_k!}
 \end{align*}
-</div></section><section class="subsection" id="subsection-162"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">9.3.3</span> <span class="title">Examples</span>
+</div></section><section class="subsection" id="subsection-175"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.5.3</span> <span class="title">Examples</span>
 </h3>
-<article class="example example-like" id="example-95"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-95"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-95"><article class="example example-like"><p id="p-817">If \(n = k\) and \(n_1 = n_2 = \cdots = n_k = 1\text{,}\) this represents distributing \(k\) presents (same number of presents as children) and giving each child exactly one present.</p>
-<p id="p-818">This is just arranging the presents to determine which child gets which present, or \(n!\text{.}\) From this formula, we see it is also,</p>
+<article class="example example-like" id="example-100"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-100"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-100"><article class="example example-like"><p id="p-874">If \(n = k\) and \(n_1 = n_2 = \cdots = n_k = 1\text{,}\) this represents distributing \(k\) presents (same number of presents as children) and giving each child exactly one present.</p>
+<p id="p-875">This is just arranging the presents to determine which child gets which present, or \(n!\text{.}\) From this formula, we see it is also,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{n!}{1! 1! \cdots 1!} = n!
 \end{equation*}
 </div></article></div>
-<article class="example example-like" id="example-96"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-96"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-96"><article class="example example-like"><p id="p-819">If \(n_1 = n_2 = \cdots = n_{k-1} = 1\) and \(n_k = n - k + 1\text{,}\) this represents giving all child 1 present, except the last child who gets the remaining \((n - k + 1)\) presents.</p>
-<p id="p-820">This involves choosing \((k - 1)\) presents from the \(n\) available to give to the \((k-1)\) children (\(\binom{n}{k-1}\) ways), and then giving the remaining presents to the last child. From the formula, we get,</p>
+<article class="example example-like" id="example-101"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-101"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-101"><article class="example example-like"><p id="p-876">If \(n_1 = n_2 = \cdots = n_{k-1} = 1\) and \(n_k = n - k + 1\text{,}\) this represents giving all child 1 present, except the last child who gets the remaining \((n - k + 1)\) presents.</p>
+<p id="p-877">This involves choosing \((k - 1)\) presents from the \(n\) available to give to the \((k-1)\) children (\(\binom{n}{k-1}\) ways), and then giving the remaining presents to the last child. From the formula, we get,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{n!}{1!1! \cdots (n - k + 1)!} = \frac{n!}{(n - (k - 1))!} = \binom{n}{k-1}

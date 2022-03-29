@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-23T11:20:25-07:00       *-->
+<!--*       on 2022-03-29T13:26:00-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,27 @@
 </head>
 <body>
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<ul class="disc">
-<li><p>Let \(a \in \mathbb{Z}\text{.}\) Then, \(a - a = 0\text{,}\) and \(n \mid 0\text{,}\) so \(n \mid (a - a)\text{.}\)</p></li>
-<li><p>Let \(a, b \in \mathbb{Z}\text{,}\) with \(a \equiv b \pmod{n}\text{.}\) Then, \(n \mid (a - b)\text{,}\) so \(a - b = kn\) for some \(k \in \mathbb{Z}\text{.}\) Then, \(b - a = (-k)n\text{,}\) and since \(-k \in \mathbb{Z}\text{,}\) \(n \mid (b - a)\text{.}\) Thus, \(b \equiv a \pmod{n}\text{.}\)</p></li>
-<li><p>Let \(a, b, c \in \mathbb{Z}\text{,}\) with \(a \equiv b \pmod{n}\) and \(b \equiv c \pmod{n}\text{.}\) Then, \(n \mid (a - b)\) and \(n \mid (b - c)\text{.}\) Then, \(a - b = kn\) and \(b - c = ln\) for some \(k, l \in \mathbb{Z}\text{.}\) Then,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-a - c = (b + kn) - (b - ln) = kn + ln = (k + l)n
-\end{equation*}
-</div>Then, \(k + l \in \mathbb{Z}\text{,}\) so \(n \mid (a - c)\text{,}\) and so \(a \equiv c \pmod{n}\text{.}\)</p></li>
-</ul></article><span class="incontext"><a href="section-ER.html#proof-66">in-context</a></span>
+<p>First, consider \(\overline{A \cup B}\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x \in \overline{A \cup B} \equiv x \notin A \cup B \amp \equiv \neg (x \in A \cup B)\\
+\amp \equiv \neg (x \in A \lor x \in B)\\
+\amp \equiv \brac{\neg (x \in A) \land \neg (x \in B)} \amp\amp \text{by De Morgan's laws}\\
+\amp \equiv \brac{x \notin A \land x \notin B}\\
+\amp \equiv \brac{x \in \overline{A} \land x \in \overline{B}}\\
+\amp \equiv \brac{x \in \overline{A} \cap \overline{B}}
+\end{align*}
+</div>
+<p>Similarly, for \(\overline{A \cap B}\text{,}\) the steps are similar, except replacing “and” with “or”,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x \in \overline{A \cap B} \equiv x \notin A \cap B \amp \equiv \neg (x \in A \cap B)\\
+\amp \equiv \neg (x \in A \land x \in B)\\
+\amp \equiv \brac{\neg (x \in A) \lor \neg (x \in B)} \amp\amp \text{by De Morgan's laws}\\
+\amp \equiv \brac{x \notin A \lor x \notin B}\\
+\amp \equiv \brac{x \in \overline{A} \lor x \in \overline{B}}\\
+\amp \equiv \brac{x \in \overline{A} \cup \overline{B}}
+\end{align*}
+</div></article><span class="incontext"><a href="section-SIAP.html#proof-66">in-context</a></span>
 </body>
 </html>
